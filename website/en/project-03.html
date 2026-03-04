@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 3: Build a Simple WooCommerce Store — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/project-03.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/project-03.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li class="active"><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Project 3: Build a Simple WooCommerce Store</h1>
+<h2>Overview</h2>
+<p>Build a complete e-commerce store with WooCommerce. This project brings together everything from the course, especially Modules 3, 4, and 5.</p>
+<p><strong>Estimated time:</strong> 4-6 hours</p>
+<hr>
+<h2>The Brief</h2>
+<p><strong>Client:</strong> &quot;Evergreen Goods&quot; — an online shop selling eco-friendly, sustainable home products (reusable bags, bamboo products, natural cleaning supplies, etc.).</p>
+<p><strong>Requirements:</strong></p>
+<ul>
+<li>Clean, professional online store</li>
+<li>Product catalog with categories</li>
+<li>Shopping cart and checkout</li>
+<li>Payment processing (Stripe test mode)</li>
+<li>Shipping configuration</li>
+<li>About the brand story</li>
+<li>Contact page</li>
+</ul>
+<hr>
+<h2>Pages to Build</h2>
+<h3>1. Home Page (Shop Landing)</h3>
+<p><strong>Sections to include:</strong></p>
+<ul>
+<li>Hero banner: &quot;Sustainable Living Made Simple&quot; with a lifestyle image</li>
+<li>Featured product categories (3-4 category cards with images)</li>
+<li>Featured/bestselling products (4 products)</li>
+<li>Brand story teaser (image + text + &quot;Learn More&quot; button)</li>
+<li>&quot;Why Choose Us&quot; section (3-4 icon boxes: Eco-Friendly, Free Shipping Over $50, Satisfaction Guaranteed, Sustainable Packaging)</li>
+<li>Newsletter signup</li>
+<li>Customer testimonials (3 reviews)</li>
+</ul>
+<h3>2. Shop Page (WooCommerce)</h3>
+<ul>
+<li>Product catalog with sidebar filters</li>
+<li>Category navigation</li>
+<li>Well-styled product cards</li>
+<li>Pagination</li>
+</ul>
+<h3>3. About Page</h3>
+<p><strong>Content to include:</strong></p>
+<ul>
+<li>Brand story and mission</li>
+<li>Sustainability commitment (with icons/stats)</li>
+<li>&quot;Our Impact&quot; numbers (trees saved, plastic reduced, etc.)</li>
+<li>Team section</li>
+</ul>
+<h3>4. Contact Page</h3>
+<p><strong>Content to include:</strong></p>
+<ul>
+<li>Contact form (Name, Email, Subject, Message)</li>
+<li>Customer service info (email, phone, hours)</li>
+<li>FAQ accordion (shipping, returns, sizing)</li>
+<li>Social media links</li>
+</ul>
+<h3>5. Blog Page</h3>
+<ul>
+<li>3 blog posts about sustainability:<ol>
+<li>&quot;10 Easy Swaps for a More Sustainable Kitchen&quot;</li>
+<li>&quot;How to Reduce Plastic in Your Daily Routine&quot;</li>
+<li>&quot;The Truth About Greenwashing: What to Look For&quot;</li>
+</ol>
+</li>
+</ul>
+<h3>6. Additional WooCommerce Pages</h3>
+<p>These are auto-generated but need to work:</p>
+<ul>
+<li>Cart page</li>
+<li>Checkout page</li>
+<li>My Account page</li>
+</ul>
+<hr>
+<h2>Products to Create</h2>
+<p>Create at least <strong>12 products</strong> across 4 categories:</p>
+<h3>Category: Kitchen &amp; Dining (3 products)</h3>
+<p><strong>Product 1: Bamboo Utensil Set (Simple)</strong></p>
+<ul>
+<li>Price: $24.99</li>
+<li>Description: Set of 5 bamboo utensils — spatula, spoon, fork, knife, and chopsticks</li>
+<li>SKU: BUS-001</li>
+<li>Image: bamboo utensils photo</li>
+</ul>
+<p><strong>Product 2: Beeswax Food Wraps (Variable)</strong></p>
+<ul>
+<li>Variations: Small ($12.99), Medium ($16.99), Large ($19.99), Variety Pack ($29.99)</li>
+<li>Description: Reusable food wraps to replace plastic wrap</li>
+<li>SKU: BFW-001</li>
+<li>Image: beeswax wraps photo</li>
+</ul>
+<p><strong>Product 3: Reusable Produce Bags Set (Simple)</strong></p>
+<ul>
+<li>Price: $15.99, Sale Price: $12.99</li>
+<li>Description: Set of 6 mesh produce bags for grocery shopping</li>
+<li>SKU: RPB-001</li>
+</ul>
+<h3>Category: Personal Care (3 products)</h3>
+<p><strong>Product 4: Bamboo Toothbrush 4-Pack (Simple)</strong></p>
+<ul>
+<li>Price: $9.99</li>
+<li>SKU: BT-001</li>
+</ul>
+<p><strong>Product 5: Shampoo Bar (Variable)</strong></p>
+<ul>
+<li>Variations: Lavender ($11.99), Peppermint ($11.99), Unscented ($10.99)</li>
+<li>SKU: SB-001</li>
+</ul>
+<p><strong>Product 6: Natural Deodorant (Variable)</strong></p>
+<ul>
+<li>Variations: Citrus, Cedar, Unscented — all $13.99</li>
+<li>SKU: ND-001</li>
+</ul>
+<h3>Category: Home Cleaning (3 products)</h3>
+<p><strong>Product 7: All-Purpose Cleaner Concentrate (Simple)</strong></p>
+<ul>
+<li>Price: $14.99</li>
+<li>Description: Makes 10 bottles of all-purpose cleaner</li>
+<li>SKU: APC-001</li>
+</ul>
+<p><strong>Product 8: Reusable Cleaning Cloths 5-Pack (Simple)</strong></p>
+<ul>
+<li>Price: $18.99</li>
+<li>SKU: RCC-001</li>
+</ul>
+<p><strong>Product 9: Laundry Detergent Sheets (Simple)</strong></p>
+<ul>
+<li>Price: $16.99</li>
+<li>Description: 60 sheets, plastic-free packaging</li>
+<li>SKU: LDS-001</li>
+</ul>
+<h3>Category: On-the-Go (3 products)</h3>
+<p><strong>Product 10: Stainless Steel Water Bottle (Variable)</strong></p>
+<ul>
+<li>Variations: 500ml ($22.99), 750ml ($27.99), 1L ($32.99)</li>
+<li>Colors: Matte Black, Forest Green, Ocean Blue</li>
+<li>SKU: SWB-001</li>
+</ul>
+<p><strong>Product 11: Organic Cotton Tote Bag (Simple)</strong></p>
+<ul>
+<li>Price: $14.99</li>
+<li>SKU: OCT-001</li>
+</ul>
+<p><strong>Product 12: Reusable Coffee Cup (Variable)</strong></p>
+<ul>
+<li>Variations: 350ml ($18.99), 450ml ($21.99)</li>
+<li>SKU: RCC-002</li>
+</ul>
+<h3>Product Requirements:</h3>
+<ul>
+<li>Every product must have: <strong>title, description, short description, price, SKU, category, product image, and 2+ gallery images</strong></li>
+<li>At least <strong>3 products should be Variable</strong> (with size/color/scent options)</li>
+<li>At least <strong>2 products should be On Sale</strong> (with sale price)</li>
+<li>Mark <strong>4 products as Featured</strong></li>
+</ul>
+<hr>
+<h2>Store Configuration</h2>
+<h3>Shipping Zones:</h3>
+<p><strong>Zone 1: Domestic</strong></p>
+<ul>
+<li>Free Shipping for orders over $50</li>
+<li>Flat Rate: $7.99 (Standard Shipping)</li>
+</ul>
+<p><strong>Zone 2: International</strong></p>
+<ul>
+<li>Flat Rate: $19.99</li>
+</ul>
+<h3>Payment:</h3>
+<ul>
+<li>Stripe (test mode)</li>
+<li>PayPal (optional)</li>
+</ul>
+<h3>Taxes:</h3>
+<ul>
+<li>Set up at least one tax rate for your region</li>
+</ul>
+<h3>Store Policies:</h3>
+<ul>
+<li>Shipping Policy page</li>
+<li>Return/Refund Policy page</li>
+<li>Privacy Policy page</li>
+</ul>
+<hr>
+<h2>Design Specifications</h2>
+<h3>Color Palette</h3>
+<table>
+<thead>
+<tr>
+<th>Color</th>
+<th>Hex</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Forest Green</td>
+<td><code>#2d6a4f</code></td>
+<td>Primary, buttons</td>
+</tr>
+<tr>
+<td>Sage Green</td>
+<td><code>#95d5b2</code></td>
+<td>Accents, highlights</td>
+</tr>
+<tr>
+<td>Warm Cream</td>
+<td><code>#fefae0</code></td>
+<td>Light backgrounds</td>
+</tr>
+<tr>
+<td>Dark Charcoal</td>
+<td><code>#1b1b1b</code></td>
+<td>Text</td>
+</tr>
+<tr>
+<td>White</td>
+<td><code>#ffffff</code></td>
+<td>Cards, backgrounds</td>
+</tr>
+<tr>
+<td>Amber</td>
+<td><code>#e09f3e</code></td>
+<td>Sale badges, CTAs</td>
+</tr>
+</tbody></table>
+<h3>Fonts</h3>
+<ul>
+<li><strong>Headings:</strong> Raleway (Clean, modern)</li>
+<li><strong>Body:</strong> Nunito or Lato (Friendly, readable)</li>
+</ul>
+<h3>Photography</h3>
+<ul>
+<li>Unsplash/Pexels search: eco friendly products, sustainable living, bamboo products, zero waste, natural home</li>
+</ul>
+<hr>
+<h2>Technical Requirements</h2>
+<ul>
+<li><input disabled="" type="checkbox"> WooCommerce installed and configured</li>
+<li><input disabled="" type="checkbox"> 12+ products with proper details, images, and categories</li>
+<li><input disabled="" type="checkbox"> Variable products with working variations</li>
+<li><input disabled="" type="checkbox"> Featured products displayed on homepage</li>
+<li><input disabled="" type="checkbox"> Sale products showing sale badges</li>
+<li><input disabled="" type="checkbox"> Shipping zones configured (domestic + international)</li>
+<li><input disabled="" type="checkbox"> Free shipping for orders over $50</li>
+<li><input disabled="" type="checkbox"> Stripe payment gateway in test mode</li>
+<li><input disabled="" type="checkbox"> Complete a test purchase successfully</li>
+<li><input disabled="" type="checkbox"> Contact form works</li>
+<li><input disabled="" type="checkbox"> Blog has 3 posts</li>
+<li><input disabled="" type="checkbox"> Mobile responsive</li>
+<li><input disabled="" type="checkbox"> SEO configured on all pages</li>
+<li><input disabled="" type="checkbox"> All product images optimized</li>
+<li><input disabled="" type="checkbox"> Store notice active (&quot;Free shipping on orders over $50!&quot;)</li>
+</ul>
+<hr>
+<h2>Bonus Challenges</h2>
+<ol>
+<li>Add a <strong>&quot;New Arrivals&quot;</strong> section to the homepage</li>
+<li>Create <strong>product category images</strong> and use <code>[product_categories]</code> shortcode</li>
+<li>Add <strong>cross-sell products</strong> to the cart page</li>
+<li>Create a <strong>coupon code</strong> (e.g., WELCOME10 for 10% off first order)</li>
+<li>Add a <strong>size guide</strong> or <strong>FAQ</strong> accordion on product pages</li>
+<li>Create a <strong>&quot;Sustainability Impact&quot;</strong> page with counters (trees saved, plastic reduced)</li>
+<li>Set up <strong>email template branding</strong> (WooCommerce → Settings → Emails → customize colors/header)</li>
+</ol>
+<hr>
+<h2>Testing Checklist</h2>
+<p>Before considering this project complete:</p>
+<ul>
+<li><input disabled="" type="checkbox"> Browse the shop and filter by category</li>
+<li><input disabled="" type="checkbox"> View a simple product page — all info displays correctly</li>
+<li><input disabled="" type="checkbox"> View a variable product — variations work (selecting size changes price)</li>
+<li><input disabled="" type="checkbox"> Add items to cart — cart updates correctly</li>
+<li><input disabled="" type="checkbox"> Update quantities in cart — total recalculates</li>
+<li><input disabled="" type="checkbox"> Remove an item from cart — works correctly</li>
+<li><input disabled="" type="checkbox"> Proceed to checkout — all fields display</li>
+<li><input disabled="" type="checkbox"> Complete a test purchase with Stripe test card (4242 4242 4242 4242)</li>
+<li><input disabled="" type="checkbox"> Order confirmation page shows</li>
+<li><input disabled="" type="checkbox"> Order appears in WooCommerce → Orders</li>
+<li><input disabled="" type="checkbox"> Order notification email is sent</li>
+<li><input disabled="" type="checkbox"> Free shipping applies when cart total exceeds $50</li>
+<li><input disabled="" type="checkbox"> Sale products show discounted prices with strikethrough on original</li>
+<li><input disabled="" type="checkbox"> Shop page looks good on mobile</li>
+<li><input disabled="" type="checkbox"> Product pages look good on mobile</li>
+<li><input disabled="" type="checkbox"> Cart and checkout work on mobile</li>
+</ul>
+<hr>
+<h2>Evaluation Criteria</h2>
+<table>
+<thead>
+<tr>
+<th>Criteria</th>
+<th>Check</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>12+ products with complete details and images</td>
+<td></td>
+</tr>
+<tr>
+<td>Variable products work correctly</td>
+<td></td>
+</tr>
+<tr>
+<td>Shop page is well-organized with categories</td>
+<td></td>
+</tr>
+<tr>
+<td>Complete purchase flow works (test mode)</td>
+<td></td>
+</tr>
+<tr>
+<td>Shipping is properly configured</td>
+<td></td>
+</tr>
+<tr>
+<td>Homepage showcases products effectively</td>
+<td></td>
+</tr>
+<tr>
+<td>Design is cohesive and professional</td>
+<td></td>
+</tr>
+<tr>
+<td>Mobile responsive throughout</td>
+<td></td>
+</tr>
+<tr>
+<td>SEO configured on all pages</td>
+<td></td>
+</tr>
+<tr>
+<td>Contact form and blog are functional</td>
+<td></td>
+</tr>
+<tr>
+<td>Store notice and promotions are visible</td>
+<td></td>
+</tr>
+<tr>
+<td>All links and navigation work</td>
+<td></td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Congratulations!</h2>
+<p>If you&#39;ve completed all three practice projects, you have hands-on experience with:</p>
+<ul>
+<li>Business/corporate WordPress sites</li>
+<li>Blog/content-focused sites</li>
+<li>E-commerce stores with WooCommerce</li>
+</ul>
+<p>These are the three most common types of WordPress sites you&#39;ll build professionally. You&#39;re ready to start building real client sites!</p>
+
+    <nav class="lesson-nav">
+      <a href="project-02.html" class="prev">&larr; Project 2: Blog / Magazine</a>
+      <span></span>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

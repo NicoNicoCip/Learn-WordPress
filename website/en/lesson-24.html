@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 24: Image Optimization and Performance Plugins — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-24.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-24.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li class="active"><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lesson 24: Image Optimization and Performance Plugins</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Understand how images affect site performance</li>
+<li>Install and configure an image optimization plugin</li>
+<li>Learn lazy loading and modern image formats</li>
+<li>Use performance testing tools</li>
+</ul>
+<hr>
+<h2>Why Image Optimization Matters</h2>
+<p>Images are typically the <strong>largest files</strong> on any web page:</p>
+<ul>
+<li>An unoptimized homepage can be 5-10MB (mostly images)</li>
+<li>An optimized homepage can be under 1MB</li>
+<li><strong>Faster sites rank higher on Google</strong> and convert more visitors</li>
+<li><strong>53% of mobile users leave</strong> if a page takes over 3 seconds to load</li>
+</ul>
+<hr>
+<h2>Image Optimization Strategies</h2>
+<h3>1. Resize Before Uploading</h3>
+<ul>
+<li>Camera photos: typically 4000-6000px wide — <strong>way too large</strong></li>
+<li>Maximum recommended width:<ul>
+<li>Full-width heroes: <strong>1920px</strong></li>
+<li>Content images: <strong>1200px</strong></li>
+<li>Thumbnails: <strong>300-400px</strong></li>
+</ul>
+</li>
+<li>Tools: Photoshop, GIMP, Canva, or online tools like Squoosh</li>
+</ul>
+<h3>2. Choose the Right Format</h3>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Best For</th>
+<th>File Size</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>JPEG</strong></td>
+<td>Photos, complex images</td>
+<td>Small-medium</td>
+</tr>
+<tr>
+<td><strong>PNG</strong></td>
+<td>Graphics with transparency, screenshots</td>
+<td>Larger</td>
+</tr>
+<tr>
+<td><strong>WebP</strong></td>
+<td>Everything (modern replacement for JPEG/PNG)</td>
+<td>Smallest</td>
+</tr>
+<tr>
+<td><strong>SVG</strong></td>
+<td>Logos, icons, illustrations</td>
+<td>Tiny (vector)</td>
+</tr>
+<tr>
+<td><strong>AVIF</strong></td>
+<td>Next-gen format (limited support)</td>
+<td>Very small</td>
+</tr>
+</tbody></table>
+<p><strong>WebP</strong> is the best general-purpose format — 25-35% smaller than JPEG with similar quality.</p>
+<h3>3. Compress Images</h3>
+<ul>
+<li><strong>Lossy compression</strong>: Reduces quality slightly for much smaller files (usually unnoticeable)</li>
+<li><strong>Lossless compression</strong>: Reduces file size without quality loss (smaller savings)</li>
+<li>Online tools: TinyPNG, Squoosh, ShortPixel online</li>
+</ul>
+<h3>4. Lazy Loading</h3>
+<ul>
+<li><strong>Lazy loading</strong> means images below the viewport (not visible on screen) only load when the user scrolls to them</li>
+<li>Reduces initial page load time dramatically</li>
+<li>WordPress has <strong>built-in lazy loading</strong> (since version 5.5) for images</li>
+<li>Elementor also supports lazy loading</li>
+</ul>
+<hr>
+<h2>Image Optimization Plugin — Smush</h2>
+<h3>Installation</h3>
+<ol>
+<li><strong>Plugins → Add New</strong> → search &quot;Smush&quot;</li>
+<li>Install and activate <strong>&quot;Smush — Lazy Load Images, Optimize &amp; Compress Images&quot;</strong></li>
+</ol>
+<h3>Configuration</h3>
+<ol>
+<li><p>Go to <strong>Smush → Dashboard</strong> (or follow the setup wizard)</p>
+</li>
+<li><p><strong>Bulk Smush</strong>:</p>
+<ul>
+<li>Click <strong>&quot;Bulk Smush Now&quot;</strong> to optimize all existing images</li>
+<li>Free version compresses up to 50 images at a time</li>
+<li>Repeat until all images are done</li>
+</ul>
+</li>
+<li><p><strong>Settings to configure</strong>:</p>
+</li>
+</ol>
+<p><strong>Automatic Optimization:</strong></p>
+<ul>
+<li>Enable <strong>&quot;Automatically optimize new uploads&quot;</strong> — every image you upload from now on will be compressed automatically</li>
+</ul>
+<p><strong>Lazy Loading:</strong></p>
+<ul>
+<li>Go to <strong>Smush → Lazy Load</strong></li>
+<li>Enable lazy loading for images</li>
+<li>This defers loading of off-screen images</li>
+</ul>
+<p><strong>Resize Original Images:</strong></p>
+<ul>
+<li>Enable <strong>&quot;Resize full size images&quot;</strong></li>
+<li>Set max width to <strong>2560px</strong> (or 1920px)</li>
+<li>This automatically resizes oversized uploads</li>
+</ul>
+<h3>Alternative Plugin: ShortPixel</h3>
+<p>ShortPixel is another excellent option:</p>
+<ul>
+<li>Offers <strong>WebP conversion</strong> on the free tier</li>
+<li>Aggressive compression with good quality</li>
+<li>100 free image credits per month</li>
+</ul>
+<h3>Alternative Plugin: Imagify</h3>
+<p>By the WP Rocket team:</p>
+<ul>
+<li>Easy to use</li>
+<li>WebP conversion</li>
+<li>20MB free per month</li>
+</ul>
+<hr>
+<h2>Other Performance Plugins</h2>
+<h3>WP Super Cache (Already Installed)</h3>
+<p>We set this up in Lesson 22. It caches pages for faster delivery.</p>
+<h3>Additional Performance Tips</h3>
+<p><strong>Minification:</strong>
+Some plugins can minify your CSS and JavaScript (remove whitespace and comments to reduce file sizes):</p>
+<ul>
+<li><strong>Autoptimize</strong> (free) — minifies and combines CSS/JS files</li>
+<li>Be cautious: minification can sometimes break page layouts</li>
+</ul>
+<p><strong>CDN (Content Delivery Network):</strong>
+A CDN stores copies of your site&#39;s files on servers worldwide, serving content from the server closest to the visitor:</p>
+<ul>
+<li><strong>Cloudflare</strong> (free tier available) — CDN + security + performance</li>
+<li>Usually configured through your hosting provider</li>
+<li>Not needed for local development, but important for live sites</li>
+</ul>
+<hr>
+<h2>Testing Performance</h2>
+<h3>Tools</h3>
+<p><strong>Google PageSpeed Insights</strong> (for live sites):</p>
+<ul>
+<li>URL: <a href="https://pagespeed.web.dev/">https://pagespeed.web.dev/</a></li>
+<li>Tests both mobile and desktop</li>
+<li>Gives a score 0-100 and specific recommendations</li>
+<li>Can&#39;t test local sites — only live URLs</li>
+</ul>
+<p><strong>GTmetrix</strong> (for live sites):</p>
+<ul>
+<li>URL: <a href="https://gtmetrix.com/">https://gtmetrix.com/</a></li>
+<li>Detailed performance report with waterfall charts</li>
+<li>Shows exactly which files are slow</li>
+</ul>
+<p><strong>Chrome DevTools (works locally):</strong></p>
+<ol>
+<li>Open your site in Chrome</li>
+<li>Press <strong>F12</strong> → <strong>Network</strong> tab</li>
+<li>Refresh the page</li>
+<li>See every file loaded, its size, and load time</li>
+<li>Look at the <strong>bottom bar</strong> for total page size and load time</li>
+</ol>
+<p><strong>Lighthouse (built into Chrome):</strong></p>
+<ol>
+<li>Press <strong>F12</strong> → <strong>Lighthouse</strong> tab</li>
+<li>Click <strong>&quot;Analyze page load&quot;</strong></li>
+<li>Get scores for Performance, Accessibility, Best Practices, SEO</li>
+</ol>
+<hr>
+<h2>Performance Checklist</h2>
+<h3>Images:</h3>
+<ul>
+<li><input disabled="" type="checkbox"> All images are properly sized (not larger than needed)</li>
+<li><input disabled="" type="checkbox"> Images are compressed (Smush or similar)</li>
+<li><input disabled="" type="checkbox"> Lazy loading is enabled</li>
+<li><input disabled="" type="checkbox"> Use WebP format where possible</li>
+</ul>
+<h3>Plugins:</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Caching is enabled (WP Super Cache)</li>
+<li><input disabled="" type="checkbox"> No unused plugins installed</li>
+<li><input disabled="" type="checkbox"> All plugins are up to date</li>
+</ul>
+<h3>General:</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Remove unused themes</li>
+<li><input disabled="" type="checkbox"> Use a lightweight theme (Hello Elementor)</li>
+<li><input disabled="" type="checkbox"> Minimize the number of fonts loaded (2 max)</li>
+<li><input disabled="" type="checkbox"> Don&#39;t use too many external scripts (social widgets, chat widgets, etc.)</li>
+</ul>
+<hr>
+<h2>Exercises</h2>
+<ol>
+<li><p><strong>Install Smush</strong>: Install, activate, and run a bulk optimization on all existing images.</p>
+</li>
+<li><p><strong>Enable lazy loading</strong>: Configure Smush to lazy load images.</p>
+</li>
+<li><p><strong>Enable auto-optimization</strong>: Turn on automatic optimization for future uploads.</p>
+</li>
+<li><p><strong>Test with DevTools</strong>: Open your homepage in Chrome, press F12, go to the Network tab, and note the total page size. Screenshot or write down the number.</p>
+</li>
+<li><p><strong>Run Lighthouse</strong>: Use Chrome&#39;s Lighthouse tab to test your local site. Note your Performance, Accessibility, and SEO scores.</p>
+</li>
+<li><p><strong>Optimize a large image</strong>: Find a large photo online (3000px+), upload it to WordPress without optimization, note the size. Then delete it, resize and compress it first, and upload again. Compare the sizes.</p>
+</li>
+</ol>
+<hr>
+<h2>Key Takeaways</h2>
+<ul>
+<li>Images are usually the <strong>#1 cause of slow websites</strong></li>
+<li><strong>Resize images before uploading</strong> — max 1920px wide for heroes, 1200px for content</li>
+<li><strong>Install an optimization plugin</strong> (Smush, ShortPixel, or Imagify) to auto-compress</li>
+<li><strong>Enable lazy loading</strong> — only load images when they&#39;re visible on screen</li>
+<li><strong>WebP format</strong> is 25-35% smaller than JPEG — use it when possible</li>
+<li><strong>Test performance</strong> with Chrome DevTools Lighthouse and Network tab</li>
+<li>Combined with caching (WP Super Cache), image optimization makes the biggest performance difference</li>
+<li><strong>Don&#39;t over-optimize</strong> — good enough is good enough, don&#39;t spend hours chasing the last few kilobytes</li>
+</ul>
+<hr>
+<p><strong>Next Module:</strong> <a href="lesson-25.html">Module 5 - WooCommerce Basics</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-23.html" class="prev">&larr; 23. Contact Forms</a>
+      <a href="lesson-25.html" class="next">25. WooCommerce Setup &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

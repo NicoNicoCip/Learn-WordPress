@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lección 33: Publicar un Sitio — Migración de Local a Hosting — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-33.html">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-33.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li class="active"><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lección 33: Publicar un Sitio — Migración de Local a Hosting</h1>
+<h2>Objetivos</h2>
+<ul>
+<li>Entender el proceso de migrar un sitio WordPress local a hosting en producción</li>
+<li>Elegir el hosting apropiado para tus necesidades</li>
+<li>Realizar la migración usando un plugin</li>
+<li>Completar la checklist post-lanzamiento</li>
+</ul>
+<hr>
+<h2>Resumen del Proceso de Lanzamiento</h2>
+<ol>
+<li><strong>Elegir y configurar el hosting</strong></li>
+<li><strong>Migrar tu sitio local al servidor</strong></li>
+<li><strong>Configurar dominio y DNS</strong></li>
+<li><strong>Probar todo en el servidor en producción</strong></li>
+<li><strong>Salir en producción (apuntar el dominio al sitio)</strong></li>
+<li><strong>Tareas post-lanzamiento</strong></li>
+</ol>
+<hr>
+<h2>Paso 1: Elegir Hosting</h2>
+<h3>Tipos de Hosting</h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Precio</th>
+<th>Ideal Para</th>
+<th>Ejemplos</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Hosting Compartido</strong></td>
+<td>3-10€/mes</td>
+<td>Sitios personales pequeños, blogs</td>
+<td>Bluehost, Hostinger</td>
+</tr>
+<tr>
+<td><strong>WordPress Gestionado</strong></td>
+<td>15-40€/mes</td>
+<td>Sitios de negocio, trabajo para clientes</td>
+<td>SiteGround, Cloudways</td>
+</tr>
+<tr>
+<td><strong>Premium Gestionado</strong></td>
+<td>30-100€+/mes</td>
+<td>Alto tráfico, e-commerce</td>
+<td>WP Engine, Kinsta</td>
+</tr>
+<tr>
+<td><strong>VPS</strong></td>
+<td>20-80€/mes</td>
+<td>Desarrolladores que quieren control</td>
+<td>DigitalOcean, Linode</td>
+</tr>
+</tbody></table>
+<h3>Qué Buscar:</h3>
+<ul>
+<li><strong>Almacenamiento SSD</strong> (más rápido que HDD)</li>
+<li><strong>Certificado SSL gratuito</strong> (HTTPS)</li>
+<li><strong>Copias de seguridad diarias</strong> (incluidas)</li>
+<li><strong>Instalación de WordPress con un clic</strong></li>
+<li><strong>Entorno de staging</strong> (para probar cambios)</li>
+<li><strong>Buen soporte</strong> (chat o teléfono 24/7)</li>
+<li><strong>Garantía de uptime</strong> (99.9%+)</li>
+<li><strong>Ubicación del servidor</strong> cerca de tu audiencia</li>
+</ul>
+<h3>Recomendados para Principiantes:</h3>
+<ol>
+<li><strong>SiteGround</strong> — excelente soporte, staging y velocidad</li>
+<li><strong>Cloudways</strong> — flexible, buen rendimiento, pago por uso</li>
+<li><strong>Bluehost</strong> — económico, oficialmente recomendado por WordPress.org</li>
+</ol>
+<hr>
+<h2>Paso 2: Obtener un Nombre de Dominio</h2>
+<p>Si aún no tienes un dominio:</p>
+<ol>
+<li>Elige un registrador: <strong>Namecheap</strong>, <strong>Squarespace Domains</strong>, <strong>GoDaddy</strong>, <strong>Cloudflare Registrar</strong></li>
+<li>Busca el dominio que deseas</li>
+<li>Regístralo (típicamente 10-15€/año para .com)</li>
+<li><strong>No compres extras</strong> que intenten venderte (la protección de privacidad suele ser gratuita ahora)</li>
+</ol>
+<hr>
+<h2>Paso 3: Migrar Tu Sitio</h2>
+<h3>Método 1: All-in-One WP Migration (El Más Fácil)</h3>
+<p>Este es el método de migración más sencillo:</p>
+<p><strong>En tu sitio local (exportar):</strong></p>
+<ol>
+<li>Instala el plugin <strong>&quot;All-in-One WP Migration&quot;</strong></li>
+<li>Ve a <strong>All-in-One WP Migration → Export</strong></li>
+<li>Haz clic en <strong>&quot;Export To&quot;</strong> → <strong>&quot;File&quot;</strong></li>
+<li>Espera a que se complete la exportación</li>
+<li>Descarga el archivo <code>.wpress</code></li>
+</ol>
+<p><strong>En tu hosting en producción (importar):</strong></p>
+<ol>
+<li>Instala WordPress en tu hosting (la mayoría tienen instalación con un clic)</li>
+<li>Inicia sesión en el nuevo admin de WordPress</li>
+<li>Instala el plugin <strong>&quot;All-in-One WP Migration&quot;</strong></li>
+<li>Ve a <strong>All-in-One WP Migration → Import</strong></li>
+<li>Sube el archivo <code>.wpress</code> de tu exportación local</li>
+<li>Espera a que se complete la importación</li>
+<li>Sigue las instrucciones (reemplazará todo en el sitio en producción)</li>
+<li>Inicia sesión de nuevo con las <strong>credenciales de tu sitio local</strong> (la importación reemplaza los usuarios también)</li>
+</ol>
+<p><strong>Nota:</strong> La versión gratuita tiene un límite de tamaño de archivo (~256MB-512MB dependiendo de la versión). Para sitios más grandes:</p>
+<ul>
+<li>Usa la &quot;Unlimited Extension&quot; ($69 pago único)</li>
+<li>O usa el Método 2 a continuación</li>
+</ul>
+<h3>Método 2: Duplicator (Para Sitios Más Grandes)</h3>
+<ol>
+<li>Instala el plugin <strong>&quot;Duplicator&quot;</strong> en tu sitio local</li>
+<li>Ve a <strong>Duplicator → Packages → Create New</strong></li>
+<li>Sigue el asistente para crear un paquete (archivo + instalador)</li>
+<li>Descarga tanto el archivo <strong>archive.zip</strong> como <strong>installer.php</strong></li>
+<li>Sube ambos archivos al directorio raíz de tu hosting (vía FTP o administrador de archivos)</li>
+<li>Navega a <code>tudominio.com/installer.php</code> en tu navegador</li>
+<li>Sigue el asistente de instalación:<ul>
+<li>Introduce las credenciales de la base de datos de tu sitio en producción (desde tu panel de hosting)</li>
+<li>Establece la nueva URL</li>
+<li>Completa la migración</li>
+</ul>
+</li>
+<li>Elimina installer.php y archive.zip del servidor después de la migración</li>
+</ol>
+<h3>Método 3: Migración Manual (Avanzado)</h3>
+<p>Para desarrolladores o cuando los plugins no funcionan:</p>
+<p><strong>Exportar base de datos:</strong></p>
+<ol>
+<li>En Local WP, ve a la pestaña Database → Open Adminer</li>
+<li>Exporta la base de datos como SQL</li>
+</ol>
+<p><strong>Subir archivos:</strong></p>
+<ol>
+<li>Conéctate a tu hosting vía FTP (FileZilla) o administrador de archivos</li>
+<li>Sube toda la carpeta <code>wp-content</code></li>
+<li>Sube <code>wp-config.php</code> (luego edita las credenciales de la base de datos)</li>
+</ol>
+<p><strong>Importar base de datos:</strong></p>
+<ol>
+<li>Crea una base de datos en tu hosting (vía cPanel → MySQL)</li>
+<li>Importa tu archivo SQL vía phpMyAdmin</li>
+</ol>
+<p><strong>Actualizar URLs:</strong></p>
+<ol>
+<li>Ejecuta un buscar y reemplazar en la base de datos:<ul>
+<li>URL antigua: <code>http://learning-wordpress.local</code></li>
+<li>URL nueva: <code>https://tudominio.com</code></li>
+<li>Usa el plugin &quot;Better Search Replace&quot; para esto</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>Paso 4: Configuración Post-Migración</h2>
+<h3>Actualizar URLs</h3>
+<p>Asegúrate de que todas las URLs apuntan al dominio en producción:</p>
+<ol>
+<li>Ve a <strong>Settings → General</strong></li>
+<li>Verifica que <strong>WordPress Address</strong> y <strong>Site Address</strong> son tu dominio en producción</li>
+<li>Ambos deben usar <code>https://</code> (no <code>http://</code>)</li>
+</ol>
+<h3>Habilitar SSL/HTTPS</h3>
+<ol>
+<li>Tu host debe proporcionar un certificado SSL gratuito</li>
+<li>Actívalo a través de tu panel de hosting</li>
+<li>Instala el plugin <strong>&quot;Really Simple SSL&quot;</strong> para una configuración HTTPS fácil</li>
+<li>O actualiza manualmente las URLs en Settings → General</li>
+</ol>
+<h3>Actualizar Permalinks</h3>
+<ol>
+<li>Ve a <strong>Settings → Permalinks</strong></li>
+<li>Haz clic en <strong>&quot;Save Changes&quot;</strong> (incluso sin cambiar nada)</li>
+<li>Esto refresca las reglas de reescritura para el nuevo servidor</li>
+</ol>
+<h3>Deshabilitar &quot;Discourage Search Engines&quot;</h3>
+<ol>
+<li>Ve a <strong>Settings → Reading</strong></li>
+<li><strong>Desmarca</strong> &quot;Discourage search engines from indexing this site&quot;</li>
+<li>Guarda los cambios — ¡esto es crítico para que Google encuentre tu sitio!</li>
+</ol>
+<hr>
+<h2>Paso 5: Checklist de Lanzamiento</h2>
+<h3>Antes de Anunciar el Sitio:</h3>
+<p><strong>Contenido:</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> Todas las páginas tienen contenido real (sin lorem ipsum)</li>
+<li><input disabled="" type="checkbox"> Todas las imágenes están presentes y cargando</li>
+<li><input disabled="" type="checkbox"> Todos los enlaces funcionan (sin enlaces rotos)</li>
+<li><input disabled="" type="checkbox"> Los formularios de contacto envían correctamente</li>
+<li><input disabled="" type="checkbox"> Los números de teléfono y emails son correctos</li>
+<li><input disabled="" type="checkbox"> La información del pie de página es precisa</li>
+<li><input disabled="" type="checkbox"> Existen las páginas de política de privacidad y términos</li>
+</ul>
+<p><strong>Funcionalidad:</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> Todos los formularios funcionan y envían emails a la dirección correcta</li>
+<li><input disabled="" type="checkbox"> El checkout de WooCommerce funciona (si aplica)</li>
+<li><input disabled="" type="checkbox"> El procesamiento de pagos funciona en modo real (¡desactiva el modo de prueba!)</li>
+<li><input disabled="" type="checkbox"> Se están recibiendo las notificaciones por email</li>
+<li><input disabled="" type="checkbox"> Los enlaces de redes sociales funcionan</li>
+<li><input disabled="" type="checkbox"> La funcionalidad de búsqueda funciona</li>
+</ul>
+<p><strong>Técnico:</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> SSL/HTTPS está activo (icono de candado en el navegador)</li>
+<li><input disabled="" type="checkbox"> &quot;Discourage search engines&quot; está desmarcado</li>
+<li><input disabled="" type="checkbox"> Los Permalinks están en &quot;Post name&quot;</li>
+<li><input disabled="" type="checkbox"> El favicon está configurado</li>
+<li><input disabled="" type="checkbox"> El sitio carga en menos de 3 segundos</li>
+<li><input disabled="" type="checkbox"> Responsive en móvil — probado en dispositivos reales</li>
+<li><input disabled="" type="checkbox"> La caché está habilitada</li>
+<li><input disabled="" type="checkbox"> Las copias de seguridad están programadas</li>
+<li><input disabled="" type="checkbox"> El plugin de seguridad está activo</li>
+</ul>
+<p><strong>SEO:</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> Cada página tiene un SEO title y meta description (Yoast)</li>
+<li><input disabled="" type="checkbox"> El XML sitemap es accesible (<code>/sitemap_index.xml</code>)</li>
+<li><input disabled="" type="checkbox"> Google Search Console está configurado (enviar sitemap)</li>
+<li><input disabled="" type="checkbox"> Google Analytics está instalado (si se desea)</li>
+<li><input disabled="" type="checkbox"> Alt text en todas las imágenes</li>
+</ul>
+<hr>
+<h2>Paso 6: Tareas Post-Lanzamiento</h2>
+<h3>Enviar a Google</h3>
+<ol>
+<li>Ve a <strong>Google Search Console</strong> (<a href="https://search.google.com/search-console">https://search.google.com/search-console</a>)</li>
+<li>Añade la propiedad de tu sitio</li>
+<li>Verifica la propiedad (DNS, archivo HTML o Google Analytics)</li>
+<li>Envía tu sitemap: <code>tudominio.com/sitemap_index.xml</code></li>
+</ol>
+<h3>Configurar Google Analytics (Opcional)</h3>
+<ol>
+<li>Crea una cuenta de <strong>Google Analytics 4</strong></li>
+<li>Obtén tu código de seguimiento</li>
+<li>Instálalo vía:<ul>
+<li>Yoast SEO (integración limitada)</li>
+<li>Un plugin como &quot;Site Kit by Google&quot;</li>
+<li>O directamente en el header de tu tema</li>
+</ul>
+</li>
+</ol>
+<h3>Monitorear</h3>
+<ul>
+<li>Revisa Google Search Console para errores de rastreo</li>
+<li>Monitorea el uptime del sitio (UptimeRobot — gratuito)</li>
+<li>Revisa los datos de analítica semanalmente</li>
+<li>Mantén la rutina de mantenimiento (Lección 30)</li>
+</ul>
+<hr>
+<h2>Entornos de Staging</h2>
+<h3>¿Qué es Staging?</h3>
+<p>Un sitio de staging es una <strong>copia de tu sitio en producción</strong> usada para probar cambios antes de aplicarlos al sitio real.</p>
+<h3>Por Qué Usar Staging:</h3>
+<ul>
+<li>Probar actualizaciones de plugins antes de que rompan tu sitio en producción</li>
+<li>Construir nuevas páginas sin que los visitantes vean trabajo inacabado</li>
+<li>Probar cambios de diseño de forma segura</li>
+</ul>
+<h3>Cómo Configurar:</h3>
+<ul>
+<li>La mayoría de hosts gestionados ofrecen <strong>staging con un clic</strong> (SiteGround, WP Engine, Kinsta)</li>
+<li>O usa el plugin <strong>WP Staging</strong> (versión gratuita disponible)</li>
+<li>Haz cambios en staging → prueba → envía a producción</li>
+</ul>
+<hr>
+<h2>Ejercicios</h2>
+<ol>
+<li><p><strong>Investiga hosting</strong>: Visita SiteGround, Cloudways y Bluehost. Compara sus planes y precios de hosting WordPress.</p>
+</li>
+<li><p><strong>Practica la exportación</strong>: Instala &quot;All-in-One WP Migration&quot; en tu sitio local y expórtalo. Anota el tamaño del archivo.</p>
+</li>
+<li><p><strong>Crea la checklist de lanzamiento</strong>: Copia la checklist de lanzamiento de esta lección y personalízala para tus necesidades.</p>
+</li>
+<li><p><strong>Revisa todo localmente</strong>: Repasa la checklist de lanzamiento en tu sitio local. Arregla todo lo que no esté listo.</p>
+</li>
+<li><p><strong>Configura Google Search Console</strong>: Crea una cuenta (la necesitarás para cualquier sitio en producción).</p>
+</li>
+</ol>
+<hr>
+<h2>Puntos Clave</h2>
+<ul>
+<li><strong>Elige hosting</strong> que se ajuste a tus necesidades (SiteGround, Cloudways recomendados para principiantes)</li>
+<li><strong>All-in-One WP Migration</strong> es la forma más fácil de migrar de local a producción</li>
+<li>Después de la migración: actualiza URLs, habilita SSL, refresca permalinks, desmarca &quot;discourage search engines&quot;</li>
+<li>Usa la <strong>checklist de lanzamiento</strong> para asegurarte de que no se olvida nada</li>
+<li>Envía tu sitemap a <strong>Google Search Console</strong> después del lanzamiento</li>
+<li>Configura <strong>Google Analytics</strong> para rastrear visitantes</li>
+<li>Usa <strong>entornos de staging</strong> para probar cambios en sitios en producción</li>
+<li><strong>Haz copia de seguridad antes de cada cambio importante</strong> — incluyendo la migración misma</li>
+</ul>
+<hr>
+<p><strong>¡Felicidades!</strong> Has completado el Curso de WordPress. ¡Ve a los <a href="project-01.html">Proyectos Prácticos</a> para poner todo en práctica!</p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-32.html" class="prev">&larr; 32. Rendimiento</a>
+      <a href="project-01.html" class="next">Proyecto 1: Sitio Web Empresarial &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

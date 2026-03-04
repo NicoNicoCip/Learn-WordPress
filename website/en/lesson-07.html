@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 07: WordPress Settings Deep Dive — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-07.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-07.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li class="active"><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lesson 07: WordPress Settings Deep Dive</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Configure all essential WordPress settings correctly</li>
+<li>Set up proper permalinks (URL structure)</li>
+<li>Configure reading settings (homepage display)</li>
+<li>Understand each settings page and when to change it</li>
+</ul>
+<hr>
+<h2>Settings → General</h2>
+<p><strong>Path:</strong> Settings → General</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What It Does</th>
+<th>Recommended</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Site Title</strong></td>
+<td>Your website&#39;s name (appears in browser tab, header)</td>
+<td>Your business/site name</td>
+</tr>
+<tr>
+<td><strong>Tagline</strong></td>
+<td>A short description of your site</td>
+<td>A brief slogan or description</td>
+</tr>
+<tr>
+<td><strong>WordPress Address (URL)</strong></td>
+<td>Where WordPress files are installed</td>
+<td>Don&#39;t change this!</td>
+</tr>
+<tr>
+<td><strong>Site Address (URL)</strong></td>
+<td>The public URL visitors use</td>
+<td>Don&#39;t change this!</td>
+</tr>
+<tr>
+<td><strong>Administration Email</strong></td>
+<td>Email for admin notifications</td>
+<td>Your real email</td>
+</tr>
+<tr>
+<td><strong>Membership</strong></td>
+<td>Allow anyone to register</td>
+<td>Usually unchecked (unless you need user registration)</td>
+</tr>
+<tr>
+<td><strong>New User Default Role</strong></td>
+<td>Role assigned to new registrants</td>
+<td>Subscriber (safest)</td>
+</tr>
+<tr>
+<td><strong>Site Language</strong></td>
+<td>Language for the admin interface</td>
+<td>Your preferred language</td>
+</tr>
+<tr>
+<td><strong>Timezone</strong></td>
+<td>Used for scheduling posts</td>
+<td>Your timezone</td>
+</tr>
+<tr>
+<td><strong>Date Format</strong></td>
+<td>How dates are displayed</td>
+<td>Your preference</td>
+</tr>
+<tr>
+<td><strong>Time Format</strong></td>
+<td>How times are displayed</td>
+<td>Your preference</td>
+</tr>
+</tbody></table>
+<h3>Action Items:</h3>
+<ol>
+<li>Set your <strong>Site Title</strong> to something meaningful</li>
+<li>Write a clear <strong>Tagline</strong> (or leave it empty — some themes display &quot;Just another WordPress site&quot; if you don&#39;t change it!)</li>
+<li>Set your <strong>Timezone</strong></li>
+<li><strong>Never change</strong> the WordPress Address or Site Address unless you know exactly what you&#39;re doing — this can break your site</li>
+</ol>
+<hr>
+<h2>Settings → Writing</h2>
+<p><strong>Path:</strong> Settings → Writing</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What It Does</th>
+<th>Recommended</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Default Post Category</strong></td>
+<td>Category for posts when none is selected</td>
+<td>Change from &quot;Uncategorized&quot; to your general category</td>
+</tr>
+<tr>
+<td><strong>Default Post Format</strong></td>
+<td>Post format (Standard, Video, Quote, etc.)</td>
+<td>Standard</td>
+</tr>
+</tbody></table>
+<p>This page is simple. The main action:</p>
+<ul>
+<li>Set your <strong>Default Post Category</strong> to whatever you renamed &quot;Uncategorized&quot; to</li>
+</ul>
+<hr>
+<h2>Settings → Reading</h2>
+<p><strong>Path:</strong> Settings → Reading</p>
+<p>This is one of the <strong>most important</strong> settings pages.</p>
+<h3>Your Homepage Displays</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Your latest posts</strong></td>
+<td>Homepage shows a list of your recent blog posts (like a traditional blog)</td>
+</tr>
+<tr>
+<td><strong>A static page</strong></td>
+<td>Homepage shows a specific page you created (like a business website)</td>
+</tr>
+</tbody></table>
+<p><strong>For most professional sites, choose &quot;A static page&quot;:</strong></p>
+<ol>
+<li>Select <strong>&quot;A static page&quot;</strong></li>
+<li><strong>Homepage</strong>: Select the page to use as your homepage (create a &quot;Home&quot; page first if you haven&#39;t)</li>
+<li><strong>Posts page</strong>: Select a page to use as your blog listing (create a &quot;Blog&quot; page — it can be empty, WordPress will populate it automatically)</li>
+</ol>
+<h3>Other Reading Settings</h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What It Does</th>
+<th>Recommended</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Blog pages show at most</strong></td>
+<td>Number of posts per page</td>
+<td>10 is fine</td>
+</tr>
+<tr>
+<td><strong>Syndication feeds show</strong></td>
+<td>Number of items in RSS feed</td>
+<td>10 is fine</td>
+</tr>
+<tr>
+<td><strong>For each post in a feed, include</strong></td>
+<td>Full text or summary in RSS</td>
+<td>Summary</td>
+</tr>
+<tr>
+<td><strong>Search engine visibility</strong></td>
+<td>Discourage search engines from indexing</td>
+<td><strong>Uncheck this!</strong> (Unless you&#39;re in development and don&#39;t want Google to find your site yet)</td>
+</tr>
+</tbody></table>
+<h3>Critical Warning!</h3>
+<p>The &quot;Search engine visibility&quot; checkbox (&quot;Discourage search engines from indexing this site&quot;) should be:</p>
+<ul>
+<li><strong>Checked</strong> while you&#39;re developing locally or building the site</li>
+<li><strong>Unchecked</strong> when the site goes live — forgetting this means Google won&#39;t index your site!</li>
+</ul>
+<hr>
+<h2>Settings → Discussion</h2>
+<p><strong>Path:</strong> Settings → Discussion</p>
+<p>Controls <strong>comments</strong> and user interaction.</p>
+<h3>Key Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What It Does</th>
+<th>Recommended for Business Sites</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Allow people to submit comments on new posts</strong></td>
+<td>Enable/disable comments globally</td>
+<td>Uncheck if you don&#39;t want a blog with comments</td>
+</tr>
+<tr>
+<td><strong>Comment author must fill out name and email</strong></td>
+<td>Require identification</td>
+<td>Check</td>
+</tr>
+<tr>
+<td><strong>Users must be registered and logged in to comment</strong></td>
+<td>Restrict who can comment</td>
+<td>Usually uncheck</td>
+</tr>
+<tr>
+<td><strong>Automatically close comments on posts older than X days</strong></td>
+<td>Auto-close old discussions</td>
+<td>30-90 days is common</td>
+</tr>
+<tr>
+<td><strong>Comment must be manually approved</strong></td>
+<td>Moderate all comments</td>
+<td>Check — prevents spam</td>
+</tr>
+<tr>
+<td><strong>Comment moderation</strong></td>
+<td>Hold comments with certain content</td>
+<td>Default is fine</td>
+</tr>
+<tr>
+<td><strong>Disallowed comment keys</strong></td>
+<td>Block comments with certain words</td>
+<td>Add spam words as needed</td>
+</tr>
+</tbody></table>
+<h3>If You Don&#39;t Want Comments at All:</h3>
+<ol>
+<li>Uncheck &quot;Allow people to submit comments on new posts&quot;</li>
+<li>This applies to <strong>new</strong> posts only — existing posts keep their current setting</li>
+<li>To disable comments on existing posts, bulk-edit them (Posts → All Posts → Select All → Bulk Actions → Edit → Comments: Do not allow)</li>
+</ol>
+<hr>
+<h2>Settings → Media</h2>
+<p><strong>Path:</strong> Settings → Media</p>
+<p>Controls the <strong>image sizes</strong> WordPress generates when you upload.</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Thumbnail size</strong></td>
+<td>150 × 150</td>
+<td>Small previews</td>
+</tr>
+<tr>
+<td><strong>Medium size</strong></td>
+<td>300 × 300 max</td>
+<td>In-content images</td>
+</tr>
+<tr>
+<td><strong>Large size</strong></td>
+<td>1024 × 1024 max</td>
+<td>Full-width images</td>
+</tr>
+</tbody></table>
+<p><strong>Recommendation:</strong> Leave these at defaults unless your theme or design requires specific sizes.</p>
+<h3>Organize Media</h3>
+<ul>
+<li><strong>&quot;Organize my uploads into month- and year-based folders&quot;</strong> — Keep this checked. It creates folders like <code>/uploads/2026/03/</code> which prevents having thousands of files in one directory.</li>
+</ul>
+<hr>
+<h2>Settings → Permalinks (Critical!)</h2>
+<p><strong>Path:</strong> Settings → Permalinks</p>
+<p>This controls the <strong>URL structure</strong> of your site. This is one of the first things you should set up.</p>
+<h3>Available Structures:</h3>
+<table>
+<thead>
+<tr>
+<th>Structure</th>
+<th>Example URL</th>
+<th>Recommended?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Plain</strong></td>
+<td><code>?p=123</code></td>
+<td>Never — ugly and bad for SEO</td>
+</tr>
+<tr>
+<td><strong>Day and name</strong></td>
+<td><code>/2026/03/02/sample-post/</code></td>
+<td>For news sites</td>
+</tr>
+<tr>
+<td><strong>Month and name</strong></td>
+<td><code>/2026/03/sample-post/</code></td>
+<td>For blogs</td>
+</tr>
+<tr>
+<td><strong>Numeric</strong></td>
+<td><code>/archives/123</code></td>
+<td>Never</td>
+</tr>
+<tr>
+<td><strong>Post name</strong></td>
+<td><code>/sample-post/</code></td>
+<td><strong>Yes — use this one!</strong></td>
+</tr>
+<tr>
+<td><strong>Custom</strong></td>
+<td>You define it</td>
+<td>For specific needs</td>
+</tr>
+</tbody></table>
+<h3>Set It Now:</h3>
+<ol>
+<li>Select <strong>&quot;Post name&quot;</strong></li>
+<li>Click <strong>&quot;Save Changes&quot;</strong></li>
+</ol>
+<p><strong>Why &quot;Post name&quot;?</strong></p>
+<ul>
+<li>Clean, readable URLs: <code>yoursite.com/about-us/</code> instead of <code>yoursite.com/?p=5</code></li>
+<li>Better for SEO — keywords in the URL help search engines</li>
+<li>Better for sharing — people can read and trust the URL</li>
+<li>Short and professional</li>
+</ul>
+<h3>Important Warning:</h3>
+<p><strong>Change permalinks FIRST, before creating lots of content.</strong> Changing them later can break existing links and hurt SEO. On a live site with existing content, changing permalinks requires setting up redirects.</p>
+<hr>
+<h2>Settings → Privacy</h2>
+<p><strong>Path:</strong> Settings → Privacy</p>
+<ul>
+<li>Select or create a <strong>Privacy Policy page</strong></li>
+<li>WordPress can generate a template privacy policy for you</li>
+<li>Required by law in many regions (GDPR in Europe, CCPA in California)</li>
+</ul>
+<h3>Action Items:</h3>
+<ol>
+<li>Click <strong>&quot;Create a new Privacy Policy page&quot;</strong> if you haven&#39;t already</li>
+<li>Edit the generated page to match your site&#39;s actual practices</li>
+<li>Or select an existing privacy policy page</li>
+</ol>
+<hr>
+<h2>First-Time Setup Checklist</h2>
+<p>Here&#39;s the order to configure a new WordPress site:</p>
+<ol>
+<li><p><strong>Settings → General</strong></p>
+<ul>
+<li>Set Site Title and Tagline</li>
+<li>Set Timezone</li>
+<li>Remove &quot;Just another WordPress site&quot; from Tagline</li>
+</ul>
+</li>
+<li><p><strong>Settings → Permalinks</strong></p>
+<ul>
+<li>Select &quot;Post name&quot; → Save Changes</li>
+</ul>
+</li>
+<li><p><strong>Settings → Reading</strong></p>
+<ul>
+<li>Set &quot;A static page&quot; for homepage (after creating Home and Blog pages)</li>
+<li>Check &quot;Discourage search engines&quot; while developing</li>
+</ul>
+</li>
+<li><p><strong>Settings → Discussion</strong></p>
+<ul>
+<li>Configure comment settings based on your needs</li>
+</ul>
+</li>
+<li><p><strong>Settings → Writing</strong></p>
+<ul>
+<li>Set Default Post Category</li>
+</ul>
+</li>
+<li><p><strong>Settings → Media</strong></p>
+<ul>
+<li>Usually leave defaults</li>
+</ul>
+</li>
+<li><p><strong>Settings → Privacy</strong></p>
+<ul>
+<li>Create or assign a privacy policy page</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>Exercises</h2>
+<ol>
+<li><p><strong>Configure General settings</strong>: Set your site title, tagline, and timezone. Remove &quot;Just another WordPress site&quot; if it&#39;s still there.</p>
+</li>
+<li><p><strong>Set Permalinks to &quot;Post name&quot;</strong>: This is critical — do it now before creating lots of content.</p>
+</li>
+<li><p><strong>Set up your homepage</strong>:</p>
+<ul>
+<li>Create a page called &quot;Home&quot; (if you haven&#39;t already)</li>
+<li>Create a page called &quot;Blog&quot;</li>
+<li>Go to Settings → Reading → select &quot;A static page&quot;</li>
+<li>Set Homepage to &quot;Home&quot; and Posts page to &quot;Blog&quot;</li>
+<li>Visit your site to see the change</li>
+</ul>
+</li>
+<li><p><strong>Configure comments</strong>: Decide if you want comments on your site. If not, uncheck the setting in Discussion. If yes, enable moderation.</p>
+</li>
+<li><p><strong>Check search engine visibility</strong>: Make sure it&#39;s checked while developing locally (we&#39;ll uncheck it when going live).</p>
+</li>
+<li><p><strong>Create a privacy policy</strong>: Use the Settings → Privacy page to create one.</p>
+</li>
+</ol>
+<hr>
+<h2>Key Takeaways</h2>
+<ul>
+<li><strong>Set Permalinks to &quot;Post name&quot; immediately</strong> — do this before creating content</li>
+<li><strong>Set a static homepage</strong> in Reading settings for professional/business sites</li>
+<li><strong>Remove &quot;Just another WordPress site&quot;</strong> from your tagline</li>
+<li><strong>Check &quot;Discourage search engines&quot;</strong> during development, uncheck when going live</li>
+<li><strong>Enable comment moderation</strong> if you allow comments</li>
+<li>The most critical settings pages are: <strong>Permalinks</strong>, <strong>Reading</strong>, and <strong>General</strong></li>
+<li>Always configure settings <strong>before</strong> building out your content</li>
+</ul>
+<hr>
+<p><strong>Next Module:</strong> <a href="lesson-08.html">Module 2 - Themes &amp; Appearance</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-06.html" class="prev">&larr; 06. The Media Library</a>
+      <a href="lesson-08.html" class="next">08. Understanding Themes &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

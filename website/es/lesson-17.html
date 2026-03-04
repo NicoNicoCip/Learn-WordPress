@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leccion 17: Construir una Pagina Sobre Nosotros — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-17.html">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-17.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li class="active"><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Leccion 17: Construir una Pagina Sobre Nosotros</h1>
+<h2>Objetivos</h2>
+<ul>
+<li>Disenar una pagina Sobre Nosotros profesional usando Elementor</li>
+<li>Aprender los patrones de Image Box y Miembro del Equipo</li>
+<li>Practicar disenos de 2 columnas para combinaciones de imagen + texto</li>
+<li>Crear una pagina de narrativa visualmente atractiva</li>
+</ul>
+<hr>
+<h2>Estructura de la Pagina Sobre Nosotros</h2>
+<p>Una buena pagina Sobre Nosotros normalmente incluye:</p>
+<ol>
+<li><strong>Encabezado de Pagina</strong> — titulo y breve introduccion</li>
+<li><strong>Nuestra Historia</strong> — historial/antecedentes de la empresa con imagenes</li>
+<li><strong>Mision y Valores</strong> — lo que representas</li>
+<li><strong>Conoce al Equipo</strong> — perfiles de los miembros del equipo</li>
+<li><strong>CTA</strong> — que hacer a continuacion</li>
+</ol>
+<hr>
+<h2>Seccion 1: Encabezado de Pagina</h2>
+<ol>
+<li><p><strong>Anade una Seccion</strong> — 1 columna</p>
+</li>
+<li><p><strong>Ajustes de la Seccion:</strong></p>
+<ul>
+<li>Style: Background → tu color primary o una imagen hero con superposicion oscura</li>
+<li>Content: Min Height → 300px, Vertical Align → Middle</li>
+<li>Advanced: Padding → 60px arriba y abajo</li>
+</ul>
+</li>
+<li><p><strong>Anade un Heading:</strong> &quot;Sobre Nosotros&quot;</p>
+<ul>
+<li>H1, Centro, Blanco, 48px</li>
+</ul>
+</li>
+<li><p><strong>Anade un Text Editor:</strong> &quot;Conoce nuestro camino, nuestra mision y el equipo que hay detras de todo.&quot;</p>
+<ul>
+<li>Centro, texto claro, 18px</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>Seccion 2: Nuestra Historia</h2>
+<ol>
+<li><strong>Anade una Seccion</strong> — 2 columnas (50/50)</li>
+<li><strong>Ajustes de la Seccion:</strong><ul>
+<li>Style: Background → Blanco</li>
+<li>Advanced: Padding → 80px arriba y abajo</li>
+</ul>
+</li>
+</ol>
+<p><strong>Columna 1 (Imagen):</strong></p>
+<ul>
+<li>Anade un widget <strong>Image</strong></li>
+<li>Sube una imagen relevante (oficina, espacio de trabajo, producto)</li>
+<li>Estilo: Border Radius → 8px, Box Shadow → sombra sutil</li>
+</ul>
+<p><strong>Columna 2 (Texto):</strong></p>
+<ul>
+<li><strong>Heading:</strong> &quot;Nuestra Historia&quot;, H2, alineado a la izquierda</li>
+<li><strong>Divider:</strong> 15% de ancho, color de acento, 3px de grosor</li>
+<li><strong>Text Editor:</strong> Escribe 2-3 parrafos sobre la historia de la empresa<pre><code>Fundada en 2020, comenzamos con una mision sencilla: ayudar a las
+pequenas empresas a prosperar en internet. Lo que empezo como un equipo
+de dos personas trabajando desde una oficina en casa ha crecido hasta
+convertirse en una agencia digital de servicio completo.
+
+A lo largo de los anos, hemos tenido el privilegio de trabajar con mas
+de 200 empresas, desde startups locales hasta empresas consolidadas.
+Cada proyecto nos ha ensenado algo nuevo y nos ha impulsado a seguir
+mejorando.
+</code></pre>
+</li>
+</ul>
+<h3>Anadir una Segunda Seccion de Historia (Diseno Invertido)</h3>
+<ol>
+<li><strong>Anade otra seccion de 2 columnas</strong> debajo</li>
+<li>Esta vez, pon el <strong>texto en la Columna 1</strong> y la <strong>imagen en la Columna 2</strong></li>
+<li>Esto crea variedad visual con un diseno alternado</li>
+</ol>
+<p><strong>Consejo:</strong> Alternar imagen-izquierda/imagen-derecha crea un patron en zigzag que guia la vista hacia abajo en la pagina.</p>
+<hr>
+<h2>Seccion 3: Mision y Valores</h2>
+<ol>
+<li><p><strong>Anade una Seccion</strong> — 1 columna (para el encabezado)</p>
+</li>
+<li><p>Estilo: Background → gris claro (#f8f9fa)</p>
+</li>
+<li><p>Padding: 80px arriba, 20px abajo</p>
+</li>
+<li><p><strong>Anade un Heading:</strong> &quot;Nuestra Mision y Valores&quot;, H2, Centro</p>
+</li>
+<li><p><strong>Anade otra seccion debajo</strong> — 3 columnas (aun con fondo gris claro)</p>
+</li>
+<li><p>Padding: 20px arriba, 80px abajo</p>
+</li>
+</ol>
+<p>En cada columna, anade un <strong>Icon Box</strong>:</p>
+<p><strong>Columna 1:</strong></p>
+<ul>
+<li>Icono: <code>fa-bullseye</code> (diana)</li>
+<li>Titulo: &quot;Nuestra Mision&quot;</li>
+<li>Descripcion: &quot;Ofrecer soluciones digitales que ayuden a las empresas a crecer y tener exito en internet.&quot;</li>
+<li>Alineacion: Centro</li>
+</ul>
+<p><strong>Columna 2:</strong></p>
+<ul>
+<li>Icono: <code>fa-eye</code> (ojo)</li>
+<li>Titulo: &quot;Nuestra Vision&quot;</li>
+<li>Descripcion: &quot;Un mundo donde cada empresa tenga acceso a herramientas digitales profesionales y efectivas.&quot;</li>
+<li>Alineacion: Centro</li>
+</ul>
+<p><strong>Columna 3:</strong></p>
+<ul>
+<li>Icono: <code>fa-heart</code> (corazon)</li>
+<li>Titulo: &quot;Nuestros Valores&quot;</li>
+<li>Descripcion: &quot;Calidad, transparencia, innovacion y poner a nuestros clientes en primer lugar en todo lo que hacemos.&quot;</li>
+<li>Alineacion: Centro</li>
+</ul>
+<hr>
+<h2>Seccion 4: Conoce al Equipo</h2>
+<h3>Encabezado de la Seccion</h3>
+<ol>
+<li><p><strong>Anade una Seccion</strong> — 1 columna</p>
+</li>
+<li><p>Background: Blanco</p>
+</li>
+<li><p>Padding: 80px arriba, 20px abajo</p>
+</li>
+<li><p><strong>Heading:</strong> &quot;Conoce al Equipo&quot;, H2, Centro</p>
+</li>
+<li><p><strong>Text Editor:</strong> &quot;Las personas con talento detras de nuestro exito&quot;, Centro, Gris</p>
+</li>
+</ol>
+<h3>Cuadricula del Equipo</h3>
+<ol>
+<li><strong>Anade una Seccion</strong> — 3 o 4 columnas</li>
+<li>Padding: 20px arriba, 80px abajo</li>
+</ol>
+<p>Para cada miembro del equipo, anade estos widgets en una columna:</p>
+<p><strong>Image:</strong></p>
+<ul>
+<li>Sube una foto de perfil (las fotos cuadradas funcionan mejor)</li>
+<li>Estilo: Border Radius → 50% (la convierte en circulo)</li>
+<li>O Border Radius → 8px (cuadrado redondeado)</li>
+<li>Alineacion: Centro</li>
+</ul>
+<p><strong>Heading:</strong></p>
+<ul>
+<li>&quot;Maria Garcia&quot;, H4, Centro, 20px</li>
+</ul>
+<p><strong>Text Editor:</strong></p>
+<ul>
+<li>&quot;Fundadora y CEO&quot;, Centro, texto gris, 14px</li>
+<li>Opcionalmente anade una breve biografia debajo</li>
+</ul>
+<p><strong>Social Icons:</strong></p>
+<ul>
+<li>Anade el widget Social Icons</li>
+<li>Anade iconos de LinkedIn, Twitter/X</li>
+<li>Estilo: Size → 16px, Color → gris, Hover → color de acento</li>
+<li>Alineacion: Centro</li>
+</ul>
+<h3>Repite para cada miembro del equipo (3-4 miembros).</h3>
+<hr>
+<h2>Seccion 5: Estadisticas de la Empresa (Opcional)</h2>
+<p>Entre la seccion del equipo y el CTA, puedes anadir una barra de estadisticas:</p>
+<ol>
+<li><strong>Anade una Seccion</strong> — 4 columnas</li>
+<li>Background: Tu color primary o de acento</li>
+<li>Padding: 40px arriba y abajo</li>
+</ol>
+<p>Anade widgets <strong>Counter</strong>:</p>
+<ul>
+<li>&quot;200+ Proyectos Completados&quot;</li>
+<li>&quot;50+ Clientes Satisfechos&quot;</li>
+<li>&quot;10 Anos de Experiencia&quot;</li>
+<li>&quot;15 Miembros del Equipo&quot;</li>
+<li>Color: Blanco para todos los numeros y titulos</li>
+</ul>
+<hr>
+<h2>Seccion 6: Seccion CTA</h2>
+<ol>
+<li><p><strong>Anade una Seccion</strong> — 1 columna</p>
+</li>
+<li><p>Background: Claro (#f8f9fa) o tu color de acento</p>
+</li>
+<li><p>Min Height: 250px, Vertical Align: Middle</p>
+</li>
+<li><p>Padding: 60px arriba y abajo</p>
+</li>
+<li><p><strong>Heading:</strong> &quot;Trabajemos Juntos&quot;</p>
+<ul>
+<li>H2, Centro, 36px</li>
+</ul>
+</li>
+<li><p><strong>Text Editor:</strong> &quot;¿Tienes un proyecto en mente? Nos encantaria saber mas sobre el.&quot;</p>
+<ul>
+<li>Centro, 18px</li>
+</ul>
+</li>
+<li><p><strong>Button:</strong> &quot;Contactanos&quot; → <code>/contact</code></p>
+<ul>
+<li>Alineado al centro, con estilo acorde a tu diseno</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>Consejos de Diseno para Paginas Sobre Nosotros</h2>
+<h3>Ritmo Visual</h3>
+<ul>
+<li>Alterna entre secciones <strong>imagen-izquierda/texto-derecha</strong> y <strong>texto-izquierda/imagen-derecha</strong></li>
+<li>Alterna entre fondos de seccion <strong>blancos</strong> y <strong>gris claro</strong></li>
+<li>Esto crea ritmo visual y mantiene la pagina interesante</li>
+</ul>
+<h3>Personalidad</h3>
+<ul>
+<li>Usa <strong>fotos reales</strong> siempre que sea posible (no fotos de banco de imagenes)</li>
+<li>Escribe con un <strong>tono calido y conversacional</strong></li>
+<li>Muestra la <strong>personalidad de tu equipo</strong> — las personas conectan con personas</li>
+</ul>
+<h3>Mantenlo Escaneable</h3>
+<ul>
+<li>Usa <strong>encabezados</strong> para separar el contenido</li>
+<li>Manten los parrafos <strong>cortos</strong> (3-4 frases como maximo)</li>
+<li>Usa <strong>vietas</strong> para listas de valores o servicios</li>
+<li>Anade <strong>elementos visuales</strong> (iconos, divisores, imagenes) para romper los bloques de texto</li>
+</ul>
+<hr>
+<h2>Ejercicios</h2>
+<ol>
+<li><p><strong>Construye la pagina Sobre Nosotros completa</strong> siguiendo las secciones anteriores.</p>
+</li>
+<li><p><strong>Usa contenido real o ficticio</strong>: Escribe contenido real para una pagina Sobre Nosotros de un negocio real o imaginario. Haz que se sienta autentico.</p>
+</li>
+<li><p><strong>Anade miembros del equipo</strong>: Crea al menos 3 tarjetas de miembros del equipo con fotos circulares, nombres, cargos e iconos sociales.</p>
+</li>
+<li><p><strong>Prueba el diseno en zigzag</strong>: Crea dos secciones de imagen+texto donde la imagen alterne entre izquierda y derecha.</p>
+</li>
+<li><p><strong>Estilo consistente</strong>: Asegurate de que todos los encabezados, textos y colores coincidan con tus estilos globales de la Leccion 15.</p>
+</li>
+<li><p><strong>Previsualiza en movil</strong>: Comprueba como los disenos de 2 y 3 columnas se apilan en movil (deberian apilarse verticalmente de forma automatica).</p>
+</li>
+</ol>
+<hr>
+<h2>Puntos Clave</h2>
+<ul>
+<li>Las paginas Sobre Nosotros cuentan tu historia — hazlas <strong>personales y atractivas</strong></li>
+<li>Usa <strong>disenos de 2 columnas</strong> para combinaciones de imagen + texto</li>
+<li><strong>Alterna la posicion de la imagen</strong> (izquierda/derecha) para variedad visual</li>
+<li>Las <strong>imagenes circulares</strong> (border-radius: 50%) funcionan genial para fotos de perfil del equipo</li>
+<li>Alterna los fondos de seccion entre <strong>blanco y gris claro</strong> para ritmo visual</li>
+<li>Manten el texto <strong>escaneable</strong> — parrafos cortos, encabezados, iconos</li>
+<li>Siempre termina con una <strong>seccion CTA</strong> — guia al visitante hacia su siguiente paso</li>
+</ul>
+<hr>
+<p><strong>Siguiente Leccion:</strong> <a href="lesson-18.html">Leccion 18 - Construir una Pagina de Contacto con Formularios</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-16.html" class="prev">&larr; 16. Construir una Página de Inicio</a>
+      <a href="lesson-18.html" class="next">18. Página de Contacto &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

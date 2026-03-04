@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 33: Taking a Site Live — Migration from Local to Hosting — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-33.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-33.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li class="active"><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lesson 33: Taking a Site Live — Migration from Local to Hosting</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Understand the process of migrating a local WordPress site to live hosting</li>
+<li>Choose appropriate hosting for your needs</li>
+<li>Perform the migration using a plugin</li>
+<li>Complete the post-launch checklist</li>
+</ul>
+<hr>
+<h2>Overview of the Launch Process</h2>
+<ol>
+<li><strong>Choose and set up hosting</strong></li>
+<li><strong>Migrate your local site to the server</strong></li>
+<li><strong>Configure domain and DNS</strong></li>
+<li><strong>Test everything on the live server</strong></li>
+<li><strong>Go live (point domain to the site)</strong></li>
+<li><strong>Post-launch tasks</strong></li>
+</ol>
+<hr>
+<h2>Step 1: Choose Hosting</h2>
+<h3>Hosting Types</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Price</th>
+<th>Best For</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Shared Hosting</strong></td>
+<td>$3-10/mo</td>
+<td>Small personal sites, blogs</td>
+<td>Bluehost, Hostinger</td>
+</tr>
+<tr>
+<td><strong>Managed WordPress</strong></td>
+<td>$15-40/mo</td>
+<td>Business sites, client work</td>
+<td>SiteGround, Cloudways</td>
+</tr>
+<tr>
+<td><strong>Premium Managed</strong></td>
+<td>$30-100+/mo</td>
+<td>High-traffic, e-commerce</td>
+<td>WP Engine, Kinsta</td>
+</tr>
+<tr>
+<td><strong>VPS</strong></td>
+<td>$20-80/mo</td>
+<td>Developers who want control</td>
+<td>DigitalOcean, Linode</td>
+</tr>
+</tbody></table>
+<h3>What to Look For:</h3>
+<ul>
+<li><strong>SSD storage</strong> (faster than HDD)</li>
+<li><strong>Free SSL certificate</strong> (HTTPS)</li>
+<li><strong>Daily backups</strong> (included)</li>
+<li><strong>One-click WordPress install</strong></li>
+<li><strong>Staging environment</strong> (for testing changes)</li>
+<li><strong>Good support</strong> (24/7 chat or phone)</li>
+<li><strong>Uptime guarantee</strong> (99.9%+)</li>
+<li><strong>Server location</strong> near your audience</li>
+</ul>
+<h3>Recommended for Beginners:</h3>
+<ol>
+<li><strong>SiteGround</strong> — excellent support, staging, and speed</li>
+<li><strong>Cloudways</strong> — flexible, good performance, pay-as-you-go</li>
+<li><strong>Bluehost</strong> — budget-friendly, officially recommended by WordPress.org</li>
+</ol>
+<hr>
+<h2>Step 2: Get a Domain Name</h2>
+<p>If you don&#39;t already have a domain:</p>
+<ol>
+<li>Choose a registrar: <strong>Namecheap</strong>, <strong>Google Domains</strong>, <strong>GoDaddy</strong>, <strong>Cloudflare Registrar</strong></li>
+<li>Search for your desired domain</li>
+<li>Register it (typically $10-15/year for .com)</li>
+<li><strong>Don&#39;t buy extras</strong> they try to upsell (privacy protection is often free now)</li>
+</ol>
+<hr>
+<h2>Step 3: Migrate Your Site</h2>
+<h3>Method 1: All-in-One WP Migration (Easiest)</h3>
+<p>This is the simplest migration method:</p>
+<p><strong>On your local site (export):</strong></p>
+<ol>
+<li>Install <strong>&quot;All-in-One WP Migration&quot;</strong> plugin</li>
+<li>Go to <strong>All-in-One WP Migration → Export</strong></li>
+<li>Click <strong>&quot;Export To&quot;</strong> → <strong>&quot;File&quot;</strong></li>
+<li>Wait for the export to complete</li>
+<li>Download the <code>.wpress</code> file</li>
+</ol>
+<p><strong>On your live hosting (import):</strong></p>
+<ol>
+<li>Install WordPress on your hosting (most hosts have one-click install)</li>
+<li>Log into the new WordPress admin</li>
+<li>Install <strong>&quot;All-in-One WP Migration&quot;</strong> plugin</li>
+<li>Go to <strong>All-in-One WP Migration → Import</strong></li>
+<li>Upload the <code>.wpress</code> file from your local export</li>
+<li>Wait for import to complete</li>
+<li>Follow the prompts (it will replace everything on the live site)</li>
+<li>Log in again with your <strong>local site&#39;s credentials</strong> (the import replaces users too)</li>
+</ol>
+<p><strong>Note:</strong> The free version has a file size limit (~256MB-512MB depending on version). For larger sites:</p>
+<ul>
+<li>Use the &quot;Unlimited Extension&quot; ($69 one-time)</li>
+<li>Or use Method 2 below</li>
+</ul>
+<h3>Method 2: Duplicator (For Larger Sites)</h3>
+<ol>
+<li>Install <strong>&quot;Duplicator&quot;</strong> plugin on your local site</li>
+<li>Go to <strong>Duplicator → Packages → Create New</strong></li>
+<li>Follow the wizard to create a package (archive + installer)</li>
+<li>Download both the <strong>archive.zip</strong> and <strong>installer.php</strong> files</li>
+<li>Upload both files to your live hosting&#39;s root directory (via FTP or file manager)</li>
+<li>Navigate to <code>yourdomain.com/installer.php</code> in your browser</li>
+<li>Follow the installation wizard:<ul>
+<li>Enter your live site&#39;s database credentials (from your hosting panel)</li>
+<li>Set the new URL</li>
+<li>Complete the migration</li>
+</ul>
+</li>
+<li>Delete installer.php and archive.zip from the server after migration</li>
+</ol>
+<h3>Method 3: Manual Migration (Advanced)</h3>
+<p>For developers or when plugins don&#39;t work:</p>
+<p><strong>Export database:</strong></p>
+<ol>
+<li>In Local WP, go to the Database tab → Open Adminer</li>
+<li>Export the database as SQL</li>
+</ol>
+<p><strong>Upload files:</strong></p>
+<ol>
+<li>Connect to your hosting via FTP (FileZilla) or file manager</li>
+<li>Upload the entire <code>wp-content</code> folder</li>
+<li>Upload <code>wp-config.php</code> (then edit database credentials)</li>
+</ol>
+<p><strong>Import database:</strong></p>
+<ol>
+<li>Create a database on your hosting (via cPanel → MySQL)</li>
+<li>Import your SQL file via phpMyAdmin</li>
+</ol>
+<p><strong>Update URLs:</strong></p>
+<ol>
+<li>Run a search-and-replace on the database:<ul>
+<li>Old URL: <code>http://learning-wordpress.local</code></li>
+<li>New URL: <code>https://yourdomain.com</code></li>
+<li>Use the &quot;Better Search Replace&quot; plugin for this</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>Step 4: Post-Migration Configuration</h2>
+<h3>Update URLs</h3>
+<p>Make sure all URLs point to the live domain:</p>
+<ol>
+<li>Go to <strong>Settings → General</strong></li>
+<li>Verify <strong>WordPress Address</strong> and <strong>Site Address</strong> are your live domain</li>
+<li>Both should use <code>https://</code> (not <code>http://</code>)</li>
+</ol>
+<h3>Enable SSL/HTTPS</h3>
+<ol>
+<li>Your host should provide a free SSL certificate</li>
+<li>Activate it through your hosting panel</li>
+<li>Install <strong>&quot;Really Simple SSL&quot;</strong> plugin for easy HTTPS configuration</li>
+<li>Or manually update URLs in Settings → General</li>
+</ol>
+<h3>Update Permalinks</h3>
+<ol>
+<li>Go to <strong>Settings → Permalinks</strong></li>
+<li>Click <strong>&quot;Save Changes&quot;</strong> (even without changing anything)</li>
+<li>This refreshes the rewrite rules for the new server</li>
+</ol>
+<h3>Disable &quot;Discourage Search Engines&quot;</h3>
+<ol>
+<li>Go to <strong>Settings → Reading</strong></li>
+<li><strong>Uncheck</strong> &quot;Discourage search engines from indexing this site&quot;</li>
+<li>Save changes — this is critical for Google to find your site!</li>
+</ol>
+<hr>
+<h2>Step 5: Go-Live Checklist</h2>
+<h3>Before Announcing the Site:</h3>
+<p><strong>Content:</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> All pages have real content (no lorem ipsum)</li>
+<li><input disabled="" type="checkbox"> All images are present and loading</li>
+<li><input disabled="" type="checkbox"> All links work (no broken links)</li>
+<li><input disabled="" type="checkbox"> Contact forms submit correctly</li>
+<li><input disabled="" type="checkbox"> Phone numbers and emails are correct</li>
+<li><input disabled="" type="checkbox"> Footer information is accurate</li>
+<li><input disabled="" type="checkbox"> Privacy policy and terms pages exist</li>
+</ul>
+<p><strong>Functionality:</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> All forms work and send emails to the right address</li>
+<li><input disabled="" type="checkbox"> WooCommerce checkout works (if applicable)</li>
+<li><input disabled="" type="checkbox"> Payment processing works in live mode (disable test mode!)</li>
+<li><input disabled="" type="checkbox"> Email notifications are being received</li>
+<li><input disabled="" type="checkbox"> Social media links work</li>
+<li><input disabled="" type="checkbox"> Search functionality works</li>
+</ul>
+<p><strong>Technical:</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> SSL/HTTPS is active (padlock icon in browser)</li>
+<li><input disabled="" type="checkbox"> &quot;Discourage search engines&quot; is unchecked</li>
+<li><input disabled="" type="checkbox"> Permalinks are set to &quot;Post name&quot;</li>
+<li><input disabled="" type="checkbox"> Favicon is set</li>
+<li><input disabled="" type="checkbox"> Site loads in under 3 seconds</li>
+<li><input disabled="" type="checkbox"> Mobile responsive — tested on real devices</li>
+<li><input disabled="" type="checkbox"> Caching is enabled</li>
+<li><input disabled="" type="checkbox"> Backups are scheduled</li>
+<li><input disabled="" type="checkbox"> Security plugin is active</li>
+</ul>
+<p><strong>SEO:</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> Every page has an SEO title and meta description (Yoast)</li>
+<li><input disabled="" type="checkbox"> XML sitemap is accessible (<code>/sitemap_index.xml</code>)</li>
+<li><input disabled="" type="checkbox"> Google Search Console is set up (submit sitemap)</li>
+<li><input disabled="" type="checkbox"> Google Analytics is installed (if desired)</li>
+<li><input disabled="" type="checkbox"> Alt text on all images</li>
+</ul>
+<hr>
+<h2>Step 6: Post-Launch Tasks</h2>
+<h3>Submit to Google</h3>
+<ol>
+<li>Go to <strong>Google Search Console</strong> (<a href="https://search.google.com/search-console">https://search.google.com/search-console</a>)</li>
+<li>Add your site property</li>
+<li>Verify ownership (DNS, HTML file, or Google Analytics)</li>
+<li>Submit your sitemap: <code>yourdomain.com/sitemap_index.xml</code></li>
+</ol>
+<h3>Set Up Google Analytics (Optional)</h3>
+<ol>
+<li>Create a <strong>Google Analytics 4</strong> account</li>
+<li>Get your tracking code</li>
+<li>Install it via:<ul>
+<li>Yoast SEO (limited integration)</li>
+<li>A plugin like &quot;Site Kit by Google&quot;</li>
+<li>Or directly in your theme&#39;s header</li>
+</ul>
+</li>
+</ol>
+<h3>Monitor</h3>
+<ul>
+<li>Check Google Search Console for crawl errors</li>
+<li>Monitor site uptime (UptimeRobot — free)</li>
+<li>Review analytics data weekly</li>
+<li>Keep up with the maintenance routine (Lesson 30)</li>
+</ul>
+<hr>
+<h2>Staging Environments</h2>
+<h3>What is Staging?</h3>
+<p>A staging site is a <strong>copy of your live site</strong> used for testing changes before applying them to the live site.</p>
+<h3>Why Use Staging:</h3>
+<ul>
+<li>Test plugin updates before they break your live site</li>
+<li>Build new pages without visitors seeing unfinished work</li>
+<li>Test design changes safely</li>
+</ul>
+<h3>How to Set Up:</h3>
+<ul>
+<li>Most managed hosts offer <strong>one-click staging</strong> (SiteGround, WP Engine, Kinsta)</li>
+<li>Or use the <strong>WP Staging</strong> plugin (free version available)</li>
+<li>Make changes on staging → test → push to live</li>
+</ul>
+<hr>
+<h2>Exercises</h2>
+<ol>
+<li><p><strong>Research hosting</strong>: Visit SiteGround, Cloudways, and Bluehost. Compare their WordPress hosting plans and pricing.</p>
+</li>
+<li><p><strong>Practice export</strong>: Install &quot;All-in-One WP Migration&quot; on your local site and export it. Note the file size.</p>
+</li>
+<li><p><strong>Create the go-live checklist</strong>: Copy the go-live checklist from this lesson and customize it for your needs.</p>
+</li>
+<li><p><strong>Check everything locally</strong>: Go through the go-live checklist on your local site. Fix anything that&#39;s not ready.</p>
+</li>
+<li><p><strong>Set up Google Search Console</strong>: Create an account (you&#39;ll need it for any live site).</p>
+</li>
+</ol>
+<hr>
+<h2>Key Takeaways</h2>
+<ul>
+<li><strong>Choose hosting</strong> that matches your needs (SiteGround, Cloudways recommended for beginners)</li>
+<li><strong>All-in-One WP Migration</strong> is the easiest way to migrate local → live</li>
+<li>After migration: update URLs, enable SSL, refresh permalinks, uncheck &quot;discourage search engines&quot;</li>
+<li>Use the <strong>go-live checklist</strong> to ensure nothing is missed</li>
+<li>Submit your sitemap to <strong>Google Search Console</strong> after launch</li>
+<li>Set up <strong>Google Analytics</strong> to track visitors</li>
+<li>Use <strong>staging environments</strong> for testing changes on live sites</li>
+<li><strong>Back up before every major change</strong> — including the migration itself</li>
+</ul>
+<hr>
+<p><strong>Congratulations!</strong> You&#39;ve completed the WordPress Learning Course. Head to the <a href="../Projects/">Practice Projects</a> to put everything together!</p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-32.html" class="prev">&larr; 32. Performance</a>
+      <a href="project-01.html" class="next">Project 1: Business Website &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

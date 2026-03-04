@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 06: The Media Library — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-06.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-06.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li class="active"><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lesson 06: The Media Library</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Upload and manage images, files, and media in WordPress</li>
+<li>Understand image sizes and optimization</li>
+<li>Use the media library effectively</li>
+<li>Learn best practices for file naming and organization</li>
+</ul>
+<hr>
+<h2>What is the Media Library?</h2>
+<p>The Media Library is where WordPress stores all uploaded files:</p>
+<ul>
+<li>Images (JPG, PNG, GIF, WebP, SVG with plugins)</li>
+<li>Documents (PDF, DOC, XLSX)</li>
+<li>Audio (MP3, WAV, OGG)</li>
+<li>Video (MP4, MOV, AVI)</li>
+</ul>
+<p>Access it at <strong>Media → Library</strong> in the sidebar.</p>
+<hr>
+<h2>Uploading Media</h2>
+<h3>Method 1: Media Library Page</h3>
+<ol>
+<li>Go to <strong>Media → Add New Media File</strong></li>
+<li>Drag and drop files onto the upload area, or click <strong>&quot;Select Files&quot;</strong></li>
+<li>You can upload multiple files at once</li>
+</ol>
+<h3>Method 2: While Editing Content</h3>
+<ol>
+<li>In the block editor, add an <strong>Image</strong> block (type <code>/image</code>)</li>
+<li>Choose <strong>&quot;Upload&quot;</strong>, <strong>&quot;Media Library&quot;</strong>, or <strong>&quot;Insert from URL&quot;</strong></li>
+<li>The file is uploaded to the Media Library automatically</li>
+</ol>
+<h3>Method 3: Drag and Drop</h3>
+<ul>
+<li>While editing a post/page, drag an image directly from your desktop into the editor</li>
+<li>WordPress creates an Image block and uploads the file automatically</li>
+</ul>
+<hr>
+<h2>The Media Library Interface</h2>
+<h3>Grid View (default)</h3>
+<ul>
+<li>Shows thumbnails of all media</li>
+<li>Click any item to see details and edit</li>
+<li>Filter by type (Images, Audio, Video, Documents) or date</li>
+</ul>
+<h3>List View</h3>
+<ul>
+<li>Switch with the icon in the top-left</li>
+<li>Shows more details: file name, author, date, attached to</li>
+<li>Better for managing many files</li>
+</ul>
+<h3>Media Details Panel</h3>
+<p>Click any media item to see:</p>
+<ul>
+<li><strong>Preview</strong> of the image</li>
+<li><strong>Title</strong> — the display name (editable)</li>
+<li><strong>Caption</strong> — displayed below the image on the front-end</li>
+<li><strong>Alt Text</strong> — important for accessibility and SEO (describes the image)</li>
+<li><strong>Description</strong> — longer description (rarely displayed)</li>
+<li><strong>File URL</strong> — the direct link to the file</li>
+<li><strong>Uploaded to</strong> — which post/page this media is attached to</li>
+<li><strong>File size and dimensions</strong></li>
+</ul>
+<hr>
+<h2>Image Sizes in WordPress</h2>
+<p>When you upload an image, WordPress automatically creates <strong>multiple sizes</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Size</th>
+<th>Default Dimensions</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Thumbnail</strong></td>
+<td>150 × 150 px</td>
+<td>Small preview, cropped square</td>
+</tr>
+<tr>
+<td><strong>Medium</strong></td>
+<td>300 × 300 px max</td>
+<td>In-content images</td>
+</tr>
+<tr>
+<td><strong>Medium Large</strong></td>
+<td>768 px wide</td>
+<td>Responsive images</td>
+</tr>
+<tr>
+<td><strong>Large</strong></td>
+<td>1024 × 1024 px max</td>
+<td>Full-width content images</td>
+</tr>
+<tr>
+<td><strong>Full</strong></td>
+<td>Original size</td>
+<td>Full resolution</td>
+</tr>
+</tbody></table>
+<h3>Configuring Default Sizes</h3>
+<ol>
+<li>Go to <strong>Settings → Media</strong></li>
+<li>Adjust the dimensions for Thumbnail, Medium, and Large</li>
+<li><strong>Recommendation:</strong> Leave defaults unless you have a specific reason to change them</li>
+</ol>
+<h3>Why Multiple Sizes?</h3>
+<ul>
+<li>WordPress serves the <strong>appropriate size</strong> based on where the image is displayed</li>
+<li>A thumbnail in a sidebar doesn&#39;t need a 4000px image</li>
+<li>This improves <strong>page load speed</strong> significantly</li>
+</ul>
+<hr>
+<h2>Image Best Practices</h2>
+<h3>Before Uploading</h3>
+<ol>
+<li><p><strong>Resize images before uploading</strong></p>
+<ul>
+<li>A 5000×3000 photo from your camera is way too large</li>
+<li>For most websites, images shouldn&#39;t exceed <strong>2000px wide</strong></li>
+<li>Hero/banner images: 1920px wide is standard</li>
+<li>In-content images: 1200px wide is usually enough</li>
+</ul>
+</li>
+<li><p><strong>Choose the right format</strong></p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>JPG/JPEG</strong></td>
+<td>Photos, images with many colors</td>
+</tr>
+<tr>
+<td><strong>PNG</strong></td>
+<td>Graphics with transparency, screenshots, logos</td>
+</tr>
+<tr>
+<td><strong>WebP</strong></td>
+<td>Modern format — smaller files, good quality (not all browsers support it)</td>
+</tr>
+<tr>
+<td><strong>SVG</strong></td>
+<td>Logos and icons (requires a plugin to upload)</td>
+</tr>
+<tr>
+<td><strong>GIF</strong></td>
+<td>Simple animations</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>Compress images</strong></p>
+<ul>
+<li>Use free tools before uploading:<ul>
+<li><strong>TinyPNG</strong> (tinypng.com) — drag-and-drop compression</li>
+<li><strong>Squoosh</strong> (squoosh.app) — Google&#39;s image optimizer</li>
+</ul>
+</li>
+<li>Or install a WordPress plugin (covered in Module 4)</li>
+</ul>
+</li>
+<li><p><strong>Name files descriptively</strong></p>
+<ul>
+<li>Bad: <code>IMG_20240315_001.jpg</code>, <code>screenshot.png</code></li>
+<li>Good: <code>blue-widget-product-photo.jpg</code>, <code>team-office-photo.jpg</code></li>
+<li>Use hyphens, not spaces or underscores</li>
+<li>This helps with SEO — search engines read file names</li>
+</ul>
+</li>
+</ol>
+<h3>After Uploading</h3>
+<ol start="5">
+<li><p><strong>Always set Alt Text</strong></p>
+<ul>
+<li>Describes the image for screen readers (accessibility)</li>
+<li>Used by search engines (SEO)</li>
+<li>Example: &quot;Team members working together in the office&quot;</li>
+<li>Don&#39;t stuff keywords — describe what you actually see</li>
+</ul>
+</li>
+<li><p><strong>Set a Title</strong></p>
+<ul>
+<li>WordPress uses the filename as the default title</li>
+<li>Change it to something readable</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>Working with Images in the Editor</h2>
+<h3>Adding an Image Block</h3>
+<ol>
+<li>Type <code>/image</code> or click &quot;+&quot; and select Image</li>
+<li>Upload, select from Media Library, or insert from URL</li>
+<li>The image appears in your content</li>
+</ol>
+<h3>Image Block Settings</h3>
+<p><strong>Block Toolbar</strong> (above the image):</p>
+<ul>
+<li><strong>Alignment</strong> — left, center, right, wide, full-width</li>
+<li><strong>Link</strong> — link the image to its media file, attachment page, or custom URL</li>
+<li><strong>Replace</strong> — swap the image</li>
+<li><strong>Crop</strong> — crop the image</li>
+</ul>
+<p><strong>Block Settings</strong> (right sidebar):</p>
+<ul>
+<li><strong>Alt Text</strong> — set or edit the alt text</li>
+<li><strong>Image Size</strong> — choose Thumbnail, Medium, Large, or Full</li>
+<li><strong>Image Dimensions</strong> — set custom width/height</li>
+<li><strong>Border Radius</strong> — round the corners</li>
+</ul>
+<h3>Gallery Block</h3>
+<p>For displaying multiple images:</p>
+<ol>
+<li>Type <code>/gallery</code> and select Gallery</li>
+<li>Upload or select multiple images</li>
+<li>Arrange them in a grid</li>
+<li>Set columns (1-8) in the block settings</li>
+</ol>
+<h3>Cover Block</h3>
+<p>For images with text overlay:</p>
+<ol>
+<li>Type <code>/cover</code> and select Cover</li>
+<li>Upload or select a background image</li>
+<li>Type text on top of the image</li>
+<li>Adjust overlay color and opacity</li>
+</ol>
+<hr>
+<h2>Organizing Media</h2>
+<p>WordPress doesn&#39;t have folders in the Media Library by default. Here&#39;s how to stay organized:</p>
+<h3>Built-in Options</h3>
+<ul>
+<li><strong>Search</strong> — use the search bar to find media by filename or title</li>
+<li><strong>Filter by date</strong> — dropdown to filter by month/year</li>
+<li><strong>Filter by type</strong> — Images, Audio, Video, Documents</li>
+</ul>
+<h3>File Naming Convention</h3>
+<p>Since there are no folders, use a naming convention:</p>
+<pre><code>[type]-[subject]-[detail].jpg
+
+Examples:
+hero-homepage-banner.jpg
+team-john-smith-headshot.jpg
+product-blue-widget-front.jpg
+blog-wordpress-tips-featured.jpg
+icon-phone-contact.png
+</code></pre>
+<h3>Plugin Option</h3>
+<p>If you need folders, plugins like <strong>FileBird</strong> or <strong>Real Media Library</strong> add folder management to the Media Library. We&#39;ll cover plugins in Module 4.</p>
+<hr>
+<h2>Editing Images in WordPress</h2>
+<p>WordPress has a basic built-in image editor:</p>
+<ol>
+<li>Go to <strong>Media → Library</strong></li>
+<li>Click an image to open it</li>
+<li>Click <strong>&quot;Edit Image&quot;</strong> below the preview</li>
+</ol>
+<h3>Available Editing Tools:</h3>
+<ul>
+<li><strong>Crop</strong> — select an area and crop</li>
+<li><strong>Rotate</strong> — rotate left or right</li>
+<li><strong>Flip</strong> — flip horizontal or vertical</li>
+<li><strong>Scale</strong> — resize the image (only make smaller, not larger)</li>
+</ul>
+<h3>Apply Changes To:</h3>
+<ul>
+<li><strong>All image sizes</strong> — changes all generated sizes</li>
+<li><strong>Thumbnail only</strong> — only changes the thumbnail</li>
+<li><strong>All except thumbnail</strong> — changes everything but the thumbnail</li>
+</ul>
+<p><strong>Note:</strong> For more advanced editing, use an external tool (Canva, Photoshop, GIMP) and re-upload.</p>
+<hr>
+<h2>File Upload Limits</h2>
+<h3>Default Limits</h3>
+<ul>
+<li>WordPress has a maximum upload size (usually 32MB-128MB depending on your host)</li>
+<li>In Local WP, this is configurable</li>
+</ul>
+<h3>Checking Your Limit</h3>
+<ol>
+<li>Go to <strong>Media → Add New Media File</strong></li>
+<li>Below the upload area, you&#39;ll see &quot;Maximum upload file size: XXX MB&quot;</li>
+</ol>
+<h3>Increasing the Limit (if needed)</h3>
+<p>In Local WP:</p>
+<ol>
+<li>Open Site Shell from Local</li>
+<li>Find the <code>php.ini</code> file</li>
+<li>Change <code>upload_max_filesize</code> and <code>post_max_size</code></li>
+</ol>
+<p>On most hosting, contact your host or edit <code>.htaccess</code>.</p>
+<hr>
+<h2>Exercises</h2>
+<ol>
+<li><p><strong>Upload 5 images</strong>: Find 5 free stock images (try unsplash.com or pexels.com). Name them descriptively before uploading. Upload them to the Media Library.</p>
+</li>
+<li><p><strong>Set Alt Text</strong>: For each uploaded image, click it in the Media Library and write a descriptive alt text.</p>
+</li>
+<li><p><strong>Add images to content</strong>: Edit one of your pages or posts and add images using the Image block. Try different alignments (left, center, wide).</p>
+</li>
+<li><p><strong>Create a Gallery</strong>: Create a new page called &quot;Gallery&quot; and add a Gallery block with 4+ images. Try changing the number of columns.</p>
+</li>
+<li><p><strong>Try the Cover block</strong>: Add a Cover block to your homepage with a background image and text overlay.</p>
+</li>
+<li><p><strong>Edit an image</strong>: Select an image in the Media Library and try the built-in editor — crop it, then undo the change.</p>
+</li>
+</ol>
+<hr>
+<h2>Key Takeaways</h2>
+<ul>
+<li>The <strong>Media Library</strong> stores all your uploads (images, documents, audio, video)</li>
+<li>WordPress creates <strong>multiple sizes</strong> of each uploaded image automatically</li>
+<li><strong>Optimize images before uploading</strong> — resize and compress them</li>
+<li><strong>Always set Alt Text</strong> — it&#39;s critical for accessibility and SEO</li>
+<li>Use <strong>descriptive file names</strong> with hyphens (e.g., <code>team-photo-office.jpg</code>)</li>
+<li>Common image blocks: <strong>Image</strong>, <strong>Gallery</strong>, <strong>Cover</strong></li>
+<li>WordPress has a basic built-in image editor for crops and rotations</li>
+<li>Use a consistent <strong>naming convention</strong> to keep your Media Library organized</li>
+</ul>
+<hr>
+<p><strong>Next Lesson:</strong> <a href="lesson-07.html">Lesson 07 - WordPress Settings Deep Dive</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-05.html" class="prev">&larr; 05. Categories, Tags &amp; Taxonomies</a>
+      <a href="lesson-07.html" class="next">07. WordPress Settings &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

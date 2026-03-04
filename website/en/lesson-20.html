@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 20: Responsive Design — Mobile &amp; Tablet Views — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-20.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-20.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li class="active"><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lesson 20: Responsive Design — Mobile &amp; Tablet Views</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Understand responsive design principles</li>
+<li>Use Elementor&#39;s responsive editing mode</li>
+<li>Adjust layouts, typography, and spacing for different devices</li>
+<li>Hide/show elements per device</li>
+<li>Test and debug responsive issues</li>
+</ul>
+<hr>
+<h2>What is Responsive Design?</h2>
+<p>Responsive design means your website <strong>adapts to look good on all screen sizes</strong> — desktop, tablet, and mobile phone. Over 60% of web traffic comes from mobile devices, so this isn&#39;t optional.</p>
+<h3>Elementor&#39;s Breakpoints</h3>
+<table>
+<thead>
+<tr>
+<th>Device</th>
+<th>Default Width</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Desktop</td>
+<td>1025px and above</td>
+</tr>
+<tr>
+<td>Tablet</td>
+<td>768px - 1024px</td>
+</tr>
+<tr>
+<td>Mobile</td>
+<td>Up to 767px</td>
+</tr>
+</tbody></table>
+<p>Elementor lets you customize your design for each breakpoint independently.</p>
+<hr>
+<h2>Switching Between Device Views</h2>
+<h3>In Elementor:</h3>
+<ol>
+<li>Click the <strong>responsive mode icon</strong> at the bottom of the left panel (looks like a monitor/device)</li>
+<li>Or press <strong>Ctrl + Shift + M</strong></li>
+<li>Choose <strong>Desktop</strong>, <strong>Tablet</strong>, or <strong>Mobile</strong></li>
+</ol>
+<h3>What Changes Per Device:</h3>
+<p>The canvas resizes to show how your page looks on that device. When you&#39;re in tablet or mobile view:</p>
+<ul>
+<li>A <strong>device icon</strong> appears next to settings that can be adjusted per device</li>
+<li>Changes you make in tablet/mobile view <strong>only apply to that device size</strong></li>
+<li>Desktop settings are the default — tablet and mobile inherit from desktop unless overridden</li>
+</ul>
+<hr>
+<h2>How Elementor Handles Responsiveness</h2>
+<h3>Automatic Behavior</h3>
+<p>Elementor handles many things automatically:</p>
+<ul>
+<li><strong>Multi-column sections</strong> stack vertically on mobile (3 columns become 3 rows)</li>
+<li><strong>Text scales down</strong> slightly</li>
+<li><strong>Images resize</strong> to fit the screen</li>
+<li><strong>Padding and margins</strong> remain unless you change them</li>
+</ul>
+<h3>What You Need to Adjust Manually</h3>
+<p>Despite auto-responsive behavior, you&#39;ll often need to tweak:</p>
+<ul>
+<li><strong>Font sizes</strong> — desktop headings are too large on mobile</li>
+<li><strong>Padding/margins</strong> — desktop spacing is often too generous on mobile</li>
+<li><strong>Column order</strong> — sometimes you want a different stack order on mobile</li>
+<li><strong>Hidden elements</strong> — some elements don&#39;t work on mobile (large decorative images)</li>
+<li><strong>Button sizes</strong> — may need to be full-width on mobile</li>
+</ul>
+<hr>
+<h2>Adjusting Typography Per Device</h2>
+<h3>The Device Icon</h3>
+<p>Many Elementor settings show a small <strong>device icon</strong> next to them. This means the setting can have different values per device.</p>
+<h3>Example: Responsive Heading Size</h3>
+<ol>
+<li>Select a Heading widget</li>
+<li>Go to <strong>Style → Typography → Size</strong></li>
+<li>Click the <strong>device icon</strong> next to the Size field</li>
+<li>Set different sizes:<ul>
+<li><strong>Desktop</strong>: 48px</li>
+<li><strong>Tablet</strong>: 36px</li>
+<li><strong>Mobile</strong>: 28px</li>
+</ul>
+</li>
+</ol>
+<h3>Recommended Font Sizes:</h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Desktop</th>
+<th>Tablet</th>
+<th>Mobile</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>H1</td>
+<td>42-52px</td>
+<td>32-40px</td>
+<td>28-34px</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>32-40px</td>
+<td>26-32px</td>
+<td>24-28px</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>24-30px</td>
+<td>20-26px</td>
+<td>18-22px</td>
+</tr>
+<tr>
+<td>Body text</td>
+<td>16-18px</td>
+<td>16px</td>
+<td>15-16px</td>
+</tr>
+<tr>
+<td>Button text</td>
+<td>16px</td>
+<td>15px</td>
+<td>14-15px</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Adjusting Spacing Per Device</h2>
+<h3>Padding and Margin</h3>
+<ol>
+<li>Select a section, column, or widget</li>
+<li>Go to <strong>Advanced → Margin</strong> or <strong>Advanced → Padding</strong></li>
+<li>Click the <strong>device icon</strong> to set different values per device</li>
+</ol>
+<h3>Example: Section Padding</h3>
+<ul>
+<li><strong>Desktop</strong>: 80px top and bottom</li>
+<li><strong>Tablet</strong>: 60px top and bottom</li>
+<li><strong>Mobile</strong>: 40px top and bottom</li>
+</ul>
+<p>This prevents mobile sections from having too much empty space.</p>
+<hr>
+<h2>Column Behavior on Mobile</h2>
+<h3>Default Stacking</h3>
+<p>By default, columns in a multi-column section <strong>stack vertically</strong> on mobile. A 3-column section becomes:</p>
+<pre><code>Desktop:    [Col 1] [Col 2] [Col 3]
+Mobile:     [Col 1]
+            [Col 2]
+            [Col 3]
+</code></pre>
+<h3>Reversing Column Order</h3>
+<p>Sometimes you want the image below the text (or vice versa) on mobile:</p>
+<ol>
+<li>Select the <strong>Section</strong></li>
+<li>Go to <strong>Advanced</strong> tab</li>
+<li>Switch to <strong>Mobile</strong> view</li>
+<li>Find <strong>&quot;Reverse Columns&quot;</strong> → Set to Yes</li>
+</ol>
+<h3>Adjusting Column Width on Tablet</h3>
+<p>Columns might be too narrow on tablet. You can adjust:</p>
+<ol>
+<li>Select a column</li>
+<li>Switch to <strong>Tablet</strong> view</li>
+<li>Go to Content → <strong>Column Width</strong></li>
+<li>Set it to 50% (so 3 columns become 2+1) or 100% (stacks like mobile)</li>
+</ol>
+<hr>
+<h2>Hiding/Showing Elements Per Device</h2>
+<p>Some elements work on desktop but not on mobile (or vice versa):</p>
+<h3>To Hide an Element on Specific Devices:</h3>
+<ol>
+<li>Select the element (section, column, or widget)</li>
+<li>Go to the <strong>Advanced</strong> tab</li>
+<li>Find <strong>Responsive</strong> section</li>
+<li>Toggle <strong>&quot;Hide On Desktop&quot;</strong>, <strong>&quot;Hide On Tablet&quot;</strong>, or <strong>&quot;Hide On Mobile&quot;</strong></li>
+</ol>
+<h3>Common Uses:</h3>
+<ul>
+<li><strong>Hide decorative images on mobile</strong> — they take up valuable space</li>
+<li><strong>Show a simplified menu on mobile</strong> — hide the desktop mega menu</li>
+<li><strong>Hide complex multi-column layouts</strong> and show a simplified mobile version</li>
+<li><strong>Show a &quot;Call Now&quot; button only on mobile</strong> — visitors can tap to call</li>
+</ul>
+<h3>Example: Mobile-Only Call Button</h3>
+<ol>
+<li>Create a Button widget: &quot;Tap to Call&quot; with link <code>tel:+15551234567</code></li>
+<li>Go to Advanced → Responsive → Hide on Desktop → Yes</li>
+<li>The button only appears on mobile</li>
+</ol>
+<hr>
+<h2>Responsive Images</h2>
+<h3>Image Sizing</h3>
+<p>Images automatically resize to fit their container, but you might want to:</p>
+<ol>
+<li>Select the Image widget</li>
+<li>Switch to <strong>Mobile</strong> view</li>
+<li>Adjust the <strong>Width</strong> (e.g., 80% instead of 100%)</li>
+<li>Change <strong>Alignment</strong> if needed</li>
+</ol>
+<h3>Background Images</h3>
+<p>For sections with background images:</p>
+<ol>
+<li>Select the section</li>
+<li>Switch to <strong>Mobile</strong> view</li>
+<li>Go to Style → Background</li>
+<li>Adjust <strong>Position</strong> (try Center Center)</li>
+<li>Adjust <strong>Size</strong> (Cover usually works, but try Custom if needed)</li>
+<li>Consider using a <strong>different image for mobile</strong> (a vertically-oriented version)</li>
+</ol>
+<hr>
+<h2>Mobile-First Considerations</h2>
+<h3>Touch Targets</h3>
+<ul>
+<li>Buttons should be at least <strong>44px tall</strong> on mobile (Apple&#39;s guideline)</li>
+<li>Links should have enough spacing so fingers don&#39;t tap the wrong one</li>
+<li>Make buttons <strong>full-width</strong> on mobile when appropriate</li>
+</ul>
+<h3>Content Priority</h3>
+<ul>
+<li>Put the most important content first on mobile</li>
+<li>Remove secondary content that clutters the mobile experience</li>
+<li>Keep forms simple — fewer fields on mobile</li>
+</ul>
+<h3>Navigation</h3>
+<ul>
+<li>The hamburger menu (☰) is standard on mobile</li>
+<li>Make sure your menu items are tappable and readable</li>
+<li>Consider reducing menu items on mobile</li>
+</ul>
+<hr>
+<h2>Testing Responsive Design</h2>
+<h3>In Elementor:</h3>
+<ol>
+<li>Switch between Desktop, Tablet, and Mobile views</li>
+<li>Scroll through the entire page in each view</li>
+<li>Check that nothing overflows, overlaps, or looks cramped</li>
+</ol>
+<h3>In Browser (More Accurate):</h3>
+<ol>
+<li>Save and publish your page</li>
+<li>Open it in Chrome</li>
+<li>Press <strong>F12</strong> to open DevTools</li>
+<li>Click the <strong>Toggle Device Toolbar</strong> icon (or press <strong>Ctrl + Shift + M</strong>)</li>
+<li>Select different devices from the dropdown (iPhone, iPad, etc.)</li>
+<li>Or drag the viewport edges to test any width</li>
+</ol>
+<h3>Responsive Checklist:</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Headings are readable on mobile (not too large, not too small)</li>
+<li><input disabled="" type="checkbox"> Text doesn&#39;t extend beyond the screen edges</li>
+<li><input disabled="" type="checkbox"> Images resize and don&#39;t overflow</li>
+<li><input disabled="" type="checkbox"> Buttons are large enough to tap</li>
+<li><input disabled="" type="checkbox"> Spacing looks proportional on all devices</li>
+<li><input disabled="" type="checkbox"> Multi-column layouts stack cleanly on mobile</li>
+<li><input disabled="" type="checkbox"> No horizontal scrolling on mobile</li>
+<li><input disabled="" type="checkbox"> Forms are usable on mobile</li>
+<li><input disabled="" type="checkbox"> Maps display correctly</li>
+</ul>
+<hr>
+<h2>Exercises</h2>
+<ol>
+<li><p><strong>Review your homepage on mobile</strong>: Switch to mobile view and scroll through your homepage. Note everything that needs fixing.</p>
+</li>
+<li><p><strong>Adjust heading sizes</strong>: Set responsive typography for all your headings — different sizes for desktop, tablet, and mobile.</p>
+</li>
+<li><p><strong>Fix section padding</strong>: Reduce padding on mobile for all sections (40px instead of 80px).</p>
+</li>
+<li><p><strong>Hide an element</strong>: Find a decorative element on your homepage and hide it on mobile.</p>
+</li>
+<li><p><strong>Create a mobile-only element</strong>: Create a &quot;Call Now&quot; button that only appears on mobile devices.</p>
+</li>
+<li><p><strong>Test in the browser</strong>: Use Chrome DevTools to test your pages on different device sizes. Check iPhone, iPad, and a small Android phone size.</p>
+</li>
+<li><p><strong>Fix all responsive issues</strong>: Go through your homepage, About page, and Contact page in mobile view and fix every issue you find.</p>
+</li>
+</ol>
+<hr>
+<h2>Key Takeaways</h2>
+<ul>
+<li>Over 60% of visitors are on mobile — <strong>responsive design is mandatory</strong></li>
+<li>Elementor lets you set <strong>different values per device</strong> (click the device icon)</li>
+<li>Columns <strong>automatically stack</strong> on mobile, but you may need to adjust</li>
+<li><strong>Reduce font sizes</strong> and <strong>spacing</strong> on mobile</li>
+<li><strong>Hide elements</strong> that don&#39;t work on mobile (Advanced → Responsive)</li>
+<li><strong>Buttons should be tap-friendly</strong> — at least 44px tall</li>
+<li>Test in <strong>both Elementor&#39;s responsive mode AND Chrome DevTools</strong></li>
+<li>Common fixes: smaller headings, less padding, stacked columns, hidden decorative elements</li>
+</ul>
+<hr>
+<p><strong>Next Module:</strong> <a href="lesson-21.html">Module 4 - Essential Plugins</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-19.html" class="prev">&larr; 19. Templates &amp; Reuse</a>
+      <a href="lesson-21.html" class="next">21. Understanding Plugins &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

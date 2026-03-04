@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lección 14: Secciones, Columnas y Widgets — Los Bloques de Construcción — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-14.html">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-14.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li class="active"><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lección 14: Secciones, Columnas y Widgets — Los Bloques de Construcción</h1>
+<h2>Objetivos</h2>
+<ul>
+<li>Entender la jerarquía Sección → Columna → Widget</li>
+<li>Crear y configurar secciones con diferentes diseños de columnas</li>
+<li>Añadir, mover y estilizar widgets</li>
+<li>Aprender las tres pestañas de configuración: Content, Style, Advanced</li>
+</ul>
+<hr>
+<h2>La Jerarquía de Elementor</h2>
+<p>Cada página de Elementor se construye con tres niveles:</p>
+<pre><code>Section (fila a ancho completo)
+  └── Column (división vertical dentro de una sección)
+       └── Widget (el contenido real — texto, imagen, botón, etc.)
+</code></pre>
+<p>Piensa en ello como una tabla:</p>
+<ul>
+<li><strong>Section</strong> = una fila</li>
+<li><strong>Column</strong> = una celda en esa fila</li>
+<li><strong>Widget</strong> = contenido dentro de la celda</li>
+</ul>
+<hr>
+<h2>Secciones</h2>
+<h3>¿Qué es una Sección?</h3>
+<p>Una sección es una <strong>fila horizontal a ancho completo</strong> que abarca tu página. Es el bloque de construcción más grande.</p>
+<h3>Crear una Sección</h3>
+<ol>
+<li>Haz clic en el icono <strong>&quot;+&quot;</strong> en el canvas (o el círculo rojo &quot;+&quot; en la parte inferior)</li>
+<li>Elige una <strong>estructura de columnas</strong>:<ul>
+<li>1 columna (ancho completo)</li>
+<li>2 columnas (50/50)</li>
+<li>3 columnas (33/33/33)</li>
+<li>Y más variaciones (25/75, 75/25, etc.)</li>
+</ul>
+</li>
+<li>La sección aparece en tu página</li>
+</ol>
+<h3>Ajustes de Sección</h3>
+<p>Haz clic en el <strong>asa azul</strong> en la parte superior de una sección para seleccionarla. El panel izquierdo muestra:</p>
+<p><strong>Pestaña Content:</strong></p>
+<ul>
+<li><strong>Layout</strong>: Boxed o Full Width</li>
+<li><strong>Content Width</strong>: Establece el ancho máximo del contenido (ej., 1140px)</li>
+<li><strong>Column Gap</strong>: Espacio entre columnas (No Gap, Narrow, Default, Extended, Wide)</li>
+<li><strong>Height</strong>: Default, Min Height, o Fit to Screen</li>
+<li><strong>Vertical Align</strong>: Top, Middle, Bottom, Space Between</li>
+<li><strong>HTML Tag</strong>: Elemento HTML semántico (div, header, footer, section, etc.)</li>
+</ul>
+<p><strong>Pestaña Style:</strong></p>
+<ul>
+<li><strong>Background</strong>: Color, imagen, degradado, vídeo o presentación</li>
+<li><strong>Background Overlay</strong>: Añade una capa de color/degradado sobre el fondo</li>
+<li><strong>Border</strong>: Añade bordes y radio de borde</li>
+<li><strong>Shape Divider</strong>: Añade formas decorativas (ondas, triángulos, etc.) arriba/abajo</li>
+<li><strong>Typography</strong>: Color de texto y tipografía por defecto</li>
+</ul>
+<p><strong>Pestaña Advanced:</strong></p>
+<ul>
+<li><strong>Margin &amp; Padding</strong>: Espaciado exterior e interior de la sección</li>
+<li><strong>Motion Effects</strong>: Animaciones de scroll, parallax</li>
+<li><strong>Responsive</strong>: Mostrar/ocultar en dispositivos específicos</li>
+<li><strong>Custom CSS</strong>: Añade CSS solo para esta sección (Pro)</li>
+<li><strong>Attributes</strong>: Atributos HTML personalizados</li>
+</ul>
+<h3>Menú Contextual de Sección</h3>
+<p>Haz clic derecho en el asa de una sección para:</p>
+<ul>
+<li><strong>Copy / Paste</strong> — copiar secciones enteras</li>
+<li><strong>Duplicate</strong> — crear una copia idéntica debajo</li>
+<li><strong>Save as Template</strong> — guardar para reutilizar</li>
+<li><strong>Delete</strong> — eliminar la sección</li>
+</ul>
+<hr>
+<h2>Columnas</h2>
+<h3>¿Qué es una Columna?</h3>
+<p>Las columnas son <strong>divisiones verticales</strong> dentro de una sección. Contienen widgets.</p>
+<h3>Ajustar el Ancho de Columnas</h3>
+<ol>
+<li>Pasa el ratón entre dos columnas hasta que veas un <strong>asa de redimensionado azul</strong></li>
+<li>Arrastra a la izquierda o derecha para ajustar el porcentaje de ancho</li>
+<li>Los anchos de columna se muestran como porcentajes (ej., 60% / 40%)</li>
+</ol>
+<h3>Ajustes de Columna</h3>
+<p>Haz clic en el <strong>asa gris de la columna</strong> (en la parte superior de la columna) para seleccionarla:</p>
+<p><strong>Pestaña Content:</strong></p>
+<ul>
+<li><strong>Column Width</strong>: Porcentaje exacto</li>
+<li><strong>Vertical Align</strong>: Cómo se alinean los widgets verticalmente</li>
+</ul>
+<p><strong>Pestaña Style:</strong></p>
+<ul>
+<li><strong>Background</strong>: Color, imagen, degradado</li>
+<li><strong>Border</strong>: Bordes y radio de borde</li>
+<li><strong>Typography</strong>: Estilos de texto por defecto para esta columna</li>
+</ul>
+<p><strong>Pestaña Advanced:</strong></p>
+<ul>
+<li><strong>Margin &amp; Padding</strong>: Espaciado para esta columna específica</li>
+<li><strong>Responsive</strong>: Mostrar/ocultar en dispositivos específicos</li>
+<li><strong>Custom CSS</strong>: CSS específico de columna (Pro)</li>
+</ul>
+<h3>Añadir/Eliminar Columnas</h3>
+<ul>
+<li><strong>Clic derecho</strong> en el asa de columna → <strong>Add New Column</strong> (añade una columna)</li>
+<li><strong>Clic derecho</strong> en el asa de columna → <strong>Delete</strong> (elimina una columna)</li>
+<li>O <strong>Duplicate</strong> una columna para crear una copia</li>
+</ul>
+<hr>
+<h2>Widgets</h2>
+<h3>¿Qué es un Widget?</h3>
+<p>Los widgets son los <strong>elementos de contenido reales</strong> — texto, imágenes, botones, iconos, reproductores de vídeo, etc.</p>
+<h3>Añadir Widgets</h3>
+<ol>
+<li>Encuentra un widget en el <strong>panel izquierdo</strong></li>
+<li><strong>Arrástralo</strong> a una columna en el canvas</li>
+<li>O haz clic en el <strong>&quot;+&quot;</strong> dentro de una columna vacía para explorar widgets</li>
+</ol>
+<h3>Widgets Gratuitos Esenciales</h3>
+<table>
+<thead>
+<tr>
+<th>Widget</th>
+<th>Qué Hace</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Heading</strong></td>
+<td>Títulos de sección y encabezados (H1-H6)</td>
+</tr>
+<tr>
+<td><strong>Text Editor</strong></td>
+<td>Contenido de texto enriquecido (párrafos, listas, formato)</td>
+</tr>
+<tr>
+<td><strong>Image</strong></td>
+<td>Muestra una imagen</td>
+</tr>
+<tr>
+<td><strong>Button</strong></td>
+<td>Un botón clickeable de llamada a la acción</td>
+</tr>
+<tr>
+<td><strong>Icon</strong></td>
+<td>Muestra un icono de Font Awesome u otras bibliotecas</td>
+</tr>
+<tr>
+<td><strong>Spacer</strong></td>
+<td>Añade espacio vertical entre elementos</td>
+</tr>
+<tr>
+<td><strong>Divider</strong></td>
+<td>Un separador de línea horizontal</td>
+</tr>
+<tr>
+<td><strong>Google Maps</strong></td>
+<td>Incrusta un mapa de Google</td>
+</tr>
+<tr>
+<td><strong>Video</strong></td>
+<td>Incrusta YouTube, Vimeo o vídeo autoalojado</td>
+</tr>
+<tr>
+<td><strong>Icon Box</strong></td>
+<td>Combo de icono + encabezado + descripción</td>
+</tr>
+<tr>
+<td><strong>Image Box</strong></td>
+<td>Combo de imagen + encabezado + descripción</td>
+</tr>
+<tr>
+<td><strong>Star Rating</strong></td>
+<td>Muestra una calificación con estrellas</td>
+</tr>
+<tr>
+<td><strong>Progress Bar</strong></td>
+<td>Barra de progreso/habilidad animada</td>
+</tr>
+<tr>
+<td><strong>Counter</strong></td>
+<td>Número con conteo animado</td>
+</tr>
+<tr>
+<td><strong>Testimonial</strong></td>
+<td>Testimonio de cliente con imagen y texto</td>
+</tr>
+<tr>
+<td><strong>Accordion</strong></td>
+<td>Secciones de contenido plegables (estilo FAQ)</td>
+</tr>
+<tr>
+<td><strong>Tabs</strong></td>
+<td>Paneles de contenido con pestañas</td>
+</tr>
+<tr>
+<td><strong>Social Icons</strong></td>
+<td>Enlaces de iconos de redes sociales</td>
+</tr>
+<tr>
+<td><strong>Alert</strong></td>
+<td>Cuadro de aviso/mensaje descartable</td>
+</tr>
+</tbody></table>
+<h3>Pestañas de Edición de Widget</h3>
+<p>Cada widget tiene <strong>tres pestañas</strong> en el panel izquierdo:</p>
+<hr>
+<h2>Las Tres Pestañas: Content, Style, Advanced</h2>
+<h3>Pestaña Content</h3>
+<p>Controla <strong>qué</strong> muestra el widget:</p>
+<ul>
+<li>Contenido de texto, encabezados, etiquetas de botones</li>
+<li>Fuente de imagen, URL de vídeo</li>
+<li>URLs de enlaces</li>
+<li>Opciones de contenido específicas del widget</li>
+</ul>
+<p><strong>Ejemplo (widget Button):</strong></p>
+<ul>
+<li>Text: &quot;Empezar&quot;</li>
+<li>Link: <code>/contacto</code></li>
+<li>Icon: icono opcional antes/después del texto</li>
+<li>Alignment: izquierda, centro, derecha</li>
+</ul>
+<h3>Pestaña Style</h3>
+<p>Controla <strong>cómo</strong> se ve el widget:</p>
+<ul>
+<li>Colores (texto, fondo, borde)</li>
+<li>Tipografía (familia de fuente, tamaño, peso, altura de línea)</li>
+<li>Padding y espaciado dentro del widget</li>
+<li>Borde y radio de borde</li>
+<li>Sombra de caja</li>
+<li>Estados hover (cómo se ve cuando el ratón pasa por encima)</li>
+</ul>
+<p><strong>Ejemplo (widget Button):</strong></p>
+<ul>
+<li>Typography: Familia de fuente, tamaño, peso</li>
+<li>Text Color: Estados Normal y Hover</li>
+<li>Background Color: Normal y Hover</li>
+<li>Border: Ancho, color, radio</li>
+<li>Padding: Espacio dentro del botón</li>
+<li>Box Shadow: Efecto de sombra</li>
+</ul>
+<h3>Pestaña Advanced</h3>
+<p>Controla el <strong>comportamiento</strong> y <strong>posicionamiento</strong>:</p>
+<ul>
+<li><strong>Layout</strong>: Ancho, alineación, posicionamiento personalizado</li>
+<li><strong>Motion Effects</strong>: Animaciones de entrada, efectos de scroll</li>
+<li><strong>Background</strong>: Fondo a nivel de widget</li>
+<li><strong>Border</strong>: Borde a nivel de widget</li>
+<li><strong>Responsive</strong>: Mostrar/ocultar en escritorio, tablet o móvil</li>
+<li><strong>Custom CSS</strong>: CSS específico del widget (Pro)</li>
+<li><strong>Attributes</strong>: Atributos de datos personalizados</li>
+</ul>
+<hr>
+<h2>Trabajando con Padding y Margin</h2>
+<p>Entender la diferencia es crítico:</p>
+<pre><code>|--- Margin (espacio FUERA del elemento) ---|
+|                                            |
+|  |--- Border ---|                          |
+|  |               |                         |
+|  |  |-- Padding (espacio DENTRO) --|       |
+|  |  |                              |       |
+|  |  |    El contenido va aquí      |       |
+|  |  |                              |       |
+|  |  |------------------------------|       |
+|  |                                 |       |
+|  |---------------------------------|       |
+|                                            |
+|--------------------------------------------|
+</code></pre>
+<ul>
+<li><strong>Margin</strong>: Espacio entre elementos (empuja otros elementos)</li>
+<li><strong>Padding</strong>: Espacio entre el borde del elemento y su contenido</li>
+</ul>
+<h3>Configurar Padding/Margin en Elementor</h3>
+<ol>
+<li>Selecciona cualquier elemento (sección, columna o widget)</li>
+<li>Ve a la pestaña <strong>Advanced</strong></li>
+<li>Encuentra <strong>Margin</strong> y <strong>Padding</strong></li>
+<li>Introduce valores en px, em, % o vh</li>
+<li>Haz clic en el <strong>icono de cadena</strong> para establecer todos los lados a la vez, o desvincula para configurar cada lado individualmente</li>
+</ol>
+<hr>
+<h2>Práctica: Construir una Sección Simple</h2>
+<p>Vamos a construir una sección hero:</p>
+<h3>Paso 1: Crear una Sección</h3>
+<ol>
+<li>Haz clic en &quot;+&quot; y selecciona un diseño de <strong>una sola columna</strong></li>
+</ol>
+<h3>Paso 2: Configurar la Sección</h3>
+<ol>
+<li>Haz clic en el asa de la sección (pestaña azul)</li>
+<li><strong>Pestaña Content</strong>: Establece Height → Min Height → <code>500px</code></li>
+<li><strong>Pestaña Style</strong>:<ul>
+<li>Background → Classic → Color → elige un azul oscuro (#1a1a2e)</li>
+</ul>
+</li>
+<li><strong>Pestaña Advanced</strong>: Establece Padding → <code>60px</code> arriba y abajo</li>
+</ol>
+<h3>Paso 3: Añadir un Heading</h3>
+<ol>
+<li>Arrastra el widget <strong>Heading</strong> a la columna</li>
+<li><strong>Pestaña Content</strong>:<ul>
+<li>Title: &quot;Bienvenido a Nuestra Web&quot;</li>
+<li>HTML Tag: H1</li>
+<li>Alignment: Center</li>
+</ul>
+</li>
+<li><strong>Pestaña Style</strong>:<ul>
+<li>Text Color: Blanco (#ffffff)</li>
+<li>Typography: Font Size → 48px, Weight → Bold</li>
+</ul>
+</li>
+</ol>
+<h3>Paso 4: Añadir un Text Editor</h3>
+<ol>
+<li>Arrastra el widget <strong>Text Editor</strong> debajo del encabezado</li>
+<li><strong>Pestaña Content</strong>: Escribe &quot;Creamos sitios web bonitos que generan resultados.&quot;</li>
+<li><strong>Pestaña Style</strong>:<ul>
+<li>Text Color: Gris claro (#cccccc)</li>
+<li>Typography: Font Size → 20px</li>
+<li>Alignment: Center</li>
+</ul>
+</li>
+</ol>
+<h3>Paso 5: Añadir un Button</h3>
+<ol>
+<li>Arrastra el widget <strong>Button</strong> debajo del texto</li>
+<li><strong>Pestaña Content</strong>: Text → &quot;Empezar&quot;, Alignment → Center</li>
+<li><strong>Pestaña Style</strong>:<ul>
+<li>Background Color: un color de acento brillante (#e94560)</li>
+<li>Border Radius: 25px (para esquinas redondeadas)</li>
+<li>Padding: 15px arriba/abajo, 40px izquierda/derecha</li>
+</ul>
+</li>
+</ol>
+<h3>Paso 6: Guardar</h3>
+<p>Presiona <strong>Ctrl + S</strong> para guardar tu trabajo.</p>
+<hr>
+<h2>Ejercicios</h2>
+<ol>
+<li><p><strong>Construye la sección hero</strong> descrita arriba paso a paso.</p>
+</li>
+<li><p><strong>Crea una sección de 3 columnas</strong>: Añade una sección con 3 columnas. En cada columna, añade un widget Icon Box con un icono, encabezado y descripción diferentes (como una sección de &quot;características&quot; o &quot;servicios&quot;).</p>
+</li>
+<li><p><strong>Practica redimensionando columnas</strong>: Crea una sección de 2 columnas y arrastra el divisor para hacer 30/70, luego 70/30, y luego de vuelta a 50/50.</p>
+</li>
+<li><p><strong>Explora la pestaña Style</strong>: Selecciona cualquier widget y experimenta con todas las opciones de la pestaña Style. Cambia colores, fuentes, bordes, sombras. Siempre puedes Ctrl+Z para deshacer.</p>
+</li>
+<li><p><strong>Usa el Navigator</strong>: Abre el Navigator (Ctrl+I) y úsalo para seleccionar, reordenar y renombrar elementos. Familiarízate con la navegación de la estructura de tu página.</p>
+</li>
+<li><p><strong>Practica padding y margin</strong>: Selecciona diferentes elementos y ajusta su padding y margin. Observa cómo cambia el diseño.</p>
+</li>
+</ol>
+<hr>
+<h2>Puntos Clave</h2>
+<ul>
+<li>Elementor usa una jerarquía <strong>Sección → Columna → Widget</strong></li>
+<li>Las <strong>Secciones</strong> son filas a ancho completo, las <strong>Columnas</strong> las dividen, los <strong>Widgets</strong> son el contenido</li>
+<li>Cada elemento tiene <strong>3 pestañas</strong>: Content (qué), Style (cómo se ve), Advanced (comportamiento)</li>
+<li><strong>Arrastra y redimensiona</strong> columnas tirando del divisor entre ellas</li>
+<li><strong>Padding</strong> = espacio dentro de un elemento; <strong>Margin</strong> = espacio fuera</li>
+<li>Usa el <strong>Navigator</strong> (Ctrl+I) para gestionar estructuras de página complejas</li>
+<li><strong>Clic derecho</strong> en elementos para acciones rápidas (copiar, pegar, duplicar, eliminar)</li>
+<li><strong>Ctrl+S</strong> guarda, <strong>Ctrl+Z</strong> deshace</li>
+</ul>
+<hr>
+<p><strong>Siguiente Lección:</strong> <a href="lesson-15.html">Lección 15 - Tipografía, Colores y Estilos Globales</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-13.html" class="prev">&larr; 13. Instalar Elementor</a>
+      <a href="lesson-15.html" class="next">15. Estilos Globales &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

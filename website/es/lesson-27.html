@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lección 27: Pasarelas de Pago y Configuración de Envíos — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-27.html">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-27.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li class="active"><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lección 27: Pasarelas de Pago y Configuración de Envíos</h1>
+<h2>Objetivos</h2>
+<ul>
+<li>Configurar métodos de pago (Stripe, PayPal)</li>
+<li>Configurar zonas y tarifas de envío</li>
+<li>Entender tarifa plana, envío gratuito y envío calculado</li>
+<li>Configurar un entorno de pago de prueba/sandbox</li>
+</ul>
+<hr>
+<h2>Pasarelas de Pago</h2>
+<p>Una pasarela de pago procesa pagos con tarjeta de crédito y pagos online. WooCommerce admite muchas opciones.</p>
+<h3>Métodos de Pago Integrados</h3>
+<p>Ve a <strong>WooCommerce → Settings → Payments</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Descripción</th>
+<th>Comisión</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Direct bank transfer (BACS)</strong></td>
+<td>El cliente paga por transferencia bancaria</td>
+<td>Sin comisión</td>
+</tr>
+<tr>
+<td><strong>Check payments</strong></td>
+<td>El cliente envía un cheque</td>
+<td>Sin comisión</td>
+</tr>
+<tr>
+<td><strong>Cash on delivery (COD)</strong></td>
+<td>El cliente paga al recibir el pedido</td>
+<td>Sin comisión</td>
+</tr>
+</tbody></table>
+<p>Estos son básicos — para pagos online, necesitas Stripe o PayPal.</p>
+<h3>Configurar Stripe (Recomendado)</h3>
+<p>Stripe es el procesador de pagos más popular — acepta tarjetas de crédito, Apple Pay, Google Pay.</p>
+<ol>
+<li>Ve a <strong>Plugins → Add New</strong> → busca <strong>&quot;WooCommerce Stripe Payment Gateway&quot;</strong></li>
+<li>Instala y activa</li>
+<li>Ve a <strong>WooCommerce → Settings → Payments</strong></li>
+<li>Encuentra <strong>&quot;Stripe - Credit Card&quot;</strong> → haz clic en <strong>&quot;Manage&quot;</strong></li>
+<li>Marca <strong>&quot;Enable Stripe&quot;</strong></li>
+<li><strong>Test Mode</strong>: Habilita el modo de prueba primero (para desarrollo)</li>
+<li><strong>API Keys</strong>:<ul>
+<li>Crea una cuenta de Stripe en <a href="https://stripe.com/">https://stripe.com/</a></li>
+<li>Ve a Stripe Dashboard → Developers → API Keys</li>
+<li>Copia tu <strong>Test Publishable Key</strong> y <strong>Test Secret Key</strong></li>
+<li>Pégalas en WooCommerce</li>
+</ul>
+</li>
+<li>Guarda los cambios</li>
+</ol>
+<h3>Números de Tarjeta de Crédito de Prueba</h3>
+<p>Cuando Stripe está en modo de prueba, usa estos números de tarjeta ficticios:</p>
+<table>
+<thead>
+<tr>
+<th>Número de Tarjeta</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>4242 4242 4242 4242</code></td>
+<td>Pago exitoso</td>
+</tr>
+<tr>
+<td><code>4000 0000 0000 0002</code></td>
+<td>Tarjeta rechazada</td>
+</tr>
+<tr>
+<td><code>4000 0000 0000 3220</code></td>
+<td>Autenticación 3D Secure requerida</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Usa cualquier fecha de vencimiento futura (ej., 12/28)</li>
+<li>Usa cualquier CVC de 3 dígitos (ej., 123)</li>
+</ul>
+<h3>Configurar PayPal</h3>
+<ol>
+<li>Ve a <strong>WooCommerce → Settings → Payments</strong></li>
+<li>Encuentra <strong>&quot;PayPal&quot;</strong> → haz clic en <strong>&quot;Manage&quot;</strong> (o instala el plugin WooCommerce PayPal Payments)</li>
+<li>Marca <strong>&quot;Enable PayPal&quot;</strong></li>
+<li>Introduce tu <strong>dirección de email de PayPal</strong></li>
+<li>Habilita el <strong>modo sandbox</strong> para pruebas</li>
+<li>Guarda los cambios</li>
+</ol>
+<h3>Elegir Métodos de Pago</h3>
+<p>Para una tienda típica, ofrece:</p>
+<ul>
+<li><strong>Stripe</strong> — para pagos con tarjeta de crédito/débito</li>
+<li><strong>PayPal</strong> — muchos clientes prefieren PayPal</li>
+<li><strong>Ambos</strong> — dar opciones a los clientes aumenta la conversión</li>
+</ul>
+<hr>
+<h2>Configuración de Envíos</h2>
+<h3>Entender las Zonas de Envío</h3>
+<p>Las zonas de envío son áreas geográficas con métodos y tarifas de envío específicos.</p>
+<p>Ejemplo:</p>
+<ul>
+<li><strong>Zona 1: Local</strong> (tu ciudad) → Envío gratuito o tarifa plana 5€</li>
+<li><strong>Zona 2: Nacional</strong> (resto del país) → Tarifa plana 10€</li>
+<li><strong>Zona 3: Internacional</strong> → Tarifa plana 25€</li>
+<li><strong>Por defecto</strong> (cualquier otro lugar) → Sin envío o tarifa plana alta</li>
+</ul>
+<h3>Configurar Zonas de Envío</h3>
+<ol>
+<li>Ve a <strong>WooCommerce → Settings → Shipping</strong></li>
+<li>Haz clic en <strong>&quot;Add shipping zone&quot;</strong></li>
+</ol>
+<p><strong>Crear Zona 1: Envío Nacional</strong></p>
+<ol>
+<li><strong>Zone Name</strong>: &quot;España&quot; (o tu país)</li>
+<li><strong>Zone Regions</strong>: Selecciona tu país del desplegable</li>
+<li>Haz clic en <strong>&quot;Add shipping method&quot;</strong></li>
+<li>Elige un método:</li>
+</ol>
+<h3>Métodos de Envío</h3>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Cómo Funciona</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Flat Rate</strong></td>
+<td>Precio fijo (ej., 10€ por cualquier pedido)</td>
+</tr>
+<tr>
+<td><strong>Free Shipping</strong></td>
+<td>Sin cargo de envío (puede requerir pedido mínimo)</td>
+</tr>
+<tr>
+<td><strong>Local Pickup</strong></td>
+<td>El cliente recoge en tu ubicación (sin cargo)</td>
+</tr>
+</tbody></table>
+<h4>Configurar Tarifa Plana:</h4>
+<ol>
+<li>Después de añadir &quot;Flat Rate&quot;, haz clic en <strong>&quot;Edit&quot;</strong> (bajo el método)</li>
+<li>Configura:<ul>
+<li><strong>Cost</strong>: El precio de envío (ej., <code>10.00</code>)</li>
+<li>Puedes usar fórmulas: <code>10 + (2 * [qty])</code> = 10€ base + 2€ por artículo</li>
+</ul>
+</li>
+<li>Guarda</li>
+</ol>
+<h4>Configurar Envío Gratuito:</h4>
+<ol>
+<li>Añade el método &quot;Free Shipping&quot;</li>
+<li>Edítalo:<ul>
+<li><strong>Requires</strong>: Elige una condición:<ul>
+<li>Un cupón de envío gratuito válido</li>
+<li>Un importe mínimo de pedido (ej., 50€)</li>
+<li>Un cupón o importe mínimo</li>
+</ul>
+</li>
+<li>Establece el <strong>importe mínimo de pedido</strong> si aplica</li>
+</ul>
+</li>
+<li>Guarda</li>
+</ol>
+<h4>Añadir Múltiples Métodos por Zona:</h4>
+<p>Una zona puede tener múltiples métodos. Los clientes eligen en el checkout.</p>
+<p><strong>Configuración común:</strong></p>
+<ul>
+<li>Envío Gratuito (para pedidos superiores a 50€)</li>
+<li>Tarifa Plana 7.99€ (envío estándar)</li>
+<li>Tarifa Plana 14.99€ (envío exprés — nómbralo &quot;Express Shipping&quot;)</li>
+</ul>
+<h3>Crear Envío Internacional</h3>
+<ol>
+<li>Añade otra zona de envío: &quot;Internacional&quot;</li>
+<li>Zone Regions: Selecciona países o &quot;Everywhere else&quot;</li>
+<li>Añade un método de Tarifa Plana con un precio más alto</li>
+</ol>
+<h3>Clases de Envío</h3>
+<p>Para productos que necesitan tarifas de envío diferentes (artículos pesados, frágiles):</p>
+<ol>
+<li>Ve a <strong>WooCommerce → Settings → Shipping → Shipping Classes</strong></li>
+<li>Haz clic en <strong>&quot;Add shipping class&quot;</strong></li>
+<li>Crea clases como:<ul>
+<li>&quot;Heavy Items&quot; (slug: heavy-items)</li>
+<li>&quot;Fragile&quot; (slug: fragile)</li>
+</ul>
+</li>
+<li>Al editar la tarifa plana en una zona de envío, puedes establecer costes diferentes por clase de envío</li>
+</ol>
+<h3>Sin Envío (para Productos Digitales)</h3>
+<p>Si vendes productos digitales/virtuales, no necesitan envío:</p>
+<ul>
+<li>Márcalos como <strong>&quot;Virtual&quot;</strong> en el editor de producto</li>
+<li>WooCommerce omite automáticamente el envío para productos virtuales</li>
+</ul>
+<hr>
+<h2>Gestión de Pedidos</h2>
+<h3>Ver Pedidos</h3>
+<p>Ve a <strong>WooCommerce → Orders</strong> para ver todos los pedidos.</p>
+<h3>Estados de Pedido</h3>
+<table>
+<thead>
+<tr>
+<th>Estado</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Pending payment</strong></td>
+<td>Pedido realizado pero pago no confirmado</td>
+</tr>
+<tr>
+<td><strong>Processing</strong></td>
+<td>Pago recibido, pedido en preparación</td>
+</tr>
+<tr>
+<td><strong>On hold</strong></td>
+<td>Esperando acción (transferencia bancaria no recibida aún)</td>
+</tr>
+<tr>
+<td><strong>Completed</strong></td>
+<td>Pedido completado y entregado</td>
+</tr>
+<tr>
+<td><strong>Cancelled</strong></td>
+<td>Cancelado por admin o cliente</td>
+</tr>
+<tr>
+<td><strong>Refunded</strong></td>
+<td>Pago reembolsado</td>
+</tr>
+<tr>
+<td><strong>Failed</strong></td>
+<td>Pago fallido</td>
+</tr>
+</tbody></table>
+<h3>Procesar un Pedido</h3>
+<ol>
+<li>Haz clic en un pedido para ver los detalles</li>
+<li>Revisa los artículos del pedido, dirección de envío e info de pago</li>
+<li>Añade <strong>notas de pedido</strong> (visibles para el cliente o privadas)</li>
+<li>Cambia el estado a <strong>&quot;Completed&quot;</strong> cuando el pedido se haya enviado</li>
+<li>Haz clic en <strong>&quot;Update&quot;</strong></li>
+</ol>
+<hr>
+<h2>Probar el Flujo Completo de Compra</h2>
+<h3>Pasos para Probar el Checkout:</h3>
+<ol>
+<li>Asegúrate de que el <strong>modo de prueba de Stripe</strong> está habilitado</li>
+<li>Visita tu página de tienda</li>
+<li>Añade un producto al carrito</li>
+<li>Ve al carrito → procede al checkout</li>
+<li>Rellena los datos de facturación (usa datos ficticios)</li>
+<li>Introduce la tarjeta de prueba: <code>4242 4242 4242 4242</code></li>
+<li>Usa cualquier fecha de vencimiento futura y cualquier CVC</li>
+<li>Realiza el pedido</li>
+<li>Comprueba que:<ul>
+<li>Aparece la página de confirmación del pedido</li>
+<li>El pedido aparece en WooCommerce → Orders</li>
+<li>Se envía la notificación por email (revisa Mailhog en Local WP)</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>Ejercicios</h2>
+<ol>
+<li><p><strong>Configura Stripe en modo de prueba</strong>: Instala el plugin de Stripe, crea una cuenta de Stripe y configura con las claves API de prueba.</p>
+</li>
+<li><p><strong>Crea zonas de envío</strong>: Configura al menos dos zonas — nacional (tu país) e internacional. Añade envío con tarifa plana a cada una.</p>
+</li>
+<li><p><strong>Configura envío gratuito</strong>: Añade un método de envío gratuito para pedidos superiores a 50€ en tu zona nacional.</p>
+</li>
+<li><p><strong>Prueba una compra</strong>: Completa una compra de prueba usando el número de tarjeta de crédito de prueba. Recorre todo el flujo desde la tienda hasta la confirmación del pedido.</p>
+</li>
+<li><p><strong>Procesa el pedido de prueba</strong>: Encuentra el pedido de prueba en WooCommerce → Orders. Añade una nota y cambia el estado a Completed.</p>
+</li>
+<li><p><strong>Revisa los emails</strong>: Verifica que se enviaron los emails de notificación del pedido (usa Mailhog en Local WP).</p>
+</li>
+</ol>
+<hr>
+<h2>Puntos Clave</h2>
+<ul>
+<li><strong>Stripe</strong> (tarjetas de crédito) y <strong>PayPal</strong> son las pasarelas de pago esenciales</li>
+<li>Siempre usa el <strong>modo de prueba/sandbox</strong> durante el desarrollo</li>
+<li>Las <strong>zonas de envío</strong> definen áreas geográficas con métodos de envío específicos</li>
+<li>Métodos de envío comunes: <strong>Tarifa Plana</strong>, <strong>Envío Gratuito</strong> (con pedido mínimo), <strong>Recogida Local</strong></li>
+<li>Usa <strong>clases de envío</strong> para productos que necesitan tarifas diferentes</li>
+<li>Los <strong>productos virtuales</strong> omiten el envío automáticamente</li>
+<li>Prueba el <strong>flujo completo de compra</strong> antes de salir a producción</li>
+<li>Los estados de pedido rastrean el ciclo de vida: Pending → Processing → Completed</li>
+</ul>
+<hr>
+<p><strong>Siguiente Lección:</strong> <a href="lesson-28.html">Lección 28 - Diseñar una Página de Tienda con Elementor</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-26.html" class="prev">&larr; 26. Añadir Productos</a>
+      <a href="lesson-28.html" class="next">28. Diseño de la Tienda &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

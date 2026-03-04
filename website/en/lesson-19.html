@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 19: Templates, Saving, and Reusing Designs — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-19.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-19.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li class="active"><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lesson 19: Templates, Saving, and Reusing Designs</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Use Elementor&#39;s template library</li>
+<li>Save your own sections and pages as templates</li>
+<li>Import and export templates</li>
+<li>Work efficiently by reusing designs</li>
+</ul>
+<hr>
+<h2>What Are Templates?</h2>
+<p>Templates are <strong>pre-designed layouts</strong> you can insert into your pages. They save you from building everything from scratch.</p>
+<h3>Types of Templates:</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>What It Is</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Page Template</strong></td>
+<td>A complete page design (all sections)</td>
+</tr>
+<tr>
+<td><strong>Section Template</strong></td>
+<td>A single section (hero, CTA, features, etc.)</td>
+</tr>
+<tr>
+<td><strong>My Templates</strong></td>
+<td>Your own saved designs</td>
+</tr>
+<tr>
+<td><strong>Elementor Library</strong></td>
+<td>Pre-made templates from Elementor</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Using the Elementor Template Library</h2>
+<h3>Accessing the Library</h3>
+<ol>
+<li>Open a page in Elementor</li>
+<li>Click the <strong>folder icon</strong> in the widget panel, or</li>
+<li>Press <strong>Ctrl + Shift + L</strong>, or</li>
+<li>Click the <strong>folder icon</strong> that appears in the middle of the canvas when adding a new section</li>
+</ol>
+<h3>Browsing Templates</h3>
+<p>The library has tabs:</p>
+<ul>
+<li><strong>Pages</strong> — complete page designs</li>
+<li><strong>Blocks</strong> (Sections) — individual section designs (hero, FAQ, features, etc.)</li>
+<li><strong>My Templates</strong> — your saved templates</li>
+</ul>
+<h3>Inserting a Template</h3>
+<ol>
+<li>Browse and find a template you like</li>
+<li>Click <strong>&quot;Insert&quot;</strong></li>
+<li>The template is added to your page</li>
+<li>You can then customize all the content, colors, fonts, and images</li>
+</ol>
+<h3>Free vs Pro Templates</h3>
+<ul>
+<li>Templates marked with a <strong>diamond icon</strong> require Elementor Pro</li>
+<li>Free templates are available without any upgrade</li>
+<li>Even free templates provide good starting points</li>
+</ul>
+<hr>
+<h2>Saving Your Own Templates</h2>
+<h3>Saving a Section as Template</h3>
+<p>This is extremely useful — save a section you&#39;ve designed well and reuse it across pages.</p>
+<ol>
+<li><strong>Right-click</strong> the section handle (blue tab at the top of the section)</li>
+<li>Click <strong>&quot;Save as Template&quot;</strong></li>
+<li>Give it a descriptive name (e.g., &quot;Hero Section - Dark Background&quot; or &quot;3-Column Services&quot;)</li>
+<li>Click <strong>&quot;Save&quot;</strong></li>
+</ol>
+<h3>Saving an Entire Page as Template</h3>
+<ol>
+<li>Click the <strong>hamburger menu (☰)</strong> → <strong>&quot;Save as Template&quot;</strong> (or the up arrow next to Update/Publish)</li>
+<li>Give it a name (e.g., &quot;Business Homepage Template&quot;)</li>
+<li>Click <strong>&quot;Save&quot;</strong></li>
+</ol>
+<h3>Using Your Saved Templates</h3>
+<ol>
+<li>Open the template library (Ctrl + Shift + L)</li>
+<li>Go to the <strong>&quot;My Templates&quot;</strong> tab</li>
+<li>Find your template</li>
+<li>Click <strong>&quot;Insert&quot;</strong></li>
+<li>Customize the content for the new page</li>
+</ol>
+<hr>
+<h2>Organizing Templates</h2>
+<h3>Naming Convention</h3>
+<p>Use a clear naming system:</p>
+<pre><code>[Type] - [Description] - [Variant]
+
+Examples:
+Hero - Image Background - Centered
+Services - 3 Column Icons - Light BG
+CTA - Full Width - Gradient
+Testimonials - Slider - Dark
+Footer - 4 Column - With Map
+</code></pre>
+<h3>Building a Template Library</h3>
+<p>Over time, build a collection of reusable sections:</p>
+<ul>
+<li><strong>Hero sections</strong> — 2-3 variations (image bg, solid color, video bg)</li>
+<li><strong>Services/Features</strong> — 3-column icons, 4-column icons, with images</li>
+<li><strong>About sections</strong> — image left, image right</li>
+<li><strong>Testimonials</strong> — carousel, grid, single featured</li>
+<li><strong>CTA sections</strong> — simple, with background image, with form</li>
+<li><strong>FAQ</strong> — accordion style</li>
+<li><strong>Contact</strong> — form + info layout</li>
+</ul>
+<p>This becomes your personal design kit — building new pages takes minutes instead of hours.</p>
+<hr>
+<h2>Importing and Exporting Templates</h2>
+<h3>Exporting Templates</h3>
+<p>Share templates between WordPress sites:</p>
+<ol>
+<li>Go to <strong>Elementor → My Templates</strong> in wp-admin (or Templates → Saved Templates)</li>
+<li>Find the template you want to export</li>
+<li>Click <strong>&quot;Export Template&quot;</strong></li>
+<li>A <code>.json</code> file is downloaded</li>
+</ol>
+<h3>Importing Templates</h3>
+<ol>
+<li>Go to <strong>Elementor → My Templates</strong></li>
+<li>Click <strong>&quot;Import Templates&quot;</strong> at the top</li>
+<li>Select the <code>.json</code> file</li>
+<li>Click <strong>&quot;Import Now&quot;</strong></li>
+<li>The template appears in your library</li>
+</ol>
+<h3>Use Cases for Import/Export:</h3>
+<ul>
+<li><strong>Move designs between sites</strong> — develop locally, export to client&#39;s site</li>
+<li><strong>Share with team members</strong> — distribute standardized designs</li>
+<li><strong>Backup your designs</strong> — export all templates for safekeeping</li>
+<li><strong>Use third-party templates</strong> — many sites offer free Elementor templates as JSON files</li>
+</ul>
+<hr>
+<h2>Template Kits and Starter Sites</h2>
+<h3>Third-Party Template Sources</h3>
+<p>Several services provide free and premium Elementor template kits:</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>What They Offer</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Envato Elements</strong></td>
+<td>1000+ full template kits (paid subscription)</td>
+</tr>
+<tr>
+<td><strong>TemplateMonster</strong></td>
+<td>Premium Elementor templates</td>
+</tr>
+<tr>
+<td><strong>Starter Templates by Astra</strong></td>
+<td>Free complete site imports</td>
+</tr>
+<tr>
+<td><strong>Elementor Community</strong></td>
+<td>Free templates shared by users</td>
+</tr>
+</tbody></table>
+<h3>Using Starter Templates Plugin (with Astra theme)</h3>
+<ol>
+<li>Install the <strong>&quot;Starter Templates&quot;</strong> plugin</li>
+<li>Choose Elementor as your page builder</li>
+<li>Browse complete website templates</li>
+<li>Click <strong>&quot;Import Complete Site&quot;</strong> or import individual pages</li>
+<li>Customize the imported content</li>
+</ol>
+<p><strong>Warning:</strong> Importing a complete site will replace your existing content. Do this on a fresh site or make a backup first.</p>
+<hr>
+<h2>Template Workflow</h2>
+<h3>Efficient Page Building Process:</h3>
+<ol>
+<li><strong>Check your template library first</strong> — do you have a section that fits?</li>
+<li><strong>Check the Elementor library</strong> — is there a free template close to what you need?</li>
+<li><strong>Insert a template</strong> as a starting point</li>
+<li><strong>Customize</strong> the content (text, images, colors)</li>
+<li><strong>Adjust to match</strong> your global styles</li>
+<li><strong>Save new designs</strong> as templates for future use</li>
+</ol>
+<h3>When Building Multiple Similar Pages:</h3>
+<ol>
+<li>Build the first page completely</li>
+<li>Save it as a page template</li>
+<li>For similar pages, insert the template and swap out the content</li>
+<li>Much faster than building from scratch each time</li>
+</ol>
+<p><strong>Example:</strong> Building 5 service pages (Web Design, SEO, Marketing, Branding, Support):</p>
+<ol>
+<li>Design the first service page layout</li>
+<li>Save it as &quot;Service Page Template&quot;</li>
+<li>Create each new page → insert template → change the service-specific content</li>
+</ol>
+<hr>
+<h2>Exercises</h2>
+<ol>
+<li><p><strong>Browse the template library</strong>: Press Ctrl + Shift + L and browse through available pages and blocks. Try inserting a free block template onto a test page.</p>
+</li>
+<li><p><strong>Save a section template</strong>: Take your best section from the homepage and save it as a template. Give it a descriptive name.</p>
+</li>
+<li><p><strong>Save a page template</strong>: Save your About page (or Homepage) as a complete page template.</p>
+</li>
+<li><p><strong>Reuse a template</strong>: Create a new page, insert your saved section template, and modify the content.</p>
+</li>
+<li><p><strong>Export and re-import</strong>: Export one of your templates as a JSON file. Delete it from your library. Re-import it to confirm the process works.</p>
+</li>
+<li><p><strong>Build a template collection</strong>: Save at least 3 different section templates (hero, services, CTA) that you can mix and match for future pages.</p>
+</li>
+</ol>
+<hr>
+<h2>Key Takeaways</h2>
+<ul>
+<li><strong>Templates save enormous time</strong> — don&#39;t build from scratch every time</li>
+<li>Save sections with <strong>right-click → Save as Template</strong></li>
+<li>Save pages from the <strong>hamburger menu → Save as Template</strong></li>
+<li>Use a clear <strong>naming convention</strong> for your templates</li>
+<li><strong>Export/Import</strong> templates as JSON files to move between sites</li>
+<li>Build a <strong>personal template library</strong> over time — this is your design toolkit</li>
+<li><strong>Check existing templates</strong> before building something new</li>
+<li>Third-party template kits can jumpstart new projects</li>
+</ul>
+<hr>
+<p><strong>Next Lesson:</strong> <a href="lesson-20.html">Lesson 20 - Responsive Design</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-18.html" class="prev">&larr; 18. Contact Page &amp; Forms</a>
+      <a href="lesson-20.html" class="next">20. Responsive Design &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

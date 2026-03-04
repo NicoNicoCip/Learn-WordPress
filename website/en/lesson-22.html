@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 22: Must-Have Plugins — SEO, Security, Backups, Caching — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-22.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-22.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li class="active"><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lesson 22: Must-Have Plugins — SEO, Security, Backups, Caching</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Install and configure essential plugins every WordPress site needs</li>
+<li>Set up basic SEO with Yoast or RankMath</li>
+<li>Configure security basics</li>
+<li>Set up backup and caching plugins</li>
+</ul>
+<hr>
+<h2>The Essential Plugin Stack</h2>
+<p>Every professional WordPress site needs these categories covered:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Recommended Plugin (Free)</th>
+<th>Alternative</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>SEO</strong></td>
+<td>Yoast SEO</td>
+<td>RankMath</td>
+</tr>
+<tr>
+<td><strong>Security</strong></td>
+<td>Wordfence</td>
+<td>Sucuri, iThemes Security</td>
+</tr>
+<tr>
+<td><strong>Backups</strong></td>
+<td>UpdraftPlus</td>
+<td>All-in-One WP Migration</td>
+</tr>
+<tr>
+<td><strong>Caching/Speed</strong></td>
+<td>WP Super Cache</td>
+<td>W3 Total Cache, LiteSpeed Cache</td>
+</tr>
+<tr>
+<td><strong>Anti-Spam</strong></td>
+<td>Akismet</td>
+<td>Antispam Bee</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>1. SEO Plugin — Yoast SEO</h2>
+<p>SEO (Search Engine Optimization) helps your site appear in Google search results.</p>
+<h3>Installation</h3>
+<ol>
+<li><strong>Plugins → Add New</strong> → search &quot;Yoast SEO&quot;</li>
+<li>Install and activate</li>
+</ol>
+<h3>Initial Setup</h3>
+<p>Yoast has a setup wizard:</p>
+<ol>
+<li>After activation, go to <strong>Yoast SEO → First-time configuration</strong></li>
+<li>Follow the steps:<ul>
+<li><strong>Site representation</strong>: Organization or Person</li>
+<li><strong>Social profiles</strong>: Add your social media URLs</li>
+<li><strong>Search appearance</strong>: Visibility settings</li>
+</ul>
+</li>
+<li>Complete all steps</li>
+</ol>
+<h3>Key Features</h3>
+<p><strong>SEO Analysis (per post/page):</strong>
+When editing a post or page, scroll down to the <strong>Yoast SEO panel</strong>:</p>
+<ul>
+<li><strong>Focus Keyphrase</strong>: Enter the main keyword for this page</li>
+<li><strong>SEO Analysis</strong>: Shows a traffic light (green/yellow/red) with specific recommendations</li>
+<li><strong>Readability Analysis</strong>: Checks if your text is easy to read</li>
+<li><strong>Snippet Preview</strong>: Shows how your page will look in Google search results</li>
+</ul>
+<p><strong>What to optimize on every page:</strong></p>
+<ul>
+<li><strong>SEO Title</strong> — the title shown in search results (include your keyword)</li>
+<li><strong>Meta Description</strong> — the description shown in search results (150-160 characters)</li>
+<li><strong>Focus Keyphrase</strong> — the main keyword you want to rank for</li>
+<li><strong>URL Slug</strong> — keep it short and include the keyword</li>
+</ul>
+<h3>Important Yoast Settings</h3>
+<p>Go to <strong>Yoast SEO → Settings</strong>:</p>
+<ul>
+<li><strong>Site Features</strong>: Enable/disable features like XML sitemaps</li>
+<li><strong>Content Types</strong>: Set default SEO settings for posts and pages</li>
+<li><strong>Taxonomies</strong>: SEO for categories and tags</li>
+</ul>
+<h3>XML Sitemap</h3>
+<p>Yoast automatically generates a <strong>sitemap</strong> — a file that tells search engines about all your pages:</p>
+<ul>
+<li>View it at: <code>yoursite.com/sitemap_index.xml</code></li>
+<li>Submit it to Google Search Console (when your site goes live)</li>
+</ul>
+<hr>
+<h2>2. Security Plugin — Wordfence</h2>
+<h3>Installation</h3>
+<ol>
+<li><strong>Plugins → Add New</strong> → search &quot;Wordfence&quot;</li>
+<li>Install and activate <strong>&quot;Wordfence Security&quot;</strong></li>
+<li>Enter your email address when prompted</li>
+</ol>
+<h3>Key Features</h3>
+<p><strong>Firewall:</strong></p>
+<ul>
+<li>Blocks malicious traffic before it reaches WordPress</li>
+<li>Go to <strong>Wordfence → Firewall</strong> to see the status</li>
+<li>Initially in &quot;Learning Mode&quot; — it will switch to &quot;Enabled&quot; after a week</li>
+</ul>
+<p><strong>Malware Scanner:</strong></p>
+<ul>
+<li>Go to <strong>Wordfence → Scan</strong></li>
+<li>Click <strong>&quot;Start New Scan&quot;</strong></li>
+<li>It checks core files, themes, and plugins for malware or modifications</li>
+</ul>
+<p><strong>Login Security:</strong></p>
+<ul>
+<li><strong>Limit login attempts</strong> — blocks brute force attacks</li>
+<li><strong>Two-Factor Authentication</strong> — add an extra security layer to login</li>
+<li>Go to <strong>Wordfence → Login Security</strong> to configure</li>
+</ul>
+<h3>Recommended Wordfence Settings</h3>
+<ol>
+<li>Enable <strong>brute force protection</strong> (on by default)</li>
+<li>Set up <strong>email notifications</strong> for critical security alerts</li>
+<li>Enable <strong>2FA</strong> for admin accounts (Wordfence → Login Security → Two-Factor Authentication)</li>
+</ol>
+<h3>Security Best Practices (Beyond Plugins)</h3>
+<ul>
+<li><strong>Use strong passwords</strong> — never <code>admin</code> or <code>password123</code></li>
+<li><strong>Don&#39;t use &quot;admin&quot; as your username</strong> on live sites</li>
+<li><strong>Keep WordPress core, themes, and plugins updated</strong></li>
+<li><strong>Delete unused themes and plugins</strong></li>
+<li><strong>Use SSL (HTTPS)</strong> — Local WP can enable this with &quot;Trust&quot; certificate</li>
+</ul>
+<hr>
+<h2>3. Backup Plugin — UpdraftPlus</h2>
+<p>Backups are your safety net. If anything goes wrong, you can restore.</p>
+<h3>Installation</h3>
+<ol>
+<li><strong>Plugins → Add New</strong> → search &quot;UpdraftPlus&quot;</li>
+<li>Install and activate <strong>&quot;UpdraftPlus WordPress Backup Plugin&quot;</strong></li>
+</ol>
+<h3>Setting Up Backups</h3>
+<ol>
+<li>Go to <strong>Settings → UpdraftPlus Backups</strong></li>
+<li>Click the <strong>&quot;Settings&quot;</strong> tab</li>
+<li>Configure:<ul>
+<li><strong>Schedule</strong>: Choose backup frequency<ul>
+<li>Files: Weekly (or Daily for active sites)</li>
+<li>Database: Daily</li>
+</ul>
+</li>
+<li><strong>Retain</strong>: How many backups to keep (3-5 is good)</li>
+<li><strong>Remote Storage</strong>: Where to store backups<ul>
+<li>Google Drive (recommended — free)</li>
+<li>Dropbox</li>
+<li>Amazon S3</li>
+<li>Email (for small sites only)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Click <strong>&quot;Save Changes&quot;</strong></li>
+</ol>
+<h3>Creating a Manual Backup</h3>
+<ol>
+<li>Go to <strong>Settings → UpdraftPlus Backups</strong></li>
+<li>Click <strong>&quot;Backup Now&quot;</strong></li>
+<li>Check both &quot;Include your database&quot; and &quot;Include your files&quot;</li>
+<li>Click <strong>&quot;Backup Now&quot;</strong></li>
+<li>Wait for completion</li>
+</ol>
+<h3>Restoring from Backup</h3>
+<ol>
+<li>Go to <strong>Settings → UpdraftPlus Backups</strong></li>
+<li>Under <strong>&quot;Existing Backups&quot;</strong>, find the backup you want</li>
+<li>Click <strong>&quot;Restore&quot;</strong></li>
+<li>Select what to restore (plugins, themes, uploads, database, etc.)</li>
+<li>Click <strong>&quot;Restore&quot;</strong></li>
+</ol>
+<h3>When to Back Up</h3>
+<ul>
+<li><strong>Before updating</strong> WordPress core, themes, or plugins</li>
+<li><strong>Before making major changes</strong> to your site</li>
+<li><strong>Automatically</strong> on a regular schedule (set it and forget it)</li>
+</ul>
+<hr>
+<h2>4. Caching Plugin — WP Super Cache</h2>
+<p>Caching makes your site <strong>load faster</strong> by storing pre-generated versions of your pages.</p>
+<h3>How Caching Works</h3>
+<p>Without cache: Every visitor → PHP processes → Database queries → Page generated → Sent to browser
+With cache: Every visitor → Pre-generated page served → Much faster</p>
+<h3>Installation</h3>
+<ol>
+<li><strong>Plugins → Add New</strong> → search &quot;WP Super Cache&quot;</li>
+<li>Install and activate</li>
+</ol>
+<h3>Configuration</h3>
+<ol>
+<li>Go to <strong>Settings → WP Super Cache</strong></li>
+<li>On the <strong>Easy</strong> tab:<ul>
+<li>Select <strong>&quot;Caching On&quot;</strong></li>
+<li>Click <strong>&quot;Update Status&quot;</strong></li>
+</ul>
+</li>
+<li>That&#39;s the minimum setup — basic caching is now active</li>
+</ol>
+<h3>Advanced Settings (Optional)</h3>
+<p>On the <strong>Advanced</strong> tab:</p>
+<ul>
+<li><strong>Cache Delivery Method</strong>: Simple (recommended for most sites)</li>
+<li><strong>Miscellaneous</strong>:<ul>
+<li>Check &quot;Don&#39;t cache pages for known users&quot; (logged-in users see live content)</li>
+<li>Check &quot;Cache rebuild&quot; (serves old cache while rebuilding)</li>
+</ul>
+</li>
+<li>Click <strong>&quot;Update Status&quot;</strong></li>
+</ul>
+<h3>When to Clear the Cache</h3>
+<p>Clear the cache when you:</p>
+<ul>
+<li>Update content and don&#39;t see changes</li>
+<li>Update themes or plugins</li>
+<li>Change site settings</li>
+</ul>
+<p><strong>To clear:</strong> Settings → WP Super Cache → click &quot;Delete Cache&quot;</p>
+<hr>
+<h2>5. Anti-Spam — Akismet</h2>
+<p>If your site has comments or forms, you need anti-spam protection.</p>
+<h3>Installation</h3>
+<ul>
+<li>Akismet comes <strong>pre-installed</strong> with WordPress</li>
+<li>Go to <strong>Plugins → Installed Plugins</strong> → Activate Akismet</li>
+<li>You&#39;ll need an <strong>API key</strong> (free for personal sites, paid for commercial)</li>
+<li>Follow the setup wizard to get your key</li>
+</ul>
+<h3>What It Does</h3>
+<ul>
+<li>Automatically checks comments and form submissions for spam</li>
+<li>Filters out spam comments so you don&#39;t have to review them manually</li>
+<li>Works with WPForms, Contact Form 7, and other popular form plugins</li>
+</ul>
+<hr>
+<h2>Plugin Installation Summary</h2>
+<p>Install these plugins in this order:</p>
+<ol>
+<li><strong>Yoast SEO</strong> — for search engine optimization</li>
+<li><strong>Wordfence Security</strong> — for security and firewall</li>
+<li><strong>UpdraftPlus</strong> — for backups</li>
+<li><strong>WP Super Cache</strong> — for performance</li>
+<li><strong>Akismet</strong> — for spam protection</li>
+</ol>
+<p>Total: 5 essential plugins. Combined with Elementor, WPForms, and Hello Elementor, that&#39;s 8 plugins — a lean, efficient stack.</p>
+<hr>
+<h2>Exercises</h2>
+<ol>
+<li><p><strong>Install all 5 essential plugins</strong> listed above.</p>
+</li>
+<li><p><strong>Configure Yoast SEO</strong>: Run the first-time configuration wizard. Then edit your homepage and set a focus keyphrase, SEO title, and meta description.</p>
+</li>
+<li><p><strong>Run a Wordfence scan</strong>: Go to Wordfence → Scan and run a scan. Review the results.</p>
+</li>
+<li><p><strong>Set up UpdraftPlus</strong>: Configure automatic backups and create a manual backup.</p>
+</li>
+<li><p><strong>Enable WP Super Cache</strong>: Turn on caching using the Easy tab.</p>
+</li>
+<li><p><strong>Check your plugin list</strong>: Go to Plugins → Installed Plugins. You should have only the plugins you need — delete any that came pre-installed and you don&#39;t want (like &quot;Hello Dolly&quot;).</p>
+</li>
+</ol>
+<hr>
+<h2>Key Takeaways</h2>
+<ul>
+<li>Every WordPress site needs: <strong>SEO, Security, Backups, Caching, Anti-Spam</strong></li>
+<li><strong>Yoast SEO</strong>: Set SEO title and meta description on every page</li>
+<li><strong>Wordfence</strong>: Provides firewall, malware scanning, and login protection</li>
+<li><strong>UpdraftPlus</strong>: Schedule automatic backups to cloud storage</li>
+<li><strong>WP Super Cache</strong>: Turn on caching for faster page loads</li>
+<li><strong>Akismet</strong>: Filters spam comments and form submissions</li>
+<li>Keep your essential plugin stack <strong>lean</strong> — 5-8 essential plugins is ideal</li>
+<li><strong>Back up before making changes</strong> — always have a safety net</li>
+</ul>
+<hr>
+<p><strong>Next Lesson:</strong> <a href="lesson-23.html">Lesson 23 - Contact Forms</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-21.html" class="prev">&larr; 21. Understanding Plugins</a>
+      <a href="lesson-23.html" class="next">23. Contact Forms &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

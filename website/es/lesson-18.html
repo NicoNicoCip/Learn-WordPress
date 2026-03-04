@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leccion 18: Construir una Pagina de Contacto con Formularios — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-18.html">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-18.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li class="active"><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Leccion 18: Construir una Pagina de Contacto con Formularios</h1>
+<h2>Objetivos</h2>
+<ul>
+<li>Construir un diseno profesional de pagina de contacto</li>
+<li>Instalar y configurar un plugin de formulario de contacto</li>
+<li>Anadir un formulario a tu pagina usando Elementor</li>
+<li>Incluir mapas, informacion de contacto y horario comercial</li>
+</ul>
+<hr>
+<h2>Estructura de la Pagina de Contacto</h2>
+<p>Una buena pagina de contacto incluye:</p>
+<ol>
+<li><strong>Encabezado de pagina</strong> — titulo y breve invitacion</li>
+<li><strong>Formulario de contacto</strong> — la caracteristica principal</li>
+<li><strong>Datos de contacto</strong> — telefono, email, direccion</li>
+<li><strong>Mapa</strong> — Google Map incrustado</li>
+<li><strong>Horario comercial</strong> (si aplica)</li>
+</ol>
+<hr>
+<h2>Configurar un Plugin de Formulario de Contacto</h2>
+<p>Elementor Free no incluye un widget de formulario (esa es una funcion de Elementor Pro). Usaremos un plugin de formulario gratuito.</p>
+<h3>Opcion 1: WPForms Lite (Recomendado para principiantes)</h3>
+<ol>
+<li>Ve a <strong>Plugins → Add New Plugin</strong></li>
+<li>Busca <strong>&quot;WPForms&quot;</strong></li>
+<li>Instala y activa <strong>&quot;WPForms Lite&quot;</strong></li>
+<li>Despues de la activacion, veras <strong>WPForms</strong> en la barra lateral</li>
+</ol>
+<h3>Crear un Formulario de Contacto con WPForms</h3>
+<ol>
+<li>Ve a <strong>WPForms → Add New</strong></li>
+<li>Nombralo &quot;Formulario de Contacto&quot;</li>
+<li>Selecciona la plantilla <strong>&quot;Simple Contact Form&quot;</strong></li>
+<li>El constructor de formularios se abre con campos preconfigurados:<ul>
+<li>Nombre</li>
+<li>Email</li>
+<li>Comentario o Mensaje</li>
+</ul>
+</li>
+<li>Personaliza si es necesario:<ul>
+<li><strong>Arrastra campos</strong> para reordenar</li>
+<li><strong>Haz clic en un campo</strong> para editar su etiqueta, marcador de posicion y requisitos</li>
+<li><strong>Anade campos</strong> desde el panel izquierdo (Telefono, Asunto, etc.)</li>
+</ul>
+</li>
+<li>Haz clic en <strong>Settings</strong> en el panel izquierdo:<ul>
+<li><strong>General</strong>: Nombre del formulario, texto del boton de envio, mensaje de confirmacion</li>
+<li><strong>Notifications</strong>: Establece la direccion de email donde se envian los envios (tu email)</li>
+<li><strong>Confirmations</strong>: Lo que el usuario ve despues de enviar (mensaje de exito o redireccion)</li>
+</ul>
+</li>
+<li>Haz clic en <strong>&quot;Save&quot;</strong></li>
+</ol>
+<h3>Anadir WPForms a Elementor</h3>
+<p><strong>Metodo 1: Shortcode</strong></p>
+<ol>
+<li>En WPForms, ve a tu formulario, busca el shortcode (se ve como <code>[wpforms id=&quot;123&quot;]</code>)</li>
+<li>En Elementor, anade un widget <strong>Shortcode</strong></li>
+<li>Pega el shortcode</li>
+</ol>
+<p><strong>Metodo 2: Widget de WPForms (si esta disponible)</strong></p>
+<ol>
+<li>En Elementor, busca &quot;WPForms&quot; en el panel de widgets</li>
+<li>Arrastra el widget de WPForms a tu pagina</li>
+<li>Selecciona tu formulario del menu desplegable</li>
+</ol>
+<h3>Opcion 2: Contact Form 7 (Alternativa)</h3>
+<ol>
+<li>Instala y activa el plugin <strong>&quot;Contact Form 7&quot;</strong></li>
+<li>Ve a <strong>Contact → Add New</strong></li>
+<li>Configura los campos de tu formulario</li>
+<li>Copia el shortcode</li>
+<li>En Elementor, usa un widget <strong>Shortcode</strong> y pegalo</li>
+</ol>
+<hr>
+<h2>Construir la Pagina de Contacto</h2>
+<h3>Seccion 1: Encabezado de Pagina</h3>
+<ol>
+<li><p><strong>Anade una Seccion</strong> — 1 columna</p>
+</li>
+<li><p>Background: Color primary o degradado sutil</p>
+</li>
+<li><p>Min Height: 250px, Vertical Align: Middle</p>
+</li>
+<li><p>Padding: 60px arriba y abajo</p>
+</li>
+<li><p><strong>Heading:</strong> &quot;Ponte en Contacto&quot;, H1, Centro, Blanco, 44px</p>
+</li>
+<li><p><strong>Text Editor:</strong> &quot;Nos encantaria saber de ti. Envianos un mensaje y te responderemos lo antes posible.&quot;, Centro, texto claro</p>
+</li>
+</ol>
+<hr>
+<h3>Seccion 2: Formulario + Informacion de Contacto (2 Columnas)</h3>
+<ol>
+<li><strong>Anade una Seccion</strong> — 2 columnas (60/40 o 65/35)</li>
+<li>Background: Blanco</li>
+<li>Padding: 80px arriba y abajo</li>
+</ol>
+<p><strong>Columna 1 (Formulario — mas ancha):</strong></p>
+<ul>
+<li><strong>Heading:</strong> &quot;Envianos un Mensaje&quot;, H3</li>
+<li>Widget <strong>WPForms</strong> o widget <strong>Shortcode</strong> con tu formulario</li>
+</ul>
+<p><strong>Columna 2 (Informacion de Contacto — mas estrecha):</strong></p>
+<p>Anade estos widgets:</p>
+<p><strong>Heading:</strong> &quot;Informacion de Contacto&quot;, H3</p>
+<p><strong>Icon List</strong> widget (o widgets individuales Icon Box):</p>
+<ul>
+<li>Icono de telefono + &quot;(555) 123-4567&quot;</li>
+<li>Icono de email + &quot;<a href="mailto:info@example.com">info@example.com</a>&quot;</li>
+<li>Icono de ubicacion + &quot;Calle Empresa 123, Ciudad, CP 12345&quot;</li>
+</ul>
+<p><strong>Heading:</strong> &quot;Horario Comercial&quot;, H4
+<strong>Text Editor:</strong></p>
+<pre><code>Lunes - Viernes: 9:00 - 18:00
+Sabado: 10:00 - 14:00
+Domingo: Cerrado
+</code></pre>
+<p><strong>Social Icons</strong> widget:</p>
+<ul>
+<li>Anade iconos para Facebook, Twitter/X, LinkedIn, Instagram</li>
+<li>Estilizalos para que coincidan con los colores de tu marca</li>
+</ul>
+<hr>
+<h3>Seccion 3: Mapa</h3>
+<ol>
+<li><strong>Anade una Seccion</strong> — 1 columna</li>
+<li>Padding: 0 (sin padding — deja que el mapa ocupe de borde a borde)</li>
+</ol>
+<p><strong>Widget Google Maps:</strong></p>
+<ul>
+<li>Arrastra el widget <strong>Google Maps</strong> a la seccion</li>
+<li>Introduce la direccion en el campo Location</li>
+<li>Establece el nivel de Zoom (14-16 es bueno para una ubicacion unica)</li>
+<li>Establece Height: 400px</li>
+</ul>
+<p><strong>Nota:</strong> Google Maps puede requerir una clave API para uso extendido. Para desarrollo local, normalmente funciona sin una.</p>
+<p><strong>Alternativa — Incrustar un Mapa:</strong></p>
+<ol>
+<li>Ve a Google Maps en tu navegador</li>
+<li>Busca una direccion</li>
+<li>Haz clic en Compartir → Insertar un mapa</li>
+<li>Copia el codigo iframe</li>
+<li>En Elementor, anade un widget <strong>HTML</strong> y pega el codigo de incrustacion</li>
+</ol>
+<hr>
+<h3>Seccion 4: Seccion de Preguntas Frecuentes (Opcional)</h3>
+<p>Preguntas comunes que las personas podrian tener antes de contactarte:</p>
+<ol>
+<li><p><strong>Anade una Seccion</strong> — 1 columna</p>
+</li>
+<li><p>Background: Claro (#f8f9fa)</p>
+</li>
+<li><p>Padding: 80px arriba y abajo</p>
+</li>
+<li><p><strong>Heading:</strong> &quot;Preguntas Frecuentes&quot;, H2, Centro</p>
+</li>
+<li><p>Widget <strong>Accordion</strong>:</p>
+<ul>
+<li>Elemento 1: &quot;¿Cual es vuestro tiempo de respuesta habitual?&quot; → &quot;Respondemos a todas las consultas en un plazo de 24 horas laborables.&quot;</li>
+<li>Elemento 2: &quot;¿Ofreceis consultas gratuitas?&quot; → &quot;¡Si! Ofrecemos una consulta gratuita de 30 minutos para hablar sobre tu proyecto.&quot;</li>
+<li>Elemento 3: &quot;¿En que zonas prestais servicio?&quot; → &quot;Trabajamos con clientes de todo el mundo. Todos nuestros servicios se pueden ofrecer de forma remota.&quot;</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>Dar Estilo al Formulario de Contacto</h2>
+<p>Los formularios de WPForms y Contact Form 7 se pueden estilizar con CSS. Anade esto al CSS Adicional del Personalizador (o en un widget Custom CSS en Elementor Pro):</p>
+<h3>Estilo Basico del Formulario (WPForms):</h3>
+<pre><code class="language-css">/* Campos de entrada */
+.wpforms-form input[type=&quot;text&quot;],
+.wpforms-form input[type=&quot;email&quot;],
+.wpforms-form textarea {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 12px 15px;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Estado de enfoque */
+.wpforms-form input:focus,
+.wpforms-form textarea:focus {
+    border-color: #1abc9c; /* tu color de acento */
+    outline: none;
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.3);
+}
+
+/* Boton de envio */
+.wpforms-form button[type=&quot;submit&quot;] {
+    background-color: #e74c3c; /* tu color de acento */
+    color: #ffffff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.wpforms-form button[type=&quot;submit&quot;]:hover {
+    background-color: #c0392b; /* mas oscuro en hover */
+}
+</code></pre>
+<hr>
+<h2>Probar Tu Formulario</h2>
+<h3>En Local WP:</h3>
+<ul>
+<li>Local WP incluye <strong>Mailhog</strong> — una herramienta que captura los emails enviados por WordPress localmente</li>
+<li>En Local, haz clic en la pestana <strong>&quot;Tools&quot;</strong> → <strong>&quot;Open Mailhog&quot;</strong></li>
+<li>Envia un formulario de prueba y comprueba Mailhog para ver el email</li>
+</ul>
+<h3>Lista de Verificacion:</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Todos los campos obligatorios muestran errores de validacion cuando estan vacios</li>
+<li><input disabled="" type="checkbox"> El formulario se envia correctamente con un mensaje de confirmacion</li>
+<li><input disabled="" type="checkbox"> El email llega con todos los datos enviados</li>
+<li><input disabled="" type="checkbox"> El formulario se ve bien en movil</li>
+<li><input disabled="" type="checkbox"> El boton de envio es claramente visible</li>
+</ul>
+<hr>
+<h2>Ejercicios</h2>
+<ol>
+<li><p><strong>Instala WPForms Lite</strong>: Instala y activa el plugin.</p>
+</li>
+<li><p><strong>Crea un formulario de contacto</strong>: Usa la plantilla Simple Contact Form. Anade un campo de Numero de Telefono y un desplegable de Asunto.</p>
+</li>
+<li><p><strong>Construye la pagina de contacto</strong>: Sigue el diseno anterior — encabezado, formulario + informacion de contacto, mapa y preguntas frecuentes.</p>
+</li>
+<li><p><strong>Da estilo al formulario</strong>: Anade CSS personalizado para que el formulario coincida con el diseno de tu sitio.</p>
+</li>
+<li><p><strong>Prueba el formulario</strong>: Envia una entrada de prueba. Comprueba Mailhog (en Local WP) o la pagina de Entries de WPForms para confirmar que funciona.</p>
+</li>
+<li><p><strong>Comprueba en movil</strong>: Previsualiza la pagina de contacto en movil y asegurate de que el diseno de 2 columnas se apila correctamente.</p>
+</li>
+</ol>
+<hr>
+<h2>Puntos Clave</h2>
+<ul>
+<li>Usa <strong>WPForms Lite</strong> (gratuito) o <strong>Contact Form 7</strong> (gratuito) para formularios de contacto en Elementor Free</li>
+<li>Una buena pagina de contacto tiene: <strong>formulario + datos de contacto + mapa</strong></li>
+<li>Usa un <strong>diseno de 2 columnas</strong>: columna mas ancha para el formulario, mas estrecha para la informacion de contacto</li>
+<li><strong>Prueba tu formulario</strong> — usa Mailhog de Local WP para verificar que se envian los emails</li>
+<li><strong>Estiliza los formularios con CSS</strong> para que coincidan con el diseno de tu sitio</li>
+<li>Una <strong>seccion de preguntas frecuentes</strong> puede responder consultas comunes y reducir las consultas innecesarias</li>
+<li>Incluye siempre <strong>multiples formas de contacto</strong> — formulario, email, telefono, redes sociales</li>
+</ul>
+<hr>
+<p><strong>Siguiente Leccion:</strong> <a href="lesson-19.html">Leccion 19 - Templates, Guardar y Reutilizar Disenos</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-17.html" class="prev">&larr; 17. Página Acerca de</a>
+      <a href="lesson-19.html" class="next">19. Plantillas y Reutilización &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

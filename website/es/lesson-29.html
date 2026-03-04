@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lección 29: Usuarios y Roles — Gestionar el Acceso — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-29.html">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-29.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li class="active"><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lección 29: Usuarios y Roles — Gestionar el Acceso</h1>
+<h2>Objetivos</h2>
+<ul>
+<li>Entender los roles de usuario y capacidades de WordPress</li>
+<li>Crear y gestionar cuentas de usuario</li>
+<li>Asignar roles apropiados a miembros del equipo y clientes</li>
+<li>Configurar los ajustes del perfil de usuario</li>
+</ul>
+<hr>
+<h2>Roles de Usuario de WordPress</h2>
+<p>WordPress tiene un sistema de roles integrado que controla lo que cada usuario puede hacer:</p>
+<table>
+<thead>
+<tr>
+<th>Rol</th>
+<th>Qué Pueden Hacer</th>
+<th>Ideal Para</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Administrator</strong></td>
+<td>Todo — control total del sitio</td>
+<td>Propietario del sitio, desarrollador principal</td>
+</tr>
+<tr>
+<td><strong>Editor</strong></td>
+<td>Gestionar y publicar todo el contenido (entradas, páginas, comentarios)</td>
+<td>Gestor de contenidos, redactor senior</td>
+</tr>
+<tr>
+<td><strong>Author</strong></td>
+<td>Escribir y publicar solo sus propias entradas</td>
+<td>Colaborador del blog, miembro del equipo</td>
+</tr>
+<tr>
+<td><strong>Contributor</strong></td>
+<td>Escribir entradas pero no pueden publicar (requiere aprobación de editor/admin)</td>
+<td>Escritores invitados, becarios</td>
+</tr>
+<tr>
+<td><strong>Subscriber</strong></td>
+<td>Solo pueden gestionar su propio perfil</td>
+<td>Visitantes registrados, suscriptores de newsletter</td>
+</tr>
+</tbody></table>
+<h3>Roles de WooCommerce (Añadidos por WooCommerce)</h3>
+<table>
+<thead>
+<tr>
+<th>Rol</th>
+<th>Qué Pueden Hacer</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Shop Manager</strong></td>
+<td>Gestionar productos, pedidos, cupones y clientes (sin ajustes del sitio)</td>
+</tr>
+<tr>
+<td><strong>Customer</strong></td>
+<td>Realizar pedidos y gestionar su cuenta</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Gestionar Usuarios</h2>
+<h3>Crear un Nuevo Usuario</h3>
+<ol>
+<li>Ve a <strong>Users → Add New User</strong></li>
+<li>Rellena:<ul>
+<li><strong>Username</strong> (obligatorio) — no se puede cambiar después</li>
+<li><strong>Email</strong> (obligatorio) — debe ser único</li>
+<li><strong>First Name / Last Name</strong> — información de visualización</li>
+<li><strong>Website</strong> — opcional</li>
+<li><strong>Password</strong> — usa &quot;Generate Password&quot; para una contraseña segura</li>
+<li><strong>Role</strong> — selecciona el rol apropiado</li>
+</ul>
+</li>
+<li>Marca <strong>&quot;Send the new user an email about their account&quot;</strong> si quieres notificarle</li>
+<li>Haz clic en <strong>&quot;Add New User&quot;</strong></li>
+</ol>
+<h3>Editar Usuarios</h3>
+<ol>
+<li>Ve a <strong>Users → All Users</strong></li>
+<li>Pasa el cursor sobre un usuario → haz clic en <strong>&quot;Edit&quot;</strong></li>
+<li>Puedes cambiar: nombre, email, rol, contraseña, biografía, foto de perfil</li>
+</ol>
+<h3>Eliminar Usuarios</h3>
+<ol>
+<li>Ve a <strong>Users → All Users</strong></li>
+<li>Pasa el cursor sobre un usuario → haz clic en <strong>&quot;Delete&quot;</strong></li>
+<li>Elige qué hacer con su contenido:<ul>
+<li><strong>Delete all content</strong> — elimina permanentemente sus entradas/páginas</li>
+<li><strong>Attribute all content to</strong> — transfiere su contenido a otro usuario</li>
+</ul>
+</li>
+<li><strong>Siempre atribuye el contenido</strong> para evitar perder entradas/páginas</li>
+</ol>
+<hr>
+<h2>Guía de Selección de Roles</h2>
+<h3>Para Sitios de Clientes</h3>
+<p>Al construir sitios para clientes, piensa qué acceso necesitan:</p>
+<table>
+<thead>
+<tr>
+<th>Necesidad del Cliente</th>
+<th>Asignar Rol</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&quot;Solo necesito actualizar las entradas del blog&quot;</td>
+<td>Author o Editor</td>
+</tr>
+<tr>
+<td>&quot;Necesito gestionar todo el contenido y las páginas&quot;</td>
+<td>Editor</td>
+</tr>
+<tr>
+<td>&quot;Necesito control total del sitio&quot;</td>
+<td>Administrator</td>
+</tr>
+<tr>
+<td>&quot;Necesito gestionar la tienda online&quot;</td>
+<td>Shop Manager</td>
+</tr>
+<tr>
+<td>&quot;Mi personal necesita escribir entradas para aprobación&quot;</td>
+<td>Contributor</td>
+</tr>
+</tbody></table>
+<h3>El Principio de Mínimo Privilegio</h3>
+<p>Da a los usuarios el <strong>rol mínimo que necesitan</strong>. Esto previene:</p>
+<ul>
+<li>Cambios accidentales en la configuración del sitio</li>
+<li>Eliminación de contenido importante</li>
+<li>Instalación de plugins inseguros</li>
+<li>Modificación del contenido de otros usuarios</li>
+</ul>
+<p><strong>Ejemplo:</strong> Un redactor de contenido no necesita acceso de Administrator. Dale el rol de Author o Editor.</p>
+<hr>
+<h2>Configuración de tu Perfil</h2>
+<p>Ve a <strong>Users → Profile</strong> para configurar tu propia cuenta:</p>
+<h3>Configuración Importante:</h3>
+<table>
+<thead>
+<tr>
+<th>Ajuste</th>
+<th>Qué Hace</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Visual Editor</strong></td>
+<td>Habilitar/deshabilitar el editor visual de entradas</td>
+</tr>
+<tr>
+<td><strong>Admin Color Scheme</strong></td>
+<td>Cambiar los colores del panel de administración</td>
+</tr>
+<tr>
+<td><strong>Keyboard Shortcuts</strong></td>
+<td>Habilitar atajos para moderación de comentarios</td>
+</tr>
+<tr>
+<td><strong>Toolbar</strong></td>
+<td>Mostrar/ocultar la barra de admin en el front-end</td>
+</tr>
+<tr>
+<td><strong>Display Name</strong></td>
+<td>Cómo aparece tu nombre públicamente</td>
+</tr>
+<tr>
+<td><strong>Email</strong></td>
+<td>Tu email de inicio de sesión y notificaciones</td>
+</tr>
+<tr>
+<td><strong>New Password</strong></td>
+<td>Cambiar tu contraseña</td>
+</tr>
+<tr>
+<td><strong>Application Passwords</strong></td>
+<td>Crear contraseñas para apps/APIs</td>
+</tr>
+</tbody></table>
+<h3>Gravatar (Foto de Perfil)</h3>
+<p>WordPress usa <strong>Gravatar</strong> (Globally Recognized Avatar) para las fotos de perfil:</p>
+<ol>
+<li>Ve a <a href="https://gravatar.com/">https://gravatar.com/</a></li>
+<li>Crea una cuenta con el mismo email que tu cuenta de WordPress</li>
+<li>Sube una foto de perfil</li>
+<li>Aparece automáticamente en WordPress</li>
+</ol>
+<hr>
+<h2>Buenas Prácticas de Seguridad para Usuarios</h2>
+<ol>
+<li><strong>No uses &quot;admin&quot; como nombre de usuario</strong> en sitios en producción — es lo primero que prueban los atacantes</li>
+<li><strong>Usa contraseñas seguras</strong> — WordPress genera contraseñas fuertes, úsalas</li>
+<li><strong>Habilita la Autenticación de Dos Factores</strong> — usa la función 2FA de Wordfence</li>
+<li><strong>Limita las cuentas de Administrator</strong> — solo 1-2 admins por sitio</li>
+<li><strong>Elimina cuentas sin usar</strong> — borra las cuentas de personas que ya no necesitan acceso</li>
+<li><strong>No compartas credenciales de inicio de sesión</strong> — cada persona debe tener su propia cuenta</li>
+<li><strong>Revisa la lista de usuarios regularmente</strong> — busca cuentas desconocidas o sospechosas</li>
+</ol>
+<hr>
+<h2>Ejercicios</h2>
+<ol>
+<li><p><strong>Revisa tu perfil</strong>: Ve a Users → Profile. Establece tu nombre de visualización, revisa tu preferencia de esquema de colores del admin y actualiza tu biografía.</p>
+</li>
+<li><p><strong>Crea usuarios de prueba</strong>: Crea un usuario para cada rol principal (Editor, Author, Contributor, Subscriber). Usa direcciones de email de prueba.</p>
+</li>
+<li><p><strong>Inicia sesión como diferentes roles</strong>: Cierra sesión, inicia sesión como el usuario Editor y anota qué puede y qué no puede hacer. Repite con Author. Observa las diferencias en la barra lateral del admin.</p>
+</li>
+<li><p><strong>Elimina un usuario de prueba</strong>: Elimina el usuario Subscriber. Elige atribuir su contenido a tu cuenta de admin.</p>
+</li>
+<li><p><strong>Revisa la seguridad</strong>: Verifica que ninguna cuenta use contraseñas débiles. Considera habilitar 2FA en tu cuenta de admin.</p>
+</li>
+</ol>
+<hr>
+<h2>Puntos Clave</h2>
+<ul>
+<li>WordPress tiene 5 roles por defecto: <strong>Administrator, Editor, Author, Contributor, Subscriber</strong></li>
+<li>WooCommerce añade <strong>Shop Manager</strong> y <strong>Customer</strong></li>
+<li>Sigue el <strong>principio de mínimo privilegio</strong> — da el acceso mínimo necesario</li>
+<li><strong>No uses &quot;admin&quot; como nombre de usuario</strong> en sitios en producción</li>
+<li>Cada persona debe tener <strong>su propia cuenta</strong> — nunca compartas inicios de sesión</li>
+<li><strong>Atribuye el contenido</strong> al eliminar usuarios para evitar perder entradas/páginas</li>
+<li>Revisa tu lista de usuarios regularmente y elimina las cuentas sin usar</li>
+</ul>
+<hr>
+<p><strong>Siguiente Lección:</strong> <a href="lesson-30.html">Lección 30 - Copias de Seguridad y Buenas Prácticas de Seguridad</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-28.html" class="prev">&larr; 28. Diseño de la Tienda</a>
+      <a href="lesson-30.html" class="next">30. Copias de Seguridad &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

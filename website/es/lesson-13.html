@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lección 13: Instalar Elementor + Vista General de la Interfaz — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-13.html">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-13.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li class="active"><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lección 13: Instalar Elementor + Vista General de la Interfaz</h1>
+<h2>Objetivos</h2>
+<ul>
+<li>Instalar y activar el plugin Elementor</li>
+<li>Entender el diseño de la interfaz de Elementor</li>
+<li>Aprender la diferencia entre Elementor Free y Pro</li>
+<li>Abrir tu primera página en Elementor</li>
+</ul>
+<hr>
+<h2>¿Qué es Elementor?</h2>
+<p>Elementor es un <strong>constructor visual de páginas con arrastrar y soltar</strong> para WordPress. En lugar de escribir código o usar el editor de bloques básico, diseñas páginas visualmente — lo que ves es lo que tus visitantes obtienen.</p>
+<h3>¿Por qué Elementor?</h3>
+<ul>
+<li><strong>Edición visual</strong> — diseña en tiempo real, sin ir y venir con previsualizaciones</li>
+<li><strong>Sin necesidad de código</strong> — arrastra widgets, haz clic para estilizar</li>
+<li><strong>Resultados profesionales</strong> — crea diseños que parecen programados a medida</li>
+<li><strong>Gran comunidad</strong> — montones de tutoriales, plantillas y complementos de terceros</li>
+<li><strong>Estándar de la industria</strong> — usado por millones de sitios, requerido por muchas agencias</li>
+</ul>
+<hr>
+<h2>Free vs Pro</h2>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Elementor Free</th>
+<th>Elementor Pro ($49+/año)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Widgets básicos</strong></td>
+<td>40+ widgets</td>
+<td>100+ widgets</td>
+</tr>
+<tr>
+<td><strong>Construcción de páginas</strong></td>
+<td>Sí</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td><strong>Theme Builder</strong></td>
+<td>No</td>
+<td>Sí — diseña cabecera, pie de página, plantillas de blog</td>
+</tr>
+<tr>
+<td><strong>Popup Builder</strong></td>
+<td>No</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td><strong>WooCommerce Builder</strong></td>
+<td>No</td>
+<td>Sí — diseña páginas de tienda/producto</td>
+</tr>
+<tr>
+<td><strong>Widget de Formulario</strong></td>
+<td>No</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td><strong>Global Widgets</strong></td>
+<td>No</td>
+<td>Sí — reutiliza widgets entre páginas</td>
+</tr>
+<tr>
+<td><strong>CSS personalizado por widget</strong></td>
+<td>No</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td><strong>Plantillas</strong></td>
+<td>Limitadas</td>
+<td>300+ plantillas pro</td>
+</tr>
+</tbody></table>
+<h3>Empezando con Free</h3>
+<p>Puedes lograr mucho con la versión gratuita. Empezaremos con la versión gratuita e indicaremos cuándo una función requiere Pro. También hay plugins gratuitos de terceros que añaden algunas funciones similares a Pro (los mencionaremos también).</p>
+<hr>
+<h2>Instalar Elementor</h2>
+<h3>Paso 1: Instalar el Plugin</h3>
+<ol>
+<li>Ve a <strong>Plugins → Add New Plugin</strong></li>
+<li>Busca <strong>&quot;Elementor&quot;</strong></li>
+<li>Encuentra <strong>&quot;Elementor Website Builder&quot;</strong> de Elementor.com</li>
+<li>Haz clic en <strong>&quot;Install Now&quot;</strong></li>
+<li>Después de la instalación, haz clic en <strong>&quot;Activate&quot;</strong></li>
+</ol>
+<h3>Paso 2: Saltar el Asistente de Configuración</h3>
+<ul>
+<li>Elementor puede mostrar un asistente de configuración — puedes seguirlo o saltarlo</li>
+<li>Nosotros configuraremos todo manualmente</li>
+</ul>
+<h3>Paso 3: Verificar la Instalación</h3>
+<ul>
+<li>Deberías ver <strong>&quot;Elementor&quot;</strong> en la barra lateral izquierda de wp-admin</li>
+<li>Al editar cualquier página, verás un botón <strong>&quot;Edit with Elementor&quot;</strong></li>
+</ul>
+<hr>
+<h2>Abrir una Página en Elementor</h2>
+<h3>Método 1: Desde wp-admin</h3>
+<ol>
+<li>Ve a <strong>Pages → All Pages</strong></li>
+<li>Pasa el ratón sobre una página</li>
+<li>Haz clic en <strong>&quot;Edit with Elementor&quot;</strong></li>
+</ol>
+<h3>Método 2: Desde el editor de páginas</h3>
+<ol>
+<li>Edita cualquier página en WordPress</li>
+<li>Haz clic en el botón <strong>&quot;Edit with Elementor&quot;</strong> en la parte superior</li>
+</ol>
+<h3>Método 3: Desde el front-end</h3>
+<ol>
+<li>Visita cualquier página mientras estás conectado</li>
+<li>Haz clic en <strong>&quot;Edit with Elementor&quot;</strong> en la barra de administración</li>
+</ol>
+<h3>Crear una Nueva Página con Elementor</h3>
+<ol>
+<li>Ve a <strong>Pages → Add New</strong></li>
+<li>Dale un título</li>
+<li>Haz clic en <strong>&quot;Edit with Elementor&quot;</strong></li>
+</ol>
+<hr>
+<h2>La Interfaz de Elementor</h2>
+<p>Cuando abres Elementor, la interfaz tiene estas áreas clave:</p>
+<h3>Panel Izquierdo (Panel de Widgets)</h3>
+<p>El panel en el lado izquierdo contiene:</p>
+<p><strong>Sección superior:</strong></p>
+<ul>
+<li><strong>Menú hamburguesa (☰)</strong> — accede a ajustes, preferencias de usuario, navegación</li>
+<li><strong>Búsqueda de widgets</strong> — busca widgets por nombre</li>
+<li><strong>Categorías de widgets</strong> — navega por widgets por categoría</li>
+</ul>
+<p><strong>Área de widgets:</strong></p>
+<ul>
+<li>Cuadrícula de widgets disponibles que puedes arrastrar a la página</li>
+<li>Categorías: Basic, General, Site, Pro, etc.</li>
+</ul>
+<p><strong>Sección inferior:</strong></p>
+<ul>
+<li><strong>Settings (icono de engranaje)</strong> — ajustes de página (título, diseño, imagen destacada)</li>
+<li><strong>Navigator (icono de capas)</strong> — muestra una vista en árbol de todos los elementos de la página</li>
+<li><strong>History (icono de reloj)</strong> — historial de deshacer/rehacer con marcas de tiempo</li>
+<li><strong>Responsive mode (iconos de dispositivos)</strong> — cambia entre vistas de escritorio, tablet, móvil</li>
+</ul>
+<h3>Canvas (Centro/Derecha)</h3>
+<p>El área principal de edición donde construyes tu página:</p>
+<ul>
+<li><strong>Botones &quot;+&quot; azules</strong> — añade nuevas secciones</li>
+<li><strong>Arrastra widgets</strong> del panel izquierdo al canvas</li>
+<li><strong>Haz clic en cualquier elemento</strong> para seleccionarlo y editarlo</li>
+<li><strong>Clic derecho</strong> para menú contextual (copiar, pegar, eliminar, etc.)</li>
+</ul>
+<h3>Barra Inferior</h3>
+<ul>
+<li><strong>Alternadores de modo responsivo</strong> — escritorio, tablet, móvil</li>
+<li><strong>Acceso directo a ajustes de página</strong></li>
+<li><strong>Alternar Navigator</strong></li>
+<li><strong>Botón Publish/Update</strong></li>
+</ul>
+<hr>
+<h2>Acciones Clave de la Interfaz</h2>
+<h3>Seleccionar Elementos</h3>
+<ul>
+<li><strong>Haz clic</strong> en un elemento del canvas para seleccionarlo</li>
+<li>Aparece un <strong>borde azul</strong> alrededor del elemento seleccionado</li>
+<li>El panel izquierdo cambia para mostrar los ajustes de ese elemento</li>
+</ul>
+<h3>Asa del Elemento</h3>
+<p>Cuando pasas el ratón sobre un elemento, ves un asa con:</p>
+<ul>
+<li><strong>Icono de edición (lápiz)</strong> — editar el elemento</li>
+<li><strong>Asa de arrastre (puntos)</strong> — arrastrar para mover</li>
+<li><strong>Clic derecho</strong> — copiar, pegar, duplicar, eliminar</li>
+</ul>
+<h3>Asa de Sección</h3>
+<p>Cuando pasas el ratón sobre una sección (el contenedor a ancho completo), ves:</p>
+<ul>
+<li><strong>Pestaña azul en la parte superior</strong> con un icono de cuadrícula</li>
+<li>Haz clic para seleccionar la sección</li>
+<li>Arrastra para mover la sección</li>
+<li>Clic derecho para opciones de sección</li>
+</ul>
+<hr>
+<h2>Panel Navigator</h2>
+<p>El Navigator es increíblemente útil — muestra la estructura de tu página como un árbol:</p>
+<ol>
+<li>Haz clic en el <strong>icono de capas</strong> en la parte inferior izquierda del panel</li>
+<li>O presiona <strong>Ctrl + I</strong> en tu teclado</li>
+</ol>
+<p>El Navigator muestra:</p>
+<pre><code>Page
+├── Section 1
+│   ├── Column 1
+│   │   ├── Heading
+│   │   └── Text Editor
+│   └── Column 2
+│       └── Image
+├── Section 2
+│   └── Column 1
+│       ├── Heading
+│       └── Button
+</code></pre>
+<h3>Funciones del Navigator:</h3>
+<ul>
+<li>Haz clic en cualquier elemento para seleccionarlo en el canvas</li>
+<li>Arrastra elementos para reordenarlos</li>
+<li>Clic derecho para opciones (renombrar, duplicar, eliminar)</li>
+<li>El icono del ojo oculta/muestra elementos</li>
+<li><strong>Renombra elementos</strong> para mejor organización (clic derecho → Rename)</li>
+</ul>
+<hr>
+<h2>Guardar tu Trabajo</h2>
+<h3>Opciones de Guardado:</h3>
+<ul>
+<li><strong>Publish</strong> — publica la página (o actualiza si ya está publicada)</li>
+<li><strong>Save Draft</strong> — guarda sin publicar</li>
+<li><strong>Save as Template</strong> — guarda el diseño como plantilla reutilizable</li>
+</ul>
+<h3>Auto-Guardado</h3>
+<p>Elementor guarda automáticamente periódicamente, pero siempre guarda manualmente antes de cerrar.</p>
+<h3>Atajo de Teclado</h3>
+<ul>
+<li><strong>Ctrl + S</strong> — guardar/publicar tu página</li>
+</ul>
+<h3>Salir de Elementor</h3>
+<ul>
+<li>Haz clic en el <strong>menú hamburguesa (☰)</strong> → <strong>Exit</strong></li>
+<li>O haz clic en la <strong>&quot;X&quot;</strong> en la esquina superior izquierda</li>
+<li>O haz clic en el enlace <strong>&quot;Back to WordPress Editor&quot;</strong></li>
+</ul>
+<hr>
+<h2>Ajustes de Elementor (en wp-admin)</h2>
+<p>Después de instalar, hay un elemento de menú <strong>Elementor</strong> en wp-admin con estos ajustes:</p>
+<h3>Settings</h3>
+<ul>
+<li><strong>General</strong>: Elige qué tipos de contenido pueden usar Elementor (Pages, Posts)</li>
+<li><strong>Integrations</strong>: Conecta Google Maps, reCAPTCHA, etc.</li>
+<li><strong>Advanced</strong>: Método de impresión CSS, método de carga del editor</li>
+<li><strong>Performance</strong>: Experimenta con funciones de rendimiento</li>
+</ul>
+<h3>Ajuste Importante:</h3>
+<p>Ve a <strong>Elementor → Settings → General</strong> y asegúrate de que <strong>&quot;Pages&quot;</strong> y <strong>&quot;Posts&quot;</strong> estén marcados en &quot;Post Types&quot; para poder usar Elementor en ambos.</p>
+<hr>
+<h2>Atajos de Teclado</h2>
+<table>
+<thead>
+<tr>
+<th>Atajo</th>
+<th>Acción</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Ctrl + S</code></td>
+<td>Guardar</td>
+</tr>
+<tr>
+<td><code>Ctrl + Z</code></td>
+<td>Deshacer</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + Z</code></td>
+<td>Rehacer</td>
+</tr>
+<tr>
+<td><code>Ctrl + C</code></td>
+<td>Copiar elemento</td>
+</tr>
+<tr>
+<td><code>Ctrl + V</code></td>
+<td>Pegar elemento</td>
+</tr>
+<tr>
+<td><code>Ctrl + D</code></td>
+<td>Duplicar elemento</td>
+</tr>
+<tr>
+<td><code>Delete</code></td>
+<td>Eliminar elemento seleccionado</td>
+</tr>
+<tr>
+<td><code>Ctrl + I</code></td>
+<td>Alternar Navigator</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + M</code></td>
+<td>Alternar modo responsivo</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + L</code></td>
+<td>Abrir biblioteca de plantillas</td>
+</tr>
+<tr>
+<td><code>Ctrl + ?</code></td>
+<td>Mostrar todos los atajos de teclado</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Ejercicios</h2>
+<ol>
+<li><p><strong>Instala Elementor</strong>: Sigue los pasos de instalación de arriba.</p>
+</li>
+<li><p><strong>Abre una página en Elementor</strong>: Abre tu página &quot;Home&quot; en Elementor. No añadas nada todavía — solo explora la interfaz.</p>
+</li>
+<li><p><strong>Explora el panel de widgets</strong>: Navega por los widgets disponibles. Observa cuáles son gratuitos y cuáles son Pro.</p>
+</li>
+<li><p><strong>Prueba el Navigator</strong>: Presiona Ctrl + I para abrir el Navigator. Si la página está vacía, está bien — lo usaremos más en la siguiente lección.</p>
+</li>
+<li><p><strong>Revisa los atajos de teclado</strong>: Presiona Ctrl + ? para ver todos los atajos de teclado.</p>
+</li>
+<li><p><strong>Configura los ajustes de Elementor</strong>: Ve a Elementor → Settings → General y asegúrate de que Pages y Posts estén activados.</p>
+</li>
+</ol>
+<hr>
+<h2>Puntos Clave</h2>
+<ul>
+<li>Elementor es un <strong>constructor visual de páginas con arrastrar y soltar</strong> — sin necesidad de código</li>
+<li>Instálalo como cualquier plugin: <strong>Plugins → Add New → busca &quot;Elementor&quot;</strong></li>
+<li>La interfaz tiene un <strong>panel izquierdo</strong> (widgets/ajustes) y un <strong>canvas</strong> (tu página)</li>
+<li>El <strong>Navigator</strong> (Ctrl + I) muestra la estructura de tu página como un árbol — úsalo a menudo</li>
+<li>La <strong>versión gratuita</strong> es suficientemente potente para empezar; Pro añade theme builder, popups, formularios</li>
+<li>Siempre <strong>guarda tu trabajo</strong> (Ctrl + S) antes de salir</li>
+<li>Edita cualquier página con Elementor haciendo clic en <strong>&quot;Edit with Elementor&quot;</strong></li>
+</ul>
+<hr>
+<p><strong>Siguiente Lección:</strong> <a href="lesson-14.html">Lección 14 - Secciones, Columnas y Widgets</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-12.html" class="prev">&larr; 12. El Personalizador</a>
+      <a href="lesson-14.html" class="next">14. Secciones, Columnas y Widgets &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lección 01: ¿Qué es WordPress? — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-01.html">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-01.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li class="active"><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lección 01: ¿Qué es WordPress?</h1>
+<h2>Objetivos</h2>
+<ul>
+<li>Entender qué es WordPress y por qué es el CMS más popular</li>
+<li>Aprender la diferencia entre WordPress.org y WordPress.com</li>
+<li>Comprender la arquitectura principal: temas, plugins, base de datos y wp-admin</li>
+<li>Conocer la terminología clave que usarás a lo largo de este curso</li>
+</ul>
+<hr>
+<h2>¿Qué es WordPress?</h2>
+<p>WordPress es un <strong>Sistema de Gestión de Contenidos (CMS)</strong> — un software que te permite crear, gestionar y publicar sitios web sin escribir código desde cero. Impulsa aproximadamente el 43% de todos los sitios web en internet (y más del 60% de todos los sitios con CMS), desde pequeños blogs hasta grandes sitios empresariales.</p>
+<h3>¿Por qué WordPress?</h3>
+<ul>
+<li><strong>Gratuito y de código abierto</strong> — sin costes de licencia</li>
+<li><strong>No requiere programación</strong> para la mayoría de tareas (pero puedes personalizar con código si lo necesitas)</li>
+<li><strong>Enorme ecosistema</strong> — miles de temas y plugins disponibles</li>
+<li><strong>Gran comunidad</strong> — fácil encontrar ayuda, tutoriales y desarrolladores</li>
+<li><strong>Flexible</strong> — puedes construir cualquier tipo de sitio web (blog, negocio, e-commerce, portfolio, etc.)</li>
+</ul>
+<hr>
+<h2>WordPress.org vs WordPress.com</h2>
+<p>Esta es una fuente común de confusión para principiantes:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>WordPress.org</th>
+<th>WordPress.com</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Qué es</strong></td>
+<td>Software gratuito que descargas y alojas tú mismo</td>
+<td>Un servicio alojado gestionado por Automattic</td>
+</tr>
+<tr>
+<td><strong>Coste</strong></td>
+<td>Software gratuito (pagas por el hosting)</td>
+<td>Nivel gratuito disponible, planes de pago para más funciones</td>
+</tr>
+<tr>
+<td><strong>Control</strong></td>
+<td>Control total — instala cualquier tema/plugin</td>
+<td>Limitado — restricciones en planes gratuitos/básicos</td>
+</tr>
+<tr>
+<td><strong>Personalización</strong></td>
+<td>Ilimitada</td>
+<td>Limitada a menos que tengas el plan Business (caro)</td>
+</tr>
+<tr>
+<td><strong>Ideal para</strong></td>
+<td>Sitios profesionales, trabajo para clientes, flexibilidad total</td>
+<td>Blogs personales sencillos</td>
+</tr>
+</tbody></table>
+<p><strong>Para tu trabajo, usarás WordPress.org</strong> (autoalojado). Esto es lo que usan los profesionales y lo que enseña este curso.</p>
+<hr>
+<h2>Arquitectura de WordPress</h2>
+<p>Piensa en WordPress como construir una casa:</p>
+<h3>1. El Núcleo (Los Cimientos)</h3>
+<p>El núcleo de WordPress es el software base. Se encarga de:</p>
+<ul>
+<li>Gestión de usuarios (inicio de sesión, roles, permisos)</li>
+<li>Almacenamiento de contenido (entradas, páginas, medios)</li>
+<li>El panel de administración</li>
+<li>La API REST</li>
+</ul>
+<p><strong>Nunca modificas los archivos del núcleo.</strong> Las actualizaciones se gestionan automáticamente.</p>
+<h3>2. Temas (El Aspecto)</h3>
+<p>Un tema controla cómo <strong>se ve</strong> tu sitio — diseño, colores, fuentes, estilos.</p>
+<ul>
+<li>Cada sitio WordPress tiene exactamente <strong>un tema activo</strong></li>
+<li>Los temas proporcionan plantillas para diferentes tipos de página (inicio, entrada de blog, archivo, etc.)</li>
+<li>Puedes cambiar de tema sin perder tu contenido</li>
+<li>Usaremos <strong>Hello Elementor</strong> como nuestro tema base (minimalista, diseñado para trabajar con Elementor)</li>
+</ul>
+<h3>3. Plugins (Las Funcionalidades)</h3>
+<p>Los plugins añaden <strong>funcionalidad</strong> a tu sitio. Ejemplos:</p>
+<ul>
+<li><strong>Elementor</strong> — constructor visual de páginas (diseño con arrastrar y soltar)</li>
+<li><strong>WooCommerce</strong> — convierte tu sitio en una tienda online</li>
+<li><strong>Yoast SEO</strong> — ayuda con la optimización para motores de búsqueda</li>
+<li><strong>Contact Form 7</strong> — añade formularios de contacto</li>
+</ul>
+<p>Puedes instalar tantos plugins como necesites (pero no te excedas — demasiados ralentizan tu sitio).</p>
+<h3>4. Base de Datos (El Almacenamiento)</h3>
+<p>WordPress usa una <strong>base de datos MySQL</strong> para almacenar:</p>
+<ul>
+<li>Todo tu contenido (entradas, páginas, comentarios)</li>
+<li>Cuentas de usuario y configuración</li>
+<li>Configuración de plugins y temas</li>
+<li>Configuración del sitio</li>
+</ul>
+<p>Raramente interactúas con la base de datos directamente. WordPress la gestiona a través de wp-admin.</p>
+<h3>5. wp-admin (El Panel de Control)</h3>
+<p>El panel de administración de WordPress (accesible en <code>tusitio.com/wp-admin</code>) es donde:</p>
+<ul>
+<li>Creas y editas contenido</li>
+<li>Instalas temas y plugins</li>
+<li>Gestionas usuarios</li>
+<li>Configuras ajustes</li>
+<li>Todo lo administrativo</li>
+</ul>
+<hr>
+<h2>Terminología Clave</h2>
+<table>
+<thead>
+<tr>
+<th>Término</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>CMS</strong></td>
+<td>Sistema de Gestión de Contenidos — software para gestionar el contenido de un sitio web</td>
+</tr>
+<tr>
+<td><strong>Tema (Theme)</strong></td>
+<td>Controla la apariencia visual/diseño de tu sitio</td>
+</tr>
+<tr>
+<td><strong>Plugin</strong></td>
+<td>Añade funcionalidad específica a tu sitio</td>
+</tr>
+<tr>
+<td><strong>wp-admin</strong></td>
+<td>El panel de administración (backend) de tu sitio WordPress</td>
+</tr>
+<tr>
+<td><strong>Front-end</strong></td>
+<td>Lo que los visitantes ven cuando visitan tu sitio</td>
+</tr>
+<tr>
+<td><strong>Back-end</strong></td>
+<td>El área de administración donde gestionas tu sitio</td>
+</tr>
+<tr>
+<td><strong>Entrada (Post)</strong></td>
+<td>Una entrada de blog (se muestra en orden cronológico inverso)</td>
+</tr>
+<tr>
+<td><strong>Página (Page)</strong></td>
+<td>Contenido estático (Acerca de, Contacto, Servicios — no tiene fecha)</td>
+</tr>
+<tr>
+<td><strong>Widget</strong></td>
+<td>Un pequeño bloque de contenido colocado en barras laterales o pies de página</td>
+</tr>
+<tr>
+<td><strong>Menú</strong></td>
+<td>Enlaces de navegación (normalmente en la cabecera/pie de página)</td>
+</tr>
+<tr>
+<td><strong>Enlace permanente (Permalink)</strong></td>
+<td>La URL permanente de una entrada o página</td>
+</tr>
+<tr>
+<td><strong>Slug</strong></td>
+<td>La versión amigable para URL de un título (ej., &quot;mi-primera-entrada&quot;)</td>
+</tr>
+<tr>
+<td><strong>Biblioteca de Medios</strong></td>
+<td>Donde se almacenan todas las imágenes, vídeos y archivos subidos</td>
+</tr>
+<tr>
+<td><strong>Shortcode</strong></td>
+<td>Una etiqueta especial como <code>[gallery]</code> que incrusta funcionalidad</td>
+</tr>
+<tr>
+<td><strong>WYSIWYG</strong></td>
+<td>&quot;What You See Is What You Get&quot; (Lo que ves es lo que obtienes) — editor visual</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Cómo se Muestra una Página de WordPress</h2>
+<p>Cuando alguien visita tu sitio, esto es lo que ocurre:</p>
+<ol>
+<li><strong>El navegador envía una petición</strong> a tu servidor web</li>
+<li><strong>El núcleo de WordPress</strong> recibe la petición</li>
+<li><strong>Consulta la base de datos</strong> para obtener el contenido solicitado</li>
+<li>El <strong>tema activo</strong> proporciona la plantilla HTML</li>
+<li>Los <strong>plugins</strong> añaden su funcionalidad (formularios, etiquetas SEO, etc.)</li>
+<li>La <strong>página completa</strong> se envía de vuelta al navegador</li>
+</ol>
+<p>Todo esto ocurre en milisegundos.</p>
+<hr>
+<h2>Ejercicios</h2>
+<ol>
+<li><p><strong>Explora WordPress.org</strong>: Visita <a href="https://wordpress.org/">https://wordpress.org/</a> y navega por los directorios de Temas y Plugins. Familiarízate con lo que hay disponible.</p>
+</li>
+<li><p><strong>Encuentra 5 sitios famosos</strong> construidos con WordPress. (Pista: La Casa Blanca, TechCrunch, BBC America, Sony Music y muchos más usan WordPress.)</p>
+</li>
+<li><p><strong>Revisa la tabla de terminología</strong> de arriba. Anota cualquier término que no te quede claro — cubriremos cada uno en profundidad a lo largo del curso.</p>
+</li>
+</ol>
+<hr>
+<h2>Puntos Clave</h2>
+<ul>
+<li>WordPress es un CMS gratuito y de código abierto que impulsa más del 43% de la web</li>
+<li><strong>WordPress.org</strong> (autoalojado) es lo que usan los profesionales — eso es lo que estamos aprendiendo</li>
+<li>La arquitectura tiene 4 partes principales: Núcleo, Temas, Plugins y Base de Datos</li>
+<li><strong>wp-admin</strong> es tu panel de control para todo</li>
+<li>Los temas controlan la apariencia, los plugins añaden funcionalidad</li>
+<li>No necesitas programar para construir sitios profesionales con WordPress + Elementor</li>
+</ul>
+<hr>
+<p><strong>Siguiente Lección:</strong> <a href="lesson-02.html">Lección 02 - Configuración de Local WP</a></p>
+
+    <nav class="lesson-nav">
+      <a href="index.html" class="prev">&larr; Inicio</a>
+      <a href="lesson-02.html" class="next">02. Configuración Local &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 16: Building a Homepage from Scratch — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-16.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-16.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li class="active"><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lesson 16: Building a Homepage from Scratch</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Build a complete professional homepage with Elementor</li>
+<li>Learn the common sections every homepage needs</li>
+<li>Practice combining widgets, styling, and layout techniques</li>
+<li>Create a real, portfolio-worthy page</li>
+</ul>
+<hr>
+<h2>Homepage Anatomy</h2>
+<p>Most professional homepages follow this structure:</p>
+<ol>
+<li><strong>Hero Section</strong> — big headline, description, CTA button</li>
+<li><strong>Services/Features</strong> — what you offer (3-4 icon boxes)</li>
+<li><strong>About Section</strong> — brief intro with image</li>
+<li><strong>Social Proof</strong> — testimonials, client logos, or stats</li>
+<li><strong>Call to Action (CTA)</strong> — final push to contact/sign up</li>
+<li><strong>Footer</strong> — contact info, links, copyright</li>
+</ol>
+<p>Let&#39;s build each one.</p>
+<hr>
+<h2>Before You Start</h2>
+<ol>
+<li>Open your &quot;Home&quot; page in Elementor</li>
+<li>If it has content from before, select all and delete (or start with a fresh page)</li>
+<li>Make sure your <strong>global colors and fonts</strong> are set up (Lesson 15)</li>
+<li>In the bottom-left <strong>Settings (gear icon)</strong>, set:<ul>
+<li><strong>Page Layout</strong>: Elementor Full Width (no sidebar, no header/footer from theme)</li>
+<li>Or <strong>Elementor Canvas</strong> (completely blank — no header/footer at all)</li>
+<li>For now, use <strong>Elementor Full Width</strong></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>Section 1: Hero Section</h2>
+<p>The hero is the first thing visitors see. Make it count.</p>
+<h3>Build It:</h3>
+<ol>
+<li><p><strong>Add a Section</strong> — single column</p>
+</li>
+<li><p><strong>Section Settings:</strong></p>
+<ul>
+<li>Content Tab: Height → Min Height → <code>600px</code>, Vertical Align → Middle</li>
+<li>Style Tab: Background → Classic → upload a relevant image (or use a solid color)</li>
+<li>Style Tab: Background Overlay → Color: black (#000000), Opacity: 0.5 (this darkens the image so text is readable)</li>
+<li>Advanced Tab: Padding → 80px top and bottom</li>
+</ul>
+</li>
+<li><p><strong>Add a Heading widget:</strong></p>
+<ul>
+<li>Content: &quot;Build Your Dream Website&quot;</li>
+<li>HTML Tag: H1</li>
+<li>Alignment: Center</li>
+<li>Style: Color → White, Size → 52px, Weight → Bold</li>
+</ul>
+</li>
+<li><p><strong>Add a Text Editor widget:</strong></p>
+<ul>
+<li>Content: &quot;We design and develop stunning websites that convert visitors into customers.&quot;</li>
+<li>Style: Color → White (#f0f0f0), Size → 20px, Alignment → Center</li>
+<li>Advanced: Max Width → 700px (set in Advanced → Layout → Width → Max Width), Align Self → Center</li>
+</ul>
+</li>
+<li><p><strong>Add a Button widget:</strong></p>
+<ul>
+<li>Content: Text → &quot;Get Started&quot;, Link → <code>/contact</code>, Alignment → Center</li>
+<li>Style: Background → your accent color, Typography → 16px SemiBold, Padding → 15px top/bottom 40px left/right, Border Radius → 30px</li>
+<li>Style (Hover): Background → slightly darker shade</li>
+</ul>
+</li>
+<li><p><strong>Add a Spacer</strong> between heading and text (20px) and between text and button (30px) if needed.</p>
+</li>
+</ol>
+<hr>
+<h2>Section 2: Services/Features</h2>
+<p>Showcase what you offer in a clean grid.</p>
+<h3>Build It:</h3>
+<ol>
+<li><p><strong>Add a Section</strong> — 3 columns (equal width)</p>
+</li>
+<li><p><strong>Section Settings:</strong></p>
+<ul>
+<li>Style: Background → light color (#f8f9fa)</li>
+<li>Advanced: Padding → 80px top and bottom</li>
+</ul>
+</li>
+<li><p><strong>Above the columns, add a centered heading:</strong></p>
+<ul>
+<li>First, add a section with 1 column above this one</li>
+<li>Or add a heading to the first column, spanning full width</li>
+<li>Better approach: Create a 1-column section first for the heading, then a 3-column section below</li>
+</ul>
+</li>
+</ol>
+<p><strong>Heading Section (1 column):</strong></p>
+<ul>
+<li>Heading: &quot;Our Services&quot;</li>
+<li>Tag: H2, Center aligned</li>
+<li>Style: Your primary color, 36px</li>
+<li>Below it, add a Text Editor: &quot;What we can do for you&quot;, center aligned, gray text</li>
+<li>Add a Divider widget: Width → 10%, Alignment → Center (creates a small accent line)</li>
+</ul>
+<p><strong>Services Section (3 columns):</strong>
+In each column, add an <strong>Icon Box</strong> widget:</p>
+<p><strong>Column 1:</strong></p>
+<ul>
+<li>Icon: Choose a web design icon (e.g., <code>fa-laptop-code</code>)</li>
+<li>Title: &quot;Web Design&quot;</li>
+<li>Description: &quot;Beautiful, responsive websites that look great on every device.&quot;</li>
+<li>Style: Icon Color → your accent color, Alignment → Center</li>
+</ul>
+<p><strong>Column 2:</strong></p>
+<ul>
+<li>Icon: <code>fa-search</code> or similar</li>
+<li>Title: &quot;SEO Optimization&quot;</li>
+<li>Description: &quot;Rank higher on Google and drive organic traffic to your site.&quot;</li>
+<li>Style: Same as Column 1</li>
+</ul>
+<p><strong>Column 3:</strong></p>
+<ul>
+<li>Icon: <code>fa-shopping-cart</code> or similar</li>
+<li>Title: &quot;E-Commerce&quot;</li>
+<li>Description: &quot;Full-featured online stores that make selling easy.&quot;</li>
+<li>Style: Same as Column 1</li>
+</ul>
+<hr>
+<h2>Section 3: About Section</h2>
+<p>An image + text layout that introduces your company.</p>
+<h3>Build It:</h3>
+<ol>
+<li><strong>Add a Section</strong> — 2 columns (50/50)</li>
+<li><strong>Section Settings:</strong><ul>
+<li>Style: Background → White</li>
+<li>Advanced: Padding → 80px top and bottom</li>
+</ul>
+</li>
+</ol>
+<p><strong>Column 1 (Image):</strong></p>
+<ul>
+<li>Add an <strong>Image</strong> widget</li>
+<li>Upload a team photo or office image</li>
+<li>Style: Border Radius → 10px (slightly rounded corners)</li>
+</ul>
+<p><strong>Column 2 (Content):</strong></p>
+<ul>
+<li>Add a <strong>Heading</strong>: &quot;About Our Company&quot;, H2, left aligned</li>
+<li>Add a <strong>Divider</strong>: Width → 15%, color → accent color, Weight → 3px</li>
+<li>Add a <strong>Text Editor</strong>: A couple paragraphs about the company</li>
+<li>Add a <strong>Button</strong>: &quot;Learn More&quot; → links to <code>/about</code>, your secondary color</li>
+</ul>
+<hr>
+<h2>Section 4: Social Proof (Testimonials)</h2>
+<p>Build trust with customer testimonials.</p>
+<h3>Build It:</h3>
+<ol>
+<li><strong>Add a Section</strong> — 3 columns</li>
+<li><strong>Section Settings:</strong><ul>
+<li>Style: Background → your primary/dark color</li>
+<li>Advanced: Padding → 80px top and bottom</li>
+</ul>
+</li>
+</ol>
+<p><strong>Add a heading section above (1 column):</strong></p>
+<ul>
+<li>Heading: &quot;What Our Clients Say&quot;, H2, Center, White text</li>
+</ul>
+<p><strong>In each column, add a Testimonial widget:</strong></p>
+<p><strong>Testimonial 1:</strong></p>
+<ul>
+<li>Content: &quot;They transformed our online presence. Our sales increased by 40% in the first month.&quot;</li>
+<li>Name: &quot;Sarah Johnson&quot;</li>
+<li>Title: &quot;CEO, TechStartup Inc.&quot;</li>
+<li>Image: Upload a placeholder headshot</li>
+<li>Style: Text Color → White/Light gray, Name Color → White</li>
+</ul>
+<p><strong>Testimonial 2 &amp; 3:</strong> Similar structure with different content.</p>
+<p><strong>Alternative (without Testimonial widget):</strong>
+Use Icon Box or Text Editor with a quote icon for a custom look.</p>
+<hr>
+<h2>Section 5: Stats/Counter Section (Optional)</h2>
+<p>Impressive numbers build credibility.</p>
+<h3>Build It:</h3>
+<ol>
+<li><strong>Add a Section</strong> — 4 columns</li>
+<li><strong>Section Settings:</strong><ul>
+<li>Style: Background → accent color (or gradient)</li>
+<li>Advanced: Padding → 60px top and bottom</li>
+</ul>
+</li>
+</ol>
+<p>In each column, add a <strong>Counter</strong> widget:</p>
+<ul>
+<li>Column 1: Number → 250, Title → &quot;Projects Completed&quot;, Color → White</li>
+<li>Column 2: Number → 50, Title → &quot;Happy Clients&quot;, Color → White</li>
+<li>Column 3: Number → 10, Title → &quot;Years Experience&quot;, Color → White</li>
+<li>Column 4: Number → 15, Title → &quot;Team Members&quot;, Color → White</li>
+</ul>
+<hr>
+<h2>Section 6: Call to Action (CTA)</h2>
+<p>The final push to get visitors to act.</p>
+<h3>Build It:</h3>
+<ol>
+<li><p><strong>Add a Section</strong> — 1 column</p>
+</li>
+<li><p><strong>Section Settings:</strong></p>
+<ul>
+<li>Content: Height → Min Height → 300px, Vertical Align → Middle</li>
+<li>Style: Background → your primary color or a subtle gradient</li>
+<li>Advanced: Padding → 60px top and bottom</li>
+</ul>
+</li>
+<li><p><strong>Add a Heading</strong>: &quot;Ready to Start Your Project?&quot;</p>
+<ul>
+<li>Center aligned, White, H2, 36px</li>
+</ul>
+</li>
+<li><p><strong>Add a Text Editor</strong>: &quot;Let&#39;s discuss your ideas and create something amazing together.&quot;</p>
+<ul>
+<li>Center, Light gray text</li>
+</ul>
+</li>
+<li><p><strong>Add a Button</strong>: &quot;Contact Us&quot; → <code>/contact</code></p>
+<ul>
+<li>White background, your primary text color</li>
+<li>Or: transparent background with white border (outline/ghost button)</li>
+<li>Border Radius → 30px</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>Final Touches</h2>
+<h3>Check Spacing</h3>
+<ul>
+<li>Scroll through the entire page</li>
+<li>Make sure spacing between sections is consistent (80px padding is a good standard)</li>
+<li>Ensure no sections feel too cramped or too spread out</li>
+</ul>
+<h3>Check Alignment</h3>
+<ul>
+<li>Headlines should be consistently sized</li>
+<li>Body text should be the same size throughout</li>
+<li>Colors should match your global palette</li>
+</ul>
+<h3>Save and Preview</h3>
+<ol>
+<li>Press <strong>Ctrl + S</strong> to save</li>
+<li>Click the <strong>eye icon</strong> (Preview Changes) at the bottom of the panel</li>
+<li>Or right-click → Preview in new tab</li>
+</ol>
+<hr>
+<h2>Exercises</h2>
+<ol>
+<li><p><strong>Build the complete homepage</strong>: Follow all 6 sections above step by step.</p>
+</li>
+<li><p><strong>Customize the content</strong>: Replace placeholder text with content relevant to a real or fictional business.</p>
+</li>
+<li><p><strong>Experiment with backgrounds</strong>: Try different section backgrounds — solid colors, gradients, and images with overlays.</p>
+</li>
+<li><p><strong>Add hover effects</strong>: On buttons and icon boxes, configure hover color changes.</p>
+</li>
+<li><p><strong>Check responsive</strong>: Click the responsive mode button and check how your homepage looks on tablet and mobile. Fix anything that doesn&#39;t look right (we&#39;ll cover responsive design in detail in Lesson 20).</p>
+</li>
+<li><p><strong>Save as Template</strong>: Click the section handle → Save as Template on your best section. You can reuse it on other pages later.</p>
+</li>
+</ol>
+<hr>
+<h2>Key Takeaways</h2>
+<ul>
+<li>A professional homepage has a clear structure: Hero → Services → About → Social Proof → CTA</li>
+<li><strong>Start from the top and work down</strong> — build section by section</li>
+<li>Use <strong>consistent spacing</strong> (80px section padding is a good default)</li>
+<li><strong>Background overlays</strong> make text readable over images (dark overlay + white text)</li>
+<li>Use <strong>global colors</strong> everywhere — click the globe icon instead of picking colors manually</li>
+<li>The <strong>Counter widget</strong> is great for impressive statistics</li>
+<li>Always <strong>preview your page</strong> after building — check for spacing, alignment, and readability</li>
+<li><strong>Save sections as templates</strong> to reuse on other pages</li>
+</ul>
+<hr>
+<p><strong>Next Lesson:</strong> <a href="lesson-17.html">Lesson 17 - Building an About Page with Responsive Design</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-15.html" class="prev">&larr; 15. Global Styles</a>
+      <a href="lesson-17.html" class="next">17. Building an About Page &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

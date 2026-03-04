@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 32: Performance Optimization — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-32.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-32.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li class="active"><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lesson 32: Performance Optimization</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Measure your site&#39;s current performance</li>
+<li>Optimize for speed using proven techniques</li>
+<li>Configure caching and minification</li>
+<li>Understand CDNs and their role</li>
+</ul>
+<hr>
+<h2>Why Performance Matters</h2>
+<ul>
+<li><strong>53% of mobile users leave</strong> if a page takes more than 3 seconds to load</li>
+<li><strong>Google uses page speed</strong> as a ranking factor</li>
+<li><strong>Every 1-second delay</strong> reduces conversions by 7%</li>
+<li>Fast sites provide a better user experience</li>
+</ul>
+<h3>Performance Targets:</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Page load time</strong></td>
+<td>Under 3 seconds</td>
+</tr>
+<tr>
+<td><strong>Total page size</strong></td>
+<td>Under 2MB (ideally under 1MB)</td>
+</tr>
+<tr>
+<td><strong>Number of requests</strong></td>
+<td>Under 50</td>
+</tr>
+<tr>
+<td><strong>Largest Contentful Paint (LCP)</strong></td>
+<td>Under 2.5 seconds</td>
+</tr>
+<tr>
+<td><strong>First Input Delay (FID)</strong></td>
+<td>Under 100ms</td>
+</tr>
+<tr>
+<td><strong>Cumulative Layout Shift (CLS)</strong></td>
+<td>Under 0.1</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Measuring Performance</h2>
+<h3>Tools:</h3>
+<p><strong>Chrome Lighthouse (works locally):</strong></p>
+<ol>
+<li>Open your site in Chrome</li>
+<li>Press <strong>F12</strong> → <strong>Lighthouse</strong> tab</li>
+<li>Select &quot;Performance&quot; category</li>
+<li>Click <strong>&quot;Analyze page load&quot;</strong></li>
+<li>Review the score (0-100) and specific recommendations</li>
+</ol>
+<p><strong>Chrome DevTools Network Tab (works locally):</strong></p>
+<ol>
+<li>Press <strong>F12</strong> → <strong>Network</strong> tab</li>
+<li>Refresh the page</li>
+<li>Look at the bottom bar: total requests, transferred size, load time</li>
+<li>Sort by size to find the largest files</li>
+</ol>
+<p><strong>Google PageSpeed Insights (live sites only):</strong></p>
+<ul>
+<li>URL: <a href="https://pagespeed.web.dev/">https://pagespeed.web.dev/</a></li>
+<li>Tests both mobile and desktop</li>
+<li>Based on real-world Chrome user data</li>
+</ul>
+<p><strong>GTmetrix (live sites only):</strong></p>
+<ul>
+<li>URL: <a href="https://gtmetrix.com/">https://gtmetrix.com/</a></li>
+<li>Detailed waterfall chart showing every resource loaded</li>
+</ul>
+<hr>
+<h2>The Performance Optimization Stack</h2>
+<h3>1. Hosting (Live Sites)</h3>
+<p>Your hosting provider has the biggest impact on speed:</p>
+<ul>
+<li><strong>Budget hosting</strong> ($3-5/mo): Slow, shared resources</li>
+<li><strong>Managed WordPress hosting</strong> ($15-30/mo): Optimized for WordPress (SiteGround, Cloudways, Kinsta)</li>
+<li><strong>Premium hosting</strong> ($30+/mo): Fastest, best support (WP Engine, Kinsta, Flywheel)</li>
+</ul>
+<p><strong>Recommendation:</strong> For client sites, use at minimum SiteGround or Cloudways.</p>
+<h3>2. Caching (Already Set Up)</h3>
+<p>WP Super Cache (Lesson 22) handles this. Review:</p>
+<ul>
+<li><strong>Page caching</strong>: Serves pre-generated HTML instead of processing PHP</li>
+<li><strong>Browser caching</strong>: Tells browsers to store static files locally</li>
+<li><strong>Object caching</strong>: Caches database queries (requires server-level support)</li>
+</ul>
+<h3>3. Image Optimization (Already Set Up)</h3>
+<p>Smush or similar (Lesson 24) handles this:</p>
+<ul>
+<li>Compress all images</li>
+<li>Lazy loading</li>
+<li>Proper image sizing</li>
+<li>WebP format when possible</li>
+</ul>
+<h3>4. Minification</h3>
+<p>Reduces file sizes by removing whitespace, comments, and unnecessary characters:</p>
+<p><strong>Install Autoptimize</strong> (free plugin):</p>
+<ol>
+<li><strong>Plugins → Add New</strong> → search &quot;Autoptimize&quot;</li>
+<li>Install and activate</li>
+<li>Go to <strong>Settings → Autoptimize</strong></li>
+<li>Check:<ul>
+<li><strong>Optimize JavaScript Code</strong></li>
+<li><strong>Optimize CSS Code</strong></li>
+<li><strong>Optimize HTML Code</strong></li>
+</ul>
+</li>
+<li>Save and test your site</li>
+</ol>
+<p><strong>Warning:</strong> Minification can sometimes break things (especially JavaScript). If your site looks or works differently after enabling:</p>
+<ol>
+<li>Try disabling JavaScript optimization first</li>
+<li>If that fixes it, keep JS optimization off</li>
+<li>CSS and HTML optimization rarely cause issues</li>
+</ol>
+<h3>5. Database Optimization</h3>
+<p>Over time, your database accumulates unnecessary data:</p>
+<ul>
+<li>Post revisions</li>
+<li>Spam comments</li>
+<li>Transient options</li>
+<li>Orphaned metadata</li>
+</ul>
+<p><strong>Using WP-Optimize</strong> (free plugin):</p>
+<ol>
+<li>Install and activate <strong>WP-Optimize</strong></li>
+<li>Go to <strong>WP-Optimize → Database</strong></li>
+<li>Check the optimizations you want to run:<ul>
+<li>Clean all post revisions</li>
+<li>Clean all auto-draft posts</li>
+<li>Clean spam and trashed comments</li>
+<li>Remove expired transient options</li>
+</ul>
+</li>
+<li>Click <strong>&quot;Run all selected optimizations&quot;</strong></li>
+</ol>
+<h3>6. Reduce HTTP Requests</h3>
+<p>Each file (CSS, JS, image, font) requires a separate HTTP request:</p>
+<ul>
+<li>Combine CSS/JS files (Autoptimize does this)</li>
+<li>Use fewer plugins (each adds CSS/JS)</li>
+<li>Use icon fonts or SVGs instead of image icons</li>
+<li>Limit external scripts (analytics, chat widgets, social buttons)</li>
+</ul>
+<h3>7. Font Optimization</h3>
+<p>Google Fonts can slow your site:</p>
+<ul>
+<li>Use at most <strong>2 font families</strong></li>
+<li>Load only the <strong>weights you need</strong> (400, 600, 700 — not all weights)</li>
+<li>Consider using <strong>system fonts</strong> for fastest loading:<pre><code class="language-css">font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, sans-serif;
+</code></pre>
+</li>
+</ul>
+<hr>
+<h2>CDN (Content Delivery Network)</h2>
+<h3>What is a CDN?</h3>
+<p>A CDN stores copies of your site&#39;s static files (images, CSS, JS) on servers around the world. Visitors get served from the nearest server.</p>
+<h3>Benefits:</h3>
+<ul>
+<li>Faster load times for visitors far from your server</li>
+<li>Reduces load on your hosting server</li>
+<li>Provides DDoS protection</li>
+<li>Better global performance</li>
+</ul>
+<h3>Cloudflare (Free Option):</h3>
+<ol>
+<li>Create a free account at <a href="https://www.cloudflare.com/">https://www.cloudflare.com/</a></li>
+<li>Add your domain</li>
+<li>Update your domain&#39;s nameservers to Cloudflare</li>
+<li>Cloudflare provides:<ul>
+<li>Free CDN</li>
+<li>Free SSL</li>
+<li>Basic DDoS protection</li>
+<li>Performance optimization tools</li>
+</ul>
+</li>
+</ol>
+<p><strong>Note:</strong> CDN configuration happens at the hosting/DNS level, not within WordPress.</p>
+<hr>
+<h2>Elementor Performance Tips</h2>
+<p>Elementor adds overhead. Minimize it:</p>
+<ol>
+<li><strong>Don&#39;t use too many sections</strong> — combine where possible</li>
+<li><strong>Use Elementor&#39;s built-in icons</strong> instead of images for icons</li>
+<li><strong>Avoid excessive animations</strong> — they require extra JavaScript</li>
+<li><strong>Use the &quot;Improved CSS Loading&quot;</strong> experiment:<ul>
+<li>Elementor → Settings → Experiments → Improved CSS Loading → Active</li>
+</ul>
+</li>
+<li><strong>Don&#39;t use too many Google Fonts</strong> — pick 1-2 and stick with them</li>
+<li><strong>Optimize Elementor&#39;s CSS output</strong>:<ul>
+<li>Elementor → Settings → Advanced → CSS Print Method → Internal Embedding</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>Performance Checklist</h2>
+<h3>Quick Wins (Do These First):</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Enable caching (WP Super Cache)</li>
+<li><input disabled="" type="checkbox"> Optimize all images (Smush)</li>
+<li><input disabled="" type="checkbox"> Enable lazy loading</li>
+<li><input disabled="" type="checkbox"> Enable minification (Autoptimize)</li>
+<li><input disabled="" type="checkbox"> Use only 2 fonts max</li>
+<li><input disabled="" type="checkbox"> Remove unused plugins and themes</li>
+</ul>
+<h3>Medium Effort:</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Optimize database (WP-Optimize)</li>
+<li><input disabled="" type="checkbox"> Reduce number of plugins</li>
+<li><input disabled="" type="checkbox"> Defer non-critical JavaScript</li>
+<li><input disabled="" type="checkbox"> Optimize Elementor settings</li>
+</ul>
+<h3>Advanced (For Live Sites):</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Use a CDN (Cloudflare)</li>
+<li><input disabled="" type="checkbox"> Choose fast hosting</li>
+<li><input disabled="" type="checkbox"> Enable object caching (if hosting supports it)</li>
+<li><input disabled="" type="checkbox"> Implement critical CSS</li>
+<li><input disabled="" type="checkbox"> Use WebP images</li>
+</ul>
+<hr>
+<h2>Exercises</h2>
+<ol>
+<li><p><strong>Run a Lighthouse test</strong>: Test your homepage with Chrome Lighthouse. Note your Performance score and the specific recommendations.</p>
+</li>
+<li><p><strong>Install Autoptimize</strong>: Enable CSS, JS, and HTML optimization. Clear cache and test your site.</p>
+</li>
+<li><p><strong>Check page size</strong>: Use Chrome DevTools Network tab to see your homepage&#39;s total size and number of requests.</p>
+</li>
+<li><p><strong>Optimize the database</strong>: Install WP-Optimize and clean up revisions, drafts, and spam.</p>
+</li>
+<li><p><strong>Reduce fonts</strong>: Check how many Google Fonts you&#39;re loading. Reduce to 2 maximum.</p>
+</li>
+<li><p><strong>Before/after comparison</strong>: Note your Lighthouse score before optimizations, apply all optimizations, clear cache, and test again. Document the improvement.</p>
+</li>
+</ol>
+<hr>
+<h2>Key Takeaways</h2>
+<ul>
+<li><strong>Page load under 3 seconds</strong> is the target</li>
+<li>The biggest factors: <strong>hosting, caching, images, and minification</strong></li>
+<li><strong>Measure before and after</strong> to see improvement</li>
+<li>Use <strong>Lighthouse</strong> (Chrome DevTools) for local testing</li>
+<li><strong>Caching</strong> (WP Super Cache) serves pre-generated pages</li>
+<li><strong>Image optimization</strong> (Smush) often provides the biggest improvement</li>
+<li><strong>Minification</strong> (Autoptimize) reduces CSS/JS/HTML file sizes</li>
+<li><strong>CDN</strong> (Cloudflare) improves speed for global visitors</li>
+<li>Fewer plugins = faster site</li>
+<li>2 fonts maximum for best performance</li>
+</ul>
+<hr>
+<p><strong>Next Lesson:</strong> <a href="lesson-33.html">Lesson 33 - Taking a Site Live</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-31.html" class="prev">&larr; 31. SEO Fundamentals</a>
+      <a href="lesson-33.html" class="next">33. Going Live &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

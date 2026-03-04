@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 27: Payment Gateways and Shipping Configuration — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-27.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-27.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li class="active"><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lesson 27: Payment Gateways and Shipping Configuration</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Set up payment methods (Stripe, PayPal)</li>
+<li>Configure shipping zones and rates</li>
+<li>Understand flat rate, free shipping, and calculated shipping</li>
+<li>Set up a test/sandbox payment environment</li>
+</ul>
+<hr>
+<h2>Payment Gateways</h2>
+<p>A payment gateway processes credit card and online payments. WooCommerce supports many options.</p>
+<h3>Built-in Payment Methods</h3>
+<p>Go to <strong>WooCommerce → Settings → Payments</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+<th>Fee</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Direct bank transfer (BACS)</strong></td>
+<td>Customer pays via bank transfer</td>
+<td>No fee</td>
+</tr>
+<tr>
+<td><strong>Check payments</strong></td>
+<td>Customer sends a check</td>
+<td>No fee</td>
+</tr>
+<tr>
+<td><strong>Cash on delivery (COD)</strong></td>
+<td>Customer pays when delivered</td>
+<td>No fee</td>
+</tr>
+</tbody></table>
+<p>These are basic — for online payments, you need Stripe or PayPal.</p>
+<h3>Setting Up Stripe (Recommended)</h3>
+<p>Stripe is the most popular payment processor — accepts credit cards, Apple Pay, Google Pay.</p>
+<ol>
+<li>Go to <strong>Plugins → Add New</strong> → search <strong>&quot;WooCommerce Stripe Payment Gateway&quot;</strong></li>
+<li>Install and activate</li>
+<li>Go to <strong>WooCommerce → Settings → Payments</strong></li>
+<li>Find <strong>&quot;Stripe - Credit Card&quot;</strong> → click <strong>&quot;Manage&quot;</strong></li>
+<li>Check <strong>&quot;Enable Stripe&quot;</strong></li>
+<li><strong>Test Mode</strong>: Enable test mode first (for development)</li>
+<li><strong>API Keys</strong>:<ul>
+<li>Create a Stripe account at <a href="https://stripe.com/">https://stripe.com/</a></li>
+<li>Go to Stripe Dashboard → Developers → API Keys</li>
+<li>Copy your <strong>Test Publishable Key</strong> and <strong>Test Secret Key</strong></li>
+<li>Paste them in WooCommerce</li>
+</ul>
+</li>
+<li>Save changes</li>
+</ol>
+<h3>Test Mode Credit Card Numbers</h3>
+<p>When Stripe is in test mode, use these fake card numbers:</p>
+<table>
+<thead>
+<tr>
+<th>Card Number</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>4242 4242 4242 4242</code></td>
+<td>Successful payment</td>
+</tr>
+<tr>
+<td><code>4000 0000 0000 0002</code></td>
+<td>Declined card</td>
+</tr>
+<tr>
+<td><code>4000 0000 0000 3220</code></td>
+<td>3D Secure authentication required</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Use any future expiry date (e.g., 12/28)</li>
+<li>Use any 3-digit CVC (e.g., 123)</li>
+</ul>
+<h3>Setting Up PayPal</h3>
+<ol>
+<li>Go to <strong>WooCommerce → Settings → Payments</strong></li>
+<li>Find <strong>&quot;PayPal&quot;</strong> → click <strong>&quot;Manage&quot;</strong> (or install WooCommerce PayPal Payments plugin)</li>
+<li>Check <strong>&quot;Enable PayPal&quot;</strong></li>
+<li>Enter your <strong>PayPal email address</strong></li>
+<li>Enable <strong>sandbox mode</strong> for testing</li>
+<li>Save changes</li>
+</ol>
+<h3>Choosing Payment Methods</h3>
+<p>For a typical store, offer:</p>
+<ul>
+<li><strong>Stripe</strong> — for credit/debit card payments</li>
+<li><strong>PayPal</strong> — many customers prefer PayPal</li>
+<li><strong>Both</strong> — giving customers choice increases conversion</li>
+</ul>
+<hr>
+<h2>Shipping Configuration</h2>
+<h3>Understanding Shipping Zones</h3>
+<p>Shipping zones are geographic areas with specific shipping methods and rates.</p>
+<p>Example:</p>
+<ul>
+<li><strong>Zone 1: Local</strong> (your city) → Free shipping or flat rate $5</li>
+<li><strong>Zone 2: Domestic</strong> (rest of country) → Flat rate $10</li>
+<li><strong>Zone 3: International</strong> → Flat rate $25</li>
+<li><strong>Default</strong> (everywhere else) → No shipping or high flat rate</li>
+</ul>
+<h3>Setting Up Shipping Zones</h3>
+<ol>
+<li>Go to <strong>WooCommerce → Settings → Shipping</strong></li>
+<li>Click <strong>&quot;Add shipping zone&quot;</strong></li>
+</ol>
+<p><strong>Create Zone 1: Domestic Shipping</strong></p>
+<ol>
+<li><strong>Zone Name</strong>: &quot;United States&quot; (or your country)</li>
+<li><strong>Zone Regions</strong>: Select your country from the dropdown</li>
+<li>Click <strong>&quot;Add shipping method&quot;</strong></li>
+<li>Choose a method:</li>
+</ol>
+<h3>Shipping Methods</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>How It Works</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Flat Rate</strong></td>
+<td>Fixed price (e.g., $10 for any order)</td>
+</tr>
+<tr>
+<td><strong>Free Shipping</strong></td>
+<td>No shipping charge (can require minimum order)</td>
+</tr>
+<tr>
+<td><strong>Local Pickup</strong></td>
+<td>Customer picks up at your location (no charge)</td>
+</tr>
+</tbody></table>
+<h4>Configuring Flat Rate:</h4>
+<ol>
+<li>After adding &quot;Flat Rate&quot;, click <strong>&quot;Edit&quot;</strong> (under the method)</li>
+<li>Set:<ul>
+<li><strong>Cost</strong>: The shipping price (e.g., <code>10.00</code>)</li>
+<li>You can use formulas: <code>10 + (2 * [qty])</code> = $10 base + $2 per item</li>
+</ul>
+</li>
+<li>Save</li>
+</ol>
+<h4>Configuring Free Shipping:</h4>
+<ol>
+<li>Add &quot;Free Shipping&quot; method</li>
+<li>Edit it:<ul>
+<li><strong>Requires</strong>: Choose a condition:<ul>
+<li>A valid free shipping coupon</li>
+<li>A minimum order amount (e.g., $50)</li>
+<li>Either a coupon or minimum amount</li>
+</ul>
+</li>
+<li>Set the <strong>minimum order amount</strong> if applicable</li>
+</ul>
+</li>
+<li>Save</li>
+</ol>
+<h4>Adding Multiple Methods per Zone:</h4>
+<p>A zone can have multiple methods. Customers choose at checkout.</p>
+<p><strong>Common setup:</strong></p>
+<ul>
+<li>Free Shipping (for orders over $50)</li>
+<li>Flat Rate $7.99 (standard shipping)</li>
+<li>Flat Rate $14.99 (express shipping — name it &quot;Express Shipping&quot;)</li>
+</ul>
+<h3>Creating International Shipping</h3>
+<ol>
+<li>Add another shipping zone: &quot;International&quot;</li>
+<li>Zone Regions: Select countries or &quot;Everywhere else&quot;</li>
+<li>Add a Flat Rate method with a higher price</li>
+</ol>
+<h3>Shipping Classes</h3>
+<p>For products that need different shipping rates (heavy items, fragile items):</p>
+<ol>
+<li>Go to <strong>WooCommerce → Settings → Shipping → Shipping Classes</strong></li>
+<li>Click <strong>&quot;Add shipping class&quot;</strong></li>
+<li>Create classes like:<ul>
+<li>&quot;Heavy Items&quot; (slug: heavy-items)</li>
+<li>&quot;Fragile&quot; (slug: fragile)</li>
+</ul>
+</li>
+<li>When editing flat rate in a shipping zone, you can set different costs per shipping class</li>
+</ol>
+<h3>No Shipping (for Digital Products)</h3>
+<p>If you sell digital/virtual products, they don&#39;t need shipping:</p>
+<ul>
+<li>Mark them as <strong>&quot;Virtual&quot;</strong> in the product editor</li>
+<li>WooCommerce automatically skips shipping for virtual products</li>
+</ul>
+<hr>
+<h2>Order Management</h2>
+<h3>Viewing Orders</h3>
+<p>Go to <strong>WooCommerce → Orders</strong> to see all orders.</p>
+<h3>Order Statuses</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Pending payment</strong></td>
+<td>Order placed but payment not confirmed</td>
+</tr>
+<tr>
+<td><strong>Processing</strong></td>
+<td>Payment received, order being prepared</td>
+</tr>
+<tr>
+<td><strong>On hold</strong></td>
+<td>Awaiting action (bank transfer not yet received)</td>
+</tr>
+<tr>
+<td><strong>Completed</strong></td>
+<td>Order fulfilled and delivered</td>
+</tr>
+<tr>
+<td><strong>Cancelled</strong></td>
+<td>Cancelled by admin or customer</td>
+</tr>
+<tr>
+<td><strong>Refunded</strong></td>
+<td>Payment refunded</td>
+</tr>
+<tr>
+<td><strong>Failed</strong></td>
+<td>Payment failed</td>
+</tr>
+</tbody></table>
+<h3>Processing an Order</h3>
+<ol>
+<li>Click on an order to view details</li>
+<li>Review order items, shipping address, and payment info</li>
+<li>Add <strong>order notes</strong> (visible to customer or private)</li>
+<li>Change status to <strong>&quot;Completed&quot;</strong> when the order is shipped</li>
+<li>Click <strong>&quot;Update&quot;</strong></li>
+</ol>
+<hr>
+<h2>Testing the Complete Purchase Flow</h2>
+<h3>Test Checkout Steps:</h3>
+<ol>
+<li>Make sure <strong>Stripe test mode</strong> is enabled</li>
+<li>Visit your shop page</li>
+<li>Add a product to the cart</li>
+<li>Go to the cart → proceed to checkout</li>
+<li>Fill in billing details (use fake info)</li>
+<li>Enter the test card: <code>4242 4242 4242 4242</code></li>
+<li>Use any future expiry and any CVC</li>
+<li>Place the order</li>
+<li>Check that:<ul>
+<li>Order confirmation page appears</li>
+<li>Order appears in WooCommerce → Orders</li>
+<li>Email notification is sent (check Mailhog in Local WP)</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>Exercises</h2>
+<ol>
+<li><p><strong>Set up Stripe in test mode</strong>: Install the Stripe plugin, create a Stripe account, and configure with test API keys.</p>
+</li>
+<li><p><strong>Create shipping zones</strong>: Set up at least two zones — domestic (your country) and international. Add flat rate shipping to each.</p>
+</li>
+<li><p><strong>Configure free shipping</strong>: Add a free shipping method for orders over $50 in your domestic zone.</p>
+</li>
+<li><p><strong>Test a purchase</strong>: Complete a test purchase using the test credit card number. Go through the entire flow from shop to order confirmation.</p>
+</li>
+<li><p><strong>Process the test order</strong>: Find the test order in WooCommerce → Orders. Add a note and change the status to Completed.</p>
+</li>
+<li><p><strong>Check emails</strong>: Verify that order notification emails were sent (use Mailhog in Local WP).</p>
+</li>
+</ol>
+<hr>
+<h2>Key Takeaways</h2>
+<ul>
+<li><strong>Stripe</strong> (credit cards) and <strong>PayPal</strong> are the essential payment gateways</li>
+<li>Always use <strong>test/sandbox mode</strong> during development</li>
+<li><strong>Shipping zones</strong> define geographic areas with specific shipping methods</li>
+<li>Common shipping methods: <strong>Flat Rate</strong>, <strong>Free Shipping</strong> (with minimum order), <strong>Local Pickup</strong></li>
+<li>Use <strong>shipping classes</strong> for products that need different rates</li>
+<li><strong>Virtual products</strong> skip shipping automatically</li>
+<li>Test the <strong>complete purchase flow</strong> before going live</li>
+<li>Order statuses track the lifecycle: Pending → Processing → Completed</li>
+</ul>
+<hr>
+<p><strong>Next Lesson:</strong> <a href="lesson-28.html">Lesson 28 - Designing a Shop Page with Elementor</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-26.html" class="prev">&larr; 26. Adding Products</a>
+      <a href="lesson-28.html" class="next">28. Shop Page Design &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

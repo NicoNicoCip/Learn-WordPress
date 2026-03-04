@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lección 25: Instalación de WooCommerce + Configuración Inicial — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-25.html">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-25.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li class="active"><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lección 25: Instalación de WooCommerce + Configuración Inicial</h1>
+<h2>Objetivos</h2>
+<ul>
+<li>Instalar y activar WooCommerce</li>
+<li>Completar el asistente de configuración</li>
+<li>Comprender el dashboard de WooCommerce</li>
+<li>Configurar los ajustes esenciales de la tienda</li>
+</ul>
+<hr>
+<h2>¿Qué es WooCommerce?</h2>
+<p><strong>WooCommerce</strong> es un plugin gratuito de WordPress que convierte tu sitio en una tienda online completa. Es la plataforma de comercio electrónico más popular del mundo, utilizada por más del 25% de todas las tiendas online.</p>
+<h3>Lo que WooCommerce Añade:</h3>
+<ul>
+<li>Gestión de productos (simples, variables, digitales, agrupados)</li>
+<li>Carrito de compras y checkout</li>
+<li>Procesamiento de pagos (Stripe, PayPal y más)</li>
+<li>Configuración de envíos</li>
+<li>Gestión de pedidos</li>
+<li>Cuentas de clientes</li>
+<li>Cálculo de impuestos</li>
+<li>Cupones y descuentos</li>
+<li>Gestión de inventario</li>
+<li>Informes y analíticas</li>
+</ul>
+<hr>
+<h2>Instalación de WooCommerce</h2>
+<h3>Paso 1: Instalación</h3>
+<ol>
+<li>Ve a <strong>Plugins → Add New Plugin</strong></li>
+<li>Busca <strong>&quot;WooCommerce&quot;</strong></li>
+<li>Instala y activa <strong>&quot;WooCommerce&quot;</strong> de Automattic</li>
+</ol>
+<h3>Paso 2: Asistente de Configuración</h3>
+<p>Después de la activación, WooCommerce lanza un asistente de configuración. Síguelo:</p>
+<p><strong>Datos de la Tienda:</strong></p>
+<ul>
+<li>País/Región</li>
+<li>Dirección</li>
+<li>Sector (elige el que corresponda)</li>
+<li>Número de productos (aproximado)</li>
+</ul>
+<p><strong>Tipos de Productos:</strong></p>
+<ul>
+<li>Productos físicos</li>
+<li>Descargas digitales</li>
+<li>Suscripciones (requiere extensión de pago)</li>
+</ul>
+<p><strong>Datos del Negocio:</strong></p>
+<ul>
+<li>Elige qué funciones gratuitas instalar (puedes omitir la mayoría de sugerencias de complementos)</li>
+<li>Sé selectivo — no instales todo lo que te sugieren</li>
+</ul>
+<p><strong>Tema:</strong></p>
+<ul>
+<li>Omite esto — ya estamos usando Hello Elementor</li>
+<li>O elige &quot;Continuar con mi tema activo&quot;</li>
+</ul>
+<p><strong>Completa el asistente</strong> y haz clic en &quot;Ir al Dashboard&quot; o continúa a la página de inicio de WooCommerce.</p>
+<hr>
+<h2>Dashboard de WooCommerce</h2>
+<p>Después de la configuración, verás <strong>WooCommerce</strong> en la barra lateral del administrador con estas subsecciones:</p>
+<table>
+<thead>
+<tr>
+<th>Sección</th>
+<th>Qué Hace</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Home</strong></td>
+<td>Panel de vista general con tareas de configuración y rendimiento de la tienda</td>
+</tr>
+<tr>
+<td><strong>Orders</strong></td>
+<td>Ver y gestionar pedidos de clientes</td>
+</tr>
+<tr>
+<td><strong>Customers</strong></td>
+<td>Lista de clientes y detalles</td>
+</tr>
+<tr>
+<td><strong>Coupons</strong></td>
+<td>Crear códigos de descuento</td>
+</tr>
+<tr>
+<td><strong>Reports</strong></td>
+<td>Informes de ventas, clientes e inventario</td>
+</tr>
+<tr>
+<td><strong>Settings</strong></td>
+<td>Configurar todos los ajustes de la tienda</td>
+</tr>
+<tr>
+<td><strong>Status</strong></td>
+<td>Estado del sistema, herramientas y registros</td>
+</tr>
+<tr>
+<td><strong>Extensions</strong></td>
+<td>Explorar e instalar extensiones de WooCommerce</td>
+</tr>
+</tbody></table>
+<p>También verás <strong>Products</strong> añadido a la barra lateral del administrador — aquí es donde gestionas tu catálogo de productos.</p>
+<hr>
+<h2>Ajustes Esenciales de WooCommerce</h2>
+<p>Ve a <strong>WooCommerce → Settings</strong> y configura estas pestañas:</p>
+<h3>Pestaña General</h3>
+<table>
+<thead>
+<tr>
+<th>Ajuste</th>
+<th>Recomendación</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Store Address</strong></td>
+<td>La dirección de tu negocio</td>
+</tr>
+<tr>
+<td><strong>Selling Location(s)</strong></td>
+<td>&quot;Vender a todos los países&quot; o países específicos</td>
+</tr>
+<tr>
+<td><strong>Shipping Location(s)</strong></td>
+<td>A dónde realizas envíos</td>
+</tr>
+<tr>
+<td><strong>Enable taxes</strong></td>
+<td>Marca si necesitas cobrar impuestos</td>
+</tr>
+<tr>
+<td><strong>Currency</strong></td>
+<td>Tu moneda local</td>
+</tr>
+</tbody></table>
+<h3>Pestaña Products</h3>
+<table>
+<thead>
+<tr>
+<th>Ajuste</th>
+<th>Recomendación</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Shop Page</strong></td>
+<td>Selecciona la página que WooCommerce usa como tienda</td>
+</tr>
+<tr>
+<td><strong>Add to Cart behaviour</strong></td>
+<td>&quot;Redirigir a la página del carrito tras añadir exitosamente&quot; — marca si lo deseas</td>
+</tr>
+<tr>
+<td><strong>Weight Unit</strong></td>
+<td>kg o lbs</td>
+</tr>
+<tr>
+<td><strong>Dimensions Unit</strong></td>
+<td>cm o in</td>
+</tr>
+<tr>
+<td><strong>Enable Reviews</strong></td>
+<td>A tu elección — las reseñas de productos generan confianza</td>
+</tr>
+</tbody></table>
+<h3>Pestaña Accounts &amp; Privacy</h3>
+<table>
+<thead>
+<tr>
+<th>Ajuste</th>
+<th>Recomendación</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Guest checkout</strong></td>
+<td>Permitir — reduce la fricción (los clientes no necesitan una cuenta para comprar)</td>
+</tr>
+<tr>
+<td><strong>Account creation</strong></td>
+<td>Permitir durante el checkout — da a los clientes la opción</td>
+</tr>
+<tr>
+<td><strong>Privacy Policy</strong></td>
+<td>Enlace a tu página de política de privacidad</td>
+</tr>
+</tbody></table>
+<h3>Pestaña Emails</h3>
+<p>Configura qué correos se envían y a quién:</p>
+<ul>
+<li><strong>New order</strong> — notifica al administrador de nuevos pedidos</li>
+<li><strong>Processing order</strong> — se envía al cliente cuando se recibe el pago</li>
+<li><strong>Completed order</strong> — se envía cuando el pedido se ha enviado/completado</li>
+<li><strong>Customer note</strong> — cuando añades una nota a su pedido</li>
+</ul>
+<p>Para cada correo, puedes:</p>
+<ul>
+<li>Activarlo/desactivarlo</li>
+<li>Cambiar el destinatario</li>
+<li>Personalizar el asunto</li>
+<li>Cambiar los colores de la plantilla de correo para que coincidan con tu marca</li>
+</ul>
+<hr>
+<h2>Páginas de WooCommerce</h2>
+<p>WooCommerce crea automáticamente varias páginas:</p>
+<table>
+<thead>
+<tr>
+<th>Página</th>
+<th>Propósito</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Shop</strong></td>
+<td>Página de listado de productos</td>
+</tr>
+<tr>
+<td><strong>Cart</strong></td>
+<td>Carrito de compras</td>
+</tr>
+<tr>
+<td><strong>Checkout</strong></td>
+<td>Formulario de pago y envío</td>
+</tr>
+<tr>
+<td><strong>My Account</strong></td>
+<td>Panel de cuenta del cliente</td>
+</tr>
+</tbody></table>
+<p>Estas páginas contienen <strong>shortcodes de WooCommerce</strong> que muestran el contenido correspondiente. No elimines estos shortcodes — puedes añadir contenido a su alrededor.</p>
+<h3>Verificación de que las Páginas están Configuradas:</h3>
+<ol>
+<li>Ve a <strong>WooCommerce → Settings → Advanced → Page Setup</strong></li>
+<li>Verifica que cada página está asignada:<ul>
+<li>Cart Page → &quot;Cart&quot;</li>
+<li>Checkout Page → &quot;Checkout&quot;</li>
+<li>My Account Page → &quot;My Account&quot;</li>
+<li>Terms and Conditions → tu página de términos (crea una si es necesario)</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>Moneda e Impuestos Básicos</h2>
+<h3>Moneda</h3>
+<ul>
+<li>Se configura en WooCommerce → Settings → General</li>
+<li>Elige tu <strong>moneda</strong> y la <strong>posición de la moneda</strong> (antes/después de la cantidad)</li>
+<li>Configura el <strong>separador decimal</strong> y el <strong>separador de miles</strong></li>
+</ul>
+<h3>Impuestos (Configuración Básica)</h3>
+<p>Si necesitas cobrar impuestos sobre las ventas:</p>
+<ol>
+<li>Ve a <strong>WooCommerce → Settings → General</strong> → marca <strong>&quot;Enable taxes&quot;</strong></li>
+<li>Ve a la nueva pestaña <strong>Tax</strong> que aparece</li>
+<li>En <strong>Standard Rates</strong>, haz clic en <strong>&quot;Insert Row&quot;</strong></li>
+<li>Introduce tu tasa impositiva:<ul>
+<li>Código de País (p. ej., &quot;ES&quot;)</li>
+<li>Código de Provincia (p. ej., &quot;M&quot;)</li>
+<li>Porcentaje % (p. ej., &quot;21&quot;)</li>
+<li>Nombre del Impuesto (p. ej., &quot;IVA&quot;)</li>
+</ul>
+</li>
+<li>Haz clic en <strong>&quot;Save Changes&quot;</strong></li>
+</ol>
+<p><strong>Para configuraciones de impuestos complejas</strong>, considera un plugin de impuestos como:</p>
+<ul>
+<li><strong>WooCommerce Tax</strong> (de Automattic) — cálculos automáticos de impuestos</li>
+<li><strong>TaxJar</strong> — impuestos de ventas automatizados para EE.UU.</li>
+</ul>
+<hr>
+<h2>Ejercicios</h2>
+<ol>
+<li><p><strong>Instala WooCommerce</strong>: Sigue los pasos de instalación y completa el asistente de configuración.</p>
+</li>
+<li><p><strong>Configura los ajustes generales</strong>: Establece la dirección de tu tienda, moneda y ubicaciones de venta.</p>
+</li>
+<li><p><strong>Revisa las páginas de WooCommerce</strong>: Verifica que las páginas Shop, Cart, Checkout y My Account existen y están correctamente asignadas.</p>
+</li>
+<li><p><strong>Configura los ajustes de correo</strong>: Ve a WooCommerce → Settings → Emails y personaliza los colores de la plantilla de correo para que coincidan con tu marca.</p>
+</li>
+<li><p><strong>Visita la página de la tienda</strong>: Ve a la página Shop de tu sitio para ver cómo se muestra (vacía por ahora — añadiremos productos a continuación).</p>
+</li>
+<li><p><strong>Activa el checkout como invitado</strong>: En WooCommerce → Settings → Accounts &amp; Privacy, asegúrate de que el checkout como invitado está permitido.</p>
+</li>
+</ol>
+<hr>
+<h2>Puntos Clave</h2>
+<ul>
+<li><strong>WooCommerce</strong> es gratuito y convierte WordPress en una tienda online completa</li>
+<li>El <strong>asistente de configuración</strong> te guía a través de la configuración inicial</li>
+<li><strong>Ajustes esenciales</strong>: moneda, impuestos, ubicaciones de envío, opciones de checkout</li>
+<li>WooCommerce crea <strong>páginas obligatorias</strong> automáticamente (Shop, Cart, Checkout, My Account)</li>
+<li>Activa el <strong>checkout como invitado</strong> para reducir la fricción para los clientes</li>
+<li>Configura las <strong>notificaciones por correo</strong> para que tú y los clientes estéis informados</li>
+<li>Configura las <strong>tasas impositivas</strong> si son necesarias para tu ubicación</li>
+<li>WooCommerce añade las secciones <strong>Products</strong> y <strong>WooCommerce</strong> a la barra lateral del administrador</li>
+</ul>
+<hr>
+<p><strong>Siguiente Lección:</strong> <a href="lesson-26.html">Lección 26 - Añadir Productos</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-24.html" class="prev">&larr; 24. Optimización de Imágenes</a>
+      <a href="lesson-26.html" class="next">26. Añadir Productos &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

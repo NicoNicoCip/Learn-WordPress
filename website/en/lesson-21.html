@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 21: Understanding Plugins — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-21.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-21.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li class="active"><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lesson 21: Understanding Plugins</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Understand what WordPress plugins are and how they work</li>
+<li>Know how to find, install, activate, and update plugins</li>
+<li>Evaluate plugins for quality and safety</li>
+<li>Manage your plugin collection</li>
+</ul>
+<hr>
+<h2>What Are Plugins?</h2>
+<p>Plugins are <strong>software add-ons</strong> that extend WordPress functionality. They can add almost anything:</p>
+<ul>
+<li>Contact forms</li>
+<li>SEO tools</li>
+<li>E-commerce (entire online stores)</li>
+<li>Security features</li>
+<li>Performance optimization</li>
+<li>Social media integration</li>
+<li>Backup systems</li>
+<li>And thousands more</li>
+</ul>
+<p>Think of plugins as <strong>apps for your website</strong> — just like you install apps on your phone to add features.</p>
+<hr>
+<h2>Finding and Installing Plugins</h2>
+<h3>Method 1: WordPress Plugin Directory (In Admin)</h3>
+<ol>
+<li>Go to <strong>Plugins → Add New Plugin</strong></li>
+<li><strong>Search</strong> for what you need (e.g., &quot;contact form&quot; or &quot;SEO&quot;)</li>
+<li>Browse results and evaluate options</li>
+<li>Click <strong>&quot;Install Now&quot;</strong></li>
+<li>Click <strong>&quot;Activate&quot;</strong></li>
+</ol>
+<h3>Method 2: Upload a ZIP File</h3>
+<p>For plugins not in the directory (premium plugins):</p>
+<ol>
+<li>Go to <strong>Plugins → Add New Plugin</strong></li>
+<li>Click <strong>&quot;Upload Plugin&quot;</strong> at the top</li>
+<li>Choose the ZIP file</li>
+<li>Click <strong>&quot;Install Now&quot;</strong></li>
+<li>Activate after installation</li>
+</ol>
+<hr>
+<h2>Evaluating Plugins</h2>
+<p>Before installing any plugin, check these factors:</p>
+<h3>Must-Check Criteria</h3>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>What to Look For</th>
+<th>Red Flag</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Last Updated</strong></td>
+<td>Within the past 6 months</td>
+<td>Over 1 year ago</td>
+</tr>
+<tr>
+<td><strong>Active Installations</strong></td>
+<td>10,000+ for established plugins</td>
+<td>Very few installations</td>
+</tr>
+<tr>
+<td><strong>Rating</strong></td>
+<td>4+ stars</td>
+<td>Below 3.5 stars</td>
+</tr>
+<tr>
+<td><strong>WordPress Version</strong></td>
+<td>&quot;Tested up to&quot; current WP version</td>
+<td>Untested with current version</td>
+</tr>
+<tr>
+<td><strong>Support</strong></td>
+<td>Developer responds to support threads</td>
+<td>Many unanswered support requests</td>
+</tr>
+<tr>
+<td><strong>Reviews</strong></td>
+<td>Read recent reviews for issues</td>
+<td>Multiple reports of bugs or conflicts</td>
+</tr>
+</tbody></table>
+<h3>Reading the Plugin Page</h3>
+<p>When you click on a plugin in the directory, check:</p>
+<ul>
+<li><strong>Description</strong> — does it do what you need?</li>
+<li><strong>Screenshots</strong> — see what it looks like</li>
+<li><strong>FAQ</strong> — answers to common questions</li>
+<li><strong>Changelog</strong> — history of updates (shows active development)</li>
+<li><strong>Reviews</strong> — real user experiences</li>
+<li><strong>Support</strong> — resolved vs unresolved threads</li>
+</ul>
+<hr>
+<h2>Managing Plugins</h2>
+<h3>Activating and Deactivating</h3>
+<ul>
+<li><strong>Active plugins</strong> run on your site and affect its behavior</li>
+<li><strong>Inactive plugins</strong> are installed but not running</li>
+<li>Go to <strong>Plugins → Installed Plugins</strong> to see all plugins</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Activate</strong></td>
+<td>Turns the plugin on — it starts running</td>
+</tr>
+<tr>
+<td><strong>Deactivate</strong></td>
+<td>Turns the plugin off — it stops running but stays installed</td>
+</tr>
+<tr>
+<td><strong>Delete</strong></td>
+<td>Removes the plugin files entirely</td>
+</tr>
+</tbody></table>
+<h3>Updating Plugins</h3>
+<p>Plugins need regular updates for security fixes and new features:</p>
+<ol>
+<li>Go to <strong>Dashboard → Updates</strong> to see available updates</li>
+<li>Or look for the notification badge on <strong>Plugins</strong> in the sidebar</li>
+<li>Select plugins to update → click <strong>&quot;Update Plugins&quot;</strong></li>
+<li>Or enable <strong>auto-updates</strong> per plugin (Plugins → Installed Plugins → click &quot;Enable auto-updates&quot; next to a plugin)</li>
+</ol>
+<h3>Auto-Updates</h3>
+<ul>
+<li><strong>Recommended for:</strong> Security plugins, small utility plugins</li>
+<li><strong>Not recommended for:</strong> Major plugins (Elementor, WooCommerce) — these can sometimes cause issues, so update manually and test</li>
+<li>Enable per plugin in the Installed Plugins list</li>
+</ul>
+<hr>
+<h2>Plugin Best Practices</h2>
+<h3>Do:</h3>
+<ul>
+<li><strong>Research before installing</strong> — check ratings, reviews, and update history</li>
+<li><strong>Keep plugins updated</strong> — outdated plugins are security risks</li>
+<li><strong>Delete inactive plugins</strong> — don&#39;t leave unused plugins installed</li>
+<li><strong>Test after updating</strong> — check your site after plugin updates</li>
+<li><strong>Back up before major updates</strong> — especially for critical plugins</li>
+</ul>
+<h3>Don&#39;t:</h3>
+<ul>
+<li><strong>Don&#39;t install too many plugins</strong> — each one adds code and can slow your site</li>
+<li><strong>Don&#39;t install plugins from untrusted sources</strong> — &quot;nulled&quot; (pirated) premium plugins often contain malware</li>
+<li><strong>Don&#39;t install plugins that do the same thing</strong> — choose one SEO plugin, one caching plugin, etc.</li>
+<li><strong>Don&#39;t ignore update notifications</strong> — security patches are critical</li>
+</ul>
+<h3>How Many Plugins Is Too Many?</h3>
+<p>There&#39;s no magic number, but guidelines:</p>
+<ul>
+<li><strong>10-20 plugins</strong> is normal for a typical business site</li>
+<li><strong>20-30</strong> is common for feature-rich sites</li>
+<li><strong>30+</strong> should be reviewed — do you really need all of them?</li>
+<li>It&#39;s more about <strong>quality</strong> than quantity — well-coded plugins have minimal performance impact</li>
+</ul>
+<hr>
+<h2>Troubleshooting Plugin Issues</h2>
+<h3>Common Problems:</h3>
+<p><strong>&quot;Site breaks after installing a plugin&quot;</strong></p>
+<ol>
+<li>Deactivate the plugin</li>
+<li>If you can&#39;t access wp-admin, use FTP/file manager to rename the plugin folder in <code>wp-content/plugins/</code></li>
+</ol>
+<p><strong>&quot;Plugins conflict with each other&quot;</strong></p>
+<ol>
+<li>Deactivate all plugins</li>
+<li>Reactivate one at a time to find the conflicting plugin</li>
+<li>Check if there&#39;s an update that fixes the conflict</li>
+<li>If not, find an alternative plugin</li>
+</ol>
+<p><strong>&quot;Site is slow after adding plugins&quot;</strong></p>
+<ol>
+<li>Use a speed test tool (GTmetrix, Google PageSpeed Insights)</li>
+<li>Deactivate plugins one at a time and re-test to find the slow one</li>
+<li>Consider lighter alternatives</li>
+</ol>
+<hr>
+<h2>Exercises</h2>
+<ol>
+<li><p><strong>Browse the plugin directory</strong>: Go to Plugins → Add New and browse &quot;Popular&quot; and &quot;Recommended&quot; plugins. Read the descriptions of the top 10.</p>
+</li>
+<li><p><strong>Evaluate a plugin</strong>: Search for &quot;SEO&quot; and compare the top 3 results. Look at ratings, installations, last updated, and reviews. Which would you choose?</p>
+</li>
+<li><p><strong>Check your installed plugins</strong>: Go to Plugins → Installed Plugins. Note which ones are active and inactive. Delete any inactive plugins you don&#39;t need.</p>
+</li>
+<li><p><strong>Enable auto-updates</strong>: For any security-related plugins, enable auto-updates.</p>
+</li>
+<li><p><strong>Check for updates</strong>: Go to Dashboard → Updates and update any plugins that need it.</p>
+</li>
+</ol>
+<hr>
+<h2>Key Takeaways</h2>
+<ul>
+<li>Plugins add <strong>functionality</strong> to WordPress — like apps for your site</li>
+<li>Install from <strong>Plugins → Add New</strong> or upload ZIP files</li>
+<li><strong>Evaluate carefully</strong>: check ratings, update date, installations, and reviews</li>
+<li><strong>Keep plugins updated</strong> — outdated plugins are security vulnerabilities</li>
+<li><strong>Delete unused plugins</strong> — don&#39;t leave inactive plugins installed</li>
+<li><strong>Don&#39;t over-install</strong> — 10-20 plugins is typical, quality matters more than quantity</li>
+<li><strong>Never install &quot;nulled&quot; plugins</strong> — they often contain malware</li>
+<li><strong>Test your site</strong> after every plugin update</li>
+</ul>
+<hr>
+<p><strong>Next Lesson:</strong> <a href="lesson-22.html">Lesson 22 - Must-Have Plugins</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-20.html" class="prev">&larr; 20. Responsive Design</a>
+      <a href="lesson-22.html" class="next">22. Must-Have Plugins &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

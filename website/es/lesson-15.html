@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leccion 15: Tipografia, Colores y Estilos Globales en Elementor — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-15.html">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-15.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li class="active"><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Leccion 15: Tipografia, Colores y Estilos Globales en Elementor</h1>
+<h2>Objetivos</h2>
+<ul>
+<li>Configurar colores y fuentes globales para mantener la coherencia en todo el sitio</li>
+<li>Comprender los Ajustes del Sitio de Elementor</li>
+<li>Usar estilos globales de forma efectiva para mantener un diseno cohesivo</li>
+<li>Aprender las mejores practicas de tipografia para diseno web</li>
+</ul>
+<hr>
+<h2>Por Que Importan los Estilos Globales</h2>
+<p>Sin estilos globales, tendrias que configurar colores y fuentes en cada widget individualmente. Los estilos globales te permiten:</p>
+<ul>
+<li><strong>Definir colores y fuentes una sola vez</strong>, aplicarlos en todas partes</li>
+<li><strong>Cambiar el aspecto de todo tu sitio</strong> editando un solo ajuste</li>
+<li><strong>Mantener la coherencia</strong> — sin colores descoordinados por accidente</li>
+<li><strong>Trabajar mas rapido</strong> — elige de tu paleta en lugar de introducir codigos hexadecimales</li>
+</ul>
+<hr>
+<h2>Acceder a los Ajustes del Sitio</h2>
+<ol>
+<li>Abre cualquier pagina en Elementor</li>
+<li>Haz clic en el <strong>menu hamburguesa (☰)</strong> en la esquina superior izquierda del panel</li>
+<li>Haz clic en <strong>&quot;Site Settings&quot;</strong></li>
+</ol>
+<p>O haz clic en <strong>menu hamburguesa → Site Settings</strong> directamente.</p>
+<hr>
+<h2>Colores Globales</h2>
+<h3>Configurar Tu Paleta de Colores</h3>
+<ol>
+<li><p>En Site Settings, haz clic en <strong>&quot;Global Colors&quot;</strong></p>
+</li>
+<li><p>Veras 4 espacios de color predeterminados:</p>
+<ul>
+<li><strong>Primary</strong> — tu color principal de marca</li>
+<li><strong>Secondary</strong> — tu color secundario de marca</li>
+<li><strong>Text</strong> — color predeterminado del texto del cuerpo</li>
+<li><strong>Accent</strong> — para botones, enlaces, resaltados</li>
+</ul>
+</li>
+<li><p>Haz clic en cada color para cambiarlo. Introduce un codigo hexadecimal o usa el selector de color.</p>
+</li>
+</ol>
+<h3>Ejemplo de Paleta de Colores Profesional:</h3>
+<table>
+<thead>
+<tr>
+<th>Espacio</th>
+<th>Color</th>
+<th>Hex</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Primary</td>
+<td>Azul Oscuro</td>
+<td><code>#2c3e50</code></td>
+<td>Encabezados, elementos principales</td>
+</tr>
+<tr>
+<td>Secondary</td>
+<td>Verde Azulado</td>
+<td><code>#1abc9c</code></td>
+<td>Acentos, iconos</td>
+</tr>
+<tr>
+<td>Text</td>
+<td>Gris Oscuro</td>
+<td><code>#333333</code></td>
+<td>Texto del cuerpo</td>
+</tr>
+<tr>
+<td>Accent</td>
+<td>Coral</td>
+<td><code>#e74c3c</code></td>
+<td>Botones, CTAs, resaltados</td>
+</tr>
+</tbody></table>
+<h3>Anadir Colores Personalizados</h3>
+<ul>
+<li>Haz clic en <strong>&quot;+ Add Color&quot;</strong> para anadir mas colores a tu paleta</li>
+<li>Util para: fondo claro, fondo oscuro, gris sutil, verde de exito, etc.</li>
+</ul>
+<h3>Colores Adicionales Recomendados:</h3>
+<ul>
+<li><strong>Fondo Claro</strong>: <code>#f8f9fa</code> — fondos de secciones claras</li>
+<li><strong>Fondo Oscuro</strong>: <code>#1a1a2e</code> — fondos de secciones oscuras</li>
+<li><strong>Blanco</strong>: <code>#ffffff</code> — para texto sobre fondos oscuros</li>
+<li><strong>Gris Claro</strong>: <code>#6c757d</code> — texto sutil, pies de foto</li>
+</ul>
+<h3>Usar los Colores Globales</h3>
+<p>Cuando estes editando el color de cualquier elemento:</p>
+<ol>
+<li>Haz clic en el campo de color</li>
+<li>Haz clic en el <strong>icono del globo</strong> (🌐) en la parte superior del selector de color</li>
+<li>Selecciona de tus colores globales</li>
+<li>El elemento ahora esta <strong>vinculado</strong> al color global — si cambias el color global mas adelante, este elemento se actualizara automaticamente</li>
+</ol>
+<hr>
+<h2>Fuentes Globales (Tipografia)</h2>
+<h3>Configurar las Fuentes Globales</h3>
+<ol>
+<li><p>En Site Settings, haz clic en <strong>&quot;Global Fonts&quot;</strong></p>
+</li>
+<li><p>Veras 4 espacios de tipografia predeterminados:</p>
+<ul>
+<li><strong>Primary</strong> — encabezados y titulos</li>
+<li><strong>Secondary</strong> — subtitulos</li>
+<li><strong>Text</strong> — texto del cuerpo/parrafos</li>
+<li><strong>Accent</strong> — texto especial (botones, insignias, etc.)</li>
+</ul>
+</li>
+<li><p>Haz clic en cada uno para configurar:</p>
+<ul>
+<li><strong>Font Family</strong>: Elige entre Google Fonts o fuentes del sistema</li>
+<li><strong>Font Size</strong>: Tamano en px, em o rem</li>
+<li><strong>Font Weight</strong>: Desde Thin (100) hasta Black (900)</li>
+<li><strong>Line Height</strong>: Espacio entre lineas (1.4-1.8 para texto del cuerpo)</li>
+<li><strong>Letter Spacing</strong>: Espacio entre letras</li>
+</ul>
+</li>
+</ol>
+<h3>Combinaciones de Fuentes Populares:</h3>
+<p><strong>Moderna y Limpia:</strong></p>
+<ul>
+<li>Encabezados: <strong>Montserrat</strong> (Bold, 700)</li>
+<li>Cuerpo: <strong>Open Sans</strong> (Regular, 400)</li>
+</ul>
+<p><strong>Profesional:</strong></p>
+<ul>
+<li>Encabezados: <strong>Playfair Display</strong> (Bold, 700)</li>
+<li>Cuerpo: <strong>Source Sans Pro</strong> (Regular, 400)</li>
+</ul>
+<p><strong>Minimalista:</strong></p>
+<ul>
+<li>Encabezados: <strong>Poppins</strong> (SemiBold, 600)</li>
+<li>Cuerpo: <strong>Poppins</strong> (Regular, 400)</li>
+</ul>
+<p><strong>Corporativa:</strong></p>
+<ul>
+<li>Encabezados: <strong>Raleway</strong> (Bold, 700)</li>
+<li>Cuerpo: <strong>Lato</strong> (Regular, 400)</li>
+</ul>
+<h3>Mejores Practicas de Tipografia</h3>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Tamano Recomendado</th>
+<th>Peso</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>H1 (Titulo de pagina)</td>
+<td>36-48px</td>
+<td>Bold (700)</td>
+</tr>
+<tr>
+<td>H2 (Titulo de seccion)</td>
+<td>28-36px</td>
+<td>Bold (700)</td>
+</tr>
+<tr>
+<td>H3 (Subseccion)</td>
+<td>22-28px</td>
+<td>SemiBold (600)</td>
+</tr>
+<tr>
+<td>H4 (Encabezado menor)</td>
+<td>18-22px</td>
+<td>SemiBold (600)</td>
+</tr>
+<tr>
+<td>Texto del cuerpo</td>
+<td>16-18px</td>
+<td>Regular (400)</td>
+</tr>
+<tr>
+<td>Texto pequeno</td>
+<td>14px</td>
+<td>Regular (400)</td>
+</tr>
+<tr>
+<td>Texto de boton</td>
+<td>14-16px</td>
+<td>SemiBold (600)</td>
+</tr>
+</tbody></table>
+<h3>Directrices de Interlineado:</h3>
+<ul>
+<li><strong>Encabezados</strong>: 1.2-1.4 (mas ajustado)</li>
+<li><strong>Texto del cuerpo</strong>: 1.5-1.8 (mas legible)</li>
+<li><strong>Texto pequeno</strong>: 1.4-1.6</li>
+</ul>
+<hr>
+<h2>Otros Ajustes del Sitio</h2>
+<h3>Ajustes de Diseno</h3>
+<p>En Site Settings → <strong>Layout</strong>:</p>
+<ul>
+<li><strong>Content Width</strong>: Ancho predeterminado del contenido de la pagina (1140px es el estandar)</li>
+<li><strong>Widgets Space</strong>: Espacio predeterminado entre widgets (20px es comun)</li>
+<li><strong>Stretched Section Fit to Content Width</strong>: Como se comportan las secciones de ancho completo</li>
+</ul>
+<h3>Lightbox</h3>
+<p>En Site Settings → <strong>Lightbox</strong>:</p>
+<ul>
+<li>Configura el comportamiento del lightbox de imagenes (ventana emergente al hacer clic en imagenes)</li>
+<li>Establece el color de fondo, color de la interfaz y funciones de galeria</li>
+</ul>
+<h3>Fondo</h3>
+<p>En Site Settings → <strong>Background</strong>:</p>
+<ul>
+<li>Establece un color o imagen de fondo global para todo tu sitio</li>
+</ul>
+<h3>Botones</h3>
+<p>En Site Settings → <strong>Buttons</strong>:</p>
+<ul>
+<li>Establece los estilos predeterminados de botones que se aplican a todos los botones de Elementor</li>
+<li>Tipografia, padding, radio de borde, colores</li>
+<li>Estados normal y hover</li>
+</ul>
+<h3>Imagenes</h3>
+<p>En Site Settings → <strong>Images</strong>:</p>
+<ul>
+<li>Radio de borde predeterminado para imagenes</li>
+<li>Animacion hover predeterminada</li>
+</ul>
+<hr>
+<h2>Crear una Pagina de Guia de Estilos</h2>
+<p>Una pagina de guia de estilos te ayuda a visualizar tu sistema de diseno. Crea una:</p>
+<ol>
+<li>Crea una nueva pagina llamada &quot;Guia de Estilos&quot; (puedes despublicarla despues)</li>
+<li>Abrela en Elementor</li>
+<li>Anade secciones mostrando:</li>
+</ol>
+<h3>Seccion 1: Colores</h3>
+<ul>
+<li>Anade cajas de colores (usa widgets Spacer con colores de fondo) mostrando tu paleta</li>
+<li>Etiqueta cada una con el nombre del color y el codigo hexadecimal</li>
+</ul>
+<h3>Seccion 2: Tipografia</h3>
+<ul>
+<li>Anade encabezados mostrando los estilos desde H1 hasta H6</li>
+<li>Anade muestras de texto del cuerpo</li>
+<li>Anade muestras de texto de botones</li>
+</ul>
+<h3>Seccion 3: Botones</h3>
+<ul>
+<li>Muestra tus estilos de botones: primario, secundario, contorno</li>
+<li>Muestra los estados hover</li>
+</ul>
+<h3>Seccion 4: Componentes</h3>
+<ul>
+<li>Muestra elementos comunes: cajas de iconos, testimonios, tarjetas, etc.</li>
+</ul>
+<p>Esta pagina sirve como referencia al construir otras paginas, asegurando la coherencia.</p>
+<hr>
+<h2>El Proceso de Diseno</h2>
+<p>Al comenzar un nuevo sitio, configura tus estilos globales primero:</p>
+<ol>
+<li><p><strong>Elige tu paleta de colores</strong> (3-5 colores maximo)</p>
+<ul>
+<li>Color principal de marca</li>
+<li>Color secundario/de acento</li>
+<li>Color del texto</li>
+<li>Variaciones de color de fondo</li>
+</ul>
+</li>
+<li><p><strong>Elige tus fuentes</strong> (2 fuentes maximo)</p>
+<ul>
+<li>Una para encabezados</li>
+<li>Una para texto del cuerpo</li>
+<li>(Usar la misma fuente para ambos tambien esta bien)</li>
+</ul>
+</li>
+<li><p><strong>Establece la escala tipografica</strong> (tamanos de encabezados, tamano del cuerpo, interlineados)</p>
+</li>
+<li><p><strong>Establece los estilos de botones</strong> (padding, radio de borde, colores)</p>
+</li>
+<li><p><strong>Luego comienza a construir paginas</strong> — con tu sistema establecido, las paginas se crean mucho mas rapido</p>
+</li>
+</ol>
+<hr>
+<h2>Ejercicios</h2>
+<ol>
+<li><p><strong>Configura los colores globales</strong>: Ve a Site Settings → Global Colors. Elige una paleta de colores profesional con colores Primary, Secondary, Text y Accent. Anade 2-3 colores personalizados.</p>
+</li>
+<li><p><strong>Configura las fuentes globales</strong>: Ve a Site Settings → Global Fonts. Elige una fuente para encabezados y una para el cuerpo. Configura tamanos, pesos e interlineados.</p>
+</li>
+<li><p><strong>Configura los estilos de botones predeterminados</strong>: Ve a Site Settings → Buttons. Establece la tipografia, padding, radio de borde y colores para los botones predeterminados.</p>
+</li>
+<li><p><strong>Usa los colores globales en un widget</strong>: Edita cualquier widget, busca un ajuste de color, haz clic en el icono del globo y selecciona un color global. Luego cambia ese color global en Site Settings y observa como se actualiza el widget.</p>
+</li>
+<li><p><strong>Establece el ancho del contenido</strong>: Ve a Site Settings → Layout y establece Content Width en 1140px.</p>
+</li>
+<li><p><strong>Crea una pagina de guia de estilos</strong>: Crea una pagina que muestre tus colores, tipografia y elementos comunes.</p>
+</li>
+</ol>
+<hr>
+<h2>Puntos Clave</h2>
+<ul>
+<li><strong>Configura los estilos globales PRIMERO</strong> antes de construir paginas — esto ahorra una enorme cantidad de tiempo</li>
+<li><strong>Colores Globales</strong>: Define tu paleta una vez, usala en todas partes mediante el icono del globo</li>
+<li><strong>Fuentes Globales</strong>: Establece la tipografia de encabezados y cuerpo en Site Settings</li>
+<li>Usa <strong>2 fuentes como maximo</strong> (una para encabezados, una para el cuerpo — o la misma fuente para ambos)</li>
+<li>Usa <strong>3-5 colores</strong> en tu paleta</li>
+<li>El <strong>ancho de contenido</strong> estandar es 1140px</li>
+<li>El tamano estandar del <strong>texto del cuerpo</strong> es 16-18px</li>
+<li>Cambiar un estilo global <strong>actualiza cada elemento</strong> que lo utiliza</li>
+<li>Crea una <strong>pagina de guia de estilos</strong> como referencia para la coherencia</li>
+</ul>
+<hr>
+<p><strong>Siguiente Leccion:</strong> <a href="lesson-16.html">Leccion 16 - Construir una Pagina de Inicio desde Cero</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-14.html" class="prev">&larr; 14. Secciones, Columnas y Widgets</a>
+      <a href="lesson-16.html" class="next">16. Construir una Página de Inicio &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WordPress Learning Course</title>
+  <script>
+    (function() {
+      var stored = localStorage.getItem('wp-learn-lang');
+      if (stored === 'es' || stored === 'en') {
+        window.location.replace(stored + '/website/index.html');
+        return;
+      }
+      var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+      if (lang.startsWith('es')) {
+        window.location.replace('/website/es/index.html');
+      } else {
+        window.location.replace('/website/en/index.html');
+      }
+    })();
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=/website/en/index.html">
+  </noscript>
+</head>
+<body>
+  <p>Redirecting&hellip; <a href="/website/en/index.html">English</a> | <a href="/website/es/index.html">Español</a></p>
+</body>
+</html>

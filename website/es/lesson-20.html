@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lección 20: Diseño Responsivo — Vistas Móvil y Tablet — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-20.html">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-20.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li class="active"><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lección 20: Diseño Responsivo — Vistas Móvil y Tablet</h1>
+<h2>Objetivos</h2>
+<ul>
+<li>Entender los principios del diseño responsivo</li>
+<li>Usar el modo de edición responsiva de Elementor</li>
+<li>Ajustar diseños, tipografía y espaciado para diferentes dispositivos</li>
+<li>Ocultar/mostrar elementos por dispositivo</li>
+<li>Probar y depurar problemas responsivos</li>
+</ul>
+<hr>
+<h2>¿Qué es el Diseño Responsivo?</h2>
+<p>El diseño responsivo significa que tu sitio web <strong>se adapta para verse bien en todos los tamaños de pantalla</strong> — escritorio, tablet y teléfono móvil. Más del 60% del tráfico web viene de dispositivos móviles, así que esto no es opcional.</p>
+<h3>Breakpoints de Elementor</h3>
+<table>
+<thead>
+<tr>
+<th>Dispositivo</th>
+<th>Ancho por Defecto</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Escritorio</td>
+<td>1025px y superior</td>
+</tr>
+<tr>
+<td>Tablet</td>
+<td>768px - 1024px</td>
+</tr>
+<tr>
+<td>Móvil</td>
+<td>Hasta 767px</td>
+</tr>
+</tbody></table>
+<p>Elementor te permite personalizar tu diseño para cada breakpoint de forma independiente.</p>
+<hr>
+<h2>Cambiar Entre Vistas de Dispositivo</h2>
+<h3>En Elementor:</h3>
+<ol>
+<li>Haz clic en el <strong>icono de modo responsivo</strong> en la parte inferior del panel izquierdo (parece un monitor/dispositivo)</li>
+<li>O presiona <strong>Ctrl + Shift + M</strong></li>
+<li>Elige <strong>Desktop</strong>, <strong>Tablet</strong> o <strong>Mobile</strong></li>
+</ol>
+<h3>Qué Cambia Por Dispositivo:</h3>
+<p>El canvas se redimensiona para mostrar cómo se ve tu página en ese dispositivo. Cuando estás en vista tablet o móvil:</p>
+<ul>
+<li>Un <strong>icono de dispositivo</strong> aparece junto a los ajustes que se pueden ajustar por dispositivo</li>
+<li>Los cambios que hagas en vista tablet/móvil <strong>solo se aplican a ese tamaño de dispositivo</strong></li>
+<li>Los ajustes de escritorio son el valor por defecto — tablet y móvil heredan del escritorio a menos que se sobreescriban</li>
+</ul>
+<hr>
+<h2>Cómo Elementor Gestiona la Responsividad</h2>
+<h3>Comportamiento Automático</h3>
+<p>Elementor gestiona muchas cosas automáticamente:</p>
+<ul>
+<li>Las <strong>secciones de múltiples columnas</strong> se apilan verticalmente en móvil (3 columnas se convierten en 3 filas)</li>
+<li>El <strong>texto se reduce</strong> ligeramente</li>
+<li>Las <strong>imágenes se redimensionan</strong> para ajustarse a la pantalla</li>
+<li>El <strong>padding y los márgenes</strong> permanecen a menos que los cambies</li>
+</ul>
+<h3>Lo Que Necesitas Ajustar Manualmente</h3>
+<p>A pesar del comportamiento auto-responsivo, a menudo necesitarás ajustar:</p>
+<ul>
+<li><strong>Tamaños de fuente</strong> — los encabezados de escritorio son demasiado grandes en móvil</li>
+<li><strong>Padding/márgenes</strong> — el espaciado de escritorio suele ser demasiado generoso en móvil</li>
+<li><strong>Orden de columnas</strong> — a veces quieres un orden de apilamiento diferente en móvil</li>
+<li><strong>Elementos ocultos</strong> — algunos elementos no funcionan en móvil (imágenes decorativas grandes)</li>
+<li><strong>Tamaños de botón</strong> — pueden necesitar ser de ancho completo en móvil</li>
+</ul>
+<hr>
+<h2>Ajustar Tipografía Por Dispositivo</h2>
+<h3>El Icono de Dispositivo</h3>
+<p>Muchos ajustes de Elementor muestran un pequeño <strong>icono de dispositivo</strong> junto a ellos. Esto significa que el ajuste puede tener diferentes valores por dispositivo.</p>
+<h3>Ejemplo: Tamaño de Encabezado Responsivo</h3>
+<ol>
+<li>Selecciona un widget Heading</li>
+<li>Ve a <strong>Style → Typography → Size</strong></li>
+<li>Haz clic en el <strong>icono de dispositivo</strong> junto al campo Size</li>
+<li>Establece diferentes tamaños:<ul>
+<li><strong>Escritorio</strong>: 48px</li>
+<li><strong>Tablet</strong>: 36px</li>
+<li><strong>Móvil</strong>: 28px</li>
+</ul>
+</li>
+</ol>
+<h3>Tamaños de Fuente Recomendados:</h3>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Escritorio</th>
+<th>Tablet</th>
+<th>Móvil</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>H1</td>
+<td>42-52px</td>
+<td>32-40px</td>
+<td>28-34px</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>32-40px</td>
+<td>26-32px</td>
+<td>24-28px</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>24-30px</td>
+<td>20-26px</td>
+<td>18-22px</td>
+</tr>
+<tr>
+<td>Texto body</td>
+<td>16-18px</td>
+<td>16px</td>
+<td>15-16px</td>
+</tr>
+<tr>
+<td>Texto botón</td>
+<td>16px</td>
+<td>15px</td>
+<td>14-15px</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Ajustar Espaciado Por Dispositivo</h2>
+<h3>Padding y Margin</h3>
+<ol>
+<li>Selecciona una sección, columna o widget</li>
+<li>Ve a <strong>Advanced → Margin</strong> o <strong>Advanced → Padding</strong></li>
+<li>Haz clic en el <strong>icono de dispositivo</strong> para establecer diferentes valores por dispositivo</li>
+</ol>
+<h3>Ejemplo: Padding de Sección</h3>
+<ul>
+<li><strong>Escritorio</strong>: 80px arriba y abajo</li>
+<li><strong>Tablet</strong>: 60px arriba y abajo</li>
+<li><strong>Móvil</strong>: 40px arriba y abajo</li>
+</ul>
+<p>Esto evita que las secciones móviles tengan demasiado espacio vacío.</p>
+<hr>
+<h2>Comportamiento de Columnas en Móvil</h2>
+<h3>Apilamiento por Defecto</h3>
+<p>Por defecto, las columnas en una sección de múltiples columnas <strong>se apilan verticalmente</strong> en móvil. Una sección de 3 columnas se convierte en:</p>
+<pre><code>Escritorio:  [Col 1] [Col 2] [Col 3]
+Móvil:       [Col 1]
+             [Col 2]
+             [Col 3]
+</code></pre>
+<h3>Invertir Orden de Columnas</h3>
+<p>A veces quieres la imagen debajo del texto (o viceversa) en móvil:</p>
+<ol>
+<li>Selecciona la <strong>Sección</strong></li>
+<li>Ve a la pestaña <strong>Advanced</strong></li>
+<li>Cambia a vista <strong>Mobile</strong></li>
+<li>Encuentra <strong>&quot;Reverse Columns&quot;</strong> → Establece a Yes</li>
+</ol>
+<h3>Ajustar Ancho de Columna en Tablet</h3>
+<p>Las columnas pueden ser demasiado estrechas en tablet. Puedes ajustar:</p>
+<ol>
+<li>Selecciona una columna</li>
+<li>Cambia a vista <strong>Tablet</strong></li>
+<li>Ve a Content → <strong>Column Width</strong></li>
+<li>Establécelo a 50% (así 3 columnas se convierten en 2+1) o 100% (se apila como móvil)</li>
+</ol>
+<hr>
+<h2>Ocultar/Mostrar Elementos Por Dispositivo</h2>
+<p>Algunos elementos funcionan en escritorio pero no en móvil (o viceversa):</p>
+<h3>Para Ocultar un Elemento en Dispositivos Específicos:</h3>
+<ol>
+<li>Selecciona el elemento (sección, columna o widget)</li>
+<li>Ve a la pestaña <strong>Advanced</strong></li>
+<li>Encuentra la sección <strong>Responsive</strong></li>
+<li>Activa <strong>&quot;Hide On Desktop&quot;</strong>, <strong>&quot;Hide On Tablet&quot;</strong> o <strong>&quot;Hide On Mobile&quot;</strong></li>
+</ol>
+<h3>Usos Comunes:</h3>
+<ul>
+<li><strong>Ocultar imágenes decorativas en móvil</strong> — ocupan espacio valioso</li>
+<li><strong>Mostrar un menú simplificado en móvil</strong> — ocultar el mega menú de escritorio</li>
+<li><strong>Ocultar diseños complejos de múltiples columnas</strong> y mostrar una versión móvil simplificada</li>
+<li><strong>Mostrar un botón &quot;Llamar Ahora&quot; solo en móvil</strong> — los visitantes pueden tocar para llamar</li>
+</ul>
+<h3>Ejemplo: Botón de Llamada Solo en Móvil</h3>
+<ol>
+<li>Crea un widget Button: &quot;Toca para Llamar&quot; con enlace <code>tel:+34912345678</code></li>
+<li>Ve a Advanced → Responsive → Hide on Desktop → Yes</li>
+<li>El botón solo aparece en móvil</li>
+</ol>
+<hr>
+<h2>Imágenes Responsivas</h2>
+<h3>Tamaño de Imágenes</h3>
+<p>Las imágenes se redimensionan automáticamente para ajustarse a su contenedor, pero podrías querer:</p>
+<ol>
+<li>Seleccionar el widget Image</li>
+<li>Cambiar a vista <strong>Mobile</strong></li>
+<li>Ajustar el <strong>Width</strong> (ej., 80% en vez de 100%)</li>
+<li>Cambiar <strong>Alignment</strong> si es necesario</li>
+</ol>
+<h3>Imágenes de Fondo</h3>
+<p>Para secciones con imágenes de fondo:</p>
+<ol>
+<li>Selecciona la sección</li>
+<li>Cambia a vista <strong>Mobile</strong></li>
+<li>Ve a Style → Background</li>
+<li>Ajusta <strong>Position</strong> (prueba Center Center)</li>
+<li>Ajusta <strong>Size</strong> (Cover normalmente funciona, pero prueba Custom si es necesario)</li>
+<li>Considera usar una <strong>imagen diferente para móvil</strong> (una versión orientada verticalmente)</li>
+</ol>
+<hr>
+<h2>Consideraciones Mobile-First</h2>
+<h3>Objetivos Táctiles</h3>
+<ul>
+<li>Los botones deberían tener al menos <strong>44px de alto</strong> en móvil (directriz de Apple)</li>
+<li>Los enlaces deberían tener suficiente espaciado para que los dedos no toquen el equivocado</li>
+<li>Haz los botones de <strong>ancho completo</strong> en móvil cuando sea apropiado</li>
+</ul>
+<h3>Prioridad de Contenido</h3>
+<ul>
+<li>Pon el contenido más importante primero en móvil</li>
+<li>Elimina contenido secundario que satura la experiencia móvil</li>
+<li>Mantén los formularios simples — menos campos en móvil</li>
+</ul>
+<h3>Navegación</h3>
+<ul>
+<li>El menú hamburguesa (☰) es estándar en móvil</li>
+<li>Asegúrate de que los elementos del menú son tocables y legibles</li>
+<li>Considera reducir los elementos del menú en móvil</li>
+</ul>
+<hr>
+<h2>Probar el Diseño Responsivo</h2>
+<h3>En Elementor:</h3>
+<ol>
+<li>Cambia entre vistas Desktop, Tablet y Mobile</li>
+<li>Desplázate por toda la página en cada vista</li>
+<li>Comprueba que nada se desborda, se superpone o se ve apretado</li>
+</ol>
+<h3>En el Navegador (Más Preciso):</h3>
+<ol>
+<li>Guarda y publica tu página</li>
+<li>Ábrela en Chrome</li>
+<li>Presiona <strong>F12</strong> para abrir DevTools</li>
+<li>Haz clic en el icono de <strong>Toggle Device Toolbar</strong> (o presiona <strong>Ctrl + Shift + M</strong>)</li>
+<li>Selecciona diferentes dispositivos del desplegable (iPhone, iPad, etc.)</li>
+<li>O arrastra los bordes del viewport para probar cualquier ancho</li>
+</ol>
+<h3>Checklist Responsivo:</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Los encabezados son legibles en móvil (ni demasiado grandes, ni demasiado pequeños)</li>
+<li><input disabled="" type="checkbox"> El texto no se extiende más allá de los bordes de la pantalla</li>
+<li><input disabled="" type="checkbox"> Las imágenes se redimensionan y no se desbordan</li>
+<li><input disabled="" type="checkbox"> Los botones son lo suficientemente grandes para tocar</li>
+<li><input disabled="" type="checkbox"> El espaciado se ve proporcional en todos los dispositivos</li>
+<li><input disabled="" type="checkbox"> Los diseños de múltiples columnas se apilan limpiamente en móvil</li>
+<li><input disabled="" type="checkbox"> No hay scroll horizontal en móvil</li>
+<li><input disabled="" type="checkbox"> Los formularios son usables en móvil</li>
+<li><input disabled="" type="checkbox"> Los mapas se muestran correctamente</li>
+</ul>
+<hr>
+<h2>Ejercicios</h2>
+<ol>
+<li><p><strong>Revisa tu página de inicio en móvil</strong>: Cambia a vista móvil y desplázate por tu página de inicio. Anota todo lo que necesita arreglarse.</p>
+</li>
+<li><p><strong>Ajusta tamaños de encabezado</strong>: Establece tipografía responsiva para todos tus encabezados — diferentes tamaños para escritorio, tablet y móvil.</p>
+</li>
+<li><p><strong>Arregla el padding de secciones</strong>: Reduce el padding en móvil para todas las secciones (40px en vez de 80px).</p>
+</li>
+<li><p><strong>Oculta un elemento</strong>: Encuentra un elemento decorativo en tu página de inicio y ocúltalo en móvil.</p>
+</li>
+<li><p><strong>Crea un elemento solo para móvil</strong>: Crea un botón &quot;Llamar Ahora&quot; que solo aparezca en dispositivos móviles.</p>
+</li>
+<li><p><strong>Prueba en el navegador</strong>: Usa Chrome DevTools para probar tus páginas en diferentes tamaños de dispositivo. Comprueba iPhone, iPad y un tamaño de teléfono Android pequeño.</p>
+</li>
+<li><p><strong>Arregla todos los problemas responsivos</strong>: Revisa tu página de inicio, página Acerca de y página de Contacto en vista móvil y arregla cada problema que encuentres.</p>
+</li>
+</ol>
+<hr>
+<h2>Puntos Clave</h2>
+<ul>
+<li>Más del 60% de los visitantes están en móvil — <strong>el diseño responsivo es obligatorio</strong></li>
+<li>Elementor te permite establecer <strong>diferentes valores por dispositivo</strong> (haz clic en el icono de dispositivo)</li>
+<li>Las columnas <strong>se apilan automáticamente</strong> en móvil, pero puede que necesites ajustar</li>
+<li><strong>Reduce tamaños de fuente</strong> y <strong>espaciado</strong> en móvil</li>
+<li><strong>Oculta elementos</strong> que no funcionan en móvil (Advanced → Responsive)</li>
+<li><strong>Los botones deben ser amigables al toque</strong> — al menos 44px de alto</li>
+<li>Prueba tanto en el <strong>modo responsivo de Elementor COMO en Chrome DevTools</strong></li>
+<li>Correcciones comunes: encabezados más pequeños, menos padding, columnas apiladas, elementos decorativos ocultos</li>
+</ul>
+<hr>
+<p><strong>Siguiente Módulo:</strong> <a href="lesson-21.html">Módulo 4 - Plugins Esenciales</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-19.html" class="prev">&larr; 19. Plantillas y Reutilización</a>
+      <a href="lesson-21.html" class="next">21. Entender los Plugins &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

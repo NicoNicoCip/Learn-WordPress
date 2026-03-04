@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 05: Categories, Tags, and Taxonomies — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-05.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-05.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li class="active"><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lesson 05: Categories, Tags, and Taxonomies</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Understand how WordPress organizes content with categories and tags</li>
+<li>Know the difference between categories and tags and when to use each</li>
+<li>Create and manage categories and tags</li>
+<li>Understand what taxonomies are</li>
+</ul>
+<hr>
+<h2>What Are Taxonomies?</h2>
+<p>A <strong>taxonomy</strong> is a way to group and classify content. WordPress has two built-in taxonomies for posts:</p>
+<ol>
+<li><strong>Categories</strong> — broad groupings (like chapters in a book)</li>
+<li><strong>Tags</strong> — specific descriptors (like index entries in a book)</li>
+</ol>
+<h3>Categories vs Tags</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Categories</th>
+<th>Tags</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Purpose</strong></td>
+<td>Broad grouping/classification</td>
+<td>Specific topics/keywords</td>
+</tr>
+<tr>
+<td><strong>Required?</strong></td>
+<td>Yes — every post must have at least one</td>
+<td>No — completely optional</td>
+</tr>
+<tr>
+<td><strong>Hierarchy</strong></td>
+<td>Yes — can have parent/child categories</td>
+<td>No — flat structure only</td>
+</tr>
+<tr>
+<td><strong>Typical count per post</strong></td>
+<td>1-3</td>
+<td>3-10</td>
+</tr>
+<tr>
+<td><strong>Default</strong></td>
+<td>&quot;Uncategorized&quot; if none selected</td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Best for</strong></td>
+<td>Site structure and navigation</td>
+<td>Content discovery and search</td>
+</tr>
+</tbody></table>
+<h3>Analogy</h3>
+<p>Think of a bookstore:</p>
+<ul>
+<li><strong>Categories</strong> = the sections: Fiction, Non-Fiction, Science, History</li>
+<li><strong>Tags</strong> = descriptive labels: bestseller, award-winner, new release, paperback</li>
+</ul>
+<hr>
+<h2>Planning Your Categories</h2>
+<p>Before creating categories, plan them based on your site&#39;s content:</p>
+<h3>Good Category Structure (for a business blog):</h3>
+<ul>
+<li>Company News</li>
+<li>Industry Insights</li>
+<li>Tips &amp; Tutorials</li>
+<li>Case Studies</li>
+<li>Product Updates</li>
+</ul>
+<h3>Rules for Good Categories:</h3>
+<ol>
+<li><strong>Keep them broad</strong> — 5-10 categories is ideal for most sites</li>
+<li><strong>Make them clear</strong> — a visitor should know what they&#39;ll find in each</li>
+<li><strong>Keep them balanced</strong> — avoid having 50 posts in one category and 2 in another</li>
+<li><strong>Use hierarchy sparingly</strong> — one level of sub-categories is usually enough</li>
+</ol>
+<h3>Bad Category Examples:</h3>
+<ul>
+<li>Too specific: &quot;Blog post about our Monday meeting&quot; (this should be a tag)</li>
+<li>Too vague: &quot;Stuff&quot; or &quot;Other&quot;</li>
+<li>Too many: 30+ categories with 1-2 posts each</li>
+</ul>
+<hr>
+<h2>Managing Categories</h2>
+<h3>Creating Categories</h3>
+<p><strong>Method 1: From the Categories page</strong></p>
+<ol>
+<li>Go to <strong>Posts → Categories</strong></li>
+<li>Fill in:<ul>
+<li><strong>Name</strong>: The display name (e.g., &quot;Company News&quot;)</li>
+<li><strong>Slug</strong>: The URL-friendly version (auto-generated, e.g., <code>company-news</code>)</li>
+<li><strong>Parent Category</strong>: Select if this is a sub-category</li>
+<li><strong>Description</strong>: Optional — some themes display this</li>
+</ul>
+</li>
+<li>Click <strong>&quot;Add New Category&quot;</strong></li>
+</ol>
+<p><strong>Method 2: While editing a post</strong></p>
+<ol>
+<li>In the post editor, find <strong>Categories</strong> in the right sidebar</li>
+<li>Click <strong>&quot;Add New Category&quot;</strong></li>
+<li>Type the name and click &quot;Add New Category&quot;</li>
+</ol>
+<h3>Editing Categories</h3>
+<ol>
+<li>Go to <strong>Posts → Categories</strong></li>
+<li>Hover over a category and click <strong>&quot;Edit&quot;</strong> or <strong>&quot;Quick Edit&quot;</strong></li>
+<li>You can change the name, slug, parent, and description</li>
+</ol>
+<h3>Deleting Categories</h3>
+<ol>
+<li>Go to <strong>Posts → Categories</strong></li>
+<li>Hover over a category and click <strong>&quot;Delete&quot;</strong></li>
+<li>Posts in that category will be moved to the default category (&quot;Uncategorized&quot;)</li>
+</ol>
+<h3>Setting the Default Category</h3>
+<ol>
+<li>Go to <strong>Settings → Writing</strong></li>
+<li>Change <strong>&quot;Default Post Category&quot;</strong> to your preferred category</li>
+<li>Rename &quot;Uncategorized&quot; to something better (like &quot;General&quot;)</li>
+</ol>
+<hr>
+<h2>Managing Tags</h2>
+<h3>Creating Tags</h3>
+<p><strong>Method 1: From the Tags page</strong></p>
+<ol>
+<li>Go to <strong>Posts → Tags</strong></li>
+<li>Fill in:<ul>
+<li><strong>Name</strong>: The display name</li>
+<li><strong>Slug</strong>: URL-friendly version (auto-generated)</li>
+<li><strong>Description</strong>: Optional</li>
+</ul>
+</li>
+<li>Click <strong>&quot;Add New Tag&quot;</strong></li>
+</ol>
+<p><strong>Method 2: While editing a post</strong></p>
+<ol>
+<li>In the post editor, find <strong>Tags</strong> in the right sidebar</li>
+<li>Type tag names separated by commas</li>
+<li>Press Enter to add them</li>
+</ol>
+<h3>Tag Best Practices</h3>
+<ul>
+<li>Use <strong>lowercase</strong> for consistency</li>
+<li>Use <strong>existing tags</strong> when possible (check what you&#39;ve already created)</li>
+<li>Don&#39;t create tags you&#39;ll only use once</li>
+<li>Tags should be useful for visitors searching your content</li>
+<li>3-5 tags per post is a good target</li>
+</ul>
+<hr>
+<h2>How Categories and Tags Affect Your Site</h2>
+<h3>Archive Pages</h3>
+<p>WordPress automatically creates archive pages for each category and tag:</p>
+<ul>
+<li><code>yoursite.com/category/company-news/</code> — shows all posts in &quot;Company News&quot;</li>
+<li><code>yoursite.com/tag/wordpress/</code> — shows all posts tagged &quot;wordpress&quot;</li>
+</ul>
+<p>These pages are styled by your theme and can be customized later with Elementor.</p>
+<h3>Navigation</h3>
+<p>Categories are commonly used in:</p>
+<ul>
+<li>Main navigation menus</li>
+<li>Sidebar widgets</li>
+<li>Footer links</li>
+<li>Blog page filters</li>
+</ul>
+<h3>SEO Impact</h3>
+<ul>
+<li><strong>Categories</strong> create a content hierarchy that search engines understand</li>
+<li><strong>Tags</strong> help with internal linking and content discovery</li>
+<li>Don&#39;t create too many of either — it creates thin archive pages that hurt SEO</li>
+</ul>
+<hr>
+<h2>Practical Example</h2>
+<p>Let&#39;s say you&#39;re building a site for a web design agency:</p>
+<h3>Categories:</h3>
+<pre><code>Web Design
+├── UI Design
+├── UX Design
+Digital Marketing
+├── SEO
+├── Social Media
+Case Studies
+Company News
+</code></pre>
+<h3>Tags (used across categories):</h3>
+<pre><code>wordpress, elementor, responsive-design, e-commerce,
+small-business, redesign, mobile-first, branding,
+analytics, conversion-rate
+</code></pre>
+<h3>Example Post:</h3>
+<ul>
+<li><strong>Title</strong>: &quot;5 Responsive Design Tips for Small Business Websites&quot;</li>
+<li><strong>Category</strong>: Web Design → UI Design</li>
+<li><strong>Tags</strong>: responsive-design, small-business, mobile-first</li>
+</ul>
+<hr>
+<h2>Understanding Taxonomies (Deeper)</h2>
+<p>Categories and tags are both examples of <strong>taxonomies</strong> — systems for classifying content. WordPress core provides two:</p>
+<table>
+<thead>
+<tr>
+<th>Taxonomy</th>
+<th>Type</th>
+<th>Applied To</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Category</td>
+<td>Hierarchical</td>
+<td>Posts</td>
+</tr>
+<tr>
+<td>Tag</td>
+<td>Non-hierarchical (flat)</td>
+<td>Posts</td>
+</tr>
+</tbody></table>
+<p><strong>Note:</strong> Pages don&#39;t have categories or tags by default. If you need to organize pages, you&#39;ll use menus and page hierarchy (parent/child).</p>
+<p>Some plugins and themes add <strong>custom taxonomies</strong>. For example:</p>
+<ul>
+<li>WooCommerce adds &quot;Product Categories&quot; and &quot;Product Tags&quot; (separate from regular post categories/tags)</li>
+<li>A portfolio plugin might add &quot;Portfolio Categories&quot;</li>
+<li>A real estate plugin might add &quot;Property Type&quot; and &quot;Location&quot;</li>
+</ul>
+<p>You don&#39;t need to worry about custom taxonomies now — just know they exist.</p>
+<hr>
+<h2>Exercises</h2>
+<ol>
+<li><p><strong>Rename &quot;Uncategorized&quot;</strong>: Go to Posts → Categories, edit &quot;Uncategorized&quot;, and rename it to &quot;General&quot;.</p>
+</li>
+<li><p><strong>Create a category structure</strong>: Create 4-5 categories that would make sense for a business blog. Create at least one with a sub-category (child category).</p>
+</li>
+<li><p><strong>Set the default category</strong>: Go to Settings → Writing and change the default category from &quot;Uncategorized&quot; to &quot;General&quot;.</p>
+</li>
+<li><p><strong>Create posts with categories and tags</strong>: Create 3 posts, each in a different category, with 3-5 relevant tags each.</p>
+</li>
+<li><p><strong>View archive pages</strong>: After creating posts, visit the category archive page by going to <code>http://learning-wordpress.local/category/your-category-slug/</code>. See how WordPress automatically groups posts.</p>
+</li>
+<li><p><strong>Check the Tags page</strong>: Go to Posts → Tags to see all the tags you&#39;ve created. Notice how it shows the count of posts using each tag.</p>
+</li>
+</ol>
+<hr>
+<h2>Key Takeaways</h2>
+<ul>
+<li><strong>Categories</strong> are broad groups (required, hierarchical) — think &quot;sections&quot;</li>
+<li><strong>Tags</strong> are specific descriptors (optional, flat) — think &quot;keywords&quot;</li>
+<li>Every post needs at least one category; tags are optional</li>
+<li>Plan your categories before you start creating content</li>
+<li>Don&#39;t over-create — 5-10 categories and a modest number of tags is ideal</li>
+<li>WordPress creates automatic <strong>archive pages</strong> for each category and tag</li>
+<li>Rename &quot;Uncategorized&quot; to something meaningful like &quot;General&quot;</li>
+</ul>
+<hr>
+<p><strong>Next Lesson:</strong> <a href="lesson-06.html">Lesson 06 - The Media Library</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-04.html" class="prev">&larr; 04. Posts vs Pages</a>
+      <a href="lesson-06.html" class="next">06. The Media Library &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto 02: Construir un Sitio de Blog/Revista — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/project-02.html">EN</a>
+        <span>|</span>
+        <a href="../es/project-02.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li class="active"><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Proyecto 02: Construir un Sitio de Blog/Revista</h1>
+<h2>Descripcion General</h2>
+<p>Construye un sitio de blog o revista en linea centrado en el contenido. Este proyecto hace hincapie en la organizacion de contenidos, la funcionalidad del blog y la experiencia del lector.</p>
+<p><strong>Tiempo estimado:</strong> 2-4 horas</p>
+<hr>
+<h2>El Encargo</h2>
+<p><strong>Cliente:</strong> &quot;TechPulse&quot; — un blog de noticias y opinion sobre tecnologia que cubre gadgets, software y estilo de vida digital.</p>
+<p><strong>Requisitos:</strong></p>
+<ul>
+<li>Diseno centrado en el blog, optimizado para la lectura</li>
+<li>Categorias de contenido bien organizadas</li>
+<li>Pagina de inicio atractiva con articulos destacados y recientes</li>
+<li>Secciones de biografia del autor</li>
+<li>Suscripcion al newsletter</li>
+</ul>
+<hr>
+<h2>Paginas a Construir</h2>
+<h3>1. Pagina de Inicio (Estilo Blog)</h3>
+<p><strong>Contenido a incluir:</strong></p>
+<ul>
+<li>Cabecera con logotipo del sitio y navegacion</li>
+<li>Seccion de entrada destacada/hero (ultima entrada con imagen grande)</li>
+<li>Cuadricula de entradas recientes (6-8 entradas en una cuadricula de 2 o 3 columnas)</li>
+<li>Barra lateral con:<ul>
+<li>Sobre el blog (texto breve)</li>
+<li>Lista de categorias</li>
+<li>Formulario de suscripcion al newsletter</li>
+</ul>
+</li>
+<li>&quot;Cargar mas&quot; o paginacion</li>
+</ul>
+<p><strong>Enfoque con Elementor:</strong> Usa shortcodes de producto o construye manualmente:</p>
+<ul>
+<li>Seccion hero con la informacion de la ultima entrada (actualizada manualmente)</li>
+<li>Usa <code>[recent_posts]</code> o construye un diseno personalizado</li>
+</ul>
+<h3>2. Pagina Sobre Nosotros</h3>
+<p><strong>Contenido a incluir:</strong></p>
+<ul>
+<li>Sobre la publicacion</li>
+<li>El equipo editorial (3 redactores con biografias y enlaces sociales)</li>
+<li>Informacion de contacto</li>
+<li>Llamada a la accion &quot;Escribe para nosotros&quot;</li>
+</ul>
+<h3>3. Pagina de Contacto</h3>
+<p><strong>Contenido a incluir:</strong></p>
+<ul>
+<li>Formulario de contacto (Nombre, Email, Asunto, Mensaje)</li>
+<li>Nota &quot;Proponer un Articulo&quot; para posibles colaboradores</li>
+<li>Enlaces a redes sociales</li>
+</ul>
+<h3>4. Paginas de Categoria (Autogeneradas)</h3>
+<p>WordPress las crea automaticamente. Asegurate de que se vean bien:</p>
+<ul>
+<li>Configurando las categorias correctamente</li>
+<li>Anadiendo descripciones a las categorias</li>
+<li>Probando el diseno de la pagina de archivo</li>
+</ul>
+<hr>
+<h2>Entradas de Blog a Crear</h2>
+<p>Crea al menos <strong>8 entradas de blog</strong> en estas categorias:</p>
+<h3>Categorias:</h3>
+<ol>
+<li><strong>Gadgets y Equipos</strong> (3 entradas)</li>
+<li><strong>Software y Apps</strong> (3 entradas)</li>
+<li><strong>Estilo de Vida Digital</strong> (2 entradas)</li>
+</ol>
+<h3>Entradas de Ejemplo:</h3>
+<p><strong>Gadgets y Equipos:</strong></p>
+<ol>
+<li><p>&quot;Los Mejores Auriculares Inalambricos de 2026: Nuestro Top 5&quot;</p>
+<ul>
+<li>Mas de 500 palabras, imagen destacada, tabla comparativa</li>
+<li>Tags: earbuds, wireless, audio, reviews</li>
+</ul>
+</li>
+<li><p>&quot;Experiencia Practica: La Ultima Revolucion en Camaras de Smartphones&quot;</p>
+<ul>
+<li>Mas de 400 palabras, multiples imagenes</li>
+<li>Tags: smartphone, camera, photography, review</li>
+</ul>
+</li>
+<li><p>&quot;Imprescindibles del Hogar Inteligente: Lo Que Realmente Necesitas&quot;</p>
+<ul>
+<li>Mas de 400 palabras, formato de lista con imagenes</li>
+<li>Tags: smart-home, IoT, automation</li>
+</ul>
+</li>
+</ol>
+<p><strong>Software y Apps:</strong>
+4. &quot;10 Apps de Productividad Que Realmente Cambiaron Mi Flujo de Trabajo&quot;</p>
+<ul>
+<li>Mas de 600 palabras, capturas de pantalla, formato de lista</li>
+<li>Tags: productivity, apps, workflow, tools</li>
+</ul>
+<ol start="5">
+<li><p>&quot;Herramientas de IA Que Todo el Mundo Deberia Conocer&quot;</p>
+<ul>
+<li>Mas de 500 palabras, lista categorizada</li>
+<li>Tags: AI, tools, technology, machine-learning</li>
+</ul>
+</li>
+<li><p>&quot;El Auge de las Plataformas No-Code: Construye Sin Programar&quot;</p>
+<ul>
+<li>Mas de 400 palabras</li>
+<li>Tags: no-code, development, platforms, tools</li>
+</ul>
+</li>
+</ol>
+<p><strong>Estilo de Vida Digital:</strong>
+7. &quot;Desintoxicacion Digital: Como Desconectar Sin Perderte Nada&quot;</p>
+<ul>
+<li>Mas de 400 palabras, formato de consejos</li>
+<li>Tags: wellness, digital-detox, tips, lifestyle</li>
+</ul>
+<ol start="8">
+<li>&quot;Configuracion para Trabajo Remoto: Construyendo la Oficina en Casa Perfecta&quot;<ul>
+<li>Mas de 500 palabras, lista de equipamiento, imagenes</li>
+<li>Tags: remote-work, home-office, productivity, setup</li>
+</ul>
+</li>
+</ol>
+<h3>Requisitos de las Entradas:</h3>
+<ul>
+<li>Cada entrada debe tener: <strong>titulo, imagen destacada, contenido (mas de 300 palabras), categoria, 3-5 tags, extracto</strong></li>
+<li>Usar <strong>encabezados (H2, H3)</strong> para estructurar el contenido</li>
+<li>Incluir <strong>al menos una imagen</strong> en el cuerpo</li>
+<li>Configurar el <strong>titulo y meta descripcion de Yoast SEO</strong></li>
+<li>Usar <strong>enlaces internos</strong> (enlazar entre tus entradas)</li>
+</ul>
+<hr>
+<h2>Especificaciones de Diseno</h2>
+<h3>Paleta de Colores</h3>
+<table>
+<thead>
+<tr>
+<th>Color</th>
+<th>Hex</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Azul Electrico</td>
+<td><code>#0066ff</code></td>
+<td>Enlaces, acentos</td>
+</tr>
+<tr>
+<td>Azul Marino Oscuro</td>
+<td><code>#1a1a2e</code></td>
+<td>Cabeceras, fondos oscuros</td>
+</tr>
+<tr>
+<td>Gris Claro</td>
+<td><code>#f4f4f5</code></td>
+<td>Fondo, tarjetas</td>
+</tr>
+<tr>
+<td>Texto Oscuro</td>
+<td><code>#222222</code></td>
+<td>Texto del cuerpo</td>
+</tr>
+<tr>
+<td>Gris Medio</td>
+<td><code>#666666</code></td>
+<td>Texto secundario, pies de foto</td>
+</tr>
+</tbody></table>
+<h3>Fuentes</h3>
+<ul>
+<li><strong>Titulares:</strong> Inter o Roboto (Moderna, limpia)</li>
+<li><strong>Cuerpo:</strong> Source Serif Pro o Georgia (Comoda para la lectura)</li>
+</ul>
+<h3>Fotografia</h3>
+<ul>
+<li>Usar Unsplash/Pexels para imagenes relacionadas con tecnologia</li>
+<li>Terminos de busqueda: technology, laptop, smartphone, coding, workspace, gadgets</li>
+</ul>
+<hr>
+<h2>Requisitos Tecnicos</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Mas de 8 entradas de blog con categorias y etiquetas adecuadas</li>
+<li><input disabled="" type="checkbox"> Navegacion funcional por categorias en el menu</li>
+<li><input disabled="" type="checkbox"> La pagina de inicio muestra entradas destacadas y recientes</li>
+<li><input disabled="" type="checkbox"> Todas las entradas tienen imagenes destacadas y extractos</li>
+<li><input disabled="" type="checkbox"> Titulos SEO y meta descripciones en todas las entradas</li>
+<li><input disabled="" type="checkbox"> El formulario de contacto funciona</li>
+<li><input disabled="" type="checkbox"> Diseno adaptable a moviles</li>
+<li><input disabled="" type="checkbox"> Formulario de suscripcion al newsletter</li>
+<li><input disabled="" type="checkbox"> Enlaces internos entre entradas relacionadas</li>
+<li><input disabled="" type="checkbox"> Tipografia limpia y legible</li>
+</ul>
+<hr>
+<h2>Desafios Extra</h2>
+<ol>
+<li>Anadir un widget de <strong>&quot;Entradas Populares&quot;</strong> en la barra lateral</li>
+<li>Crear una <strong>pagina 404 personalizada</strong> con navegacion util</li>
+<li>Anadir <strong>cajas de biografia del autor</strong> al final de cada entrada</li>
+<li>Implementar una seccion de <strong>entradas relacionadas</strong> al final de cada entrada (plugin: &quot;Related Posts for WordPress&quot;)</li>
+<li>Anadir <strong>botones para compartir en redes sociales</strong> en las entradas (plugin: &quot;Social Warfare&quot; o &quot;AddToAny&quot;)</li>
+<li>Crear una pagina <strong>&quot;Empieza Aqui&quot;</strong> o <strong>&quot;Lo Mejor De&quot;</strong> enlazando a tus mejores entradas</li>
+</ol>
+<hr>
+<h2>Criterios de Evaluacion</h2>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Verificacion</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Existen mas de 8 entradas de blog con formato adecuado</td>
+<td></td>
+</tr>
+<tr>
+<td>Las categorias y etiquetas estan bien organizadas</td>
+<td></td>
+</tr>
+<tr>
+<td>La pagina de inicio muestra contenido reciente/popular</td>
+<td></td>
+</tr>
+<tr>
+<td>Las entradas son faciles de leer (tipografia, espaciado, encabezados)</td>
+<td></td>
+</tr>
+<tr>
+<td>La navegacion incluye categorias</td>
+<td></td>
+</tr>
+<tr>
+<td>Todas las entradas tienen imagenes destacadas</td>
+<td></td>
+</tr>
+<tr>
+<td>El SEO esta configurado en todas las entradas</td>
+<td></td>
+</tr>
+<tr>
+<td>Adaptable a moviles</td>
+<td></td>
+</tr>
+<tr>
+<td>Existe formulario de suscripcion al newsletter</td>
+<td></td>
+</tr>
+<tr>
+<td>Los enlaces internos conectan entradas relacionadas</td>
+<td></td>
+</tr>
+</tbody></table>
+
+    <nav class="lesson-nav">
+      <a href="project-01.html" class="prev">&larr; Proyecto 1: Sitio Web Empresarial</a>
+      <a href="project-03.html" class="next">Proyecto 3: Tienda E-Commerce &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

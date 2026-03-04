@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lección 12: El Personalizador de WordPress — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-12.html">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-12.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li class="active"><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lección 12: El Personalizador de WordPress</h1>
+<h2>Objetivos</h2>
+<ul>
+<li>Usar el Personalizador de WordPress para ajustes globales del sitio</li>
+<li>Configurar la identidad del sitio (logo, favicon)</li>
+<li>Añadir CSS personalizado</li>
+<li>Comprender el papel del Personalizador al usar Elementor</li>
+</ul>
+<hr>
+<h2>¿Qué es el Personalizador?</h2>
+<p>El <strong>Personalizador de WordPress</strong> es una herramienta visual para realizar cambios globales en el sitio con una <strong>vista previa en vivo</strong>. Te permite modificar ajustes y ver los resultados en tiempo real antes de publicar.</p>
+<p>Accede en: <strong>Appearance → Customize</strong> (o haz clic en &quot;Customize&quot; en la barra de administración mientras ves tu sitio)</p>
+<hr>
+<h2>Interfaz del Personalizador</h2>
+<h3>Disposición:</h3>
+<ul>
+<li><strong>Panel izquierdo</strong>: Ajustes y opciones organizados por sección</li>
+<li><strong>Panel derecho</strong>: Vista previa en vivo de tu sitio</li>
+<li><strong>Barra superior</strong>: Navegación (botón atrás, vista previa de dispositivos, publicar)</li>
+</ul>
+<h3>Vista Previa de Dispositivos</h3>
+<p>En la parte inferior del panel izquierdo, verás iconos de dispositivos:</p>
+<ul>
+<li><strong>Escritorio</strong> — vista de ancho completo</li>
+<li><strong>Tablet</strong> — vista con ancho de tablet</li>
+<li><strong>Móvil</strong> — vista con ancho de teléfono</li>
+</ul>
+<p>Úsalos para comprobar cómo se ve tu sitio en diferentes dispositivos.</p>
+<hr>
+<h2>Secciones del Personalizador (Hello Elementor)</h2>
+<p>El Personalizador de Hello Elementor es minimalista. Esto es lo que encontrarás:</p>
+<h3>Site Identity</h3>
+<p>La sección más importante del Personalizador:</p>
+<table>
+<thead>
+<tr>
+<th>Ajuste</th>
+<th>Qué Hacer</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Logo</strong></td>
+<td>Sube el logo de tu sitio (recomendado PNG con transparencia, 200-300px de ancho)</td>
+</tr>
+<tr>
+<td><strong>Site Title</strong></td>
+<td>El nombre de tu sitio (se muestra si no hay logo configurado)</td>
+</tr>
+<tr>
+<td><strong>Tagline</strong></td>
+<td>Breve descripción del sitio</td>
+</tr>
+<tr>
+<td><strong>Display Site Title and Tagline</strong></td>
+<td>Mostrar/ocultar estos en la cabecera</td>
+</tr>
+<tr>
+<td><strong>Site Icon (Favicon)</strong></td>
+<td>Imagen cuadrada (mín. 512×512px) para las pestañas del navegador</td>
+</tr>
+</tbody></table>
+<h3>Menus</h3>
+<p>La misma gestión de menús que Appearance → Menus, pero con una vista previa en vivo.</p>
+<h3>Widgets</h3>
+<p>Lo mismo que Appearance → Widgets, pero con una vista previa en vivo.</p>
+<h3>Homepage Settings</h3>
+<p>Lo mismo que Settings → Reading — elige si la página de inicio muestra las últimas entradas o una página estática.</p>
+<h3>Additional CSS</h3>
+<p>Añade CSS personalizado que se aplica a todo el sitio. Aquí es donde pones pequeños ajustes de estilo sin editar archivos del theme.</p>
+<hr>
+<h2>Añadir CSS Personalizado</h2>
+<p>La sección <strong>Additional CSS</strong> es útil para pequeños ajustes de estilo:</p>
+<ol>
+<li>Ve a <strong>Appearance → Customize → Additional CSS</strong></li>
+<li>Escribe tu CSS en el editor</li>
+<li>Ve los cambios en tiempo real en la vista previa</li>
+</ol>
+<h3>Ejemplos de Fragmentos CSS:</h3>
+<p><strong>Ocultar el título de la página en todas las páginas:</strong></p>
+<pre><code class="language-css">.page .entry-title {
+    display: none;
+}
+</code></pre>
+<p><strong>Cambiar el color de los enlaces:</strong></p>
+<pre><code class="language-css">a {
+    color: #0066cc;
+}
+a:hover {
+    color: #004499;
+}
+</code></pre>
+<p><strong>Añadir más espacio entre párrafos:</strong></p>
+<pre><code class="language-css">.entry-content p {
+    margin-bottom: 1.5em;
+}
+</code></pre>
+<h3>Cuándo Usar Additional CSS vs Estilos de Elementor</h3>
+<ul>
+<li><strong>Additional CSS</strong>: Para cambios globales del sitio que afectan a páginas que no son de Elementor (entradas de blog, páginas de archivo, áreas controladas por la administración)</li>
+<li><strong>Estilos de Elementor</strong>: Para páginas construidas con Elementor (Elementor tiene sus propios controles de estilo — úsalos en su lugar)</li>
+</ul>
+<hr>
+<h2>Personalizador con Otros Themes</h2>
+<p>Si cambias a un theme con más funciones (como Astra), el Personalizador tendrá muchas más secciones:</p>
+<table>
+<thead>
+<tr>
+<th>Sección</th>
+<th>Qué Controla</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Global</td>
+<td>Colores base, tipografía, ancho del contenedor</td>
+</tr>
+<tr>
+<td>Header Builder</td>
+<td>Colocación del logo, estilo del menú, búsqueda, botones</td>
+</tr>
+<tr>
+<td>Breadcrumb</td>
+<td>Migas de pan de navegación</td>
+</tr>
+<tr>
+<td>Blog</td>
+<td>Diseño del blog, meta de entradas, páginas de archivo</td>
+</tr>
+<tr>
+<td>Sidebar</td>
+<td>Diseño y ancho de la barra lateral</td>
+</tr>
+<tr>
+<td>Footer Builder</td>
+<td>Columnas del pie de página, copyright, widgets</td>
+</tr>
+<tr>
+<td>Colors &amp; Background</td>
+<td>Esquema de colores de todo el sitio</td>
+</tr>
+<tr>
+<td>Typography</td>
+<td>Familias de fuentes, tamaños, pesos</td>
+</tr>
+<tr>
+<td>Buttons</td>
+<td>Estilos de botones, colores, bordes</td>
+</tr>
+<tr>
+<td>Layout</td>
+<td>Ancho del contenido, relleno</td>
+</tr>
+</tbody></table>
+<p>Por eso algunas personas eligen Astra o GeneratePress — ofrecen más control a través del Personalizador sin necesitar Elementor Pro.</p>
+<hr>
+<h2>Personalizador vs Elementor vs Ajustes del Theme</h2>
+<p>Comprender cuándo usar cada uno:</p>
+<table>
+<thead>
+<tr>
+<th>Qué Estás Cambiando</th>
+<th>Dónde Hacerlo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Logo del sitio y favicon</td>
+<td>Customizer → Site Identity</td>
+</tr>
+<tr>
+<td>Diseño y disposición de páginas</td>
+<td>Editor de Elementor</td>
+</tr>
+<tr>
+<td>Colores y fuentes globales (páginas de Elementor)</td>
+<td>Elementor → Site Settings</td>
+</tr>
+<tr>
+<td>Diseño de entradas de blog</td>
+<td>Personalizador o ajustes del theme (si están disponibles)</td>
+</tr>
+<tr>
+<td>Menús de navegación</td>
+<td>Customizer → Menus o Appearance → Menus</td>
+</tr>
+<tr>
+<td>Diseño del pie de página (con Elementor)</td>
+<td>Elementor Theme Builder (Pro) o plugin Header Footer</td>
+</tr>
+<tr>
+<td>Pequeños ajustes CSS</td>
+<td>Customizer → Additional CSS</td>
+</tr>
+<tr>
+<td>Ajustes SEO</td>
+<td>Plugin SEO (Yoast/RankMath)</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Publicar y Programar Cambios</h2>
+<h3>Publicar Inmediatamente</h3>
+<ul>
+<li>Haz clic en <strong>&quot;Publish&quot;</strong> en el Personalizador para aplicar los cambios inmediatamente</li>
+</ul>
+<h3>Guardar como Borrador</h3>
+<ul>
+<li>Haz clic en el <strong>icono de engranaje</strong> junto a Publish</li>
+<li>Selecciona <strong>&quot;Save Draft&quot;</strong> para guardar sin publicar</li>
+<li>Tus cambios se guardan pero no son visibles para los visitantes</li>
+<li>Vuelve más tarde para publicar</li>
+</ul>
+<h3>Programar Cambios</h3>
+<ul>
+<li>Haz clic en el icono de engranaje junto a Publish</li>
+<li>Selecciona <strong>&quot;Schedule&quot;</strong></li>
+<li>Elige una fecha y hora</li>
+<li>Los cambios se activarán automáticamente en ese momento</li>
+<li>Útil para lanzamientos coordinados (nuevo logo, rediseño, etc.)</li>
+</ul>
+<hr>
+<h2>Ejercicios</h2>
+<ol>
+<li><p><strong>Configura la Identidad del Sitio</strong>: Sube un logo (o usa una imagen de marcador de posición), establece un favicon y configura el título y eslogan de tu sitio.</p>
+</li>
+<li><p><strong>Previsualiza en diferentes dispositivos</strong>: Usa los botones de vista previa de dispositivos para ver cómo se ve tu sitio en escritorio, tablet y móvil.</p>
+</li>
+<li><p><strong>Añade CSS personalizado</strong>: Ve a Additional CSS y añade una regla simple (como cambiar un color u ocultar un elemento). Observa la vista previa en vivo.</p>
+</li>
+<li><p><strong>Prueba guardar como borrador</strong>: Haz un cambio, guárdalo como borrador y luego cierra el Personalizador. Vuelve a abrirlo para encontrar tu borrador.</p>
+</li>
+<li><p><strong>Explora los menús en el Personalizador</strong>: Navega a la sección Menus e intenta editar tu menú con la vista previa en vivo.</p>
+</li>
+</ol>
+<hr>
+<h2>Puntos Clave</h2>
+<ul>
+<li>El <strong>Personalizador</strong> proporciona edición con vista previa en vivo para ajustes globales del sitio</li>
+<li>Úsalo para la <strong>identidad del sitio</strong> (logo, favicon), <strong>menús</strong> y <strong>pequeños ajustes CSS</strong></li>
+<li><strong>Additional CSS</strong> es donde añades ajustes de estilo globales del sitio</li>
+<li>Cuando usas Elementor, el papel del Personalizador se reduce — Elementor maneja la mayor parte del diseño</li>
+<li>Puedes <strong>guardar como borrador</strong> o <strong>programar</strong> los cambios del Personalizador</li>
+<li>Los themes con más funciones (Astra, GeneratePress) añaden muchas más opciones al Personalizador</li>
+<li>Usa la <strong>vista previa de dispositivos</strong> para comprobar las vistas de móvil y tablet</li>
+</ul>
+<hr>
+<p><strong>Siguiente Módulo:</strong> <a href="lesson-13.html">Módulo 3 - Construcción de Páginas con Elementor</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-11.html" class="prev">&larr; 11. Widgets y Barras Laterales</a>
+      <a href="lesson-13.html" class="next">13. Instalar Elementor &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

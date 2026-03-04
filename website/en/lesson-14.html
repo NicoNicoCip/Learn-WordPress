@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 14: Sections, Columns, and Widgets — The Building Blocks — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-14.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-14.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li class="active"><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lesson 14: Sections, Columns, and Widgets — The Building Blocks</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Understand the Section → Column → Widget hierarchy</li>
+<li>Create and configure sections with different column layouts</li>
+<li>Add, move, and style widgets</li>
+<li>Learn the three settings tabs: Content, Style, Advanced</li>
+</ul>
+<hr>
+<h2>The Elementor Hierarchy</h2>
+<p>Every Elementor page is built with three levels:</p>
+<pre><code>Section (full-width row)
+  └── Column (vertical division within a section)
+       └── Widget (the actual content — text, image, button, etc.)
+</code></pre>
+<p>Think of it like a table:</p>
+<ul>
+<li><strong>Section</strong> = a row</li>
+<li><strong>Column</strong> = a cell in that row</li>
+<li><strong>Widget</strong> = content inside the cell</li>
+</ul>
+<hr>
+<h2>Sections</h2>
+<h3>What is a Section?</h3>
+<p>A section is a <strong>full-width horizontal row</strong> that spans your page. It&#39;s the largest building block.</p>
+<h3>Creating a Section</h3>
+<ol>
+<li>Click the <strong>&quot;+&quot;</strong> icon on the canvas (or the red circle &quot;+&quot; at the bottom)</li>
+<li>Choose a <strong>column structure</strong>:<ul>
+<li>1 column (full width)</li>
+<li>2 columns (50/50)</li>
+<li>3 columns (33/33/33)</li>
+<li>And more variations (25/75, 75/25, etc.)</li>
+</ul>
+</li>
+<li>The section appears on your page</li>
+</ol>
+<h3>Section Settings</h3>
+<p>Click the <strong>blue handle</strong> at the top of a section to select it. The left panel shows:</p>
+<p><strong>Content Tab:</strong></p>
+<ul>
+<li><strong>Layout</strong>: Boxed or Full Width</li>
+<li><strong>Content Width</strong>: Set maximum content width (e.g., 1140px)</li>
+<li><strong>Column Gap</strong>: Space between columns (No Gap, Narrow, Default, Extended, Wide)</li>
+<li><strong>Height</strong>: Default, Min Height, or Fit to Screen</li>
+<li><strong>Vertical Align</strong>: Top, Middle, Bottom, Space Between</li>
+<li><strong>HTML Tag</strong>: Semantic HTML element (div, header, footer, section, etc.)</li>
+</ul>
+<p><strong>Style Tab:</strong></p>
+<ul>
+<li><strong>Background</strong>: Color, image, gradient, video, or slideshow</li>
+<li><strong>Background Overlay</strong>: Add a color/gradient overlay on top of the background</li>
+<li><strong>Border</strong>: Add borders and border radius</li>
+<li><strong>Shape Divider</strong>: Add decorative shapes (waves, triangles, etc.) at top/bottom</li>
+<li><strong>Typography</strong>: Default text color and typography</li>
+</ul>
+<p><strong>Advanced Tab:</strong></p>
+<ul>
+<li><strong>Margin &amp; Padding</strong>: Spacing outside and inside the section</li>
+<li><strong>Motion Effects</strong>: Scroll animations, parallax</li>
+<li><strong>Responsive</strong>: Show/hide on specific devices</li>
+<li><strong>Custom CSS</strong>: Add CSS for this section only (Pro)</li>
+<li><strong>Attributes</strong>: Custom HTML attributes</li>
+</ul>
+<h3>Section Context Menu</h3>
+<p>Right-click a section handle for:</p>
+<ul>
+<li><strong>Copy / Paste</strong> — copy entire sections</li>
+<li><strong>Duplicate</strong> — create an identical copy below</li>
+<li><strong>Save as Template</strong> — save for reuse</li>
+<li><strong>Delete</strong> — remove the section</li>
+</ul>
+<hr>
+<h2>Columns</h2>
+<h3>What is a Column?</h3>
+<p>Columns are <strong>vertical divisions</strong> within a section. They hold widgets.</p>
+<h3>Adjusting Column Widths</h3>
+<ol>
+<li>Hover between two columns until you see a <strong>blue resize handle</strong></li>
+<li>Drag left or right to adjust the width percentage</li>
+<li>Column widths are shown as percentages (e.g., 60% / 40%)</li>
+</ol>
+<h3>Column Settings</h3>
+<p>Click the <strong>gray column handle</strong> (at the top of the column) to select it:</p>
+<p><strong>Content Tab:</strong></p>
+<ul>
+<li><strong>Column Width</strong>: Exact percentage</li>
+<li><strong>Vertical Align</strong>: How widgets are aligned vertically</li>
+</ul>
+<p><strong>Style Tab:</strong></p>
+<ul>
+<li><strong>Background</strong>: Color, image, gradient</li>
+<li><strong>Border</strong>: Borders and border radius</li>
+<li><strong>Typography</strong>: Default text styles for this column</li>
+</ul>
+<p><strong>Advanced Tab:</strong></p>
+<ul>
+<li><strong>Margin &amp; Padding</strong>: Spacing for this specific column</li>
+<li><strong>Responsive</strong>: Show/hide on specific devices</li>
+<li><strong>Custom CSS</strong>: Column-specific CSS (Pro)</li>
+</ul>
+<h3>Adding/Removing Columns</h3>
+<ul>
+<li><strong>Right-click</strong> a column handle → <strong>Add New Column</strong> (adds a column)</li>
+<li><strong>Right-click</strong> a column handle → <strong>Delete</strong> (removes a column)</li>
+<li>Or <strong>Duplicate</strong> a column to create a copy</li>
+</ul>
+<hr>
+<h2>Widgets</h2>
+<h3>What is a Widget?</h3>
+<p>Widgets are the <strong>actual content elements</strong> — text, images, buttons, icons, video players, etc.</p>
+<h3>Adding Widgets</h3>
+<ol>
+<li>Find a widget in the <strong>left panel</strong></li>
+<li><strong>Drag it</strong> onto a column on the canvas</li>
+<li>Or click the <strong>&quot;+&quot;</strong> inside an empty column to browse widgets</li>
+</ol>
+<h3>Essential Free Widgets</h3>
+<table>
+<thead>
+<tr>
+<th>Widget</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Heading</strong></td>
+<td>Section titles and headings (H1-H6)</td>
+</tr>
+<tr>
+<td><strong>Text Editor</strong></td>
+<td>Rich text content (paragraphs, lists, formatting)</td>
+</tr>
+<tr>
+<td><strong>Image</strong></td>
+<td>Display an image</td>
+</tr>
+<tr>
+<td><strong>Button</strong></td>
+<td>A clickable call-to-action button</td>
+</tr>
+<tr>
+<td><strong>Icon</strong></td>
+<td>Display an icon from Font Awesome or other libraries</td>
+</tr>
+<tr>
+<td><strong>Spacer</strong></td>
+<td>Add vertical space between elements</td>
+</tr>
+<tr>
+<td><strong>Divider</strong></td>
+<td>A horizontal line separator</td>
+</tr>
+<tr>
+<td><strong>Google Maps</strong></td>
+<td>Embed a Google map</td>
+</tr>
+<tr>
+<td><strong>Video</strong></td>
+<td>Embed YouTube, Vimeo, or self-hosted video</td>
+</tr>
+<tr>
+<td><strong>Icon Box</strong></td>
+<td>Icon + heading + description combo</td>
+</tr>
+<tr>
+<td><strong>Image Box</strong></td>
+<td>Image + heading + description combo</td>
+</tr>
+<tr>
+<td><strong>Star Rating</strong></td>
+<td>Display a star rating</td>
+</tr>
+<tr>
+<td><strong>Progress Bar</strong></td>
+<td>Animated progress/skill bar</td>
+</tr>
+<tr>
+<td><strong>Counter</strong></td>
+<td>Animated counting number</td>
+</tr>
+<tr>
+<td><strong>Testimonial</strong></td>
+<td>Customer testimonial with image and text</td>
+</tr>
+<tr>
+<td><strong>Accordion</strong></td>
+<td>Collapsible content sections (FAQ-style)</td>
+</tr>
+<tr>
+<td><strong>Tabs</strong></td>
+<td>Tabbed content panels</td>
+</tr>
+<tr>
+<td><strong>Social Icons</strong></td>
+<td>Social media icon links</td>
+</tr>
+<tr>
+<td><strong>Alert</strong></td>
+<td>A dismissible notice/message box</td>
+</tr>
+</tbody></table>
+<h3>Widget Editing Tabs</h3>
+<p>Every widget has <strong>three tabs</strong> in the left panel:</p>
+<hr>
+<h2>The Three Tabs: Content, Style, Advanced</h2>
+<h3>Content Tab</h3>
+<p>Controls <strong>what</strong> the widget displays:</p>
+<ul>
+<li>Text content, headings, button labels</li>
+<li>Image source, video URL</li>
+<li>Link URLs</li>
+<li>Widget-specific content options</li>
+</ul>
+<p><strong>Example (Button widget):</strong></p>
+<ul>
+<li>Text: &quot;Get Started&quot;</li>
+<li>Link: <code>/contact</code></li>
+<li>Icon: optional icon before/after text</li>
+<li>Alignment: left, center, right</li>
+</ul>
+<h3>Style Tab</h3>
+<p>Controls <strong>how</strong> the widget looks:</p>
+<ul>
+<li>Colors (text, background, border)</li>
+<li>Typography (font family, size, weight, line height)</li>
+<li>Padding and spacing within the widget</li>
+<li>Border and border radius</li>
+<li>Box shadow</li>
+<li>Hover states (how it looks when the mouse hovers over it)</li>
+</ul>
+<p><strong>Example (Button widget):</strong></p>
+<ul>
+<li>Typography: Font family, size, weight</li>
+<li>Text Color: Normal and Hover states</li>
+<li>Background Color: Normal and Hover</li>
+<li>Border: Width, color, radius</li>
+<li>Padding: Space inside the button</li>
+<li>Box Shadow: Drop shadow effect</li>
+</ul>
+<h3>Advanced Tab</h3>
+<p>Controls <strong>behavior</strong> and <strong>positioning</strong>:</p>
+<ul>
+<li><strong>Layout</strong>: Width, alignment, custom positioning</li>
+<li><strong>Motion Effects</strong>: Entrance animations, scroll effects</li>
+<li><strong>Background</strong>: Widget-level background</li>
+<li><strong>Border</strong>: Widget-level border</li>
+<li><strong>Responsive</strong>: Show/hide on desktop, tablet, or mobile</li>
+<li><strong>Custom CSS</strong>: Widget-specific CSS (Pro)</li>
+<li><strong>Attributes</strong>: Custom data attributes</li>
+</ul>
+<hr>
+<h2>Working with Padding and Margin</h2>
+<p>Understanding the difference is critical:</p>
+<pre><code>|--- Margin (space OUTSIDE the element) ---|
+|                                           |
+|  |--- Border ---|                         |
+|  |               |                        |
+|  |  |-- Padding (space INSIDE) --|        |
+|  |  |                            |        |
+|  |  |    Content lives here      |        |
+|  |  |                            |        |
+|  |  |----------------------------|        |
+|  |                               |        |
+|  |-------------------------------|        |
+|                                           |
+|-------------------------------------------|
+</code></pre>
+<ul>
+<li><strong>Margin</strong>: Space between elements (pushes other elements away)</li>
+<li><strong>Padding</strong>: Space between the element&#39;s border and its content</li>
+</ul>
+<h3>Setting Padding/Margin in Elementor</h3>
+<ol>
+<li>Select any element (section, column, or widget)</li>
+<li>Go to the <strong>Advanced</strong> tab</li>
+<li>Find <strong>Margin</strong> and <strong>Padding</strong></li>
+<li>Enter values in px, em, %, or vh</li>
+<li>Click the <strong>chain link icon</strong> to set all sides at once, or unlink to set each side individually</li>
+</ol>
+<hr>
+<h2>Practical: Building a Simple Section</h2>
+<p>Let&#39;s build a hero section:</p>
+<h3>Step 1: Create a Section</h3>
+<ol>
+<li>Click &quot;+&quot; and select a <strong>single column</strong> layout</li>
+</ol>
+<h3>Step 2: Configure the Section</h3>
+<ol>
+<li>Click the section handle (blue tab)</li>
+<li><strong>Content Tab</strong>: Set Height → Min Height → <code>500px</code></li>
+<li><strong>Style Tab</strong>:<ul>
+<li>Background → Classic → Color → choose a dark blue (#1a1a2e)</li>
+</ul>
+</li>
+<li><strong>Advanced Tab</strong>: Set Padding → <code>60px</code> top and bottom</li>
+</ol>
+<h3>Step 3: Add a Heading</h3>
+<ol>
+<li>Drag the <strong>Heading</strong> widget into the column</li>
+<li><strong>Content Tab</strong>:<ul>
+<li>Title: &quot;Welcome to Our Website&quot;</li>
+<li>HTML Tag: H1</li>
+<li>Alignment: Center</li>
+</ul>
+</li>
+<li><strong>Style Tab</strong>:<ul>
+<li>Text Color: White (#ffffff)</li>
+<li>Typography: Font Size → 48px, Weight → Bold</li>
+</ul>
+</li>
+</ol>
+<h3>Step 4: Add a Text Editor</h3>
+<ol>
+<li>Drag the <strong>Text Editor</strong> widget below the heading</li>
+<li><strong>Content Tab</strong>: Type &quot;We create beautiful websites that drive results.&quot;</li>
+<li><strong>Style Tab</strong>:<ul>
+<li>Text Color: Light gray (#cccccc)</li>
+<li>Typography: Font Size → 20px</li>
+<li>Alignment: Center</li>
+</ul>
+</li>
+</ol>
+<h3>Step 5: Add a Button</h3>
+<ol>
+<li>Drag the <strong>Button</strong> widget below the text</li>
+<li><strong>Content Tab</strong>: Text → &quot;Get Started&quot;, Alignment → Center</li>
+<li><strong>Style Tab</strong>:<ul>
+<li>Background Color: a bright accent color (#e94560)</li>
+<li>Border Radius: 25px (for rounded corners)</li>
+<li>Padding: 15px top/bottom, 40px left/right</li>
+</ul>
+</li>
+</ol>
+<h3>Step 6: Save</h3>
+<p>Press <strong>Ctrl + S</strong> to save your work.</p>
+<hr>
+<h2>Exercises</h2>
+<ol>
+<li><p><strong>Build the hero section</strong> described above step by step.</p>
+</li>
+<li><p><strong>Create a 3-column section</strong>: Add a section with 3 columns. In each column, add an Icon Box widget with a different icon, heading, and description (like a &quot;features&quot; or &quot;services&quot; section).</p>
+</li>
+<li><p><strong>Practice resizing columns</strong>: Create a 2-column section and drag the divider to make it 30/70, then 70/30, then back to 50/50.</p>
+</li>
+<li><p><strong>Explore the Style tab</strong>: Select any widget and experiment with every option in the Style tab. Change colors, fonts, borders, shadows. You can always Ctrl+Z to undo.</p>
+</li>
+<li><p><strong>Use the Navigator</strong>: Open the Navigator (Ctrl+I) and use it to select, reorder, and rename elements. Get comfortable navigating your page structure this way.</p>
+</li>
+<li><p><strong>Practice padding and margin</strong>: Select different elements and adjust their padding and margin. Observe how the layout changes.</p>
+</li>
+</ol>
+<hr>
+<h2>Key Takeaways</h2>
+<ul>
+<li>Elementor uses a <strong>Section → Column → Widget</strong> hierarchy</li>
+<li><strong>Sections</strong> are full-width rows, <strong>Columns</strong> divide them, <strong>Widgets</strong> are the content</li>
+<li>Every element has <strong>3 tabs</strong>: Content (what), Style (how it looks), Advanced (behavior)</li>
+<li><strong>Drag and resize</strong> columns by pulling the divider between them</li>
+<li><strong>Padding</strong> = space inside an element; <strong>Margin</strong> = space outside</li>
+<li>Use the <strong>Navigator</strong> (Ctrl+I) to manage complex page structures</li>
+<li><strong>Right-click</strong> elements for quick actions (copy, paste, duplicate, delete)</li>
+<li><strong>Ctrl+S</strong> saves, <strong>Ctrl+Z</strong> undoes</li>
+</ul>
+<hr>
+<p><strong>Next Lesson:</strong> <a href="lesson-15.html">Lesson 15 - Typography, Colors, and Global Styles</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-13.html" class="prev">&larr; 13. Installing Elementor</a>
+      <a href="lesson-15.html" class="next">15. Global Styles &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

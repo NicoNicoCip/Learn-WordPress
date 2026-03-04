@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 17: Building an About Page — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-17.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-17.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li class="active"><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lesson 17: Building an About Page</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Design a professional About page using Elementor</li>
+<li>Learn the Image Box and Team Member patterns</li>
+<li>Practice 2-column layouts for image + text combinations</li>
+<li>Create a visually engaging storytelling page</li>
+</ul>
+<hr>
+<h2>About Page Structure</h2>
+<p>A good About page typically includes:</p>
+<ol>
+<li><strong>Page Header</strong> — title and brief intro</li>
+<li><strong>Our Story</strong> — company history/background with images</li>
+<li><strong>Mission &amp; Values</strong> — what you stand for</li>
+<li><strong>Meet the Team</strong> — team member profiles</li>
+<li><strong>CTA</strong> — what to do next</li>
+</ol>
+<hr>
+<h2>Section 1: Page Header</h2>
+<ol>
+<li><p><strong>Add a Section</strong> — 1 column</p>
+</li>
+<li><p><strong>Section Settings:</strong></p>
+<ul>
+<li>Style: Background → your primary color or a hero image with dark overlay</li>
+<li>Content: Min Height → 300px, Vertical Align → Middle</li>
+<li>Advanced: Padding → 60px top and bottom</li>
+</ul>
+</li>
+<li><p><strong>Add a Heading:</strong> &quot;About Us&quot;</p>
+<ul>
+<li>H1, Center, White, 48px</li>
+</ul>
+</li>
+<li><p><strong>Add a Text Editor:</strong> &quot;Learn about our journey, our mission, and the team behind it all.&quot;</p>
+<ul>
+<li>Center, Light text, 18px</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>Section 2: Our Story</h2>
+<ol>
+<li><strong>Add a Section</strong> — 2 columns (50/50)</li>
+<li><strong>Section Settings:</strong><ul>
+<li>Style: Background → White</li>
+<li>Advanced: Padding → 80px top and bottom</li>
+</ul>
+</li>
+</ol>
+<p><strong>Column 1 (Image):</strong></p>
+<ul>
+<li>Add an <strong>Image</strong> widget</li>
+<li>Upload a relevant image (office, workspace, product)</li>
+<li>Style: Border Radius → 8px, Box Shadow → subtle shadow</li>
+</ul>
+<p><strong>Column 2 (Text):</strong></p>
+<ul>
+<li><strong>Heading:</strong> &quot;Our Story&quot;, H2, left aligned</li>
+<li><strong>Divider:</strong> 15% width, accent color, 3px weight</li>
+<li><strong>Text Editor:</strong> Write 2-3 paragraphs about the company&#39;s history<pre><code>Founded in 2020, we started with a simple mission: to help small
+businesses thrive online. What began as a two-person team working
+from a home office has grown into a full-service digital agency.
+
+Over the years, we&#39;ve had the privilege of working with over 200
+businesses, from local startups to established enterprises. Each
+project has taught us something new and driven us to keep improving.
+</code></pre>
+</li>
+</ul>
+<h3>Adding a Second Story Section (Reversed Layout)</h3>
+<ol>
+<li><strong>Add another 2-column section</strong> below</li>
+<li>This time, put the <strong>text in Column 1</strong> and <strong>image in Column 2</strong></li>
+<li>This creates visual variety with an alternating layout</li>
+</ol>
+<p><strong>Tip:</strong> Alternating image-left/image-right creates a zigzag pattern that guides the eye down the page.</p>
+<hr>
+<h2>Section 3: Mission &amp; Values</h2>
+<ol>
+<li><p><strong>Add a Section</strong> — 1 column (for the heading)</p>
+</li>
+<li><p>Style: Background → light gray (#f8f9fa)</p>
+</li>
+<li><p>Padding: 80px top, 20px bottom</p>
+</li>
+<li><p><strong>Add Heading:</strong> &quot;Our Mission &amp; Values&quot;, H2, Center</p>
+</li>
+<li><p><strong>Add another section below</strong> — 3 columns (still light gray background)</p>
+</li>
+<li><p>Padding: 20px top, 80px bottom</p>
+</li>
+</ol>
+<p>In each column, add an <strong>Icon Box</strong>:</p>
+<p><strong>Column 1:</strong></p>
+<ul>
+<li>Icon: <code>fa-bullseye</code> (target)</li>
+<li>Title: &quot;Our Mission&quot;</li>
+<li>Description: &quot;To deliver digital solutions that help businesses grow and succeed online.&quot;</li>
+<li>Alignment: Center</li>
+</ul>
+<p><strong>Column 2:</strong></p>
+<ul>
+<li>Icon: <code>fa-eye</code> (eye)</li>
+<li>Title: &quot;Our Vision&quot;</li>
+<li>Description: &quot;A world where every business has access to professional, effective digital tools.&quot;</li>
+<li>Alignment: Center</li>
+</ul>
+<p><strong>Column 3:</strong></p>
+<ul>
+<li>Icon: <code>fa-heart</code> (heart)</li>
+<li>Title: &quot;Our Values&quot;</li>
+<li>Description: &quot;Quality, transparency, innovation, and putting our clients first in everything we do.&quot;</li>
+<li>Alignment: Center</li>
+</ul>
+<hr>
+<h2>Section 4: Meet the Team</h2>
+<h3>Section Heading</h3>
+<ol>
+<li><p><strong>Add a Section</strong> — 1 column</p>
+</li>
+<li><p>Background: White</p>
+</li>
+<li><p>Padding: 80px top, 20px bottom</p>
+</li>
+<li><p><strong>Heading:</strong> &quot;Meet the Team&quot;, H2, Center</p>
+</li>
+<li><p><strong>Text Editor:</strong> &quot;The talented people behind our success&quot;, Center, Gray</p>
+</li>
+</ol>
+<h3>Team Grid</h3>
+<ol>
+<li><strong>Add a Section</strong> — 3 or 4 columns</li>
+<li>Padding: 20px top, 80px bottom</li>
+</ol>
+<p>For each team member, add these widgets in a column:</p>
+<p><strong>Image:</strong></p>
+<ul>
+<li>Upload a headshot (square photos work best)</li>
+<li>Style: Border Radius → 50% (makes it a circle)</li>
+<li>Or Border Radius → 8px (rounded square)</li>
+<li>Alignment: Center</li>
+</ul>
+<p><strong>Heading:</strong></p>
+<ul>
+<li>&quot;Jane Smith&quot;, H4, Center, 20px</li>
+</ul>
+<p><strong>Text Editor:</strong></p>
+<ul>
+<li>&quot;Founder &amp; CEO&quot;, Center, gray text, 14px</li>
+<li>Optionally add a brief bio below</li>
+</ul>
+<p><strong>Social Icons:</strong></p>
+<ul>
+<li>Add Social Icons widget</li>
+<li>Add LinkedIn, Twitter/X icons</li>
+<li>Style: Size → 16px, Color → gray, Hover → accent color</li>
+<li>Alignment: Center</li>
+</ul>
+<h3>Repeat for each team member (3-4 members).</h3>
+<hr>
+<h2>Section 5: Company Stats (Optional)</h2>
+<p>Between the team section and the CTA, you might add a stats bar:</p>
+<ol>
+<li><strong>Add a Section</strong> — 4 columns</li>
+<li>Background: Your primary or accent color</li>
+<li>Padding: 40px top and bottom</li>
+</ol>
+<p>Add <strong>Counter</strong> widgets:</p>
+<ul>
+<li>&quot;200+ Projects Completed&quot;</li>
+<li>&quot;50+ Happy Clients&quot;</li>
+<li>&quot;10 Years Experience&quot;</li>
+<li>&quot;15 Team Members&quot;</li>
+<li>Color: White for all numbers and titles</li>
+</ul>
+<hr>
+<h2>Section 6: CTA Section</h2>
+<ol>
+<li><p><strong>Add a Section</strong> — 1 column</p>
+</li>
+<li><p>Background: Light (#f8f9fa) or your accent color</p>
+</li>
+<li><p>Min Height: 250px, Vertical Align: Middle</p>
+</li>
+<li><p>Padding: 60px top and bottom</p>
+</li>
+<li><p><strong>Heading:</strong> &quot;Let&#39;s Work Together&quot;</p>
+<ul>
+<li>H2, Center, 36px</li>
+</ul>
+</li>
+<li><p><strong>Text Editor:</strong> &quot;Have a project in mind? We&#39;d love to hear about it.&quot;</p>
+<ul>
+<li>Center, 18px</li>
+</ul>
+</li>
+<li><p><strong>Button:</strong> &quot;Contact Us&quot; → <code>/contact</code></p>
+<ul>
+<li>Center aligned, styled to match your design</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>Design Tips for About Pages</h2>
+<h3>Visual Rhythm</h3>
+<ul>
+<li>Alternate between <strong>image-left/text-right</strong> and <strong>text-left/image-right</strong> sections</li>
+<li>Alternate between <strong>white</strong> and <strong>light gray</strong> section backgrounds</li>
+<li>This creates visual rhythm and keeps the page interesting</li>
+</ul>
+<h3>Personality</h3>
+<ul>
+<li>Use <strong>real photos</strong> when possible (not stock photos)</li>
+<li>Write in a <strong>warm, conversational tone</strong></li>
+<li>Show your <strong>team&#39;s personality</strong> — people connect with people</li>
+</ul>
+<h3>Keep It Scannable</h3>
+<ul>
+<li>Use <strong>headings</strong> to break up content</li>
+<li>Keep paragraphs <strong>short</strong> (3-4 sentences max)</li>
+<li>Use <strong>bullet points</strong> for lists of values or services</li>
+<li>Add <strong>visual elements</strong> (icons, dividers, images) to break up text walls</li>
+</ul>
+<hr>
+<h2>Exercises</h2>
+<ol>
+<li><p><strong>Build the complete About page</strong> following the sections above.</p>
+</li>
+<li><p><strong>Use real or fictional content</strong>: Write actual About page content for a real or imaginary business. Make it feel authentic.</p>
+</li>
+<li><p><strong>Add team members</strong>: Create at least 3 team member cards with circular photos, names, titles, and social icons.</p>
+</li>
+<li><p><strong>Try the zigzag layout</strong>: Create two image+text sections where the image alternates between left and right.</p>
+</li>
+<li><p><strong>Style consistently</strong>: Make sure all headings, text, and colors match your global styles from Lesson 15.</p>
+</li>
+<li><p><strong>Preview on mobile</strong>: Check how the 2-column and 3-column layouts stack on mobile (they should automatically stack vertically).</p>
+</li>
+</ol>
+<hr>
+<h2>Key Takeaways</h2>
+<ul>
+<li>About pages tell your story — make them <strong>personal and engaging</strong></li>
+<li>Use <strong>2-column layouts</strong> for image + text combinations</li>
+<li><strong>Alternate image position</strong> (left/right) for visual variety</li>
+<li><strong>Circular images</strong> (border-radius: 50%) work great for team headshots</li>
+<li>Alternate section backgrounds between <strong>white and light gray</strong> for visual rhythm</li>
+<li>Keep text <strong>scannable</strong> — short paragraphs, headings, icons</li>
+<li>Always end with a <strong>CTA section</strong> — guide the visitor to their next step</li>
+</ul>
+<hr>
+<p><strong>Next Lesson:</strong> <a href="lesson-18.html">Lesson 18 - Building a Contact Page with Forms</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-16.html" class="prev">&larr; 16. Building a Homepage</a>
+      <a href="lesson-18.html" class="next">18. Contact Page &amp; Forms &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 18: Building a Contact Page with Forms — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-18.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-18.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li class="active"><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lesson 18: Building a Contact Page with Forms</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Build a professional Contact page layout</li>
+<li>Install and configure a contact form plugin</li>
+<li>Add a form to your page using Elementor</li>
+<li>Include maps, contact info, and business hours</li>
+</ul>
+<hr>
+<h2>Contact Page Structure</h2>
+<p>A good contact page includes:</p>
+<ol>
+<li><strong>Page header</strong> — title and brief invitation</li>
+<li><strong>Contact form</strong> — the main feature</li>
+<li><strong>Contact details</strong> — phone, email, address</li>
+<li><strong>Map</strong> — embedded Google Map</li>
+<li><strong>Business hours</strong> (if applicable)</li>
+</ol>
+<hr>
+<h2>Setting Up a Contact Form Plugin</h2>
+<p>Elementor Free doesn&#39;t include a form widget (that&#39;s an Elementor Pro feature). We&#39;ll use a free form plugin.</p>
+<h3>Option 1: WPForms Lite (Recommended for beginners)</h3>
+<ol>
+<li>Go to <strong>Plugins → Add New Plugin</strong></li>
+<li>Search for <strong>&quot;WPForms&quot;</strong></li>
+<li>Install and activate <strong>&quot;WPForms Lite&quot;</strong></li>
+<li>After activation, you&#39;ll see <strong>WPForms</strong> in the sidebar</li>
+</ol>
+<h3>Creating a Contact Form with WPForms</h3>
+<ol>
+<li>Go to <strong>WPForms → Add New</strong></li>
+<li>Name it &quot;Contact Form&quot;</li>
+<li>Select the <strong>&quot;Simple Contact Form&quot;</strong> template</li>
+<li>The form builder opens with pre-configured fields:<ul>
+<li>Name</li>
+<li>Email</li>
+<li>Comment or Message</li>
+</ul>
+</li>
+<li>Customize if needed:<ul>
+<li><strong>Drag fields</strong> to reorder</li>
+<li><strong>Click a field</strong> to edit its label, placeholder, and requirements</li>
+<li><strong>Add fields</strong> from the left panel (Phone, Subject, etc.)</li>
+</ul>
+</li>
+<li>Click <strong>Settings</strong> in the left panel:<ul>
+<li><strong>General</strong>: Form name, submit button text, confirmation message</li>
+<li><strong>Notifications</strong>: Set the email address where submissions are sent (your email)</li>
+<li><strong>Confirmations</strong>: What the user sees after submitting (success message or redirect)</li>
+</ul>
+</li>
+<li>Click <strong>&quot;Save&quot;</strong></li>
+</ol>
+<h3>Adding WPForms to Elementor</h3>
+<p><strong>Method 1: Shortcode</strong></p>
+<ol>
+<li>In WPForms, go to your form, find the shortcode (looks like <code>[wpforms id=&quot;123&quot;]</code>)</li>
+<li>In Elementor, add a <strong>Shortcode</strong> widget</li>
+<li>Paste the shortcode</li>
+</ol>
+<p><strong>Method 2: WPForms Widget (if available)</strong></p>
+<ol>
+<li>In Elementor, search for &quot;WPForms&quot; in the widget panel</li>
+<li>Drag the WPForms widget onto your page</li>
+<li>Select your form from the dropdown</li>
+</ol>
+<h3>Option 2: Contact Form 7 (Alternative)</h3>
+<ol>
+<li>Install and activate <strong>&quot;Contact Form 7&quot;</strong> plugin</li>
+<li>Go to <strong>Contact → Add New</strong></li>
+<li>Configure your form fields</li>
+<li>Copy the shortcode</li>
+<li>In Elementor, use a <strong>Shortcode</strong> widget and paste it</li>
+</ol>
+<hr>
+<h2>Building the Contact Page</h2>
+<h3>Section 1: Page Header</h3>
+<ol>
+<li><p><strong>Add a Section</strong> — 1 column</p>
+</li>
+<li><p>Background: Primary color or subtle gradient</p>
+</li>
+<li><p>Min Height: 250px, Vertical Align: Middle</p>
+</li>
+<li><p>Padding: 60px top and bottom</p>
+</li>
+<li><p><strong>Heading:</strong> &quot;Get in Touch&quot;, H1, Center, White, 44px</p>
+</li>
+<li><p><strong>Text Editor:</strong> &quot;We&#39;d love to hear from you. Send us a message and we&#39;ll respond as soon as possible.&quot;, Center, Light text</p>
+</li>
+</ol>
+<hr>
+<h3>Section 2: Form + Contact Info (2 Columns)</h3>
+<ol>
+<li><strong>Add a Section</strong> — 2 columns (60/40 or 65/35)</li>
+<li>Background: White</li>
+<li>Padding: 80px top and bottom</li>
+</ol>
+<p><strong>Column 1 (Form — wider):</strong></p>
+<ul>
+<li><strong>Heading:</strong> &quot;Send Us a Message&quot;, H3</li>
+<li><strong>WPForms widget</strong> or <strong>Shortcode widget</strong> with your form</li>
+</ul>
+<p><strong>Column 2 (Contact Info — narrower):</strong></p>
+<p>Add these widgets:</p>
+<p><strong>Heading:</strong> &quot;Contact Information&quot;, H3</p>
+<p><strong>Icon List</strong> widget (or individual Icon Box widgets):</p>
+<ul>
+<li>Phone icon + &quot;(555) 123-4567&quot;</li>
+<li>Email icon + &quot;<a href="mailto:info@example.com">info@example.com</a>&quot;</li>
+<li>Location icon + &quot;123 Business St, City, ST 12345&quot;</li>
+</ul>
+<p><strong>Heading:</strong> &quot;Business Hours&quot;, H4
+<strong>Text Editor:</strong></p>
+<pre><code>Monday - Friday: 9:00 AM - 6:00 PM
+Saturday: 10:00 AM - 2:00 PM
+Sunday: Closed
+</code></pre>
+<p><strong>Social Icons</strong> widget:</p>
+<ul>
+<li>Add icons for Facebook, Twitter/X, LinkedIn, Instagram</li>
+<li>Style them to match your brand colors</li>
+</ul>
+<hr>
+<h3>Section 3: Map</h3>
+<ol>
+<li><strong>Add a Section</strong> — 1 column</li>
+<li>Padding: 0 (no padding — let the map go edge to edge)</li>
+</ol>
+<p><strong>Google Maps widget:</strong></p>
+<ul>
+<li>Drag the <strong>Google Maps</strong> widget onto the section</li>
+<li>Enter the address in the Location field</li>
+<li>Set Zoom level (14-16 is good for a single location)</li>
+<li>Set Height: 400px</li>
+</ul>
+<p><strong>Note:</strong> Google Maps may require an API key for extended use. For local development, it usually works without one.</p>
+<p><strong>Alternative — Embed a Map:</strong></p>
+<ol>
+<li>Go to Google Maps in your browser</li>
+<li>Search for an address</li>
+<li>Click Share → Embed a map</li>
+<li>Copy the iframe code</li>
+<li>In Elementor, add an <strong>HTML</strong> widget and paste the embed code</li>
+</ol>
+<hr>
+<h3>Section 4: FAQ Section (Optional)</h3>
+<p>Common questions people might have before contacting you:</p>
+<ol>
+<li><p><strong>Add a Section</strong> — 1 column</p>
+</li>
+<li><p>Background: Light (#f8f9fa)</p>
+</li>
+<li><p>Padding: 80px top and bottom</p>
+</li>
+<li><p><strong>Heading:</strong> &quot;Frequently Asked Questions&quot;, H2, Center</p>
+</li>
+<li><p><strong>Accordion</strong> widget:</p>
+<ul>
+<li>Item 1: &quot;What is your typical response time?&quot; → &quot;We respond to all inquiries within 24 business hours.&quot;</li>
+<li>Item 2: &quot;Do you offer free consultations?&quot; → &quot;Yes! We offer a free 30-minute consultation to discuss your project.&quot;</li>
+<li>Item 3: &quot;What areas do you serve?&quot; → &quot;We work with clients worldwide. All our services can be delivered remotely.&quot;</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>Styling the Contact Form</h2>
+<p>WPForms and Contact Form 7 forms can be styled with CSS. Add this to the Customizer&#39;s Additional CSS (or in a Custom CSS widget in Elementor Pro):</p>
+<h3>Basic Form Styling (WPForms):</h3>
+<pre><code class="language-css">/* Input fields */
+.wpforms-form input[type=&quot;text&quot;],
+.wpforms-form input[type=&quot;email&quot;],
+.wpforms-form textarea {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 12px 15px;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Focus state */
+.wpforms-form input:focus,
+.wpforms-form textarea:focus {
+    border-color: #1abc9c; /* your accent color */
+    outline: none;
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.3);
+}
+
+/* Submit button */
+.wpforms-form button[type=&quot;submit&quot;] {
+    background-color: #e74c3c; /* your accent color */
+    color: #ffffff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.wpforms-form button[type=&quot;submit&quot;]:hover {
+    background-color: #c0392b; /* darker on hover */
+}
+</code></pre>
+<hr>
+<h2>Testing Your Form</h2>
+<h3>In Local WP:</h3>
+<ul>
+<li>Local WP includes <strong>Mailhog</strong> — a tool that catches emails sent by WordPress locally</li>
+<li>In Local, click the <strong>&quot;Tools&quot;</strong> tab → <strong>&quot;Open Mailhog&quot;</strong></li>
+<li>Submit a test form and check Mailhog for the email</li>
+</ul>
+<h3>Checklist:</h3>
+<ul>
+<li><input disabled="" type="checkbox"> All required fields show validation errors when empty</li>
+<li><input disabled="" type="checkbox"> Form submits successfully with a confirmation message</li>
+<li><input disabled="" type="checkbox"> Email arrives with all submitted data</li>
+<li><input disabled="" type="checkbox"> Form looks good on mobile</li>
+<li><input disabled="" type="checkbox"> Submit button is clearly visible</li>
+</ul>
+<hr>
+<h2>Exercises</h2>
+<ol>
+<li><p><strong>Install WPForms Lite</strong>: Install and activate the plugin.</p>
+</li>
+<li><p><strong>Create a contact form</strong>: Use the Simple Contact Form template. Add a Phone Number field and a Subject dropdown.</p>
+</li>
+<li><p><strong>Build the contact page</strong>: Follow the layout above — header, form + contact info, map, and FAQ.</p>
+</li>
+<li><p><strong>Style the form</strong>: Add custom CSS to make the form match your site&#39;s design.</p>
+</li>
+<li><p><strong>Test the form</strong>: Submit a test entry. Check Mailhog (in Local WP) or the WPForms Entries page to confirm it works.</p>
+</li>
+<li><p><strong>Check on mobile</strong>: Preview the contact page on mobile and make sure the 2-column layout stacks properly.</p>
+</li>
+</ol>
+<hr>
+<h2>Key Takeaways</h2>
+<ul>
+<li>Use <strong>WPForms Lite</strong> (free) or <strong>Contact Form 7</strong> (free) for contact forms in Elementor Free</li>
+<li>A good contact page has: <strong>form + contact details + map</strong></li>
+<li>Use a <strong>2-column layout</strong>: wider column for the form, narrower for contact info</li>
+<li><strong>Test your form</strong> — use Local WP&#39;s Mailhog to verify emails are sent</li>
+<li><strong>Style forms with CSS</strong> to match your site design</li>
+<li>An <strong>FAQ section</strong> can answer common questions and reduce unnecessary inquiries</li>
+<li>Always include <strong>multiple ways to contact</strong> — form, email, phone, social media</li>
+</ul>
+<hr>
+<p><strong>Next Lesson:</strong> <a href="lesson-19.html">Lesson 19 - Templates, Saving, and Reusing Designs</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-17.html" class="prev">&larr; 17. Building an About Page</a>
+      <a href="lesson-19.html" class="next">19. Templates &amp; Reuse &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leccion 16: Construir una Pagina de Inicio desde Cero — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-16.html">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-16.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li class="active"><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Leccion 16: Construir una Pagina de Inicio desde Cero</h1>
+<h2>Objetivos</h2>
+<ul>
+<li>Construir una pagina de inicio profesional completa con Elementor</li>
+<li>Aprender las secciones comunes que toda pagina de inicio necesita</li>
+<li>Practicar la combinacion de widgets, estilos y tecnicas de diseno</li>
+<li>Crear una pagina real digna de portfolio</li>
+</ul>
+<hr>
+<h2>Anatomia de una Pagina de Inicio</h2>
+<p>La mayoria de las paginas de inicio profesionales siguen esta estructura:</p>
+<ol>
+<li><strong>Seccion Hero</strong> — titular grande, descripcion, boton CTA</li>
+<li><strong>Servicios/Caracteristicas</strong> — lo que ofreces (3-4 cajas de iconos)</li>
+<li><strong>Seccion Sobre Nosotros</strong> — breve introduccion con imagen</li>
+<li><strong>Prueba Social</strong> — testimonios, logotipos de clientes o estadisticas</li>
+<li><strong>Llamada a la Accion (CTA)</strong> — impulso final para contactar/registrarse</li>
+<li><strong>Footer</strong> — informacion de contacto, enlaces, copyright</li>
+</ol>
+<p>Vamos a construir cada una.</p>
+<hr>
+<h2>Antes de Empezar</h2>
+<ol>
+<li>Abre tu pagina &quot;Inicio&quot; en Elementor</li>
+<li>Si tiene contenido anterior, selecciona todo y elimina (o comienza con una pagina nueva)</li>
+<li>Asegurate de que tus <strong>colores y fuentes globales</strong> estan configurados (Leccion 15)</li>
+<li>En los <strong>Ajustes (icono de engranaje)</strong> de la parte inferior izquierda, establece:<ul>
+<li><strong>Page Layout</strong>: Elementor Full Width (sin barra lateral, sin header/footer del theme)</li>
+<li>O <strong>Elementor Canvas</strong> (completamente en blanco — sin header/footer en absoluto)</li>
+<li>Por ahora, usa <strong>Elementor Full Width</strong></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>Seccion 1: Seccion Hero</h2>
+<p>La seccion hero es lo primero que ven los visitantes. Haz que cuente.</p>
+<h3>Construyela:</h3>
+<ol>
+<li><p><strong>Anade una Seccion</strong> — una sola columna</p>
+</li>
+<li><p><strong>Ajustes de la Seccion:</strong></p>
+<ul>
+<li>Pestana Content: Height → Min Height → <code>600px</code>, Vertical Align → Middle</li>
+<li>Pestana Style: Background → Classic → sube una imagen relevante (o usa un color solido)</li>
+<li>Pestana Style: Background Overlay → Color: negro (#000000), Opacity: 0.5 (esto oscurece la imagen para que el texto sea legible)</li>
+<li>Pestana Advanced: Padding → 80px arriba y abajo</li>
+</ul>
+</li>
+<li><p><strong>Anade un widget Heading:</strong></p>
+<ul>
+<li>Contenido: &quot;Construye el Sitio Web de Tus Suenos&quot;</li>
+<li>HTML Tag: H1</li>
+<li>Alineacion: Centro</li>
+<li>Estilo: Color → Blanco, Tamano → 52px, Peso → Bold</li>
+</ul>
+</li>
+<li><p><strong>Anade un widget Text Editor:</strong></p>
+<ul>
+<li>Contenido: &quot;Disenamos y desarrollamos sitios web impresionantes que convierten visitantes en clientes.&quot;</li>
+<li>Estilo: Color → Blanco (#f0f0f0), Tamano → 20px, Alineacion → Centro</li>
+<li>Advanced: Max Width → 700px (establece en Advanced → Layout → Width → Max Width), Align Self → Center</li>
+</ul>
+</li>
+<li><p><strong>Anade un widget Button:</strong></p>
+<ul>
+<li>Contenido: Text → &quot;Comenzar&quot;, Link → <code>/contact</code>, Alineacion → Centro</li>
+<li>Estilo: Background → tu color de acento, Typography → 16px SemiBold, Padding → 15px arriba/abajo 40px izquierda/derecha, Border Radius → 30px</li>
+<li>Estilo (Hover): Background → un tono ligeramente mas oscuro</li>
+</ul>
+</li>
+<li><p><strong>Anade un Spacer</strong> entre el encabezado y el texto (20px) y entre el texto y el boton (30px) si es necesario.</p>
+</li>
+</ol>
+<hr>
+<h2>Seccion 2: Servicios/Caracteristicas</h2>
+<p>Muestra lo que ofreces en una cuadricula limpia.</p>
+<h3>Construyela:</h3>
+<ol>
+<li><p><strong>Anade una Seccion</strong> — 3 columnas (ancho igual)</p>
+</li>
+<li><p><strong>Ajustes de la Seccion:</strong></p>
+<ul>
+<li>Style: Background → color claro (#f8f9fa)</li>
+<li>Advanced: Padding → 80px arriba y abajo</li>
+</ul>
+</li>
+<li><p><strong>Encima de las columnas, anade un encabezado centrado:</strong></p>
+<ul>
+<li>Primero, anade una seccion con 1 columna encima de esta</li>
+<li>O anade un encabezado en la primera columna, abarcando el ancho completo</li>
+<li>Mejor enfoque: Crea primero una seccion de 1 columna para el encabezado, luego una seccion de 3 columnas debajo</li>
+</ul>
+</li>
+</ol>
+<p><strong>Seccion del Encabezado (1 columna):</strong></p>
+<ul>
+<li>Heading: &quot;Nuestros Servicios&quot;</li>
+<li>Tag: H2, alineado al centro</li>
+<li>Estilo: Tu color primary, 36px</li>
+<li>Debajo, anade un Text Editor: &quot;Lo que podemos hacer por ti&quot;, alineado al centro, texto gris</li>
+<li>Anade un widget Divider: Width → 10%, Alignment → Center (crea una pequena linea de acento)</li>
+</ul>
+<p><strong>Seccion de Servicios (3 columnas):</strong>
+En cada columna, anade un widget <strong>Icon Box</strong>:</p>
+<p><strong>Columna 1:</strong></p>
+<ul>
+<li>Icono: Elige un icono de diseno web (ej., <code>fa-laptop-code</code>)</li>
+<li>Titulo: &quot;Diseno Web&quot;</li>
+<li>Descripcion: &quot;Sitios web bonitos y responsivos que lucen genial en cualquier dispositivo.&quot;</li>
+<li>Estilo: Icon Color → tu color de acento, Alineacion → Centro</li>
+</ul>
+<p><strong>Columna 2:</strong></p>
+<ul>
+<li>Icono: <code>fa-search</code> o similar</li>
+<li>Titulo: &quot;Optimizacion SEO&quot;</li>
+<li>Descripcion: &quot;Posicionate mas alto en Google y genera trafico organico hacia tu sitio.&quot;</li>
+<li>Estilo: Igual que la Columna 1</li>
+</ul>
+<p><strong>Columna 3:</strong></p>
+<ul>
+<li>Icono: <code>fa-shopping-cart</code> o similar</li>
+<li>Titulo: &quot;E-Commerce&quot;</li>
+<li>Descripcion: &quot;Tiendas online completas que hacen que vender sea facil.&quot;</li>
+<li>Estilo: Igual que la Columna 1</li>
+</ul>
+<hr>
+<h2>Seccion 3: Seccion Sobre Nosotros</h2>
+<p>Un diseno de imagen + texto que presenta tu empresa.</p>
+<h3>Construyela:</h3>
+<ol>
+<li><strong>Anade una Seccion</strong> — 2 columnas (50/50)</li>
+<li><strong>Ajustes de la Seccion:</strong><ul>
+<li>Style: Background → Blanco</li>
+<li>Advanced: Padding → 80px arriba y abajo</li>
+</ul>
+</li>
+</ol>
+<p><strong>Columna 1 (Imagen):</strong></p>
+<ul>
+<li>Anade un widget <strong>Image</strong></li>
+<li>Sube una foto del equipo o de la oficina</li>
+<li>Estilo: Border Radius → 10px (esquinas ligeramente redondeadas)</li>
+</ul>
+<p><strong>Columna 2 (Contenido):</strong></p>
+<ul>
+<li>Anade un <strong>Heading</strong>: &quot;Sobre Nuestra Empresa&quot;, H2, alineado a la izquierda</li>
+<li>Anade un <strong>Divider</strong>: Width → 15%, color → color de acento, Weight → 3px</li>
+<li>Anade un <strong>Text Editor</strong>: Un par de parrafos sobre la empresa</li>
+<li>Anade un <strong>Button</strong>: &quot;Saber Mas&quot; → enlaza a <code>/about</code>, tu color secundario</li>
+</ul>
+<hr>
+<h2>Seccion 4: Prueba Social (Testimonios)</h2>
+<p>Genera confianza con testimonios de clientes.</p>
+<h3>Construyela:</h3>
+<ol>
+<li><strong>Anade una Seccion</strong> — 3 columnas</li>
+<li><strong>Ajustes de la Seccion:</strong><ul>
+<li>Style: Background → tu color primary/oscuro</li>
+<li>Advanced: Padding → 80px arriba y abajo</li>
+</ul>
+</li>
+</ol>
+<p><strong>Anade una seccion de encabezado encima (1 columna):</strong></p>
+<ul>
+<li>Heading: &quot;Lo Que Dicen Nuestros Clientes&quot;, H2, Centro, texto blanco</li>
+</ul>
+<p><strong>En cada columna, anade un widget Testimonial:</strong></p>
+<p><strong>Testimonio 1:</strong></p>
+<ul>
+<li>Contenido: &quot;Transformaron nuestra presencia online. Nuestras ventas aumentaron un 40% en el primer mes.&quot;</li>
+<li>Nombre: &quot;Sara Garcia&quot;</li>
+<li>Titulo: &quot;CEO, TechStartup S.L.&quot;</li>
+<li>Imagen: Sube una foto de perfil de ejemplo</li>
+<li>Estilo: Text Color → Blanco/Gris claro, Name Color → Blanco</li>
+</ul>
+<p><strong>Testimonios 2 y 3:</strong> Estructura similar con diferente contenido.</p>
+<p><strong>Alternativa (sin el widget Testimonial):</strong>
+Usa un Icon Box o Text Editor con un icono de comillas para un aspecto personalizado.</p>
+<hr>
+<h2>Seccion 5: Seccion de Estadisticas/Contador (Opcional)</h2>
+<p>Los numeros impresionantes generan credibilidad.</p>
+<h3>Construyela:</h3>
+<ol>
+<li><strong>Anade una Seccion</strong> — 4 columnas</li>
+<li><strong>Ajustes de la Seccion:</strong><ul>
+<li>Style: Background → color de acento (o degradado)</li>
+<li>Advanced: Padding → 60px arriba y abajo</li>
+</ul>
+</li>
+</ol>
+<p>En cada columna, anade un widget <strong>Counter</strong>:</p>
+<ul>
+<li>Columna 1: Number → 250, Title → &quot;Proyectos Completados&quot;, Color → Blanco</li>
+<li>Columna 2: Number → 50, Title → &quot;Clientes Satisfechos&quot;, Color → Blanco</li>
+<li>Columna 3: Number → 10, Title → &quot;Anos de Experiencia&quot;, Color → Blanco</li>
+<li>Columna 4: Number → 15, Title → &quot;Miembros del Equipo&quot;, Color → Blanco</li>
+</ul>
+<hr>
+<h2>Seccion 6: Llamada a la Accion (CTA)</h2>
+<p>El impulso final para que los visitantes actuen.</p>
+<h3>Construyela:</h3>
+<ol>
+<li><p><strong>Anade una Seccion</strong> — 1 columna</p>
+</li>
+<li><p><strong>Ajustes de la Seccion:</strong></p>
+<ul>
+<li>Content: Height → Min Height → 300px, Vertical Align → Middle</li>
+<li>Style: Background → tu color primary o un degradado sutil</li>
+<li>Advanced: Padding → 60px arriba y abajo</li>
+</ul>
+</li>
+<li><p><strong>Anade un Heading</strong>: &quot;¿Listo para Comenzar Tu Proyecto?&quot;</p>
+<ul>
+<li>Alineado al centro, Blanco, H2, 36px</li>
+</ul>
+</li>
+<li><p><strong>Anade un Text Editor</strong>: &quot;Hablemos sobre tus ideas y creemos algo increible juntos.&quot;</p>
+<ul>
+<li>Centro, texto gris claro</li>
+</ul>
+</li>
+<li><p><strong>Anade un Button</strong>: &quot;Contactanos&quot; → <code>/contact</code></p>
+<ul>
+<li>Fondo blanco, tu color primary para el texto</li>
+<li>O: fondo transparente con borde blanco (boton de contorno/fantasma)</li>
+<li>Border Radius → 30px</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>Toques Finales</h2>
+<h3>Revisar el Espaciado</h3>
+<ul>
+<li>Desplazate por toda la pagina</li>
+<li>Asegurate de que el espaciado entre secciones sea consistente (80px de padding es un buen estandar)</li>
+<li>Verifica que ninguna seccion se sienta demasiado apretada o demasiado espaciada</li>
+</ul>
+<h3>Revisar la Alineacion</h3>
+<ul>
+<li>Los titulares deben tener un tamano consistente</li>
+<li>El texto del cuerpo debe ser del mismo tamano en toda la pagina</li>
+<li>Los colores deben coincidir con tu paleta global</li>
+</ul>
+<h3>Guardar y Previsualizar</h3>
+<ol>
+<li>Pulsa <strong>Ctrl + S</strong> para guardar</li>
+<li>Haz clic en el <strong>icono del ojo</strong> (Preview Changes) en la parte inferior del panel</li>
+<li>O clic derecho → Previsualizar en nueva pestana</li>
+</ol>
+<hr>
+<h2>Ejercicios</h2>
+<ol>
+<li><p><strong>Construye la pagina de inicio completa</strong>: Sigue las 6 secciones anteriores paso a paso.</p>
+</li>
+<li><p><strong>Personaliza el contenido</strong>: Reemplaza el texto de ejemplo con contenido relevante para un negocio real o ficticio.</p>
+</li>
+<li><p><strong>Experimenta con los fondos</strong>: Prueba diferentes fondos de seccion — colores solidos, degradados e imagenes con superposiciones.</p>
+</li>
+<li><p><strong>Anade efectos hover</strong>: En los botones y cajas de iconos, configura cambios de color al pasar el raton.</p>
+</li>
+<li><p><strong>Comprueba la version responsive</strong>: Haz clic en el boton de modo responsive y comprueba como se ve tu pagina de inicio en tablet y movil. Corrige todo lo que no se vea bien (cubriremos el diseno responsive en detalle en la Leccion 20).</p>
+</li>
+<li><p><strong>Guardar como Template</strong>: Haz clic en el asa de la seccion → Save as Template en tu mejor seccion. Puedes reutilizarla en otras paginas mas adelante.</p>
+</li>
+</ol>
+<hr>
+<h2>Puntos Clave</h2>
+<ul>
+<li>Una pagina de inicio profesional tiene una estructura clara: Hero → Servicios → Sobre Nosotros → Prueba Social → CTA</li>
+<li><strong>Comienza desde arriba y trabaja hacia abajo</strong> — construye seccion por seccion</li>
+<li>Usa un <strong>espaciado consistente</strong> (80px de padding en las secciones es un buen valor predeterminado)</li>
+<li>Las <strong>superposiciones de fondo</strong> hacen el texto legible sobre imagenes (superposicion oscura + texto blanco)</li>
+<li>Usa <strong>colores globales</strong> en todas partes — haz clic en el icono del globo en lugar de elegir colores manualmente</li>
+<li>El <strong>widget Counter</strong> es excelente para estadisticas impresionantes</li>
+<li>Siempre <strong>previsualiza tu pagina</strong> despues de construirla — comprueba el espaciado, la alineacion y la legibilidad</li>
+<li><strong>Guarda secciones como templates</strong> para reutilizarlas en otras paginas</li>
+</ul>
+<hr>
+<p><strong>Siguiente Leccion:</strong> <a href="lesson-17.html">Leccion 17 - Construir una Pagina Sobre Nosotros con Diseno Responsive</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-15.html" class="prev">&larr; 15. Estilos Globales</a>
+      <a href="lesson-17.html" class="next">17. Página Acerca de &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

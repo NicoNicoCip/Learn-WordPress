@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lección 03: El Recorrido por el Dashboard de WordPress — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-03.html">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-03.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li class="active"><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lección 03: El Recorrido por el Dashboard de WordPress</h1>
+<h2>Objetivos</h2>
+<ul>
+<li>Navegar por el panel de administración de WordPress con confianza</li>
+<li>Entender qué hace cada sección del dashboard</li>
+<li>Personalizar el dashboard para mostrar información útil</li>
+<li>Saber dónde encontrar todo lo que necesitas</li>
+</ul>
+<hr>
+<h2>Acceder al Dashboard</h2>
+<ol>
+<li>Inicia tu sitio en Local WP</li>
+<li>Haz clic en <strong>&quot;WP Admin&quot;</strong> o navega a <code>http://learning-wordpress.local/wp-admin/</code></li>
+<li>Inicia sesión con tus credenciales (<code>admin</code> / <code>admin</code>)</li>
+</ol>
+<p>Lo primero que ves después de iniciar sesión es la <strong>pantalla principal del Dashboard</strong>.</p>
+<hr>
+<h2>Pantalla Principal del Dashboard</h2>
+<p>La pantalla principal del Dashboard muestra una colección de <strong>widgets</strong> (paneles de información):</p>
+<h3>Panel de Bienvenida</h3>
+<ul>
+<li>Accesos rápidos para personalizar tu sitio, escribir una entrada, gestionar widgets, etc.</li>
+<li>Puedes ocultarlo haciendo clic en &quot;Dismiss&quot; en la esquina superior derecha del panel</li>
+</ul>
+<h3>De un Vistazo</h3>
+<ul>
+<li>Muestra cuántas entradas, páginas y comentarios tiene tu sitio</li>
+<li>Muestra tu tema actual y la versión de WordPress</li>
+<li>Una instantánea rápida del contenido de tu sitio</li>
+</ul>
+<h3>Actividad</h3>
+<ul>
+<li>Muestra las entradas publicadas recientemente</li>
+<li>Muestra los comentarios recientes pendientes de moderación</li>
+</ul>
+<h3>Borrador Rápido</h3>
+<ul>
+<li>Un mini editor para apuntar rápidamente una idea de entrada (se guarda como borrador)</li>
+</ul>
+<h3>Eventos y Noticias de WordPress</h3>
+<ul>
+<li>Próximos eventos de la comunidad WordPress</li>
+<li>Últimas noticias de WordPress.org</li>
+</ul>
+<h3>Personalizar el Dashboard</h3>
+<ul>
+<li>Haz clic en <strong>&quot;Screen Options&quot;</strong> (esquina superior derecha) para mostrar/ocultar widgets</li>
+<li>Arrastra y suelta los widgets para reorganizarlos</li>
+<li>La mayoría de profesionales ocultan todo excepto &quot;De un Vistazo&quot; y &quot;Actividad&quot;</li>
+</ul>
+<hr>
+<h2>La Barra Lateral de Administración - Sección por Sección</h2>
+<p>La barra lateral izquierda es tu navegación principal. Repasemos cada elemento:</p>
+<h3>1. Dashboard</h3>
+<ul>
+<li><strong>Home</strong> — la pantalla principal del dashboard (lo que acabamos de ver)</li>
+<li><strong>Updates</strong> — muestra las actualizaciones disponibles para el núcleo de WordPress, temas y plugins</li>
+</ul>
+<h3>2. Posts</h3>
+<p>Donde gestionas las <strong>entradas del blog</strong> (contenido cronológico, basado en fechas).</p>
+<ul>
+<li><strong>All Posts</strong> — lista de todas las entradas, con opciones para editar, eliminar o editar en bloque</li>
+<li><strong>Add New Post</strong> — crear una nueva entrada de blog</li>
+<li><strong>Categories</strong> — organizar las entradas en categorías (ej., &quot;Noticias&quot;, &quot;Tutoriales&quot;)</li>
+<li><strong>Tags</strong> — añadir etiquetas de palabras clave a las entradas para una mayor organización</li>
+</ul>
+<h3>3. Media</h3>
+<p>La <strong>Biblioteca de Medios</strong> — todos los archivos subidos (imágenes, PDFs, vídeos, audio).</p>
+<ul>
+<li><strong>Library</strong> — explorar todos los medios subidos en vista de cuadrícula o lista</li>
+<li><strong>Add New Media File</strong> — subir nuevos archivos</li>
+<li>También puedes subir medios directamente al editar una entrada o página</li>
+</ul>
+<h3>4. Pages</h3>
+<p>Donde gestionas las <strong>páginas estáticas</strong> (Acerca de, Contacto, Servicios, etc.).</p>
+<ul>
+<li><strong>All Pages</strong> — lista de todas las páginas</li>
+<li><strong>Add New Page</strong> — crear una nueva página</li>
+<li>Las páginas no tienen categorías ni etiquetas — son contenido independiente</li>
+</ul>
+<h3>5. Comments</h3>
+<p>Gestiona los comentarios dejados en las entradas del blog.</p>
+<ul>
+<li>Aprobar, responder, editar, marcar como spam o eliminar comentarios</li>
+<li>Configura las reglas de moderación de comentarios en Settings → Discussion</li>
+</ul>
+<h3>6. Appearance</h3>
+<p>Controla el <strong>aspecto</strong> de tu sitio.</p>
+<ul>
+<li><strong>Themes</strong> — instalar, activar y gestionar temas</li>
+<li><strong>Customize</strong> — el Personalizador de WordPress (vista previa en vivo de los cambios)</li>
+<li><strong>Widgets</strong> — gestionar bloques de contenido en barras laterales y pies de página</li>
+<li><strong>Menus</strong> — crear y gestionar menús de navegación</li>
+<li><strong>Theme File Editor</strong> — editar el código del tema directamente (¡usar con precaución!)</li>
+</ul>
+<h3>7. Plugins</h3>
+<p>Gestiona la <strong>funcionalidad</strong> del sitio.</p>
+<ul>
+<li><strong>Installed Plugins</strong> — ver todos los plugins, activarlos/desactivarlos</li>
+<li><strong>Add New Plugin</strong> — buscar e instalar plugins del repositorio de WordPress</li>
+<li><strong>Plugin File Editor</strong> — editar el código de los plugins directamente (no uses esto a menos que sepas lo que haces)</li>
+</ul>
+<h3>8. Users</h3>
+<p>Gestiona las <strong>cuentas de usuario</strong> y los roles.</p>
+<ul>
+<li><strong>All Users</strong> — lista de todos los usuarios del sitio</li>
+<li><strong>Add New User</strong> — crear una nueva cuenta de usuario</li>
+<li><strong>Profile</strong> — editar tu propio perfil (nombre para mostrar, email, contraseña, etc.)</li>
+</ul>
+<h3>9. Tools</h3>
+<p>Funciones de utilidad.</p>
+<ul>
+<li><strong>Available Tools</strong> — enlaces a press-this y otras herramientas</li>
+<li><strong>Import</strong> — importar contenido desde otras plataformas (Blogger, Tumblr, etc.)</li>
+<li><strong>Export</strong> — exportar tu contenido de WordPress como XML</li>
+<li><strong>Site Health</strong> — información de diagnóstico sobre tu sitio</li>
+</ul>
+<h3>10. Settings</h3>
+<p>Configura el <strong>comportamiento</strong> de tu sitio.</p>
+<ul>
+<li><strong>General</strong> — título del sitio, descripción, URL, zona horaria, formato de fecha</li>
+<li><strong>Writing</strong> — categoría predeterminada de entradas, formato de entrada</li>
+<li><strong>Reading</strong> — qué muestra tu página de inicio, cuántas entradas mostrar</li>
+<li><strong>Discussion</strong> — configuración de comentarios y reglas de moderación</li>
+<li><strong>Media</strong> — tamaños de imagen predeterminados</li>
+<li><strong>Permalinks</strong> — estructura de URLs para tus entradas y páginas</li>
+<li><strong>Privacy</strong> — configuración de la página de política de privacidad</li>
+</ul>
+<hr>
+<h2>La Admin Bar (Barra Superior)</h2>
+<p>La barra oscura en la parte superior de cada página (también visible en el front-end cuando estás conectado):</p>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Qué Hace</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Logo de WordPress</strong></td>
+<td>Enlaza a WordPress.org, documentación y foros</td>
+</tr>
+<tr>
+<td><strong>Nombre del sitio</strong></td>
+<td>Pasa el ratón para obtener un enlace al front-end</td>
+</tr>
+<tr>
+<td><strong>Updates</strong></td>
+<td>Muestra si hay actualizaciones disponibles (insignia con número)</td>
+</tr>
+<tr>
+<td><strong>Comments</strong></td>
+<td>Muestra los comentarios pendientes (insignia con número)</td>
+</tr>
+<tr>
+<td><strong>+ New</strong></td>
+<td>Crear rápidamente una nueva entrada, página, medio o usuario</td>
+</tr>
+<tr>
+<td><strong>Tu nombre (lado derecho)</strong></td>
+<td>Editar perfil, cerrar sesión</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Screen Options y Ayuda</h2>
+<p>Dos funciones que a menudo se pasan por alto en la <strong>esquina superior derecha</strong> de cada página de administración:</p>
+<h3>Screen Options</h3>
+<ul>
+<li>Haz clic para mostrar/ocultar columnas y elementos en la página actual</li>
+<li>Las opciones cambian dependiendo de la página en la que estés</li>
+<li>Ejemplo: En la lista de Posts, puedes mostrar/ocultar columnas como Author, Categories, Tags, Date</li>
+</ul>
+<h3>Help</h3>
+<ul>
+<li>Haz clic para obtener ayuda contextual sobre la página actual</li>
+<li>Útil cuando olvidas lo que hace una configuración específica</li>
+</ul>
+<hr>
+<h2>Atajos de Teclado</h2>
+<p>WordPress tiene algunos atajos de teclado útiles:</p>
+<table>
+<thead>
+<tr>
+<th>Atajo</th>
+<th>Acción</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Alt + Shift + N</code></td>
+<td>Nueva entrada (en el editor)</td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>Abrir el insertador de bloques (en el editor Gutenberg)</td>
+</tr>
+</tbody></table>
+<p>Para la moderación de comentarios, activa los atajos en <strong>Users → Profile → Keyboard Shortcuts</strong>.</p>
+<hr>
+<h2>Ejercicios</h2>
+<ol>
+<li><p><strong>Explora cada elemento de la barra lateral</strong>: Haz clic en cada sección de la barra lateral izquierda. No cambies nada — solo mira lo que hay disponible.</p>
+</li>
+<li><p><strong>Personaliza el dashboard</strong>: Haz clic en &quot;Screen Options&quot; en la pantalla principal del Dashboard y oculta todo excepto &quot;De un Vistazo&quot; y &quot;Actividad&quot;.</p>
+</li>
+<li><p><strong>Revisa las páginas de Settings</strong>: Visita cada página dentro de Settings (General, Writing, Reading, Discussion, Media, Permalinks, Privacy) y lee las opciones. Anota lo que controla cada una.</p>
+</li>
+<li><p><strong>Visita tu sitio desde la barra de administración</strong>: Pasa el ratón sobre el nombre de tu sitio en la barra superior y haz clic en &quot;Visit Site&quot;. Luego haz clic de nuevo en el nombre de tu sitio para volver al dashboard.</p>
+</li>
+<li><p><strong>Comprueba Site Health</strong>: Ve a <strong>Tools → Site Health</strong> y mira lo que reporta. Será más útil más adelante, pero familiarízate con dónde está.</p>
+</li>
+</ol>
+<hr>
+<h2>Puntos Clave</h2>
+<ul>
+<li>La <strong>barra lateral izquierda</strong> es tu navegación principal — contiene todo</li>
+<li><strong>Posts</strong> son para contenido del blog, <strong>Pages</strong> son para contenido estático</li>
+<li><strong>Appearance</strong> controla el aspecto de tu sitio (temas, menús, widgets)</li>
+<li><strong>Plugins</strong> añaden funcionalidad</li>
+<li><strong>Settings</strong> configura el comportamiento (especialmente Permalinks y Reading)</li>
+<li><strong>Screen Options</strong> (esquina superior derecha) te permite personalizar cada página de administración</li>
+<li>La <strong>admin bar</strong> proporciona acceso rápido a acciones comunes</li>
+<li>Puedes ocultar el panel de bienvenida y reorganizar los widgets del dashboard</li>
+</ul>
+<hr>
+<p><strong>Siguiente Lección:</strong> <a href="lesson-04.html">Lección 04 - Entradas vs Páginas</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-02.html" class="prev">&larr; 02. Configuración Local</a>
+      <a href="lesson-04.html" class="next">04. Entradas vs Páginas &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

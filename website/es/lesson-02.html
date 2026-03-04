@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lección 02: Configuración de Local WP + Creación de Tu Primer Sitio — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-02.html">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-02.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li class="active"><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lección 02: Configuración de Local WP + Creación de Tu Primer Sitio</h1>
+<h2>Objetivos</h2>
+<ul>
+<li>Instalar Local WP en tu ordenador</li>
+<li>Crear tu primer sitio WordPress local</li>
+<li>Iniciar sesión en wp-admin por primera vez</li>
+<li>Entender la interfaz de Local WP</li>
+</ul>
+<hr>
+<h2>¿Qué es Local WP?</h2>
+<p><strong>Local</strong> (anteriormente Local by Flywheel) es una aplicación de escritorio gratuita que crea un entorno de desarrollo WordPress completo en tu ordenador. Incluye todo lo que WordPress necesita:</p>
+<ul>
+<li>Servidor web (Apache o Nginx)</li>
+<li>PHP (el lenguaje de programación que usa WordPress)</li>
+<li>MySQL (la base de datos)</li>
+</ul>
+<p>No requiere configuración complicada — lo gestiona todo con unos pocos clics.</p>
+<h3>¿Por qué Local WP en lugar de XAMPP/WAMP?</h3>
+<ul>
+<li><strong>Creación de sitios con un clic</strong> — sin configuración manual</li>
+<li><strong>Diseñado específicamente para WordPress</strong> — experiencia optimizada</li>
+<li><strong>Fácil gestión de múltiples sitios</strong> — cada proyecto tiene su propio entorno</li>
+<li><strong>Live Links</strong> — comparte tu sitio local temporalmente con clientes (integrado)</li>
+<li><strong>Gratuito</strong> — sin coste para las funciones que necesitas</li>
+</ul>
+<hr>
+<h2>Paso 1: Descargar e Instalar Local WP</h2>
+<ol>
+<li>Ve a <strong><a href="https://localwp.com/">https://localwp.com/</a></strong></li>
+<li>Haz clic en <strong>&quot;Download for Free&quot;</strong></li>
+<li>Selecciona tu plataforma (Windows)</li>
+<li>Rellena el formulario (puedes usar cualquier email) y descarga</li>
+<li>Ejecuta el instalador:<ul>
+<li>Acepta el acuerdo de licencia</li>
+<li>Elige la ubicación de instalación (la predeterminada está bien)</li>
+<li>Espera a que se complete la instalación</li>
+</ul>
+</li>
+<li>Abre Local WP</li>
+</ol>
+<h3>Primer Inicio</h3>
+<p>Cuando abras Local por primera vez, puede que:</p>
+<ul>
+<li>Te pida crear una cuenta gratuita de Local (opcional — puedes omitirlo)</li>
+<li>Solicite permisos de firewall — <strong>permítelos</strong> (necesita ejecutar un servidor web local)</li>
+<li>Muestre una pantalla de bienvenida — haz clic para continuar</li>
+</ul>
+<hr>
+<h2>Paso 2: Crear Tu Primer Sitio WordPress</h2>
+<ol>
+<li><p>Haz clic en el botón grande <strong>&quot;+ Create a new site&quot;</strong> (o el icono + en la esquina inferior izquierda)</p>
+</li>
+<li><p>Selecciona <strong>&quot;Create a new site&quot;</strong> (no &quot;Create from Blueprint&quot;)</p>
+</li>
+<li><p>Introduce el nombre de tu sitio: <strong>&quot;Learning WordPress&quot;</strong></p>
+<ul>
+<li>Local generará automáticamente un dominio como <code>learning-wordpress.local</code></li>
+<li>Haz clic en <strong>&quot;Continue&quot;</strong></li>
+</ul>
+</li>
+<li><p>Elige tu entorno:</p>
+<ul>
+<li>Selecciona <strong>&quot;Preferred&quot;</strong> (esto usa las versiones recomendadas de PHP y MySQL)</li>
+<li>Haz clic en <strong>&quot;Continue&quot;</strong></li>
+</ul>
+</li>
+<li><p>Configura las credenciales de WordPress:</p>
+<ul>
+<li><strong>WordPress Username:</strong> <code>admin</code></li>
+<li><strong>WordPress Password:</strong> <code>admin</code> (esto es solo local, así que una contraseña simple está bien)</li>
+<li><strong>WordPress Email:</strong> tu email (o cualquier email — es local)</li>
+<li>Haz clic en <strong>&quot;Add Site&quot;</strong></li>
+</ul>
+</li>
+<li><p>Espera a que Local configure todo (tarda 1-2 minutos)</p>
+</li>
+</ol>
+<hr>
+<h2>Paso 3: Explorar la Interfaz de Local WP</h2>
+<p>Una vez creado tu sitio, verás el <strong>panel del sitio</strong> en Local:</p>
+<h3>Sección Superior</h3>
+<ul>
+<li><strong>Nombre del sitio</strong> y URL local (ej., <code>learning-wordpress.local</code>)</li>
+<li>Botón <strong>Stop/Start</strong> — inicia o detiene el servidor local para este sitio</li>
+<li><strong>Indicador de estado del sitio</strong> — verde significa que está en funcionamiento</li>
+</ul>
+<h3>Pestaña Overview</h3>
+<ul>
+<li><strong>Site Domain</strong> — la URL para acceder a tu sitio</li>
+<li><strong>SSL</strong> — puedes habilitar HTTPS (haz clic en &quot;Trust&quot; para añadir el certificado)</li>
+<li><strong>Web Server</strong> — Apache o Nginx</li>
+<li><strong>PHP Version</strong> — la versión de PHP en uso</li>
+<li><strong>Database</strong> — versión de MySQL o MariaDB</li>
+</ul>
+<h3>Botones Importantes</h3>
+<ul>
+<li><strong>&quot;Open Site&quot;</strong> — abre el front-end de tu sitio en el navegador (lo que ven los visitantes)</li>
+<li><strong>&quot;WP Admin&quot;</strong> — abre el panel de administración de WordPress (donde gestionas todo)</li>
+<li><strong>&quot;Open Site Folder&quot;</strong> — abre la carpeta del sistema de archivos donde se almacenan los archivos de WordPress</li>
+</ul>
+<h3>Otras Pestañas</h3>
+<ul>
+<li><strong>Database</strong> — acceso a Adminer (herramienta de gestión de bases de datos)</li>
+<li><strong>Tools</strong> — Mailhog (captura los emails enviados por WordPress localmente)</li>
+</ul>
+<hr>
+<h2>Paso 4: Iniciar Sesión en WordPress por Primera Vez</h2>
+<ol>
+<li>Asegúrate de que tu sitio esté <strong>en funcionamiento</strong> (estado verde en Local)</li>
+<li>Haz clic en el botón <strong>&quot;WP Admin&quot;</strong> en Local</li>
+<li>Tu navegador abrirá la página de inicio de sesión de WordPress</li>
+<li>Introduce tus credenciales:<ul>
+<li>Username: <code>admin</code></li>
+<li>Password: <code>admin</code></li>
+</ul>
+</li>
+<li>Haz clic en <strong>&quot;Log In&quot;</strong></li>
+</ol>
+<p><strong>¡Enhorabuena!</strong> Ya estás en el panel de administración de WordPress.</p>
+<h3>Guarda Estas URLs en Marcadores</h3>
+<ul>
+<li><strong>Tu sitio:</strong> <code>http://learning-wordpress.local/</code></li>
+<li><strong>Panel de administración:</strong> <code>http://learning-wordpress.local/wp-admin/</code></li>
+</ul>
+<hr>
+<h2>Paso 5: Recorrido Rápido de lo que Ves</h2>
+<p>No te preocupes por entenderlo todo ahora — cubriremos cada parte en detalle. Por ahora, simplemente observa:</p>
+<h3>La Barra Lateral Izquierda (Menú de Administración)</h3>
+<p>Es tu navegación principal. Verás:</p>
+<ul>
+<li><strong>Dashboard</strong> — pantalla de resumen y bienvenida</li>
+<li><strong>Posts</strong> — entradas del blog</li>
+<li><strong>Media</strong> — imágenes y archivos</li>
+<li><strong>Pages</strong> — páginas estáticas</li>
+<li><strong>Comments</strong> — comentarios del blog</li>
+<li><strong>Appearance</strong> — temas, menús, widgets</li>
+<li><strong>Plugins</strong> — plugins instalados</li>
+<li><strong>Users</strong> — cuentas de usuario</li>
+<li><strong>Tools</strong> — importar/exportar</li>
+<li><strong>Settings</strong> — configuración del sitio</li>
+</ul>
+<h3>La Barra Superior (Admin Bar)</h3>
+<ul>
+<li>Enlaces para visitar tu sitio</li>
+<li>Accesos rápidos para crear contenido nuevo</li>
+<li>Tu perfil de usuario</li>
+</ul>
+<hr>
+<h2>Paso 6: Visitar Tu Sitio</h2>
+<ol>
+<li>En wp-admin, pasa el ratón sobre el nombre de tu sitio en la esquina superior izquierda de la barra de administración</li>
+<li>Haz clic en <strong>&quot;Visit Site&quot;</strong></li>
+<li>Verás el sitio WordPress predeterminado con un tema por defecto</li>
+</ol>
+<p>Todavía no tendrá mucho aspecto — ¡es normal! Lo transformaremos en un sitio profesional a lo largo de este curso.</p>
+<hr>
+<h2>Gestión de Tu Sitio en Local WP</h2>
+<h3>Detener e Iniciar</h3>
+<ul>
+<li>No necesitas mantener tu sitio en funcionamiento todo el tiempo</li>
+<li>Haz clic en <strong>&quot;Stop Site&quot;</strong> cuando termines de trabajar</li>
+<li>Haz clic en <strong>&quot;Start Site&quot;</strong> cuando quieras volver a trabajar</li>
+<li>Tu contenido y configuración se conservan entre sesiones</li>
+</ul>
+<h3>Crear Sitios Adicionales</h3>
+<ul>
+<li>Puedes crear tantos sitios como quieras</li>
+<li>Cada uno tiene su propia instalación de WordPress y base de datos</li>
+<li>Útil para proyectos de práctica más adelante en este curso</li>
+</ul>
+<h3>¿Dónde Están los Archivos?</h3>
+<p>Haz clic en <strong>&quot;Open Site Folder&quot;</strong> en Local para ver:</p>
+<pre><code>your-site/
+├── app/          ← La instalación de WordPress está aquí
+│   └── public/   ← Los archivos reales de WordPress
+│       ├── wp-admin/       ← Archivos del panel de administración (no editar)
+│       ├── wp-content/     ← TU contenido: temas, plugins, subidas
+│       │   ├── themes/     ← Archivos de temas
+│       │   ├── plugins/    ← Archivos de plugins
+│       │   └── uploads/    ← Medios que subes
+│       ├── wp-includes/    ← Archivos del núcleo de WordPress (no editar)
+│       └── wp-config.php   ← Configuración de conexión a la base de datos
+├── conf/         ← Configuración del servidor
+└── logs/         ← Registros de errores
+</code></pre>
+<p><strong>Importante:</strong> La única carpeta en la que trabajarás es <code>wp-content/</code>. Nunca edites archivos en <code>wp-admin/</code> o <code>wp-includes/</code>.</p>
+<hr>
+<h2>Solución de Problemas</h2>
+<h3>&quot;El sitio no arranca&quot;</h3>
+<ul>
+<li>Intenta reiniciar Local WP</li>
+<li>Comprueba si otro programa está usando el puerto 80 (como Skype o IIS)</li>
+<li>En Local, ve a Preferences e intenta cambiar el modo de router</li>
+</ul>
+<h3>&quot;No puedo acceder al sitio en el navegador&quot;</h3>
+<ul>
+<li>Asegúrate de que el sitio esté en funcionamiento (indicador verde en Local)</li>
+<li>Intenta limpiar tu DNS: abre el Símbolo del sistema y ejecuta <code>ipconfig /flushdns</code></li>
+<li>Prueba con otro navegador</li>
+</ul>
+<h3>&quot;Olvidé la contraseña de administrador&quot;</h3>
+<ul>
+<li>En Local, haz clic derecho en el sitio → &quot;Open Site Shell&quot;</li>
+<li>Ejecuta: <code>wp user update admin --user_pass=admin</code></li>
+</ul>
+<hr>
+<h2>Ejercicios</h2>
+<ol>
+<li><p><strong>Crea tu sitio</strong>: Sigue los pasos anteriores para instalar Local WP y crear un sitio &quot;Learning WordPress&quot;.</p>
+</li>
+<li><p><strong>Inicia sesión en wp-admin</strong>: Accede al panel de administración y haz clic en cada elemento de la barra lateral izquierda — solo para ver qué hay. No cambies nada todavía.</p>
+</li>
+<li><p><strong>Visita tu sitio</strong>: Mira el front-end y observa cómo se ve el tema predeterminado.</p>
+</li>
+<li><p><strong>Encuentra los archivos</strong>: Haz clic en &quot;Open Site Folder&quot; y navega hasta la carpeta <code>wp-content</code>. Mira las carpetas <code>themes</code> y <code>plugins</code> para ver qué hay instalado por defecto.</p>
+</li>
+<li><p><strong>Detener y reiniciar</strong>: Practica deteniendo tu sitio y volviéndolo a iniciar para confirmar que todo funciona.</p>
+</li>
+</ol>
+<hr>
+<h2>Puntos Clave</h2>
+<ul>
+<li><strong>Local WP</strong> es la forma más sencilla de ejecutar WordPress en tu ordenador</li>
+<li>Crea sitios con solo unos clics — sin necesidad de configurar servidores</li>
+<li>Accede a tu sitio en <code>http://nombre-de-tu-sitio.local/</code></li>
+<li>Accede al panel de administración en <code>http://nombre-de-tu-sitio.local/wp-admin/</code></li>
+<li>La carpeta <code>wp-content</code> es donde se encuentran los temas, plugins y archivos subidos</li>
+<li>Nunca edites archivos en <code>wp-admin/</code> o <code>wp-includes/</code></li>
+<li>Detén tu sitio cuando no lo estés usando, inícialo cuando lo necesites</li>
+</ul>
+<hr>
+<p><strong>Siguiente Lección:</strong> <a href="lesson-03.html">Lección 03 - El Recorrido por el Dashboard de WordPress</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-01.html" class="prev">&larr; 01. Qué es WordPress</a>
+      <a href="lesson-03.html" class="next">03. Tour del Panel &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

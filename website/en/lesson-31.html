@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 31: SEO Fundamentals for WordPress — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-31.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-31.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li class="active"><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lesson 31: SEO Fundamentals for WordPress</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Understand how search engines find and rank your site</li>
+<li>Optimize every page and post for search engines</li>
+<li>Use Yoast SEO effectively</li>
+<li>Implement technical SEO basics</li>
+</ul>
+<hr>
+<h2>How Search Engines Work</h2>
+<h3>The Basic Process:</h3>
+<ol>
+<li><strong>Crawling</strong> — Google sends &quot;bots&quot; to discover and scan your pages</li>
+<li><strong>Indexing</strong> — Google stores and categorizes your content</li>
+<li><strong>Ranking</strong> — Google decides where to show your pages in search results</li>
+</ol>
+<h3>What Affects Rankings:</h3>
+<ul>
+<li><strong>Content quality</strong> — relevant, helpful, well-written content</li>
+<li><strong>Keywords</strong> — the terms people search for match your content</li>
+<li><strong>Site speed</strong> — faster sites rank higher</li>
+<li><strong>Mobile-friendly</strong> — mobile-responsive design is required</li>
+<li><strong>Backlinks</strong> — other sites linking to yours</li>
+<li><strong>Technical SEO</strong> — proper site structure, sitemaps, clean URLs</li>
+<li><strong>User experience</strong> — low bounce rate, good navigation</li>
+</ul>
+<hr>
+<h2>On-Page SEO (Per Page/Post)</h2>
+<h3>For Every Page and Post, Optimize These:</h3>
+<h4>1. SEO Title (Title Tag)</h4>
+<p>The most important on-page SEO element:</p>
+<ul>
+<li>Appears as the clickable headline in Google results</li>
+<li>Keep it under <strong>60 characters</strong></li>
+<li>Include your <strong>target keyword</strong> near the beginning</li>
+<li>Make it compelling — it determines if people click</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>Bad: &quot;Home&quot;</li>
+<li>Good: &quot;Professional Web Design Services | Your Company&quot;</li>
+<li>Bad: &quot;About Us&quot;</li>
+<li>Good: &quot;About Our Agency — 10 Years of Award-Winning Design&quot;</li>
+</ul>
+<h4>2. Meta Description</h4>
+<p>The snippet shown below the title in Google results:</p>
+<ul>
+<li>Keep it under <strong>155 characters</strong></li>
+<li>Include your target keyword naturally</li>
+<li>Write a compelling summary that encourages clicks</li>
+<li>Include a call to action</li>
+</ul>
+<p><strong>Example:</strong>
+&quot;We design stunning websites that drive results. 10+ years experience, 200+ projects completed. Get a free consultation today.&quot;</p>
+<h4>3. URL Slug</h4>
+<p>The URL of the page:</p>
+<ul>
+<li>Keep it <strong>short and descriptive</strong></li>
+<li>Include the main keyword</li>
+<li>Use hyphens between words</li>
+<li>Remove unnecessary words (a, the, and, etc.)</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>Bad: <code>yoursite.com/our-professional-web-design-services-for-small-businesses</code></li>
+<li>Good: <code>yoursite.com/web-design-services</code></li>
+</ul>
+<h4>4. Headings (H1-H6)</h4>
+<ul>
+<li>Use <strong>one H1</strong> per page (usually the main title)</li>
+<li>Use <strong>H2</strong> for major sections</li>
+<li>Use <strong>H3</strong> for sub-sections</li>
+<li>Include keywords naturally in headings</li>
+<li>Use a logical hierarchy (H1 → H2 → H3, never skip levels)</li>
+</ul>
+<h4>5. Content</h4>
+<ul>
+<li>Write <strong>naturally</strong> — don&#39;t stuff keywords</li>
+<li>Aim for <strong>300+ words</strong> on every page (more for blog posts)</li>
+<li>Use <strong>keywords and related terms</strong> naturally throughout</li>
+<li>Break up text with headings, lists, and images</li>
+<li>Internal linking — link to other pages on your site</li>
+</ul>
+<h4>6. Images</h4>
+<ul>
+<li>Use <strong>descriptive file names</strong> (web-design-example.jpg, not IMG_001.jpg)</li>
+<li>Write meaningful <strong>alt text</strong> for every image</li>
+<li>Include keywords in alt text where natural</li>
+<li>Compress images for fast loading</li>
+</ul>
+<hr>
+<h2>Using Yoast SEO</h2>
+<h3>The Yoast Panel</h3>
+<p>When editing any post or page, scroll down to find the Yoast SEO panel:</p>
+<h3>Focus Keyphrase</h3>
+<ol>
+<li>Enter the main keyword or phrase for this page</li>
+<li>Yoast analyzes your content for that keyword</li>
+<li>It checks: title, meta description, URL, headings, content, images</li>
+</ol>
+<h3>SEO Analysis</h3>
+<p>Yoast shows colored dots:</p>
+<ul>
+<li><strong>Green</strong> — good, optimized correctly</li>
+<li><strong>Orange</strong> — could be improved</li>
+<li><strong>Red</strong> — needs attention</li>
+</ul>
+<p>Common recommendations:</p>
+<ul>
+<li>&quot;The focus keyphrase doesn&#39;t appear in the SEO title&quot;</li>
+<li>&quot;The meta description is too short&quot;</li>
+<li>&quot;No internal links appear in this page&quot;</li>
+<li>&quot;Images on this page do not have alt attributes with the focus keyphrase&quot;</li>
+</ul>
+<h3>Readability Analysis</h3>
+<p>Checks how easy your content is to read:</p>
+<ul>
+<li>Sentence length (keep under 20 words on average)</li>
+<li>Paragraph length (keep under 150 words)</li>
+<li>Use of transition words (&quot;however&quot;, &quot;therefore&quot;, &quot;in addition&quot;)</li>
+<li>Passive voice usage (minimize it)</li>
+<li>Subheading distribution (add headings every 300 words)</li>
+</ul>
+<h3>Snippet Preview</h3>
+<p>Shows how your page will appear in Google:</p>
+<ol>
+<li>Click <strong>&quot;Edit snippet&quot;</strong> in the Yoast panel</li>
+<li>Customize the <strong>SEO Title</strong> and <strong>Meta Description</strong></li>
+<li>See a preview of the Google search result</li>
+</ol>
+<hr>
+<h2>Technical SEO</h2>
+<h3>XML Sitemap</h3>
+<p>Yoast automatically generates a sitemap:</p>
+<ul>
+<li>Located at: <code>yoursite.com/sitemap_index.xml</code></li>
+<li>Lists all your pages, posts, and images</li>
+<li>Submit to Google Search Console when your site goes live</li>
+</ul>
+<h3>Robots.txt</h3>
+<p>Controls which pages search engines can crawl:</p>
+<ul>
+<li>Yoast manages this automatically</li>
+<li>Access at: <code>yoursite.com/robots.txt</code></li>
+</ul>
+<h3>Canonical URLs</h3>
+<p>Prevents duplicate content issues:</p>
+<ul>
+<li>Yoast automatically adds canonical tags</li>
+<li>Tells search engines which version of a page is the &quot;official&quot; one</li>
+</ul>
+<h3>Schema Markup (Structured Data)</h3>
+<p>Helps search engines understand your content:</p>
+<ul>
+<li>Yoast adds basic schema automatically</li>
+<li>Types: Article, Organization, Product, FAQ, etc.</li>
+<li>Can result in rich snippets in search results (stars, prices, FAQs)</li>
+</ul>
+<hr>
+<h2>SEO Checklist for Every Page</h2>
+<p>Before publishing any page or post:</p>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>SEO Title</strong> set and under 60 characters</li>
+<li><input disabled="" type="checkbox"> <strong>Meta Description</strong> set and under 155 characters</li>
+<li><input disabled="" type="checkbox"> <strong>URL Slug</strong> is short and includes the keyword</li>
+<li><input disabled="" type="checkbox"> <strong>Focus Keyphrase</strong> is set in Yoast</li>
+<li><input disabled="" type="checkbox"> <strong>Yoast SEO score</strong> is green (or at least orange)</li>
+<li><input disabled="" type="checkbox"> <strong>H1 heading</strong> is used once and includes the keyword</li>
+<li><input disabled="" type="checkbox"> <strong>H2/H3 headings</strong> are used for sections</li>
+<li><input disabled="" type="checkbox"> <strong>Internal links</strong> to other pages on your site</li>
+<li><input disabled="" type="checkbox"> <strong>Images have alt text</strong> with natural keyword inclusion</li>
+<li><input disabled="" type="checkbox"> <strong>Content is 300+ words</strong> (more for blog posts)</li>
+<li><input disabled="" type="checkbox"> <strong>Readability score</strong> is good (green or orange in Yoast)</li>
+</ul>
+<hr>
+<h2>Local SEO (For Local Businesses)</h2>
+<p>If building sites for local businesses:</p>
+<ol>
+<li><strong>Google Business Profile</strong> — create/claim the business listing (most important)</li>
+<li><strong>NAP Consistency</strong> — Name, Address, Phone must be identical everywhere</li>
+<li><strong>Local keywords</strong> — include city/region in titles and content (e.g., &quot;Web Design in Portland&quot;)</li>
+<li><strong>Google Maps</strong> — embed a map on the contact page</li>
+<li><strong>Customer reviews</strong> — encourage Google reviews</li>
+<li><strong>Local schema</strong> — add LocalBusiness structured data</li>
+</ol>
+<hr>
+<h2>Content Strategy for SEO</h2>
+<h3>Blog Posts for Traffic</h3>
+<p>Regularly publishing helpful blog posts drives organic traffic:</p>
+<ol>
+<li><strong>Research keywords</strong> — find what your audience searches for<ul>
+<li>Use free tools: Google&#39;s &quot;People also ask&quot;, AnswerThePublic, Ubersuggest</li>
+</ul>
+</li>
+<li><strong>Write helpful content</strong> — answer questions your audience has</li>
+<li><strong>Aim for 1,000-2,000 words</strong> for blog posts</li>
+<li><strong>Publish consistently</strong> — weekly or bi-weekly</li>
+<li><strong>Update old posts</strong> — refresh content to keep it relevant</li>
+</ol>
+<h3>Keyword Research (Basic)</h3>
+<ol>
+<li>Think about what your customers search for</li>
+<li>Use Google — type a query and look at:<ul>
+<li>Autocomplete suggestions</li>
+<li>&quot;People also ask&quot; boxes</li>
+<li>&quot;Related searches&quot; at the bottom</li>
+</ul>
+</li>
+<li>These are real keywords people use — create content around them</li>
+</ol>
+<hr>
+<h2>Exercises</h2>
+<ol>
+<li><p><strong>Optimize your homepage</strong>: Set a focus keyphrase, write an SEO title and meta description. Get the Yoast score to green.</p>
+</li>
+<li><p><strong>Optimize your About page</strong>: Same as above — keyphrase, title, description.</p>
+</li>
+<li><p><strong>Optimize a blog post</strong>: Create a new blog post (500+ words) targeting a specific keyword. Follow the SEO checklist above.</p>
+</li>
+<li><p><strong>Add internal links</strong>: On each page, add at least one link to another page on your site.</p>
+</li>
+<li><p><strong>Check your sitemap</strong>: Visit <code>your-site.local/sitemap_index.xml</code> and see all the pages listed.</p>
+</li>
+<li><p><strong>Review all alt text</strong>: Go through your Media Library and make sure every image has descriptive alt text.</p>
+</li>
+</ol>
+<hr>
+<h2>Key Takeaways</h2>
+<ul>
+<li>SEO is about making your site <strong>discoverable</strong> and <strong>relevant</strong> to search engines</li>
+<li><strong>On-page SEO</strong>: title, meta description, URL, headings, content, images</li>
+<li><strong>Yoast SEO</strong> provides a checklist — aim for green scores on every page</li>
+<li><strong>SEO Title</strong> is the most important single element (under 60 characters, include keyword)</li>
+<li><strong>Content quality</strong> matters most — write helpful, well-structured content</li>
+<li><strong>Technical SEO</strong> (sitemaps, canonical URLs, schema) is handled by Yoast automatically</li>
+<li><strong>Internal linking</strong> helps search engines and users navigate your site</li>
+<li><strong>Blog consistently</strong> to build organic traffic over time</li>
+</ul>
+<hr>
+<p><strong>Next Lesson:</strong> <a href="lesson-32.html">Lesson 32 - Performance Optimization</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-30.html" class="prev">&larr; 30. Backups &amp; Security</a>
+      <a href="lesson-32.html" class="next">32. Performance &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

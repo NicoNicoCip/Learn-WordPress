@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lección 23: Formularios de Contacto — WPForms y Contact Form 7 — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-23.html">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-23.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li class="active"><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lección 23: Formularios de Contacto — WPForms y Contact Form 7</h1>
+<h2>Objetivos</h2>
+<ul>
+<li>Crear diferentes tipos de formularios más allá del contacto básico</li>
+<li>Configurar notificaciones y confirmaciones de formularios</li>
+<li>Añadir lógica condicional a los formularios</li>
+<li>Insertar formularios en páginas de Elementor</li>
+</ul>
+<hr>
+<h2>Más Allá del Formulario de Contacto Básico</h2>
+<p>En la Lección 18, configuramos un formulario de contacto básico. Ahora vamos a explorar más tipos de formularios y funciones avanzadas.</p>
+<h3>Tipos Comunes de Formularios:</h3>
+<ul>
+<li><strong>Formulario de contacto</strong> — nombre, correo electrónico, mensaje (ya creado)</li>
+<li><strong>Formulario de solicitud de presupuesto</strong> — selección de servicio, presupuesto, plazo</li>
+<li><strong>Suscripción a newsletter</strong> — solo correo electrónico (o nombre + correo)</li>
+<li><strong>Formulario de opinión/encuesta</strong> — valoración, opción múltiple, áreas de texto</li>
+<li><strong>Formulario de solicitud de empleo</strong> — datos personales, carga de CV, carta de presentación</li>
+<li><strong>Registro de eventos</strong> — nombre, correo electrónico, número de asistentes, requisitos dietéticos</li>
+</ul>
+<hr>
+<h2>WPForms: Creación de Formularios Avanzados</h2>
+<h3>Creación de un Formulario de Solicitud de Presupuesto</h3>
+<ol>
+<li><p>Ve a <strong>WPForms → Add New</strong></p>
+</li>
+<li><p>Nombre: &quot;Solicitar un Presupuesto&quot;</p>
+</li>
+<li><p>Empieza con un <strong>Blank Form</strong> (o la plantilla Suggestion Form)</p>
+</li>
+<li><p><strong>Añade campos</strong> arrastrándolos desde el panel izquierdo:</p>
+<ul>
+<li><strong>Name</strong> (campo de texto simple o campo de nombre)</li>
+<li><strong>Email</strong> (campo de correo electrónico)</li>
+<li><strong>Phone</strong> (campo de teléfono)</li>
+<li><strong>Dropdown</strong>: &quot;¿Qué servicio le interesa?&quot;<ul>
+<li>Opciones: Diseño Web, SEO, E-Commerce, Marketing, Otro</li>
+</ul>
+</li>
+<li><strong>Number Slider o Dropdown</strong>: &quot;Presupuesto Estimado&quot;<ul>
+<li>Opciones: Menos de 1.000 $; 1.000 $-5.000 $; 5.000 $-10.000 $; 10.000 $+</li>
+</ul>
+</li>
+<li><strong>Dropdown</strong>: &quot;Plazo&quot;<ul>
+<li>Opciones: Lo antes posible, 1-2 meses, 3-6 meses, Sin prisa</li>
+</ul>
+</li>
+<li><strong>Paragraph Text</strong>: &quot;Cuéntenos sobre su proyecto&quot;</li>
+</ul>
+</li>
+<li><p><strong>Configura cada campo:</strong></p>
+<ul>
+<li>Haz clic en un campo para editar su etiqueta, texto de ayuda y si es obligatorio</li>
+<li>Marca Nombre, Email y Servicio como <strong>Required</strong> (obligatorios)</li>
+</ul>
+</li>
+<li><p>Haz clic en <strong>&quot;Save&quot;</strong></p>
+</li>
+</ol>
+<h3>Configuración de Notificaciones</h3>
+<ol>
+<li>En el constructor de formularios, haz clic en <strong>Settings → Notifications</strong></li>
+<li><strong>Send To Email Address</strong>: Tu correo electrónico (o <code>{admin_email}</code>)</li>
+<li><strong>Email Subject</strong>: &quot;Nueva Solicitud de Presupuesto de {field_id=&#39;1&#39;}&quot; (usa Smart Tags)</li>
+<li><strong>From Email</strong>: <code>{field_id=&#39;2&#39;}</code> (el correo del remitente)</li>
+<li><strong>Reply-To</strong>: <code>{field_id=&#39;2&#39;}</code></li>
+<li><strong>Message</strong>: <code>{all_fields}</code> (incluye todos los datos del formulario)</li>
+</ol>
+<h3>Configuración de Confirmaciones</h3>
+<ol>
+<li>Ve a <strong>Settings → Confirmations</strong></li>
+<li>Elige el <strong>Tipo de Confirmación</strong>:<ul>
+<li><strong>Message</strong> — muestra un mensaje de agradecimiento en la misma página</li>
+<li><strong>Show Page</strong> — redirige a una página de agradecimiento</li>
+<li><strong>Go to URL</strong> — redirige a cualquier URL</li>
+</ul>
+</li>
+<li>Para la mayoría de formularios, usa un <strong>Message</strong>: &quot;¡Gracias por tu solicitud! Nos pondremos en contacto contigo en un plazo de 24 horas.&quot;</li>
+</ol>
+<hr>
+<h2>Contact Form 7 (Alternativa)</h2>
+<p>Contact Form 7 es el otro gran plugin gratuito de formularios. Utiliza un enfoque diferente: marcado similar a HTML.</p>
+<h3>Creación de un Formulario en CF7</h3>
+<ol>
+<li>Ve a <strong>Contact → Add New</strong></li>
+<li>El formulario usa etiquetas de marcado:</li>
+</ol>
+<pre><code>&lt;label&gt;Your Name (required)
+    [text* your-name]&lt;/label&gt;
+
+&lt;label&gt;Your Email (required)
+    [email* your-email]&lt;/label&gt;
+
+&lt;label&gt;Subject
+    [text your-subject]&lt;/label&gt;
+
+&lt;label&gt;Your Message
+    [textarea your-message]&lt;/label&gt;
+
+[submit &quot;Send&quot;]
+</code></pre>
+<h3>CF7 vs WPForms</h3>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>WPForms Lite</th>
+<th>Contact Form 7</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Constructor</strong></td>
+<td>Arrastrar y soltar visual</td>
+<td>Marcado similar a HTML</td>
+</tr>
+<tr>
+<td><strong>Facilidad de uso</strong></td>
+<td>Más fácil para principiantes</td>
+<td>Requiere entender el marcado</td>
+</tr>
+<tr>
+<td><strong>Plantillas</strong></td>
+<td>Sí</td>
+<td>No (empieza en blanco)</td>
+</tr>
+<tr>
+<td><strong>Almacenamiento de envíos</strong></td>
+<td>Sí (ver envíos en WP)</td>
+<td>No (solo correo, a menos que añadas un plugin)</td>
+</tr>
+<tr>
+<td><strong>Estilos</strong></td>
+<td>Básicos incorporados</td>
+<td>Requiere CSS personalizado</td>
+</tr>
+<tr>
+<td><strong>Complementos</strong></td>
+<td>Muchos (de pago)</td>
+<td>Muchos (gratuitos)</td>
+</tr>
+</tbody></table>
+<p><strong>Recomendación:</strong> Usa <strong>WPForms</strong> si eres principiante. Usa <strong>CF7</strong> si te sientes cómodo con el código y quieres más flexibilidad gratuita.</p>
+<hr>
+<h2>Insertar Formularios en Elementor</h2>
+<h3>Método 1: Widget de WPForms</h3>
+<ul>
+<li>En Elementor, busca &quot;WPForms&quot; en el panel de widgets</li>
+<li>Arrástralo a tu página</li>
+<li>Selecciona tu formulario en el desplegable</li>
+</ul>
+<h3>Método 2: Shortcode</h3>
+<ul>
+<li>Copia el shortcode del formulario desde WPForms o CF7</li>
+<li>En Elementor, añade un widget de <strong>Shortcode</strong></li>
+<li>Pega el shortcode</li>
+</ul>
+<h3>Método 3: Bloque (en Gutenberg)</h3>
+<ul>
+<li>Cuando uses el editor de bloques de WordPress (no Elementor), añade un bloque de WPForms o CF7</li>
+</ul>
+<hr>
+<h2>Personalización de Estilos de los Formularios</h2>
+<h3>Personalización CSS de WPForms</h3>
+<p>Añade en <strong>Appearance → Customize → Additional CSS</strong>:</p>
+<pre><code class="language-css">/* Form container */
+.wpforms-container {
+    max-width: 600px;
+}
+
+/* Labels */
+.wpforms-field-label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Input fields */
+.wpforms-field input,
+.wpforms-field textarea,
+.wpforms-field select {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+/* Focus state */
+.wpforms-field input:focus,
+.wpforms-field textarea:focus,
+.wpforms-field select:focus {
+    border-color: #1abc9c;
+    outline: none;
+}
+
+/* Submit button */
+.wpforms-submit-container button {
+    background: #e74c3c;
+    color: #fff;
+    padding: 14px 40px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.wpforms-submit-container button:hover {
+    background: #c0392b;
+}
+</code></pre>
+<hr>
+<h2>Buenas Prácticas para Formularios</h2>
+<h3>Diseño:</h3>
+<ul>
+<li>Mantén los formularios <strong>lo más cortos posible</strong> — menos campos = más envíos</li>
+<li>Marca claramente los campos obligatorios</li>
+<li>Usa <strong>texto de ejemplo</strong> para guiar a los usuarios</li>
+<li>Haz que el botón de envío sea <strong>visible</strong> y descriptivo (&quot;Solicitar Presupuesto&quot; en lugar de simplemente &quot;Enviar&quot;)</li>
+</ul>
+<h3>Experiencia de Usuario:</h3>
+<ul>
+<li>Muestra una <strong>confirmación clara</strong> después del envío</li>
+<li>Configura una <strong>página de agradecimiento</strong> para mejor seguimiento (puedes rastrear conversiones en analítica)</li>
+<li>Usa <strong>validación de campos</strong> — muestra errores de inmediato, no después del envío</li>
+</ul>
+<h3>Técnico:</h3>
+<ul>
+<li><strong>Prueba cada formulario</strong> antes de publicar</li>
+<li>Configura las <strong>notificaciones por correo</strong> al destinatario correcto</li>
+<li>Usa <strong>protección antispam</strong> (reCAPTCHA, campos honeypot)</li>
+<li>En Local WP, revisa <strong>Mailhog</strong> para verificar que los correos se están enviando</li>
+</ul>
+<hr>
+<h2>Ejercicios</h2>
+<ol>
+<li><p><strong>Crea un formulario de solicitud de presupuesto</strong>: Construye el formulario descrito anteriormente con desplegable de servicio, presupuesto y plazo.</p>
+</li>
+<li><p><strong>Crea una suscripción a newsletter</strong>: Construye un formulario simple con solo los campos Nombre y Email. Personaliza el botón de envío para que diga &quot;Suscribirse&quot;.</p>
+</li>
+<li><p><strong>Configura las notificaciones</strong>: Configura las notificaciones por correo para tu formulario de solicitud de presupuesto con el asunto y la dirección de respuesta adecuados.</p>
+</li>
+<li><p><strong>Dale estilo a tus formularios</strong>: Añade CSS personalizado para que tus formularios coincidan con el diseño de tu sitio.</p>
+</li>
+<li><p><strong>Prueba todos los formularios</strong>: Envía pruebas en cada formulario. Comprueba que los correos se reciben (usa Mailhog en Local WP).</p>
+</li>
+<li><p><strong>Crea una página de agradecimiento</strong>: Crea una página simple que diga &quot;¡Gracias! Nos pondremos en contacto pronto.&quot; Configura tu formulario para redirigir allí después del envío.</p>
+</li>
+</ol>
+<hr>
+<h2>Puntos Clave</h2>
+<ul>
+<li><strong>WPForms</strong> es el constructor de formularios más fácil para principiantes (arrastrar y soltar)</li>
+<li>Crea diferentes tipos de formularios: contacto, solicitud de presupuesto, newsletter, encuesta</li>
+<li>Configura las <strong>notificaciones</strong> (quién recibe el correo) y las <strong>confirmaciones</strong> (qué ve el usuario)</li>
+<li>Inserta formularios en Elementor usando el <strong>widget de WPForms</strong> o el <strong>widget de Shortcode</strong></li>
+<li><strong>Personaliza los formularios con CSS</strong> para que coincidan con el diseño de tu sitio</li>
+<li>Mantén los formularios <strong>cortos</strong> — cada campo adicional reduce los envíos</li>
+<li>Siempre <strong>prueba los formularios</strong> antes de publicar</li>
+<li>Usa <strong>protección antispam</strong> (honeypot, reCAPTCHA) en todos los formularios públicos</li>
+</ul>
+<hr>
+<p><strong>Siguiente Lección:</strong> <a href="lesson-24.html">Lección 24 - Optimización de Imágenes y Rendimiento</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-22.html" class="prev">&larr; 22. Plugins Esenciales</a>
+      <a href="lesson-24.html" class="next">24. Optimización de Imágenes &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

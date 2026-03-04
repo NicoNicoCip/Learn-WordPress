@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 12: The WordPress Customizer — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-12.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-12.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li class="active"><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lesson 12: The WordPress Customizer</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Use the WordPress Customizer for site-wide settings</li>
+<li>Configure site identity (logo, favicon)</li>
+<li>Add custom CSS</li>
+<li>Understand the Customizer&#39;s role when using Elementor</li>
+</ul>
+<hr>
+<h2>What is the Customizer?</h2>
+<p>The <strong>WordPress Customizer</strong> is a visual tool for making site-wide changes with a <strong>live preview</strong>. It lets you modify settings and see the results in real-time before publishing.</p>
+<p>Access it at: <strong>Appearance → Customize</strong> (or click &quot;Customize&quot; in the admin bar while viewing your site)</p>
+<hr>
+<h2>Customizer Interface</h2>
+<h3>Layout:</h3>
+<ul>
+<li><strong>Left panel</strong>: Settings and options organized by section</li>
+<li><strong>Right panel</strong>: Live preview of your site</li>
+<li><strong>Top bar</strong>: Navigation (back button, device preview, publish)</li>
+</ul>
+<h3>Device Preview</h3>
+<p>In the bottom of the left panel, you&#39;ll see device icons:</p>
+<ul>
+<li><strong>Desktop</strong> — full-width view</li>
+<li><strong>Tablet</strong> — tablet-width view</li>
+<li><strong>Mobile</strong> — phone-width view</li>
+</ul>
+<p>Use these to check how your site looks on different devices.</p>
+<hr>
+<h2>Customizer Sections (Hello Elementor)</h2>
+<p>Hello Elementor&#39;s Customizer is minimal. Here&#39;s what you&#39;ll find:</p>
+<h3>Site Identity</h3>
+<p>The most important Customizer section:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What to Do</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Logo</strong></td>
+<td>Upload your site logo (PNG with transparency recommended, 200-300px wide)</td>
+</tr>
+<tr>
+<td><strong>Site Title</strong></td>
+<td>Your site name (displayed if no logo is set)</td>
+</tr>
+<tr>
+<td><strong>Tagline</strong></td>
+<td>Short site description</td>
+</tr>
+<tr>
+<td><strong>Display Site Title and Tagline</strong></td>
+<td>Show/hide these in the header</td>
+</tr>
+<tr>
+<td><strong>Site Icon (Favicon)</strong></td>
+<td>Square image (512×512px min) for browser tabs</td>
+</tr>
+</tbody></table>
+<h3>Menus</h3>
+<p>Same menu management as Appearance → Menus, but with a live preview.</p>
+<h3>Widgets</h3>
+<p>Same as Appearance → Widgets, but with a live preview.</p>
+<h3>Homepage Settings</h3>
+<p>Same as Settings → Reading — choose whether the homepage shows latest posts or a static page.</p>
+<h3>Additional CSS</h3>
+<p>Add custom CSS that applies site-wide. This is where you put small style tweaks without editing theme files.</p>
+<hr>
+<h2>Adding Custom CSS</h2>
+<p>The <strong>Additional CSS</strong> section is useful for small styling adjustments:</p>
+<ol>
+<li>Go to <strong>Appearance → Customize → Additional CSS</strong></li>
+<li>Type your CSS in the editor</li>
+<li>See changes in real-time in the preview</li>
+</ol>
+<h3>Example CSS Snippets:</h3>
+<p><strong>Hide the page title on all pages:</strong></p>
+<pre><code class="language-css">.page .entry-title {
+    display: none;
+}
+</code></pre>
+<p><strong>Change link color:</strong></p>
+<pre><code class="language-css">a {
+    color: #0066cc;
+}
+a:hover {
+    color: #004499;
+}
+</code></pre>
+<p><strong>Add more space between paragraphs:</strong></p>
+<pre><code class="language-css">.entry-content p {
+    margin-bottom: 1.5em;
+}
+</code></pre>
+<h3>When to Use Additional CSS vs Elementor Styling</h3>
+<ul>
+<li><strong>Additional CSS</strong>: For site-wide changes that affect non-Elementor pages (blog posts, archive pages, admin-controlled areas)</li>
+<li><strong>Elementor styling</strong>: For pages built with Elementor (Elementor has its own style controls — use those instead)</li>
+</ul>
+<hr>
+<h2>Customizer with Other Themes</h2>
+<p>If you switch to a more feature-rich theme (like Astra), the Customizer will have many more sections:</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What It Controls</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Global</td>
+<td>Base colors, typography, container width</td>
+</tr>
+<tr>
+<td>Header Builder</td>
+<td>Logo placement, menu style, search, buttons</td>
+</tr>
+<tr>
+<td>Breadcrumb</td>
+<td>Navigation breadcrumbs</td>
+</tr>
+<tr>
+<td>Blog</td>
+<td>Blog layout, post meta, archive pages</td>
+</tr>
+<tr>
+<td>Sidebar</td>
+<td>Sidebar layout and width</td>
+</tr>
+<tr>
+<td>Footer Builder</td>
+<td>Footer columns, copyright, widgets</td>
+</tr>
+<tr>
+<td>Colors &amp; Background</td>
+<td>Site-wide color scheme</td>
+</tr>
+<tr>
+<td>Typography</td>
+<td>Font families, sizes, weights</td>
+</tr>
+<tr>
+<td>Buttons</td>
+<td>Button styles, colors, borders</td>
+</tr>
+<tr>
+<td>Layout</td>
+<td>Content width, padding</td>
+</tr>
+</tbody></table>
+<p>This is why some people choose Astra or GeneratePress — they offer more control through the Customizer without needing Elementor Pro.</p>
+<hr>
+<h2>Customizer vs Elementor vs Theme Settings</h2>
+<p>Understanding when to use each:</p>
+<table>
+<thead>
+<tr>
+<th>What You&#39;re Changing</th>
+<th>Where to Do It</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Site logo and favicon</td>
+<td>Customizer → Site Identity</td>
+</tr>
+<tr>
+<td>Page design and layout</td>
+<td>Elementor editor</td>
+</tr>
+<tr>
+<td>Global colors and fonts (Elementor pages)</td>
+<td>Elementor → Site Settings</td>
+</tr>
+<tr>
+<td>Blog post layout</td>
+<td>Customizer or theme settings (if available)</td>
+</tr>
+<tr>
+<td>Navigation menus</td>
+<td>Customizer → Menus or Appearance → Menus</td>
+</tr>
+<tr>
+<td>Footer design (with Elementor)</td>
+<td>Elementor Theme Builder (Pro) or Header Footer plugin</td>
+</tr>
+<tr>
+<td>Small CSS tweaks</td>
+<td>Customizer → Additional CSS</td>
+</tr>
+<tr>
+<td>SEO settings</td>
+<td>SEO plugin (Yoast/RankMath)</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Publishing and Scheduling Changes</h2>
+<h3>Publishing Immediately</h3>
+<ul>
+<li>Click <strong>&quot;Publish&quot;</strong> in the Customizer to apply changes immediately</li>
+</ul>
+<h3>Saving as Draft</h3>
+<ul>
+<li>Click the <strong>gear icon</strong> next to Publish</li>
+<li>Select <strong>&quot;Save Draft&quot;</strong> to save without publishing</li>
+<li>Your changes are saved but not visible to visitors</li>
+<li>Come back later to publish</li>
+</ul>
+<h3>Scheduling Changes</h3>
+<ul>
+<li>Click the gear icon next to Publish</li>
+<li>Select <strong>&quot;Schedule&quot;</strong></li>
+<li>Pick a date and time</li>
+<li>Changes will go live automatically at that time</li>
+<li>Useful for coordinated launches (new logo, redesign, etc.)</li>
+</ul>
+<hr>
+<h2>Exercises</h2>
+<ol>
+<li><p><strong>Set up Site Identity</strong>: Upload a logo (or use a placeholder image), set a favicon, and configure your site title and tagline.</p>
+</li>
+<li><p><strong>Preview on different devices</strong>: Use the device preview buttons to see how your site looks on desktop, tablet, and mobile.</p>
+</li>
+<li><p><strong>Add custom CSS</strong>: Go to Additional CSS and add a simple rule (like changing a color or hiding an element). See the live preview.</p>
+</li>
+<li><p><strong>Try saving as draft</strong>: Make a change, save it as a draft, then close the Customizer. Re-open it to find your draft.</p>
+</li>
+<li><p><strong>Explore menus in the Customizer</strong>: Navigate to the Menus section and try editing your menu with the live preview.</p>
+</li>
+</ol>
+<hr>
+<h2>Key Takeaways</h2>
+<ul>
+<li>The <strong>Customizer</strong> provides live-preview editing for site-wide settings</li>
+<li>Use it for <strong>site identity</strong> (logo, favicon), <strong>menus</strong>, and <strong>small CSS tweaks</strong></li>
+<li><strong>Additional CSS</strong> is where you add site-wide styling adjustments</li>
+<li>When using Elementor, the Customizer&#39;s role is reduced — Elementor handles most design</li>
+<li>You can <strong>save as draft</strong> or <strong>schedule</strong> Customizer changes</li>
+<li>More feature-rich themes (Astra, GeneratePress) add many more Customizer options</li>
+<li>Use the <strong>device preview</strong> to check mobile and tablet views</li>
+</ul>
+<hr>
+<p><strong>Next Module:</strong> <a href="lesson-13.html">Module 3 - Elementor Page Building</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-11.html" class="prev">&larr; 11. Widgets &amp; Sidebars</a>
+      <a href="lesson-13.html" class="next">13. Installing Elementor &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

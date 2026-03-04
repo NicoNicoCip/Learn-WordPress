@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 28: Designing a Shop Page with Elementor — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-28.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-28.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li class="active"><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lesson 28: Designing a Shop Page with Elementor</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Customize the WooCommerce shop page appearance</li>
+<li>Use Elementor widgets for product display</li>
+<li>Create a compelling product showcase</li>
+<li>Understand the limitations of Elementor Free with WooCommerce</li>
+</ul>
+<hr>
+<h2>WooCommerce + Elementor: What&#39;s Possible</h2>
+<h3>With Elementor Free:</h3>
+<ul>
+<li>Add WooCommerce shortcodes via Shortcode widget</li>
+<li>Design custom content around the shop</li>
+<li>Create landing pages that feature products</li>
+<li>Style the shop with custom CSS</li>
+</ul>
+<h3>With Elementor Pro:</h3>
+<ul>
+<li>Full WooCommerce Builder — design product pages, shop pages, cart, and checkout</li>
+<li>WooCommerce-specific widgets (Products, Product Categories, Cart, etc.)</li>
+<li>Complete visual control over every WooCommerce page</li>
+</ul>
+<h3>Free Alternatives to Elementor Pro for WooCommerce:</h3>
+<ul>
+<li><strong>ShopEngine</strong> — free WooCommerce builder for Elementor</li>
+<li><strong>JetWooBuilder</strong> (by Jetalements) — adds WooCommerce widgets</li>
+<li><strong>Products widgets</strong> come with some themes (like Astra)</li>
+</ul>
+<hr>
+<h2>Customizing the Shop Page (Free Method)</h2>
+<h3>Method 1: WooCommerce Shortcodes in Elementor</h3>
+<p>WooCommerce provides shortcodes to display products:</p>
+<table>
+<thead>
+<tr>
+<th>Shortcode</th>
+<th>What It Shows</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[products limit=&quot;8&quot; columns=&quot;4&quot;]</code></td>
+<td>Latest 8 products in 4 columns</td>
+</tr>
+<tr>
+<td><code>[products category=&quot;t-shirts&quot;]</code></td>
+<td>Products from a specific category</td>
+</tr>
+<tr>
+<td><code>[featured_products limit=&quot;4&quot;]</code></td>
+<td>Featured products only</td>
+</tr>
+<tr>
+<td><code>[sale_products limit=&quot;4&quot;]</code></td>
+<td>Products on sale</td>
+</tr>
+<tr>
+<td><code>[best_selling_products limit=&quot;4&quot;]</code></td>
+<td>Best sellers</td>
+</tr>
+<tr>
+<td><code>[recent_products limit=&quot;8&quot;]</code></td>
+<td>Most recently added</td>
+</tr>
+<tr>
+<td><code>[product_categories]</code></td>
+<td>Product category grid</td>
+</tr>
+</tbody></table>
+<h4>Using Shortcodes in Elementor:</h4>
+<ol>
+<li>Open a page in Elementor</li>
+<li>Add a <strong>Shortcode</strong> widget</li>
+<li>Paste one of the shortcodes above</li>
+<li>The products will display on the page</li>
+</ol>
+<h3>Method 2: Create a Custom Shop Landing Page</h3>
+<p>Instead of relying on the default shop page, create a custom page that showcases your products beautifully:</p>
+<h4>Section 1: Shop Hero</h4>
+<ol>
+<li><p><strong>Add a Section</strong> — 1 column</p>
+</li>
+<li><p>Background: Your brand color or product image with overlay</p>
+</li>
+<li><p>Min Height: 400px, Vertical Align: Middle</p>
+</li>
+<li><p><strong>Heading</strong>: &quot;Our Products&quot; or &quot;Shop the Collection&quot;</p>
+</li>
+<li><p><strong>Text Editor</strong>: &quot;Discover quality products designed for you.&quot;</p>
+</li>
+</ol>
+<h4>Section 2: Featured Categories</h4>
+<ol>
+<li><p><strong>Add a Section</strong> — 3 or 4 columns</p>
+</li>
+<li><p>Background: White</p>
+</li>
+<li><p>Padding: 80px top and bottom</p>
+</li>
+<li><p><strong>Section Heading</strong> (above columns): &quot;Shop by Category&quot;, H2, Center</p>
+</li>
+</ol>
+<p>In each column:</p>
+<ul>
+<li><strong>Image</strong> widget: Upload a category image</li>
+<li><strong>Heading</strong> (H4): Category name</li>
+<li><strong>Button</strong>: &quot;Shop Now&quot; → link to the category archive page</li>
+<li>Example: <code>http://learning-wordpress.local/product-category/clothing/</code></li>
+</ul>
+<h4>Section 3: Featured Products</h4>
+<ol>
+<li><p><strong>Add a Section</strong> — 1 column</p>
+</li>
+<li><p>Padding: 80px top and bottom</p>
+</li>
+<li><p><strong>Heading</strong>: &quot;Featured Products&quot;, H2, Center</p>
+</li>
+<li><p><strong>Shortcode</strong> widget: <code>[featured_products limit=&quot;4&quot; columns=&quot;4&quot;]</code></p>
+</li>
+</ol>
+<h4>Section 4: On Sale</h4>
+<ol>
+<li><p><strong>Add a Section</strong> — 1 column</p>
+</li>
+<li><p>Background: Light (#f8f9fa)</p>
+</li>
+<li><p>Padding: 80px top and bottom</p>
+</li>
+<li><p><strong>Heading</strong>: &quot;On Sale&quot;, H2, Center</p>
+</li>
+<li><p><strong>Shortcode</strong> widget: <code>[sale_products limit=&quot;4&quot; columns=&quot;4&quot;]</code></p>
+</li>
+</ol>
+<h4>Section 5: New Arrivals</h4>
+<ol>
+<li><p><strong>Add a Section</strong> — 1 column</p>
+</li>
+<li><p>Padding: 80px top and bottom</p>
+</li>
+<li><p><strong>Heading</strong>: &quot;New Arrivals&quot;, H2, Center</p>
+</li>
+<li><p><strong>Shortcode</strong> widget: <code>[recent_products limit=&quot;8&quot; columns=&quot;4&quot;]</code></p>
+</li>
+</ol>
+<h4>Section 6: CTA Banner</h4>
+<ol>
+<li><p><strong>Add a Section</strong> — 1 column</p>
+</li>
+<li><p>Background: Accent color or promotional image</p>
+</li>
+<li><p>Min Height: 300px, Vertical Align: Middle</p>
+</li>
+<li><p><strong>Heading</strong>: &quot;Free Shipping on Orders Over $50&quot;, White, Center</p>
+</li>
+<li><p><strong>Button</strong>: &quot;Shop Now&quot; → link to shop page</p>
+</li>
+</ol>
+<hr>
+<h2>Styling WooCommerce Elements with CSS</h2>
+<p>The default WooCommerce product display can be styled to match your site:</p>
+<h3>Product Card Styling</h3>
+<p>Add to <strong>Appearance → Customize → Additional CSS</strong>:</p>
+<pre><code class="language-css">/* Product card */
+.woocommerce ul.products li.product {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect */
+.woocommerce ul.products li.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Product title */
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Price */
+.woocommerce ul.products li.product .price {
+    color: #e74c3c;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Sale badge */
+.woocommerce span.onsale {
+    background-color: #e74c3c;
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px 10px;
+}
+
+/* Add to cart button */
+.woocommerce ul.products li.product .button {
+    background-color: #2c3e50;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.woocommerce ul.products li.product .button:hover {
+    background-color: #1abc9c;
+}
+
+/* Product image */
+.woocommerce ul.products li.product img {
+    border-radius: 8px;
+}
+</code></pre>
+<hr>
+<h2>WooCommerce Customizer Settings</h2>
+<p>Some shop appearance settings are in the WordPress Customizer:</p>
+<ol>
+<li>Go to <strong>Appearance → Customize → WooCommerce</strong> (this section appears after installing WooCommerce)</li>
+</ol>
+<p>Available settings:</p>
+<ul>
+<li><strong>Store Notice</strong>: Display a site-wide notice (e.g., &quot;Free shipping this week!&quot;)</li>
+<li><strong>Product Catalog</strong>: Products per row, rows per page, default sorting</li>
+<li><strong>Product Images</strong>: Thumbnail cropping and gallery behavior</li>
+<li><strong>Checkout</strong>: Checkout page layout options</li>
+</ul>
+<h3>Key Settings to Configure:</h3>
+<ul>
+<li><strong>Products per row</strong>: 3 or 4 (default is 4)</li>
+<li><strong>Rows per page</strong>: 3-4 rows (so 12-16 products per page)</li>
+<li><strong>Catalog image cropping</strong>: Uncropped, 1:1 square, or custom ratio</li>
+</ul>
+<hr>
+<h2>Making Products Stand Out</h2>
+<h3>Mark Products as Featured</h3>
+<ol>
+<li>Go to <strong>Products → All Products</strong></li>
+<li>Click the <strong>star icon</strong> next to a product to mark it as featured</li>
+<li>Featured products appear in <code>[featured_products]</code> shortcodes</li>
+</ol>
+<h3>Adding Sale Prices</h3>
+<ol>
+<li>Edit a product</li>
+<li>Set a <strong>Sale Price</strong> lower than the Regular Price</li>
+<li>A &quot;Sale!&quot; badge appears automatically on the product</li>
+</ol>
+<h3>Product Ordering</h3>
+<p>In <strong>Appearance → Customize → WooCommerce → Product Catalog</strong>:</p>
+<ul>
+<li>Default sorting: Popularity, Rating, Newness, Price (low/high)</li>
+</ul>
+<hr>
+<h2>Exercises</h2>
+<ol>
+<li><p><strong>Create a custom shop landing page</strong>: Build a page with hero, featured categories, featured products, sale items, and a CTA banner using Elementor.</p>
+</li>
+<li><p><strong>Use WooCommerce shortcodes</strong>: Add at least 3 different product shortcodes to your custom shop page.</p>
+</li>
+<li><p><strong>Style the products</strong>: Add custom CSS to improve the product card appearance (hover effects, button styles, etc.).</p>
+</li>
+<li><p><strong>Configure product catalog</strong>: Go to Appearance → Customize → WooCommerce → Product Catalog and set products per row and rows per page.</p>
+</li>
+<li><p><strong>Feature some products</strong>: Mark 3-4 products as &quot;Featured&quot; and display them on your shop page.</p>
+</li>
+<li><p><strong>Add a store notice</strong>: In the Customizer, add a store-wide notice (e.g., &quot;Free shipping on orders over $50!&quot;).</p>
+</li>
+</ol>
+<hr>
+<h2>Key Takeaways</h2>
+<ul>
+<li>Elementor Free uses <strong>WooCommerce shortcodes</strong> to display products</li>
+<li>Create a <strong>custom shop landing page</strong> with hero, categories, featured products, and CTAs</li>
+<li><strong>Style products with CSS</strong> to match your brand (hover effects, buttons, badges)</li>
+<li>Use the <strong>WooCommerce Customizer settings</strong> for catalog layout (products per row, sorting)</li>
+<li><strong>Mark products as Featured</strong> to highlight them with the <code>[featured_products]</code> shortcode</li>
+<li>Elementor Pro (or free alternatives like ShopEngine) gives full WooCommerce visual control</li>
+<li>The <strong>store notice</strong> is great for promotions visible across the entire site</li>
+</ul>
+<hr>
+<p><strong>Next Module:</strong> <a href="lesson-29.html">Module 6 - Site Management &amp; Launch</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-27.html" class="prev">&larr; 27. Payments &amp; Shipping</a>
+      <a href="lesson-29.html" class="next">29. Users &amp; Roles &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

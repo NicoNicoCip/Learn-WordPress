@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lección 04: Entradas vs Páginas - Cuándo Usar Cada Una — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-04.html">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-04.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li class="active"><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lección 04: Entradas vs Páginas - Cuándo Usar Cada Una</h1>
+<h2>Objetivos</h2>
+<ul>
+<li>Entender la diferencia fundamental entre Entradas y Páginas</li>
+<li>Saber cuándo usar cada una</li>
+<li>Crear tu primera Entrada y tu primera Página</li>
+<li>Aprender los conceptos básicos del editor de bloques Gutenberg</li>
+</ul>
+<hr>
+<h2>Entradas vs Páginas: La Diferencia Principal</h2>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Entradas (Posts)</th>
+<th>Páginas (Pages)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Propósito</strong></td>
+<td>Contenido de blog/noticias — temporal, basado en fechas</td>
+<td>Contenido estático — permanente, independiente</td>
+</tr>
+<tr>
+<td><strong>Fecha</strong></td>
+<td>Siempre tienen fecha de publicación</td>
+<td>Sin fecha visible</td>
+</tr>
+<tr>
+<td><strong>Categorías/Etiquetas</strong></td>
+<td>Sí — se pueden organizar y filtrar</td>
+<td>No — independientes</td>
+</tr>
+<tr>
+<td><strong>Orden</strong></td>
+<td>Se muestran automáticamente del más reciente al más antiguo</td>
+<td>Se muestran en el orden personalizado que establezcas</td>
+</tr>
+<tr>
+<td><strong>Comentarios</strong></td>
+<td>Habilitados por defecto</td>
+<td>Deshabilitados por defecto</td>
+</tr>
+<tr>
+<td><strong>Autor</strong></td>
+<td>Muestra el autor por defecto</td>
+<td>Normalmente no muestra el autor</td>
+</tr>
+<tr>
+<td><strong>Aparece en</strong></td>
+<td>Feed del blog, archivos, RSS</td>
+<td>Menús de navegación, como páginas independientes</td>
+</tr>
+<tr>
+<td><strong>Ejemplos</strong></td>
+<td>Artículos de noticias, entradas de blog, anuncios</td>
+<td>Acerca de, Contacto, Servicios, Inicio, Política de Privacidad</td>
+</tr>
+</tbody></table>
+<h3>Regla Sencilla</h3>
+<ul>
+<li><strong>¿Tendría sentido este contenido con una fecha?</strong> --&gt; Es una <strong>Entrada</strong></li>
+<li><strong>¿Es este contenido permanente y debería encontrarse a través del menú?</strong> --&gt; Es una <strong>Página</strong></li>
+</ul>
+<hr>
+<h2>Cuándo Usar Entradas</h2>
+<p>Usa entradas cuando el contenido sea:</p>
+<ul>
+<li><strong>Sensible al tiempo</strong> — noticias, anuncios, actualizaciones</li>
+<li><strong>Parte de una serie</strong> — entradas de blog, tutoriales, artículos</li>
+<li><strong>Categorizable</strong> — pertenece a una categoría (ej., &quot;Noticias de la Empresa&quot;, &quot;Trucos y Consejos&quot;)</li>
+<li><strong>Destinado a crecer</strong> — seguirás añadiendo más con el tiempo</li>
+</ul>
+<h3>Ejemplos:</h3>
+<ul>
+<li>&quot;Acabamos de Lanzar Nuestra Nueva Línea de Productos&quot; (anuncio)</li>
+<li>&quot;10 Consejos para un Mejor Diseño Web&quot; (artículo de blog)</li>
+<li>&quot;Boletín Mensual de la Empresa - Marzo 2026&quot; (contenido recurrente)</li>
+</ul>
+<hr>
+<h2>Cuándo Usar Páginas</h2>
+<p>Usa páginas cuando el contenido sea:</p>
+<ul>
+<li><strong>Permanente</strong> — no cambia con frecuencia</li>
+<li><strong>Independiente</strong> — tiene sentido por sí solo, no forma parte de una serie</li>
+<li><strong>Parte de la estructura del sitio</strong> — pertenece al menú de navegación</li>
+<li><strong>No depende de la fecha</strong> — sería raro con una fecha de &quot;Publicado el&quot;</li>
+</ul>
+<h3>Ejemplos:</h3>
+<ul>
+<li>Página de Inicio</li>
+<li>Quiénes Somos</li>
+<li>Nuestros Servicios</li>
+<li>Contacto</li>
+<li>Política de Privacidad / Términos del Servicio</li>
+<li>Portfolio</li>
+<li>Preguntas Frecuentes</li>
+<li>Equipo / Personal</li>
+</ul>
+<hr>
+<h2>Crear Tu Primera Página</h2>
+<p>Vamos a crear una página &quot;Acerca de&quot;:</p>
+<ol>
+<li>Ve a <strong>Pages → Add New Page</strong> en la barra lateral</li>
+<li>Ahora estás en el <strong>Editor de Bloques Gutenberg</strong></li>
+</ol>
+<h3>El Editor de Bloques (Gutenberg)</h3>
+<p>WordPress usa un <strong>editor basado en bloques</strong>. Todo es un &quot;bloque&quot;:</p>
+<ul>
+<li>Los párrafos son bloques</li>
+<li>Los encabezados son bloques</li>
+<li>Las imágenes son bloques</li>
+<li>Listas, citas, botones — todos son bloques</li>
+</ul>
+<h4>Elementos Clave de la Interfaz:</h4>
+<ul>
+<li><strong>Área del título</strong> (arriba) — escribe aquí el título de tu página</li>
+<li><strong>Área de contenido</strong> — donde añades los bloques</li>
+<li><strong>Botón &quot;+&quot;</strong> — haz clic para añadir un nuevo bloque</li>
+<li><strong>Barra lateral derecha</strong> — configuración del bloque seleccionado o de la página<ul>
+<li><strong>Pestaña Block</strong> — configuración del bloque seleccionado actualmente</li>
+<li><strong>Pestaña Page</strong> — configuración de toda la página (imagen destacada, slug de la URL, etc.)</li>
+</ul>
+</li>
+</ul>
+<h3>Crear la Página Acerca de:</h3>
+<ol>
+<li><strong>Título</strong>: Escribe <code>About Us</code></li>
+<li><strong>Primer bloque</strong>: Haz clic en el área de contenido y escribe un párrafo:<pre><code>Welcome to our company. We are dedicated to providing excellent service.
+</code></pre>
+</li>
+<li><strong>Añadir un encabezado</strong>: Pulsa Enter, luego escribe <code>/heading</code> y selecciona &quot;Heading&quot;. Escribe: <code>Our Mission</code></li>
+<li><strong>Añadir otro párrafo</strong>: Pulsa Enter y escribe:<pre><code>Our mission is to deliver high-quality solutions that make a difference.
+</code></pre>
+</li>
+<li><strong>Añadir una lista</strong>: Pulsa Enter, escribe <code>/list</code> y selecciona &quot;List&quot;. Añade algunos elementos:<ul>
+<li>Quality first</li>
+<li>Customer satisfaction</li>
+<li>Innovation</li>
+</ul>
+</li>
+<li>Haz clic en <strong>&quot;Publish&quot;</strong> (esquina superior derecha)</li>
+<li>Haz clic en <strong>&quot;Publish&quot;</strong> de nuevo para confirmar</li>
+<li>Haz clic en <strong>&quot;View Page&quot;</strong> para verla en el front-end</li>
+</ol>
+<hr>
+<h2>Crear Tu Primera Entrada</h2>
+<p>Ahora vamos a crear una entrada de blog:</p>
+<ol>
+<li>Ve a <strong>Posts → Add New Post</strong></li>
+<li><strong>Título</strong>: Escribe <code>Welcome to Our Blog</code></li>
+<li><strong>Contenido</strong>: Escribe un párrafo:<pre><code>This is our first blog post! We&#39;re excited to share news, tips, and updates with you. Stay tuned for more content coming soon.
+</code></pre>
+</li>
+<li><strong>Asignar una Categoría</strong>:<ul>
+<li>En la barra lateral derecha, busca la sección <strong>Categories</strong> (bajo la pestaña Post)</li>
+<li>Haz clic en <strong>&quot;Add New Category&quot;</strong></li>
+<li>Escribe <code>General</code> y haz clic en &quot;Add New Category&quot;</li>
+<li>Asegúrate de que esté marcada</li>
+</ul>
+</li>
+<li><strong>Añadir Etiquetas</strong>:<ul>
+<li>En la barra lateral derecha, busca la sección <strong>Tags</strong></li>
+<li>Escribe <code>welcome, first post</code> y pulsa Enter</li>
+</ul>
+</li>
+<li>Haz clic en <strong>&quot;Publish&quot;</strong> --&gt; <strong>&quot;Publish&quot;</strong> de nuevo</li>
+<li>Haz clic en <strong>&quot;View Post&quot;</strong> para verla</li>
+</ol>
+<hr>
+<h2>Trabajar con el Editor de Bloques</h2>
+<h3>Añadir Bloques</h3>
+<p>Hay varias formas de añadir bloques:</p>
+<ol>
+<li>Haz clic en el botón <strong>&quot;+&quot;</strong> que aparece entre los bloques</li>
+<li>Haz clic en el botón <strong>&quot;+&quot;</strong> en la barra de herramientas superior izquierda</li>
+<li>Escribe <strong><code>/</code></strong> en un bloque vacío para buscar tipos de bloque</li>
+<li>Pulsa <strong>Enter</strong> para crear un nuevo bloque de párrafo</li>
+</ol>
+<h3>Tipos de Bloques Comunes</h3>
+<table>
+<thead>
+<tr>
+<th>Bloque</th>
+<th>Qué Hace</th>
+<th>Atajo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Paragraph</td>
+<td>Texto normal</td>
+<td>Solo empieza a escribir</td>
+</tr>
+<tr>
+<td>Heading</td>
+<td>Encabezados de sección (H2, H3, etc.)</td>
+<td><code>/heading</code></td>
+</tr>
+<tr>
+<td>Image</td>
+<td>Insertar una imagen</td>
+<td><code>/image</code></td>
+</tr>
+<tr>
+<td>List</td>
+<td>Lista con viñetas o numerada</td>
+<td><code>/list</code></td>
+</tr>
+<tr>
+<td>Quote</td>
+<td>Una cita con estilo</td>
+<td><code>/quote</code></td>
+</tr>
+<tr>
+<td>Button</td>
+<td>Un botón de llamada a la acción</td>
+<td><code>/button</code></td>
+</tr>
+<tr>
+<td>Columns</td>
+<td>Diseño en múltiples columnas</td>
+<td><code>/columns</code></td>
+</tr>
+<tr>
+<td>Separator</td>
+<td>Una línea horizontal</td>
+<td><code>/separator</code></td>
+</tr>
+<tr>
+<td>Spacer</td>
+<td>Espacio vertical entre bloques</td>
+<td><code>/spacer</code></td>
+</tr>
+</tbody></table>
+<h3>Controles del Bloque</h3>
+<p>Cuando haces clic en un bloque, obtienes:</p>
+<ul>
+<li><strong>Barra de herramientas del bloque</strong> (aparece encima del bloque) — opciones de formato</li>
+<li><strong>Configuración del bloque</strong> (barra lateral derecha, pestaña Block) — configuración detallada</li>
+<li><strong>Menú de tres puntos</strong> en la barra de herramientas — mover, duplicar, eliminar, etc.</li>
+</ul>
+<h3>Mover Bloques</h3>
+<ul>
+<li>Usa las <strong>flechas arriba/abajo</strong> en la barra de herramientas del bloque</li>
+<li><strong>Arrastra y suelta</strong> usando el icono de seis puntos</li>
+<li>Usa el <strong>menú de tres puntos → Move to</strong> para un posicionamiento preciso</li>
+</ul>
+<h3>Atajos de Teclado en el Editor</h3>
+<table>
+<thead>
+<tr>
+<th>Atajo</th>
+<th>Acción</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Ctrl + B</code></td>
+<td>Negrita</td>
+</tr>
+<tr>
+<td><code>Ctrl + I</code></td>
+<td>Cursiva</td>
+</tr>
+<tr>
+<td><code>Ctrl + K</code></td>
+<td>Insertar enlace</td>
+</tr>
+<tr>
+<td><code>Ctrl + Z</code></td>
+<td>Deshacer</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + Z</code></td>
+<td>Rehacer</td>
+</tr>
+<tr>
+<td><code>Ctrl + S</code></td>
+<td>Guardar borrador / Actualizar</td>
+</tr>
+<tr>
+<td><code>Enter</code></td>
+<td>Nuevo bloque</td>
+</tr>
+<tr>
+<td><code>Shift + Enter</code></td>
+<td>Nueva línea dentro del mismo bloque</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Configuración de Páginas/Entradas (Barra Lateral Derecha)</h2>
+<h3>Para Páginas:</h3>
+<ul>
+<li><strong>Status &amp; Visibility</strong> — borrador, publicado, programado, visibilidad (público/privado)</li>
+<li><strong>URL (Slug)</strong> — la ruta de la URL (ej., <code>/about-us</code>)</li>
+<li><strong>Featured Image</strong> — una imagen destacada para la página</li>
+<li><strong>Page Attributes</strong> — página padre (para jerarquía), plantilla, orden</li>
+<li><strong>Discussion</strong> — habilitar/deshabilitar comentarios</li>
+</ul>
+<h3>Para Entradas (opciones adicionales):</h3>
+<ul>
+<li><strong>Categories</strong> — asignar a una o más categorías</li>
+<li><strong>Tags</strong> — añadir palabras clave descriptivas</li>
+<li><strong>Excerpt</strong> — un breve resumen (usado en los feeds del blog)</li>
+<li><strong>Author</strong> — quién escribió esta entrada</li>
+</ul>
+<hr>
+<h2>Jerarquía de Páginas (Páginas Padre/Hijo)</h2>
+<p>Las páginas se pueden organizar jerárquicamente:</p>
+<ul>
+<li>Una página &quot;Servicios&quot; podría ser la padre</li>
+<li>&quot;Diseño Web&quot;, &quot;SEO&quot;, &quot;Marketing&quot; podrían ser páginas hijas</li>
+<li>Esto crea URLs como <code>/services/web-design/</code></li>
+</ul>
+<p>Para establecer una página padre:</p>
+<ol>
+<li>Edita la página hija</li>
+<li>En la barra lateral derecha → pestaña <strong>Page</strong> → <strong>Page Attributes</strong></li>
+<li>Selecciona la página padre del desplegable</li>
+</ol>
+<hr>
+<h2>Ejercicios</h2>
+<ol>
+<li><p><strong>Crea 3 páginas más</strong>: Crea páginas para &quot;Services&quot;, &quot;Contact&quot; y &quot;Blog&quot; (puedes dejarlas casi vacías por ahora — solo añade un título y un breve párrafo).</p>
+</li>
+<li><p><strong>Crea 2 entradas más</strong>: Crea dos entradas de blog con diferentes categorías. Intenta usar diferentes tipos de bloques (encabezados, listas, imágenes).</p>
+</li>
+<li><p><strong>Practica con los bloques</strong>: En una de tus páginas, practica añadiendo y organizando estos bloques: Heading, Paragraph, Image (sube cualquier imagen), List, Button, Columns.</p>
+</li>
+<li><p><strong>Establece una página padre</strong>: Crea una página hija dentro de &quot;Services&quot; llamada &quot;Web Design&quot;. Comprueba la estructura de la URL.</p>
+</li>
+<li><p><strong>Explora la configuración de entradas</strong>: En una de tus entradas, explora la barra lateral derecha — intenta establecer una imagen destacada, añadir un extracto y cambiar el slug de la URL.</p>
+</li>
+</ol>
+<hr>
+<h2>Puntos Clave</h2>
+<ul>
+<li><strong>Entradas</strong> = contenido basado en fechas y categorizado (blogs, noticias)</li>
+<li><strong>Páginas</strong> = contenido estático e independiente (Acerca de, Contacto, Servicios)</li>
+<li>El <strong>editor de bloques Gutenberg</strong> es la herramienta con la que creas contenido en ambos casos</li>
+<li>Todo en el editor es un <strong>bloque</strong> — escribe <code>/</code> para buscar tipos de bloque</li>
+<li>Las páginas pueden tener <strong>jerarquía padre-hijo</strong> para estructuras de URL organizadas</li>
+<li>La <strong>barra lateral derecha</strong> contiene configuraciones importantes para cada entrada/página</li>
+<li>Usa <code>Shift + Enter</code> para una nueva línea, <code>Enter</code> para un nuevo bloque</li>
+</ul>
+<hr>
+<p><strong>Siguiente Lección:</strong> <a href="lesson-05.html">Lección 05 - Categorías, Etiquetas y Taxonomías</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-03.html" class="prev">&larr; 03. Tour del Panel</a>
+      <a href="lesson-05.html" class="next">05. Categorías, Etiquetas y Taxonomías &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

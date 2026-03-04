@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 10: Menus and Navigation — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-10.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-10.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li class="active"><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lesson 10: Menus and Navigation</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Create and manage navigation menus</li>
+<li>Add pages, posts, categories, and custom links to menus</li>
+<li>Create dropdown (sub-item) menus</li>
+<li>Assign menus to theme locations</li>
+<li>Understand menu best practices</li>
+</ul>
+<hr>
+<h2>What Are WordPress Menus?</h2>
+<p>Menus are the <strong>navigation links</strong> that help visitors move around your site. Typically found in:</p>
+<ul>
+<li><strong>Header</strong> (main navigation bar)</li>
+<li><strong>Footer</strong> (footer links)</li>
+<li><strong>Sidebar</strong> (sometimes used for secondary navigation)</li>
+</ul>
+<p>WordPress has a dedicated menu management system that lets you create menus and assign them to locations defined by your theme.</p>
+<hr>
+<h2>Creating Your First Menu</h2>
+<h3>Step 1: Open the Menu Editor</h3>
+<ol>
+<li>Go to <strong>Appearance → Menus</strong></li>
+<li>You&#39;ll see the menu editor with two sections:<ul>
+<li><strong>Left side</strong>: Items you can add to the menu (Pages, Posts, Custom Links, Categories)</li>
+<li><strong>Right side</strong>: The menu structure (currently empty)</li>
+</ul>
+</li>
+</ol>
+<h3>Step 2: Create a New Menu</h3>
+<ol>
+<li>In the <strong>&quot;Menu Name&quot;</strong> field, type: <code>Main Navigation</code></li>
+<li>Click <strong>&quot;Create Menu&quot;</strong></li>
+</ol>
+<h3>Step 3: Add Pages to the Menu</h3>
+<ol>
+<li>On the left side, under <strong>&quot;Pages&quot;</strong>, you&#39;ll see your existing pages</li>
+<li>Click <strong>&quot;View All&quot;</strong> to see all pages</li>
+<li>Check the boxes next to the pages you want in your menu:<ul>
+<li>Home</li>
+<li>About Us</li>
+<li>Services</li>
+<li>Blog</li>
+<li>Contact</li>
+</ul>
+</li>
+<li>Click <strong>&quot;Add to Menu&quot;</strong></li>
+</ol>
+<h3>Step 4: Arrange Menu Items</h3>
+<p>The items appear on the right side. You can:</p>
+<ul>
+<li><strong>Drag and drop</strong> to reorder them</li>
+<li>Items at the top appear first (leftmost in a horizontal menu)</li>
+</ul>
+<p>Recommended order:</p>
+<ol>
+<li>Home</li>
+<li>About Us</li>
+<li>Services</li>
+<li>Blog</li>
+<li>Contact</li>
+</ol>
+<h3>Step 5: Assign a Menu Location</h3>
+<ol>
+<li>At the bottom of the menu editor, find <strong>&quot;Menu Settings&quot;</strong></li>
+<li>Under <strong>&quot;Display location&quot;</strong>, check <strong>&quot;Primary&quot;</strong> (or &quot;Header Menu&quot; — the name depends on your theme)</li>
+<li>Click <strong>&quot;Save Menu&quot;</strong></li>
+</ol>
+<h3>Step 6: View Your Menu</h3>
+<p>Visit your site to see the navigation menu in the header.</p>
+<hr>
+<h2>Creating Dropdown Menus (Sub-Items)</h2>
+<p>Dropdown menus show nested items when you hover over a parent item.</p>
+<h3>How to Create Dropdowns:</h3>
+<ol>
+<li>Add all the items you want to the menu</li>
+<li>Drag a menu item <strong>slightly to the right</strong> under another item</li>
+<li>It will indent and become a <strong>sub-item</strong></li>
+</ol>
+<h3>Example Structure:</h3>
+<pre><code>Home
+About Us
+Services              ← parent item
+  ├── Web Design      ← sub-item (dropdown)
+  ├── SEO             ← sub-item
+  └── Marketing       ← sub-item
+Blog
+Contact
+</code></pre>
+<h3>To Create This:</h3>
+<ol>
+<li>Add &quot;Services&quot;, &quot;Web Design&quot;, &quot;SEO&quot;, and &quot;Marketing&quot; pages to the menu</li>
+<li>Drag &quot;Web Design&quot; under &quot;Services&quot; and slightly to the right until it indents</li>
+<li>Do the same for &quot;SEO&quot; and &quot;Marketing&quot;</li>
+<li>Save the menu</li>
+</ol>
+<p><strong>Tip:</strong> You can go multiple levels deep (sub-sub-items), but avoid going more than 2 levels — it gets confusing for users on mobile.</p>
+<hr>
+<h2>Types of Menu Items</h2>
+<h3>Pages</h3>
+<ul>
+<li>Most common menu item type</li>
+<li>Links to your WordPress pages</li>
+</ul>
+<h3>Posts</h3>
+<ul>
+<li>Links to specific blog posts</li>
+<li>Not commonly used in main navigation</li>
+</ul>
+<h3>Custom Links</h3>
+<ul>
+<li>Link to <strong>any URL</strong> (internal or external)</li>
+<li>Useful for:<ul>
+<li>External links (social media, partner sites)</li>
+<li>Anchor links (<code>#section-name</code>)</li>
+<li>Links to non-WordPress pages</li>
+</ul>
+</li>
+</ul>
+<p><strong>To add a custom link:</strong></p>
+<ol>
+<li>In the left panel, expand <strong>&quot;Custom Links&quot;</strong></li>
+<li>Enter the <strong>URL</strong> and <strong>Link Text</strong></li>
+<li>Click <strong>&quot;Add to Menu&quot;</strong></li>
+</ol>
+<h3>Categories</h3>
+<ul>
+<li>Links to category archive pages</li>
+<li>Useful for blog-heavy sites</li>
+</ul>
+<p><strong>Example:</strong> Adding a &quot;News&quot; category to the menu would link to the page showing all posts in the News category.</p>
+<hr>
+<h2>Editing Menu Items</h2>
+<p>Click the <strong>down arrow</strong> on any menu item to expand its settings:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Navigation Label</strong></td>
+<td>The text displayed in the menu (doesn&#39;t have to match the page title)</td>
+</tr>
+<tr>
+<td><strong>Title Attribute</strong></td>
+<td>Tooltip text shown on hover (optional)</td>
+</tr>
+<tr>
+<td><strong>Open link in a new tab</strong></td>
+<td>Opens the link in a new browser tab (enable in Screen Options first)</td>
+</tr>
+<tr>
+<td><strong>CSS Classes</strong></td>
+<td>Add custom CSS classes for styling (enable in Screen Options first)</td>
+</tr>
+</tbody></table>
+<h3>Renaming Menu Items</h3>
+<p>You can display a different name than the page title:</p>
+<ol>
+<li>Expand the menu item</li>
+<li>Change the <strong>&quot;Navigation Label&quot;</strong></li>
+<li>Example: Your page is &quot;About Us&quot; but you want the menu to say just &quot;About&quot;</li>
+</ol>
+<h3>Enabling Advanced Options</h3>
+<p>Click <strong>&quot;Screen Options&quot;</strong> (top-right) and check:</p>
+<ul>
+<li><strong>Link Target</strong> — to enable &quot;Open in new tab&quot;</li>
+<li><strong>CSS Classes</strong> — to add custom classes</li>
+<li><strong>Link Relationship (XFN)</strong> — for link rel attributes</li>
+<li><strong>Description</strong> — to add descriptions (some themes display these)</li>
+</ul>
+<hr>
+<h2>Creating Multiple Menus</h2>
+<p>You can create different menus for different locations:</p>
+<h3>Common Menu Setup:</h3>
+<ol>
+<li><strong>Main Navigation</strong> → Header (primary location)</li>
+<li><strong>Footer Menu</strong> → Footer (shorter menu with legal links)</li>
+</ol>
+<h3>Creating a Footer Menu:</h3>
+<ol>
+<li>Go to <strong>Appearance → Menus</strong></li>
+<li>Click <strong>&quot;Create a new menu&quot;</strong> link</li>
+<li>Name it <code>Footer Menu</code></li>
+<li>Add items like: Privacy Policy, Terms of Service, Contact, Sitemap</li>
+<li>Under &quot;Display location&quot;, check <strong>&quot;Footer&quot;</strong> (if available in your theme)</li>
+<li>Save</li>
+</ol>
+<hr>
+<h2>Managing Menus in the Customizer</h2>
+<p>You can also manage menus through the Customizer with a live preview:</p>
+<ol>
+<li>Go to <strong>Appearance → Customize → Menus</strong></li>
+<li>Select a menu to edit or create a new one</li>
+<li>Add, remove, and reorder items with a live preview</li>
+<li>Click <strong>&quot;Publish&quot;</strong> to save</li>
+</ol>
+<p>This is useful because you can see changes in real-time.</p>
+<hr>
+<h2>Menu Best Practices</h2>
+<h3>Do:</h3>
+<ul>
+<li>Keep the main menu to <strong>5-7 items</strong> max</li>
+<li>Put the most important items first (or last — these positions get the most attention)</li>
+<li>Use <strong>clear, concise labels</strong> (&quot;Services&quot; not &quot;What We Can Do For You&quot;)</li>
+<li>Include a <strong>call-to-action</strong> as the last item (e.g., &quot;Contact Us&quot; or &quot;Get a Quote&quot;)</li>
+<li>Test the menu on mobile — make sure dropdowns work</li>
+</ul>
+<h3>Don&#39;t:</h3>
+<ul>
+<li>Don&#39;t overload the menu with too many items</li>
+<li>Don&#39;t go deeper than 2 levels of dropdown</li>
+<li>Don&#39;t use vague labels like &quot;More&quot; or &quot;Misc&quot;</li>
+<li>Don&#39;t put your entire sitemap in the navigation</li>
+<li>Don&#39;t forget to test on mobile devices</li>
+</ul>
+<h3>Mobile Menu Considerations</h3>
+<ul>
+<li>Most themes automatically convert the menu to a <strong>hamburger menu</strong> (☰) on mobile</li>
+<li>Long menus become scrollable lists on mobile — keep them short</li>
+<li>Make sure your most important pages are easily accessible</li>
+</ul>
+<hr>
+<h2>Exercises</h2>
+<ol>
+<li><p><strong>Create a main navigation menu</strong>: Add Home, About, Services, Blog, and Contact pages. Assign it to the Primary/Header location.</p>
+</li>
+<li><p><strong>Create dropdown items</strong>: Add sub-pages under &quot;Services&quot; as dropdown items (create simple pages for &quot;Web Design&quot;, &quot;SEO&quot;, &quot;Marketing&quot; if they don&#39;t exist).</p>
+</li>
+<li><p><strong>Add a custom link</strong>: Add a custom link to your menu that opens in a new tab (any external URL).</p>
+</li>
+<li><p><strong>Create a footer menu</strong>: Create a second menu with Privacy Policy, Terms, and Contact. Assign it to the Footer location.</p>
+</li>
+<li><p><strong>Rename a menu item</strong>: Change the Navigation Label of one of your menu items to be different from its page title.</p>
+</li>
+<li><p><strong>Test on mobile</strong>: Use your browser&#39;s responsive mode (F12 → toggle device toolbar) to see how your menu looks on mobile.</p>
+</li>
+</ol>
+<hr>
+<h2>Key Takeaways</h2>
+<ul>
+<li>Create menus at <strong>Appearance → Menus</strong></li>
+<li>Drag items <strong>to the right</strong> to create dropdown sub-items</li>
+<li><strong>Assign menus to locations</strong> (Primary/Header, Footer) defined by your theme</li>
+<li>Menu items can be <strong>pages, posts, categories, or custom links</strong></li>
+<li>You can <strong>rename menu labels</strong> independently of page titles</li>
+<li>Keep main menus to <strong>5-7 items</strong> with max 2 levels of dropdowns</li>
+<li>Create <strong>separate menus</strong> for header and footer</li>
+<li>Always <strong>test on mobile</strong> — most visitors are on phones</li>
+</ul>
+<hr>
+<p><strong>Next Lesson:</strong> <a href="lesson-11.html">Lesson 11 - Widgets and Sidebars</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-09.html" class="prev">&larr; 09. Installing a Theme</a>
+      <a href="lesson-11.html" class="next">11. Widgets &amp; Sidebars &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

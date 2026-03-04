@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 23: Contact Forms — WPForms &amp; Contact Form 7 — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-23.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-23.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li class="active"><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lesson 23: Contact Forms — WPForms &amp; Contact Form 7</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Create different types of forms beyond basic contact</li>
+<li>Configure form notifications and confirmations</li>
+<li>Add conditional logic to forms</li>
+<li>Embed forms in Elementor pages</li>
+</ul>
+<hr>
+<h2>Beyond the Basic Contact Form</h2>
+<p>In Lesson 18, we set up a basic contact form. Now let&#39;s explore more form types and advanced features.</p>
+<h3>Common Form Types:</h3>
+<ul>
+<li><strong>Contact form</strong> — name, email, message (already built)</li>
+<li><strong>Quote request form</strong> — service selection, budget, timeline</li>
+<li><strong>Newsletter signup</strong> — just email (or name + email)</li>
+<li><strong>Feedback/survey form</strong> — rating, multiple choice, text areas</li>
+<li><strong>Job application form</strong> — personal info, resume upload, cover letter</li>
+<li><strong>Event registration</strong> — name, email, number of attendees, dietary requirements</li>
+</ul>
+<hr>
+<h2>WPForms: Building Advanced Forms</h2>
+<h3>Creating a Quote Request Form</h3>
+<ol>
+<li><p>Go to <strong>WPForms → Add New</strong></p>
+</li>
+<li><p>Name: &quot;Request a Quote&quot;</p>
+</li>
+<li><p>Start with a <strong>Blank Form</strong> (or the Suggestion Form template)</p>
+</li>
+<li><p><strong>Add fields</strong> by dragging from the left panel:</p>
+<ul>
+<li><strong>Name</strong> (Single Line Text or Name field)</li>
+<li><strong>Email</strong> (Email field)</li>
+<li><strong>Phone</strong> (Phone field)</li>
+<li><strong>Dropdown</strong>: &quot;What service are you interested in?&quot;<ul>
+<li>Options: Web Design, SEO, E-Commerce, Marketing, Other</li>
+</ul>
+</li>
+<li><strong>Number Slider or Dropdown</strong>: &quot;Estimated Budget&quot;<ul>
+<li>Options: Under $1,000; $1,000-$5,000; $5,000-$10,000; $10,000+</li>
+</ul>
+</li>
+<li><strong>Dropdown</strong>: &quot;Timeline&quot;<ul>
+<li>Options: ASAP, 1-2 months, 3-6 months, No rush</li>
+</ul>
+</li>
+<li><strong>Paragraph Text</strong>: &quot;Tell us about your project&quot;</li>
+</ul>
+</li>
+<li><p><strong>Configure each field:</strong></p>
+<ul>
+<li>Click a field to edit its label, placeholder, and whether it&#39;s required</li>
+<li>Mark Name, Email, and Service as <strong>Required</strong></li>
+</ul>
+</li>
+<li><p>Click <strong>&quot;Save&quot;</strong></p>
+</li>
+</ol>
+<h3>Configuring Notifications</h3>
+<ol>
+<li>In the form builder, click <strong>Settings → Notifications</strong></li>
+<li><strong>Send To Email Address</strong>: Your email (or <code>{admin_email}</code>)</li>
+<li><strong>Email Subject</strong>: &quot;New Quote Request from {field_id=&#39;1&#39;}&quot; (use Smart Tags)</li>
+<li><strong>From Email</strong>: <code>{field_id=&#39;2&#39;}</code> (the submitter&#39;s email)</li>
+<li><strong>Reply-To</strong>: <code>{field_id=&#39;2&#39;}</code></li>
+<li><strong>Message</strong>: <code>{all_fields}</code> (includes all form data)</li>
+</ol>
+<h3>Confirmation Settings</h3>
+<ol>
+<li>Go to <strong>Settings → Confirmations</strong></li>
+<li>Choose <strong>Confirmation Type</strong>:<ul>
+<li><strong>Message</strong> — display a thank-you message on the same page</li>
+<li><strong>Show Page</strong> — redirect to a thank-you page</li>
+<li><strong>Go to URL</strong> — redirect to any URL</li>
+</ul>
+</li>
+<li>For most forms, use a <strong>Message</strong>: &quot;Thank you for your request! We&#39;ll get back to you within 24 hours.&quot;</li>
+</ol>
+<hr>
+<h2>Contact Form 7 (Alternative)</h2>
+<p>Contact Form 7 is the other major free form plugin. It uses a different approach — HTML-like markup.</p>
+<h3>Creating a Form in CF7</h3>
+<ol>
+<li>Go to <strong>Contact → Add New</strong></li>
+<li>The form uses markup tags:</li>
+</ol>
+<pre><code>&lt;label&gt;Your Name (required)
+    [text* your-name]&lt;/label&gt;
+
+&lt;label&gt;Your Email (required)
+    [email* your-email]&lt;/label&gt;
+
+&lt;label&gt;Subject
+    [text your-subject]&lt;/label&gt;
+
+&lt;label&gt;Your Message
+    [textarea your-message]&lt;/label&gt;
+
+[submit &quot;Send&quot;]
+</code></pre>
+<h3>CF7 vs WPForms</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>WPForms Lite</th>
+<th>Contact Form 7</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Builder</strong></td>
+<td>Visual drag-and-drop</td>
+<td>HTML-like markup</td>
+</tr>
+<tr>
+<td><strong>Ease of use</strong></td>
+<td>Easier for beginners</td>
+<td>Requires understanding markup</td>
+</tr>
+<tr>
+<td><strong>Templates</strong></td>
+<td>Yes</td>
+<td>No (starts blank)</td>
+</tr>
+<tr>
+<td><strong>Entry storage</strong></td>
+<td>Yes (view submissions in WP)</td>
+<td>No (email only, unless you add a plugin)</td>
+</tr>
+<tr>
+<td><strong>Styling</strong></td>
+<td>Basic built-in</td>
+<td>Requires custom CSS</td>
+</tr>
+<tr>
+<td><strong>Add-ons</strong></td>
+<td>Many (paid)</td>
+<td>Many (free)</td>
+</tr>
+</tbody></table>
+<p><strong>Recommendation:</strong> Use <strong>WPForms</strong> if you&#39;re a beginner. Use <strong>CF7</strong> if you&#39;re comfortable with code and want more free flexibility.</p>
+<hr>
+<h2>Embedding Forms in Elementor</h2>
+<h3>Method 1: WPForms Widget</h3>
+<ul>
+<li>In Elementor, search for &quot;WPForms&quot; in the widget panel</li>
+<li>Drag it onto your page</li>
+<li>Select your form from the dropdown</li>
+</ul>
+<h3>Method 2: Shortcode</h3>
+<ul>
+<li>Copy the form shortcode from WPForms or CF7</li>
+<li>In Elementor, add a <strong>Shortcode</strong> widget</li>
+<li>Paste the shortcode</li>
+</ul>
+<h3>Method 3: Block (in Gutenberg)</h3>
+<ul>
+<li>When using the WordPress block editor (not Elementor), add a WPForms or CF7 block</li>
+</ul>
+<hr>
+<h2>Styling Forms to Match Your Site</h2>
+<h3>WPForms CSS Customization</h3>
+<p>Add to <strong>Appearance → Customize → Additional CSS</strong>:</p>
+<pre><code class="language-css">/* Form container */
+.wpforms-container {
+    max-width: 600px;
+}
+
+/* Labels */
+.wpforms-field-label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Input fields */
+.wpforms-field input,
+.wpforms-field textarea,
+.wpforms-field select {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+/* Focus state */
+.wpforms-field input:focus,
+.wpforms-field textarea:focus,
+.wpforms-field select:focus {
+    border-color: #1abc9c;
+    outline: none;
+}
+
+/* Submit button */
+.wpforms-submit-container button {
+    background: #e74c3c;
+    color: #fff;
+    padding: 14px 40px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.wpforms-submit-container button:hover {
+    background: #c0392b;
+}
+</code></pre>
+<hr>
+<h2>Form Best Practices</h2>
+<h3>Design:</h3>
+<ul>
+<li>Keep forms <strong>as short as possible</strong> — fewer fields = more submissions</li>
+<li>Mark required fields clearly</li>
+<li>Use <strong>placeholder text</strong> to guide users</li>
+<li>Make the submit button <strong>prominent</strong> and descriptive (&quot;Get Your Quote&quot; not just &quot;Submit&quot;)</li>
+</ul>
+<h3>User Experience:</h3>
+<ul>
+<li>Show a <strong>clear confirmation</strong> after submission</li>
+<li>Set up a <strong>thank-you page</strong> for better tracking (you can track conversions in analytics)</li>
+<li>Use <strong>field validation</strong> — show errors immediately, not after submission</li>
+</ul>
+<h3>Technical:</h3>
+<ul>
+<li><strong>Test every form</strong> before going live</li>
+<li>Set up <strong>email notifications</strong> to the right recipient</li>
+<li>Use <strong>spam protection</strong> (reCAPTCHA, honeypot fields)</li>
+<li>In Local WP, check <strong>Mailhog</strong> to verify emails are being sent</li>
+</ul>
+<hr>
+<h2>Exercises</h2>
+<ol>
+<li><p><strong>Create a Quote Request form</strong>: Build the form described above with service dropdown, budget, and timeline.</p>
+</li>
+<li><p><strong>Create a Newsletter signup</strong>: Build a simple form with just Name and Email fields. Style the submit button to say &quot;Subscribe&quot;.</p>
+</li>
+<li><p><strong>Configure notifications</strong>: Set up email notifications for your Quote Request form with proper subject line and reply-to address.</p>
+</li>
+<li><p><strong>Style your forms</strong>: Add custom CSS to make your forms match your site&#39;s design.</p>
+</li>
+<li><p><strong>Test all forms</strong>: Submit test entries for each form. Check that emails are received (use Mailhog in Local WP).</p>
+</li>
+<li><p><strong>Create a thank-you page</strong>: Make a simple page that says &quot;Thank you! We&#39;ll be in touch soon.&quot; Configure your form to redirect there after submission.</p>
+</li>
+</ol>
+<hr>
+<h2>Key Takeaways</h2>
+<ul>
+<li><strong>WPForms</strong> is the easiest form builder for beginners (drag and drop)</li>
+<li>Create different form types: contact, quote request, newsletter, survey</li>
+<li>Configure <strong>notifications</strong> (who receives the email) and <strong>confirmations</strong> (what the user sees)</li>
+<li>Embed forms in Elementor using the <strong>WPForms widget</strong> or <strong>Shortcode widget</strong></li>
+<li><strong>Style forms with CSS</strong> to match your site design</li>
+<li>Keep forms <strong>short</strong> — every extra field reduces submissions</li>
+<li>Always <strong>test forms</strong> before going live</li>
+<li>Use <strong>spam protection</strong> (honeypot, reCAPTCHA) on all public forms</li>
+</ul>
+<hr>
+<p><strong>Next Lesson:</strong> <a href="lesson-24.html">Lesson 24 - Image Optimization and Performance</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-22.html" class="prev">&larr; 22. Must-Have Plugins</a>
+      <a href="lesson-24.html" class="next">24. Image Optimization &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

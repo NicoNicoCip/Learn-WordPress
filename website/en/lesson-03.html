@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 03: The WordPress Dashboard Tour — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-03.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-03.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li class="active"><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lesson 03: The WordPress Dashboard Tour</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Navigate the WordPress admin dashboard confidently</li>
+<li>Understand what each section of the dashboard does</li>
+<li>Customize the dashboard to show useful information</li>
+<li>Know where to find everything you need</li>
+</ul>
+<hr>
+<h2>Accessing the Dashboard</h2>
+<ol>
+<li>Start your site in Local WP</li>
+<li>Click <strong>&quot;WP Admin&quot;</strong> or navigate to <code>http://learning-wordpress.local/wp-admin/</code></li>
+<li>Log in with your credentials (<code>admin</code> / <code>admin</code>)</li>
+</ol>
+<p>The first thing you see after logging in is the <strong>Dashboard Home</strong>.</p>
+<hr>
+<h2>Dashboard Home Screen</h2>
+<p>The Dashboard home shows a collection of <strong>widgets</strong> (information panels):</p>
+<h3>Welcome Panel</h3>
+<ul>
+<li>Quick links to customize your site, write a post, manage widgets, etc.</li>
+<li>You can dismiss this by clicking &quot;Dismiss&quot; in the top-right of the panel</li>
+</ul>
+<h3>At a Glance</h3>
+<ul>
+<li>Shows how many posts, pages, and comments your site has</li>
+<li>Shows your current theme and WordPress version</li>
+<li>Quick snapshot of your site&#39;s content</li>
+</ul>
+<h3>Activity</h3>
+<ul>
+<li>Shows recently published posts</li>
+<li>Shows recent comments awaiting moderation</li>
+</ul>
+<h3>Quick Draft</h3>
+<ul>
+<li>A mini editor to quickly jot down a post idea (saves as a draft)</li>
+</ul>
+<h3>WordPress Events and News</h3>
+<ul>
+<li>Upcoming WordPress community events</li>
+<li>Latest news from WordPress.org</li>
+</ul>
+<h3>Customizing the Dashboard</h3>
+<ul>
+<li>Click <strong>&quot;Screen Options&quot;</strong> (top-right corner) to show/hide widgets</li>
+<li>Drag and drop widgets to rearrange them</li>
+<li>Most professionals hide everything except &quot;At a Glance&quot; and &quot;Activity&quot;</li>
+</ul>
+<hr>
+<h2>The Admin Sidebar - Section by Section</h2>
+<p>The left sidebar is your main navigation. Let&#39;s go through each item:</p>
+<h3>1. Dashboard</h3>
+<ul>
+<li><strong>Home</strong> — the main dashboard screen (what we just covered)</li>
+<li><strong>Updates</strong> — shows available updates for WordPress core, themes, and plugins</li>
+</ul>
+<h3>2. Posts</h3>
+<p>Where you manage <strong>blog posts</strong> (date-based, chronological content).</p>
+<ul>
+<li><strong>All Posts</strong> — list of all posts, with options to edit, trash, or bulk-edit</li>
+<li><strong>Add New Post</strong> — create a new blog post</li>
+<li><strong>Categories</strong> — organize posts into categories (e.g., &quot;News&quot;, &quot;Tutorials&quot;)</li>
+<li><strong>Tags</strong> — add keyword tags to posts for further organization</li>
+</ul>
+<h3>3. Media</h3>
+<p>The <strong>Media Library</strong> — all uploaded files (images, PDFs, videos, audio).</p>
+<ul>
+<li><strong>Library</strong> — browse all uploaded media in grid or list view</li>
+<li><strong>Add New Media File</strong> — upload new files</li>
+<li>You can also upload media directly when editing a post or page</li>
+</ul>
+<h3>4. Pages</h3>
+<p>Where you manage <strong>static pages</strong> (About, Contact, Services, etc.).</p>
+<ul>
+<li><strong>All Pages</strong> — list of all pages</li>
+<li><strong>Add New Page</strong> — create a new page</li>
+<li>Pages don&#39;t have categories or tags — they&#39;re standalone content</li>
+</ul>
+<h3>5. Comments</h3>
+<p>Manage comments left on your blog posts.</p>
+<ul>
+<li>Approve, reply to, edit, spam, or trash comments</li>
+<li>Set comment moderation rules in Settings → Discussion</li>
+</ul>
+<h3>6. Appearance</h3>
+<p>Controls how your site <strong>looks</strong>.</p>
+<ul>
+<li><strong>Themes</strong> — install, activate, and manage themes</li>
+<li><strong>Customize</strong> — the WordPress Customizer (live preview of changes)</li>
+<li><strong>Widgets</strong> — manage sidebar and footer content blocks</li>
+<li><strong>Menus</strong> — create and manage navigation menus</li>
+<li><strong>Theme File Editor</strong> — edit theme code directly (use with caution!)</li>
+</ul>
+<h3>7. Plugins</h3>
+<p>Manage site <strong>functionality</strong>.</p>
+<ul>
+<li><strong>Installed Plugins</strong> — see all plugins, activate/deactivate them</li>
+<li><strong>Add New Plugin</strong> — search and install plugins from the WordPress repository</li>
+<li><strong>Plugin File Editor</strong> — edit plugin code directly (don&#39;t use this unless you know what you&#39;re doing)</li>
+</ul>
+<h3>8. Users</h3>
+<p>Manage <strong>user accounts</strong> and roles.</p>
+<ul>
+<li><strong>All Users</strong> — list of all users on the site</li>
+<li><strong>Add New User</strong> — create a new user account</li>
+<li><strong>Profile</strong> — edit your own profile (display name, email, password, etc.)</li>
+</ul>
+<h3>9. Tools</h3>
+<p>Utility features.</p>
+<ul>
+<li><strong>Available Tools</strong> — links to press-this and other tools</li>
+<li><strong>Import</strong> — import content from other platforms (Blogger, Tumblr, etc.)</li>
+<li><strong>Export</strong> — export your WordPress content as XML</li>
+<li><strong>Site Health</strong> — diagnostic information about your site</li>
+</ul>
+<h3>10. Settings</h3>
+<p>Configure how your site <strong>behaves</strong>.</p>
+<ul>
+<li><strong>General</strong> — site title, tagline, URL, timezone, date format</li>
+<li><strong>Writing</strong> — default post category, post format</li>
+<li><strong>Reading</strong> — what your homepage displays, how many posts to show</li>
+<li><strong>Discussion</strong> — comment settings and moderation rules</li>
+<li><strong>Media</strong> — default image sizes</li>
+<li><strong>Permalinks</strong> — URL structure for your posts and pages</li>
+<li><strong>Privacy</strong> — privacy policy page settings</li>
+</ul>
+<hr>
+<h2>The Admin Bar (Top Bar)</h2>
+<p>The dark bar at the top of every page (also visible on the front-end when logged in):</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>WordPress logo</strong></td>
+<td>Links to WordPress.org, documentation, and forums</td>
+</tr>
+<tr>
+<td><strong>Site name</strong></td>
+<td>Hover to get a link to visit the front-end</td>
+</tr>
+<tr>
+<td><strong>Updates</strong></td>
+<td>Shows if updates are available (number badge)</td>
+</tr>
+<tr>
+<td><strong>Comments</strong></td>
+<td>Shows pending comments (number badge)</td>
+</tr>
+<tr>
+<td><strong>+ New</strong></td>
+<td>Quick-create a new post, page, media, or user</td>
+</tr>
+<tr>
+<td><strong>Your name (right side)</strong></td>
+<td>Edit profile, log out</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Screen Options &amp; Help</h2>
+<p>Two often-overlooked features at the <strong>top-right</strong> of every admin page:</p>
+<h3>Screen Options</h3>
+<ul>
+<li>Click to show/hide columns and elements on the current page</li>
+<li>Different options appear depending on which page you&#39;re on</li>
+<li>Example: On the Posts list, you can show/hide columns like Author, Categories, Tags, Date</li>
+</ul>
+<h3>Help</h3>
+<ul>
+<li>Click for context-sensitive help about the current page</li>
+<li>Useful when you forget what a specific setting does</li>
+</ul>
+<hr>
+<h2>Keyboard Shortcuts</h2>
+<p>WordPress has some handy keyboard shortcuts:</p>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Alt + Shift + N</code></td>
+<td>New post (in the editor)</td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>Open the block inserter (in Gutenberg editor)</td>
+</tr>
+</tbody></table>
+<p>For comment moderation, enable shortcuts in <strong>Users → Profile → Keyboard Shortcuts</strong>.</p>
+<hr>
+<h2>Exercises</h2>
+<ol>
+<li><p><strong>Explore every sidebar item</strong>: Click through every section in the left sidebar. Don&#39;t change anything — just look at what&#39;s available.</p>
+</li>
+<li><p><strong>Customize the dashboard</strong>: Click &quot;Screen Options&quot; on the Dashboard home and hide everything except &quot;At a Glance&quot; and &quot;Activity&quot;.</p>
+</li>
+<li><p><strong>Check the Settings pages</strong>: Visit each page under Settings (General, Writing, Reading, Discussion, Media, Permalinks, Privacy) and read through the options. Note what each one controls.</p>
+</li>
+<li><p><strong>Visit your site from the admin bar</strong>: Hover over your site name in the top bar and click &quot;Visit Site&quot;. Then click your site name again to go back to the dashboard.</p>
+</li>
+<li><p><strong>Check Site Health</strong>: Go to <strong>Tools → Site Health</strong> and see what it reports. This will be more useful later, but get familiar with where it is.</p>
+</li>
+</ol>
+<hr>
+<h2>Key Takeaways</h2>
+<ul>
+<li>The <strong>left sidebar</strong> is your main navigation — it contains everything</li>
+<li><strong>Posts</strong> are for blog content, <strong>Pages</strong> are for static content</li>
+<li><strong>Appearance</strong> controls how your site looks (themes, menus, widgets)</li>
+<li><strong>Plugins</strong> add functionality</li>
+<li><strong>Settings</strong> configures behavior (especially Permalinks and Reading)</li>
+<li><strong>Screen Options</strong> (top-right) lets you customize every admin page</li>
+<li>The <strong>admin bar</strong> provides quick access to common actions</li>
+<li>You can dismiss the Welcome panel and rearrange dashboard widgets</li>
+</ul>
+<hr>
+<p><strong>Next Lesson:</strong> <a href="lesson-04.html">Lesson 04 - Posts vs Pages</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-02.html" class="prev">&larr; 02. Setting Up Local WP</a>
+      <a href="lesson-04.html" class="next">04. Posts vs Pages &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 2: Build a Blog/Magazine Site — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/project-02.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/project-02.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li class="active"><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Project 2: Build a Blog/Magazine Site</h1>
+<h2>Overview</h2>
+<p>Build a content-focused blog or online magazine site. This project emphasizes content organization, blog functionality, and reader experience.</p>
+<p><strong>Estimated time:</strong> 2-4 hours</p>
+<hr>
+<h2>The Brief</h2>
+<p><strong>Client:</strong> &quot;TechPulse&quot; — a tech news and opinion blog covering gadgets, software, and digital lifestyle.</p>
+<p><strong>Requirements:</strong></p>
+<ul>
+<li>Blog-centric design optimized for reading</li>
+<li>Well-organized content categories</li>
+<li>Engaging homepage with featured and recent articles</li>
+<li>Author bio sections</li>
+<li>Newsletter signup</li>
+</ul>
+<hr>
+<h2>Pages to Build</h2>
+<h3>1. Home Page (Blog-Style)</h3>
+<p><strong>Content to include:</strong></p>
+<ul>
+<li>Header with site logo and navigation</li>
+<li>Featured/hero post section (latest post with large image)</li>
+<li>Recent posts grid (6-8 posts in a 2 or 3 column grid)</li>
+<li>Sidebar with:<ul>
+<li>About the blog (short text)</li>
+<li>Categories list</li>
+<li>Newsletter signup form</li>
+</ul>
+</li>
+<li>&quot;Load more&quot; or pagination</li>
+</ul>
+<p><strong>Elementor approach:</strong> Use product shortcodes or build manually:</p>
+<ul>
+<li>Hero section with the latest post info (manually updated)</li>
+<li>Use <code>[recent_posts]</code> or build a custom layout</li>
+</ul>
+<h3>2. About Page</h3>
+<p><strong>Content to include:</strong></p>
+<ul>
+<li>About the publication</li>
+<li>The editorial team (3 writers with bios and social links)</li>
+<li>Contact information</li>
+<li>&quot;Write for us&quot; call-to-action</li>
+</ul>
+<h3>3. Contact Page</h3>
+<p><strong>Content to include:</strong></p>
+<ul>
+<li>Contact form (Name, Email, Subject, Message)</li>
+<li>&quot;Pitch a Story&quot; note for potential contributors</li>
+<li>Social media links</li>
+</ul>
+<h3>4. Category Pages (Auto-Generated)</h3>
+<p>WordPress automatically creates these. Make sure they look good by:</p>
+<ul>
+<li>Setting up categories properly</li>
+<li>Adding category descriptions</li>
+<li>Testing the archive page layout</li>
+</ul>
+<hr>
+<h2>Blog Posts to Create</h2>
+<p>Create at least <strong>8 blog posts</strong> across these categories:</p>
+<h3>Categories:</h3>
+<ol>
+<li><strong>Gadgets &amp; Gear</strong> (3 posts)</li>
+<li><strong>Software &amp; Apps</strong> (3 posts)</li>
+<li><strong>Digital Lifestyle</strong> (2 posts)</li>
+</ol>
+<h3>Sample Posts:</h3>
+<p><strong>Gadgets &amp; Gear:</strong></p>
+<ol>
+<li><p>&quot;The Best Wireless Earbuds of 2026: Our Top 5 Picks&quot;</p>
+<ul>
+<li>500+ words, featured image, comparison table</li>
+<li>Tags: earbuds, wireless, audio, reviews</li>
+</ul>
+</li>
+<li><p>&quot;Hands-On: The Latest Smartphone Camera Revolution&quot;</p>
+<ul>
+<li>400+ words, multiple images</li>
+<li>Tags: smartphone, camera, photography, review</li>
+</ul>
+</li>
+<li><p>&quot;Smart Home Essentials: What You Actually Need&quot;</p>
+<ul>
+<li>400+ words, list format with images</li>
+<li>Tags: smart-home, IoT, automation</li>
+</ul>
+</li>
+</ol>
+<p><strong>Software &amp; Apps:</strong>
+4. &quot;10 Productivity Apps That Actually Changed My Workflow&quot;</p>
+<ul>
+<li>600+ words, screenshots, list format</li>
+<li>Tags: productivity, apps, workflow, tools</li>
+</ul>
+<ol start="5">
+<li><p>&quot;AI Tools Everyone Should Know About&quot;</p>
+<ul>
+<li>500+ words, categorized list</li>
+<li>Tags: AI, tools, technology, machine-learning</li>
+</ul>
+</li>
+<li><p>&quot;The Rise of No-Code Platforms: Build Without Coding&quot;</p>
+<ul>
+<li>400+ words</li>
+<li>Tags: no-code, development, platforms, tools</li>
+</ul>
+</li>
+</ol>
+<p><strong>Digital Lifestyle:</strong>
+7. &quot;Digital Detox: How to Unplug Without Missing Out&quot;</p>
+<ul>
+<li>400+ words, tips format</li>
+<li>Tags: wellness, digital-detox, tips, lifestyle</li>
+</ul>
+<ol start="8">
+<li>&quot;Remote Work Setup: Building the Perfect Home Office&quot;<ul>
+<li>500+ words, equipment list, images</li>
+<li>Tags: remote-work, home-office, productivity, setup</li>
+</ul>
+</li>
+</ol>
+<h3>Post Requirements:</h3>
+<ul>
+<li>Each post must have: <strong>title, featured image, content (300+ words), category, 3-5 tags, excerpt</strong></li>
+<li>Use <strong>headings (H2, H3)</strong> to structure content</li>
+<li>Include <strong>at least one image</strong> in the body</li>
+<li>Set <strong>Yoast SEO</strong> title and meta description</li>
+<li>Use <strong>internal links</strong> (link between your posts)</li>
+</ul>
+<hr>
+<h2>Design Specifications</h2>
+<h3>Color Palette</h3>
+<table>
+<thead>
+<tr>
+<th>Color</th>
+<th>Hex</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Electric Blue</td>
+<td><code>#0066ff</code></td>
+<td>Links, accents</td>
+</tr>
+<tr>
+<td>Dark Navy</td>
+<td><code>#1a1a2e</code></td>
+<td>Headers, dark backgrounds</td>
+</tr>
+<tr>
+<td>Light Gray</td>
+<td><code>#f4f4f5</code></td>
+<td>Background, cards</td>
+</tr>
+<tr>
+<td>Dark Text</td>
+<td><code>#222222</code></td>
+<td>Body text</td>
+</tr>
+<tr>
+<td>Medium Gray</td>
+<td><code>#666666</code></td>
+<td>Meta text, captions</td>
+</tr>
+</tbody></table>
+<h3>Fonts</h3>
+<ul>
+<li><strong>Headings:</strong> Inter or Roboto (Modern, clean)</li>
+<li><strong>Body:</strong> Source Serif Pro or Georgia (Easy on the eyes for reading)</li>
+</ul>
+<h3>Photography</h3>
+<ul>
+<li>Use Unsplash/Pexels for tech-related images</li>
+<li>Search terms: technology, laptop, smartphone, coding, workspace, gadgets</li>
+</ul>
+<hr>
+<h2>Technical Requirements</h2>
+<ul>
+<li><input disabled="" type="checkbox"> 8+ blog posts with proper categories and tags</li>
+<li><input disabled="" type="checkbox"> Functional category navigation in the menu</li>
+<li><input disabled="" type="checkbox"> Homepage showcases featured and recent posts</li>
+<li><input disabled="" type="checkbox"> All posts have featured images and excerpts</li>
+<li><input disabled="" type="checkbox"> SEO titles and meta descriptions on all posts</li>
+<li><input disabled="" type="checkbox"> Contact form works</li>
+<li><input disabled="" type="checkbox"> Mobile responsive design</li>
+<li><input disabled="" type="checkbox"> Newsletter signup form</li>
+<li><input disabled="" type="checkbox"> Internal links between related posts</li>
+<li><input disabled="" type="checkbox"> Clean, readable typography</li>
+</ul>
+<hr>
+<h2>Bonus Challenges</h2>
+<ol>
+<li>Add a <strong>&quot;Popular Posts&quot;</strong> widget to the sidebar</li>
+<li>Create a <strong>custom 404 page</strong> with helpful navigation</li>
+<li>Add <strong>author bio boxes</strong> at the end of each post</li>
+<li>Implement <strong>related posts</strong> section at the bottom of each post (plugin: &quot;Related Posts for WordPress&quot;)</li>
+<li>Add <strong>social sharing buttons</strong> to posts (plugin: &quot;Social Warfare&quot; or &quot;AddToAny&quot;)</li>
+<li>Create a <strong>&quot;Start Here&quot;</strong> or <strong>&quot;Best Of&quot;</strong> page linking to your top posts</li>
+</ol>
+<hr>
+<h2>Evaluation Criteria</h2>
+<table>
+<thead>
+<tr>
+<th>Criteria</th>
+<th>Check</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>8+ blog posts exist with proper formatting</td>
+<td></td>
+</tr>
+<tr>
+<td>Categories and tags are well-organized</td>
+<td></td>
+</tr>
+<tr>
+<td>Homepage features recent/popular content</td>
+<td></td>
+</tr>
+<tr>
+<td>Posts are easy to read (typography, spacing, headings)</td>
+<td></td>
+</tr>
+<tr>
+<td>Navigation includes categories</td>
+<td></td>
+</tr>
+<tr>
+<td>All posts have featured images</td>
+<td></td>
+</tr>
+<tr>
+<td>SEO is configured on all posts</td>
+<td></td>
+</tr>
+<tr>
+<td>Mobile responsive</td>
+<td></td>
+</tr>
+<tr>
+<td>Newsletter signup form exists</td>
+<td></td>
+</tr>
+<tr>
+<td>Internal links connect related posts</td>
+<td></td>
+</tr>
+</tbody></table>
+
+    <nav class="lesson-nav">
+      <a href="project-01.html" class="prev">&larr; Project 1: Business Website</a>
+      <a href="project-03.html" class="next">Project 3: E-Commerce Store &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

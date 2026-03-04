@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lección 07: Ajustes de WordPress a Fondo — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-07.html">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-07.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li class="active"><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lección 07: Ajustes de WordPress a Fondo</h1>
+<h2>Objetivos</h2>
+<ul>
+<li>Configurar correctamente todos los ajustes esenciales de WordPress</li>
+<li>Establecer los enlaces permanentes adecuados (estructura de URL)</li>
+<li>Configurar los ajustes de lectura (visualización de la página de inicio)</li>
+<li>Entender cada página de ajustes y cuándo modificarla</li>
+</ul>
+<hr>
+<h2>Settings → General</h2>
+<p><strong>Ruta:</strong> Settings → General</p>
+<table>
+<thead>
+<tr>
+<th>Ajuste</th>
+<th>Qué Hace</th>
+<th>Recomendado</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Site Title</strong></td>
+<td>El nombre de tu sitio web (aparece en la pestaña del navegador, cabecera)</td>
+<td>El nombre de tu negocio/sitio</td>
+</tr>
+<tr>
+<td><strong>Tagline</strong></td>
+<td>Una breve descripción de tu sitio</td>
+<td>Un eslogan o descripción breve</td>
+</tr>
+<tr>
+<td><strong>WordPress Address (URL)</strong></td>
+<td>Dónde están instalados los archivos de WordPress</td>
+<td>¡No cambies esto!</td>
+</tr>
+<tr>
+<td><strong>Site Address (URL)</strong></td>
+<td>La URL pública que usan los visitantes</td>
+<td>¡No cambies esto!</td>
+</tr>
+<tr>
+<td><strong>Administration Email</strong></td>
+<td>Email para notificaciones de administración</td>
+<td>Tu email real</td>
+</tr>
+<tr>
+<td><strong>Membership</strong></td>
+<td>Permitir que cualquiera se registre</td>
+<td>Normalmente desmarcado (a menos que necesites registro de usuarios)</td>
+</tr>
+<tr>
+<td><strong>New User Default Role</strong></td>
+<td>Rol asignado a nuevos registrados</td>
+<td>Subscriber (el más seguro)</td>
+</tr>
+<tr>
+<td><strong>Site Language</strong></td>
+<td>Idioma de la interfaz de administración</td>
+<td>Tu idioma preferido</td>
+</tr>
+<tr>
+<td><strong>Timezone</strong></td>
+<td>Usado para programar entradas</td>
+<td>Tu zona horaria</td>
+</tr>
+<tr>
+<td><strong>Date Format</strong></td>
+<td>Cómo se muestran las fechas</td>
+<td>Tu preferencia</td>
+</tr>
+<tr>
+<td><strong>Time Format</strong></td>
+<td>Cómo se muestran las horas</td>
+<td>Tu preferencia</td>
+</tr>
+</tbody></table>
+<h3>Acciones a Realizar:</h3>
+<ol>
+<li>Establece tu <strong>Site Title</strong> con algo significativo</li>
+<li>Escribe un <strong>Tagline</strong> claro (o déjalo vacío — ¡algunos temas muestran &quot;Just another WordPress site&quot; si no lo cambias!)</li>
+<li>Configura tu <strong>Timezone</strong></li>
+<li><strong>Nunca cambies</strong> el WordPress Address o Site Address a menos que sepas exactamente lo que haces — esto puede romper tu sitio</li>
+</ol>
+<hr>
+<h2>Settings → Writing</h2>
+<p><strong>Ruta:</strong> Settings → Writing</p>
+<table>
+<thead>
+<tr>
+<th>Ajuste</th>
+<th>Qué Hace</th>
+<th>Recomendado</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Default Post Category</strong></td>
+<td>Categoría para entradas cuando no se selecciona ninguna</td>
+<td>Cambiar de &quot;Uncategorized&quot; a tu categoría general</td>
+</tr>
+<tr>
+<td><strong>Default Post Format</strong></td>
+<td>Formato de entrada (Estándar, Vídeo, Cita, etc.)</td>
+<td>Standard</td>
+</tr>
+</tbody></table>
+<p>Esta página es sencilla. La acción principal:</p>
+<ul>
+<li>Establece tu <strong>Default Post Category</strong> con el nombre al que hayas renombrado &quot;Uncategorized&quot;</li>
+</ul>
+<hr>
+<h2>Settings → Reading</h2>
+<p><strong>Ruta:</strong> Settings → Reading</p>
+<p>Esta es una de las páginas de ajustes <strong>más importantes</strong>.</p>
+<h3>Tu Página de Inicio Muestra</h3>
+<table>
+<thead>
+<tr>
+<th>Opción</th>
+<th>Qué Hace</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Your latest posts</strong></td>
+<td>La página de inicio muestra una lista de tus entradas recientes del blog (como un blog tradicional)</td>
+</tr>
+<tr>
+<td><strong>A static page</strong></td>
+<td>La página de inicio muestra una página específica que hayas creado (como un sitio web empresarial)</td>
+</tr>
+</tbody></table>
+<p><strong>Para la mayoría de sitios profesionales, elige &quot;A static page&quot;:</strong></p>
+<ol>
+<li>Selecciona <strong>&quot;A static page&quot;</strong></li>
+<li><strong>Homepage</strong>: Selecciona la página que usarás como inicio (crea primero una página &quot;Home&quot; si no lo has hecho)</li>
+<li><strong>Posts page</strong>: Selecciona una página para usar como listado de blog (crea una página &quot;Blog&quot; — puede estar vacía, WordPress la rellenará automáticamente)</li>
+</ol>
+<h3>Otros Ajustes de Lectura</h3>
+<table>
+<thead>
+<tr>
+<th>Ajuste</th>
+<th>Qué Hace</th>
+<th>Recomendado</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Blog pages show at most</strong></td>
+<td>Número de entradas por página</td>
+<td>10 está bien</td>
+</tr>
+<tr>
+<td><strong>Syndication feeds show</strong></td>
+<td>Número de elementos en el feed RSS</td>
+<td>10 está bien</td>
+</tr>
+<tr>
+<td><strong>For each post in a feed, include</strong></td>
+<td>Texto completo o resumen en RSS</td>
+<td>Summary</td>
+</tr>
+<tr>
+<td><strong>Search engine visibility</strong></td>
+<td>Disuadir a los motores de búsqueda de indexar</td>
+<td><strong>¡Desmarca esto!</strong> (A menos que estés en desarrollo y no quieras que Google encuentre tu sitio todavía)</td>
+</tr>
+</tbody></table>
+<h3>¡Advertencia Crítica!</h3>
+<p>La casilla &quot;Search engine visibility&quot; (&quot;Discourage search engines from indexing this site&quot;) debería estar:</p>
+<ul>
+<li><strong>Marcada</strong> mientras estás desarrollando en local o construyendo el sitio</li>
+<li><strong>Desmarcada</strong> cuando el sitio esté en producción — ¡olvidar esto significa que Google no indexará tu sitio!</li>
+</ul>
+<hr>
+<h2>Settings → Discussion</h2>
+<p><strong>Ruta:</strong> Settings → Discussion</p>
+<p>Controla los <strong>comentarios</strong> y la interacción de usuarios.</p>
+<h3>Ajustes Clave:</h3>
+<table>
+<thead>
+<tr>
+<th>Ajuste</th>
+<th>Qué Hace</th>
+<th>Recomendado para Sitios Empresariales</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Allow people to submit comments on new posts</strong></td>
+<td>Activar/desactivar comentarios globalmente</td>
+<td>Desmarcar si no quieres un blog con comentarios</td>
+</tr>
+<tr>
+<td><strong>Comment author must fill out name and email</strong></td>
+<td>Requerir identificación</td>
+<td>Marcar</td>
+</tr>
+<tr>
+<td><strong>Users must be registered and logged in to comment</strong></td>
+<td>Restringir quién puede comentar</td>
+<td>Normalmente desmarcar</td>
+</tr>
+<tr>
+<td><strong>Automatically close comments on posts older than X days</strong></td>
+<td>Cerrar automáticamente discusiones antiguas</td>
+<td>30-90 días es habitual</td>
+</tr>
+<tr>
+<td><strong>Comment must be manually approved</strong></td>
+<td>Moderar todos los comentarios</td>
+<td>Marcar — previene spam</td>
+</tr>
+<tr>
+<td><strong>Comment moderation</strong></td>
+<td>Retener comentarios con cierto contenido</td>
+<td>El valor por defecto está bien</td>
+</tr>
+<tr>
+<td><strong>Disallowed comment keys</strong></td>
+<td>Bloquear comentarios con ciertas palabras</td>
+<td>Añadir palabras de spam según sea necesario</td>
+</tr>
+</tbody></table>
+<h3>Si No Quieres Comentarios en Absoluto:</h3>
+<ol>
+<li>Desmarca &quot;Allow people to submit comments on new posts&quot;</li>
+<li>Esto aplica solo a entradas <strong>nuevas</strong> — las entradas existentes mantienen su configuración actual</li>
+<li>Para desactivar comentarios en entradas existentes, edítalas en lote (Posts → All Posts → Select All → Bulk Actions → Edit → Comments: Do not allow)</li>
+</ol>
+<hr>
+<h2>Settings → Media</h2>
+<p><strong>Ruta:</strong> Settings → Media</p>
+<p>Controla los <strong>tamaños de imagen</strong> que WordPress genera al subir.</p>
+<table>
+<thead>
+<tr>
+<th>Ajuste</th>
+<th>Por Defecto</th>
+<th>Propósito</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Thumbnail size</strong></td>
+<td>150 × 150</td>
+<td>Previsualizaciones pequeñas</td>
+</tr>
+<tr>
+<td><strong>Medium size</strong></td>
+<td>300 × 300 máx.</td>
+<td>Imágenes en contenido</td>
+</tr>
+<tr>
+<td><strong>Large size</strong></td>
+<td>1024 × 1024 máx.</td>
+<td>Imágenes a ancho completo</td>
+</tr>
+</tbody></table>
+<p><strong>Recomendación:</strong> Deja los valores por defecto a menos que tu tema o diseño requiera tamaños específicos.</p>
+<h3>Organizar Medios</h3>
+<ul>
+<li><strong>&quot;Organize my uploads into month- and year-based folders&quot;</strong> — Mantén esto marcado. Crea carpetas como <code>/uploads/2025/06/</code> que evitan tener miles de archivos en un solo directorio.</li>
+</ul>
+<hr>
+<h2>Settings → Permalinks (¡Crítico!)</h2>
+<p><strong>Ruta:</strong> Settings → Permalinks</p>
+<p>Esto controla la <strong>estructura de URLs</strong> de tu sitio. Es una de las primeras cosas que debes configurar.</p>
+<h3>Estructuras Disponibles:</h3>
+<table>
+<thead>
+<tr>
+<th>Estructura</th>
+<th>URL de Ejemplo</th>
+<th>¿Recomendada?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Plain</strong></td>
+<td><code>?p=123</code></td>
+<td>Nunca — fea y mala para SEO</td>
+</tr>
+<tr>
+<td><strong>Day and name</strong></td>
+<td><code>/2026/03/02/sample-post/</code></td>
+<td>Para sitios de noticias</td>
+</tr>
+<tr>
+<td><strong>Month and name</strong></td>
+<td><code>/2026/03/sample-post/</code></td>
+<td>Para blogs</td>
+</tr>
+<tr>
+<td><strong>Numeric</strong></td>
+<td><code>/archives/123</code></td>
+<td>Nunca</td>
+</tr>
+<tr>
+<td><strong>Post name</strong></td>
+<td><code>/sample-post/</code></td>
+<td><strong>¡Sí — usa esta!</strong></td>
+</tr>
+<tr>
+<td><strong>Custom</strong></td>
+<td>Tú la defines</td>
+<td>Para necesidades específicas</td>
+</tr>
+</tbody></table>
+<h3>Configúralo Ahora:</h3>
+<ol>
+<li>Selecciona <strong>&quot;Post name&quot;</strong></li>
+<li>Haz clic en <strong>&quot;Save Changes&quot;</strong></li>
+</ol>
+<p><strong>¿Por qué &quot;Post name&quot;?</strong></p>
+<ul>
+<li>URLs limpias y legibles: <code>tusitio.com/sobre-nosotros/</code> en vez de <code>tusitio.com/?p=5</code></li>
+<li>Mejor para SEO — las palabras clave en la URL ayudan a los motores de búsqueda</li>
+<li>Mejor para compartir — la gente puede leer y confiar en la URL</li>
+<li>Cortas y profesionales</li>
+</ul>
+<h3>Advertencia Importante:</h3>
+<p><strong>Cambia los enlaces permanentes PRIMERO, antes de crear mucho contenido.</strong> Cambiarlos después puede romper enlaces existentes y perjudicar el SEO. En un sitio en producción con contenido existente, cambiar los enlaces permanentes requiere configurar redirecciones.</p>
+<hr>
+<h2>Settings → Privacy</h2>
+<p><strong>Ruta:</strong> Settings → Privacy</p>
+<ul>
+<li>Selecciona o crea una <strong>página de Política de Privacidad</strong></li>
+<li>WordPress puede generar una plantilla de política de privacidad para ti</li>
+<li>Requerido por ley en muchas regiones (RGPD en Europa, CCPA en California)</li>
+</ul>
+<h3>Acciones a Realizar:</h3>
+<ol>
+<li>Haz clic en <strong>&quot;Create a new Privacy Policy page&quot;</strong> si no lo has hecho ya</li>
+<li>Edita la página generada para que coincida con las prácticas reales de tu sitio</li>
+<li>O selecciona una página de política de privacidad existente</li>
+</ol>
+<hr>
+<h2>Lista de Configuración Inicial</h2>
+<p>Aquí está el orden para configurar un nuevo sitio WordPress:</p>
+<ol>
+<li><p><strong>Settings → General</strong></p>
+<ul>
+<li>Establecer Site Title y Tagline</li>
+<li>Configurar Timezone</li>
+<li>Eliminar &quot;Just another WordPress site&quot; del Tagline</li>
+</ul>
+</li>
+<li><p><strong>Settings → Permalinks</strong></p>
+<ul>
+<li>Seleccionar &quot;Post name&quot; → Save Changes</li>
+</ul>
+</li>
+<li><p><strong>Settings → Reading</strong></p>
+<ul>
+<li>Establecer &quot;A static page&quot; para la página de inicio (después de crear las páginas Home y Blog)</li>
+<li>Marcar &quot;Discourage search engines&quot; durante el desarrollo</li>
+</ul>
+</li>
+<li><p><strong>Settings → Discussion</strong></p>
+<ul>
+<li>Configurar los ajustes de comentarios según tus necesidades</li>
+</ul>
+</li>
+<li><p><strong>Settings → Writing</strong></p>
+<ul>
+<li>Establecer la Default Post Category</li>
+</ul>
+</li>
+<li><p><strong>Settings → Media</strong></p>
+<ul>
+<li>Normalmente dejar los valores por defecto</li>
+</ul>
+</li>
+<li><p><strong>Settings → Privacy</strong></p>
+<ul>
+<li>Crear o asignar una página de política de privacidad</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>Ejercicios</h2>
+<ol>
+<li><p><strong>Configura los ajustes generales</strong>: Establece el título de tu sitio, eslogan y zona horaria. Elimina &quot;Just another WordPress site&quot; si aún está ahí.</p>
+</li>
+<li><p><strong>Establece los Permalinks a &quot;Post name&quot;</strong>: Esto es crítico — hazlo ahora antes de crear mucho contenido.</p>
+</li>
+<li><p><strong>Configura tu página de inicio</strong>:</p>
+<ul>
+<li>Crea una página llamada &quot;Home&quot; (si no lo has hecho ya)</li>
+<li>Crea una página llamada &quot;Blog&quot;</li>
+<li>Ve a Settings → Reading → selecciona &quot;A static page&quot;</li>
+<li>Establece Homepage como &quot;Home&quot; y Posts page como &quot;Blog&quot;</li>
+<li>Visita tu sitio para ver el cambio</li>
+</ul>
+</li>
+<li><p><strong>Configura los comentarios</strong>: Decide si quieres comentarios en tu sitio. Si no, desmarca el ajuste en Discussion. Si sí, activa la moderación.</p>
+</li>
+<li><p><strong>Verifica la visibilidad en buscadores</strong>: Asegúrate de que está marcada mientras desarrollas en local (la desmarcaremos al publicar).</p>
+</li>
+<li><p><strong>Crea una política de privacidad</strong>: Usa la página Settings → Privacy para crear una.</p>
+</li>
+</ol>
+<hr>
+<h2>Puntos Clave</h2>
+<ul>
+<li><strong>Establece los Permalinks a &quot;Post name&quot; inmediatamente</strong> — hazlo antes de crear contenido</li>
+<li><strong>Configura una página de inicio estática</strong> en los ajustes de Reading para sitios profesionales/empresariales</li>
+<li><strong>Elimina &quot;Just another WordPress site&quot;</strong> de tu eslogan</li>
+<li><strong>Marca &quot;Discourage search engines&quot;</strong> durante el desarrollo, desmárcalo al publicar</li>
+<li><strong>Activa la moderación de comentarios</strong> si permites comentarios</li>
+<li>Las páginas de ajustes más críticas son: <strong>Permalinks</strong>, <strong>Reading</strong> y <strong>General</strong></li>
+<li>Siempre configura los ajustes <strong>antes</strong> de construir tu contenido</li>
+</ul>
+<hr>
+<p><strong>Siguiente Módulo:</strong> <a href="lesson-08.html">Módulo 2 - Temas y Apariencia</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-06.html" class="prev">&larr; 06. La Biblioteca de Medios</a>
+      <a href="lesson-08.html" class="next">08. Entender los Temas &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

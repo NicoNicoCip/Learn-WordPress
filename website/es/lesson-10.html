@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lección 10: Menús y Navegación — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-10.html">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-10.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li class="active"><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lección 10: Menús y Navegación</h1>
+<h2>Objetivos</h2>
+<ul>
+<li>Crear y gestionar menús de navegación</li>
+<li>Añadir páginas, entradas, categorías y enlaces personalizados a los menús</li>
+<li>Crear menús desplegables (subelementos)</li>
+<li>Asignar menús a ubicaciones del theme</li>
+<li>Comprender las mejores prácticas de menús</li>
+</ul>
+<hr>
+<h2>¿Qué Son los Menús de WordPress?</h2>
+<p>Los menús son los <strong>enlaces de navegación</strong> que ayudan a los visitantes a moverse por tu sitio. Normalmente se encuentran en:</p>
+<ul>
+<li><strong>Cabecera</strong> (barra de navegación principal)</li>
+<li><strong>Pie de página</strong> (enlaces del footer)</li>
+<li><strong>Barra lateral</strong> (a veces se usa para navegación secundaria)</li>
+</ul>
+<p>WordPress tiene un sistema dedicado de gestión de menús que te permite crear menús y asignarlos a ubicaciones definidas por tu theme.</p>
+<hr>
+<h2>Crear Tu Primer Menú</h2>
+<h3>Paso 1: Abrir el Editor de Menús</h3>
+<ol>
+<li>Ve a <strong>Appearance → Menus</strong></li>
+<li>Verás el editor de menús con dos secciones:<ul>
+<li><strong>Lado izquierdo</strong>: Elementos que puedes añadir al menú (Páginas, Entradas, Enlaces Personalizados, Categorías)</li>
+<li><strong>Lado derecho</strong>: La estructura del menú (actualmente vacía)</li>
+</ul>
+</li>
+</ol>
+<h3>Paso 2: Crear un Nuevo Menú</h3>
+<ol>
+<li>En el campo <strong>&quot;Menu Name&quot;</strong>, escribe: <code>Main Navigation</code></li>
+<li>Haz clic en <strong>&quot;Create Menu&quot;</strong></li>
+</ol>
+<h3>Paso 3: Añadir Páginas al Menú</h3>
+<ol>
+<li>En el lado izquierdo, bajo <strong>&quot;Pages&quot;</strong>, verás tus páginas existentes</li>
+<li>Haz clic en <strong>&quot;View All&quot;</strong> para ver todas las páginas</li>
+<li>Marca las casillas junto a las páginas que quieras en tu menú:<ul>
+<li>Inicio</li>
+<li>Sobre Nosotros</li>
+<li>Servicios</li>
+<li>Blog</li>
+<li>Contacto</li>
+</ul>
+</li>
+<li>Haz clic en <strong>&quot;Add to Menu&quot;</strong></li>
+</ol>
+<h3>Paso 4: Ordenar los Elementos del Menú</h3>
+<p>Los elementos aparecen en el lado derecho. Puedes:</p>
+<ul>
+<li><strong>Arrastrar y soltar</strong> para reordenarlos</li>
+<li>Los elementos en la parte superior aparecen primero (más a la izquierda en un menú horizontal)</li>
+</ul>
+<p>Orden recomendado:</p>
+<ol>
+<li>Inicio</li>
+<li>Sobre Nosotros</li>
+<li>Servicios</li>
+<li>Blog</li>
+<li>Contacto</li>
+</ol>
+<h3>Paso 5: Asignar una Ubicación del Menú</h3>
+<ol>
+<li>En la parte inferior del editor de menús, encuentra <strong>&quot;Menu Settings&quot;</strong></li>
+<li>Bajo <strong>&quot;Display location&quot;</strong>, marca <strong>&quot;Primary&quot;</strong> (o &quot;Header Menu&quot; — el nombre depende de tu theme)</li>
+<li>Haz clic en <strong>&quot;Save Menu&quot;</strong></li>
+</ol>
+<h3>Paso 6: Ver Tu Menú</h3>
+<p>Visita tu sitio para ver el menú de navegación en la cabecera.</p>
+<hr>
+<h2>Crear Menús Desplegables (Subelementos)</h2>
+<p>Los menús desplegables muestran elementos anidados cuando pasas el ratón sobre un elemento padre.</p>
+<h3>Cómo Crear Desplegables:</h3>
+<ol>
+<li>Añade todos los elementos que quieras al menú</li>
+<li>Arrastra un elemento del menú <strong>ligeramente a la derecha</strong> bajo otro elemento</li>
+<li>Se indentará y se convertirá en un <strong>subelemento</strong></li>
+</ol>
+<h3>Ejemplo de Estructura:</h3>
+<pre><code>Inicio
+Sobre Nosotros
+Servicios              ← elemento padre
+  ├── Diseño Web       ← subelemento (desplegable)
+  ├── SEO              ← subelemento
+  └── Marketing        ← subelemento
+Blog
+Contacto
+</code></pre>
+<h3>Para Crear Esto:</h3>
+<ol>
+<li>Añade las páginas &quot;Servicios&quot;, &quot;Diseño Web&quot;, &quot;SEO&quot; y &quot;Marketing&quot; al menú</li>
+<li>Arrastra &quot;Diseño Web&quot; bajo &quot;Servicios&quot; y ligeramente a la derecha hasta que se indente</li>
+<li>Haz lo mismo con &quot;SEO&quot; y &quot;Marketing&quot;</li>
+<li>Guarda el menú</li>
+</ol>
+<p><strong>Consejo:</strong> Puedes crear varios niveles de profundidad (sub-subelementos), pero evita pasar de 2 niveles — resulta confuso para los usuarios en móvil.</p>
+<hr>
+<h2>Tipos de Elementos de Menú</h2>
+<h3>Páginas</h3>
+<ul>
+<li>El tipo de elemento de menú más común</li>
+<li>Enlaza a tus páginas de WordPress</li>
+</ul>
+<h3>Entradas</h3>
+<ul>
+<li>Enlaza a entradas de blog específicas</li>
+<li>No se usa comúnmente en la navegación principal</li>
+</ul>
+<h3>Enlaces Personalizados</h3>
+<ul>
+<li>Enlaza a <strong>cualquier URL</strong> (interna o externa)</li>
+<li>Útil para:<ul>
+<li>Enlaces externos (redes sociales, sitios asociados)</li>
+<li>Enlaces de anclaje (<code>#nombre-seccion</code>)</li>
+<li>Enlaces a páginas fuera de WordPress</li>
+</ul>
+</li>
+</ul>
+<p><strong>Para añadir un enlace personalizado:</strong></p>
+<ol>
+<li>En el panel izquierdo, expande <strong>&quot;Custom Links&quot;</strong></li>
+<li>Introduce la <strong>URL</strong> y el <strong>Link Text</strong></li>
+<li>Haz clic en <strong>&quot;Add to Menu&quot;</strong></li>
+</ol>
+<h3>Categorías</h3>
+<ul>
+<li>Enlaza a páginas de archivo de categorías</li>
+<li>Útil para sitios con mucho contenido de blog</li>
+</ul>
+<p><strong>Ejemplo:</strong> Añadir una categoría &quot;Noticias&quot; al menú enlazaría a la página que muestra todas las entradas en la categoría Noticias.</p>
+<hr>
+<h2>Editar Elementos del Menú</h2>
+<p>Haz clic en la <strong>flecha hacia abajo</strong> de cualquier elemento del menú para expandir sus ajustes:</p>
+<table>
+<thead>
+<tr>
+<th>Ajuste</th>
+<th>Qué Hace</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Navigation Label</strong></td>
+<td>El texto que se muestra en el menú (no tiene que coincidir con el título de la página)</td>
+</tr>
+<tr>
+<td><strong>Title Attribute</strong></td>
+<td>Texto de información emergente que se muestra al pasar el ratón (opcional)</td>
+</tr>
+<tr>
+<td><strong>Open link in a new tab</strong></td>
+<td>Abre el enlace en una nueva pestaña del navegador (actívalo primero en Screen Options)</td>
+</tr>
+<tr>
+<td><strong>CSS Classes</strong></td>
+<td>Añade clases CSS personalizadas para el estilo (actívalo primero en Screen Options)</td>
+</tr>
+</tbody></table>
+<h3>Renombrar Elementos del Menú</h3>
+<p>Puedes mostrar un nombre diferente al título de la página:</p>
+<ol>
+<li>Expande el elemento del menú</li>
+<li>Cambia el <strong>&quot;Navigation Label&quot;</strong></li>
+<li>Ejemplo: Tu página es &quot;Sobre Nosotros&quot; pero quieres que el menú diga solo &quot;Nosotros&quot;</li>
+</ol>
+<h3>Activar Opciones Avanzadas</h3>
+<p>Haz clic en <strong>&quot;Screen Options&quot;</strong> (esquina superior derecha) y marca:</p>
+<ul>
+<li><strong>Link Target</strong> — para activar &quot;Abrir en nueva pestaña&quot;</li>
+<li><strong>CSS Classes</strong> — para añadir clases personalizadas</li>
+<li><strong>Link Relationship (XFN)</strong> — para atributos rel de enlaces</li>
+<li><strong>Description</strong> — para añadir descripciones (algunos themes las muestran)</li>
+</ul>
+<hr>
+<h2>Crear Múltiples Menús</h2>
+<p>Puedes crear diferentes menús para diferentes ubicaciones:</p>
+<h3>Configuración Común de Menús:</h3>
+<ol>
+<li><strong>Navegación Principal</strong> → Cabecera (ubicación primaria)</li>
+<li><strong>Menú del Pie de Página</strong> → Footer (menú más corto con enlaces legales)</li>
+</ol>
+<h3>Crear un Menú de Pie de Página:</h3>
+<ol>
+<li>Ve a <strong>Appearance → Menus</strong></li>
+<li>Haz clic en el enlace <strong>&quot;Create a new menu&quot;</strong></li>
+<li>Nómbralo <code>Footer Menu</code></li>
+<li>Añade elementos como: Política de Privacidad, Términos de Servicio, Contacto, Mapa del Sitio</li>
+<li>Bajo &quot;Display location&quot;, marca <strong>&quot;Footer&quot;</strong> (si está disponible en tu theme)</li>
+<li>Guarda</li>
+</ol>
+<hr>
+<h2>Gestionar Menús en el Personalizador</h2>
+<p>También puedes gestionar menús a través del Personalizador con una vista previa en vivo:</p>
+<ol>
+<li>Ve a <strong>Appearance → Customize → Menus</strong></li>
+<li>Selecciona un menú para editar o crea uno nuevo</li>
+<li>Añade, elimina y reordena elementos con una vista previa en vivo</li>
+<li>Haz clic en <strong>&quot;Publish&quot;</strong> para guardar</li>
+</ol>
+<p>Esto es útil porque puedes ver los cambios en tiempo real.</p>
+<hr>
+<h2>Mejores Prácticas para Menús</h2>
+<h3>Haz:</h3>
+<ul>
+<li>Mantén el menú principal con <strong>5-7 elementos</strong> como máximo</li>
+<li>Pon los elementos más importantes primero (o último — estas posiciones reciben más atención)</li>
+<li>Usa <strong>etiquetas claras y concisas</strong> (&quot;Servicios&quot; en vez de &quot;Lo Que Podemos Hacer Por Ti&quot;)</li>
+<li>Incluye una <strong>llamada a la acción</strong> como último elemento (ej., &quot;Contáctanos&quot; o &quot;Pide Presupuesto&quot;)</li>
+<li>Prueba el menú en móvil — asegúrate de que los desplegables funcionan</li>
+</ul>
+<h3>No Hagas:</h3>
+<ul>
+<li>No sobrecargues el menú con demasiados elementos</li>
+<li>No pases de 2 niveles de desplegable</li>
+<li>No uses etiquetas vagas como &quot;Más&quot; o &quot;Varios&quot;</li>
+<li>No pongas todo el mapa del sitio en la navegación</li>
+<li>No olvides probar en dispositivos móviles</li>
+</ul>
+<h3>Consideraciones para Móvil</h3>
+<ul>
+<li>La mayoría de los themes convierten automáticamente el menú en un <strong>menú hamburguesa</strong> en móvil</li>
+<li>Los menús largos se convierten en listas desplazables en móvil — mantenlos cortos</li>
+<li>Asegúrate de que tus páginas más importantes sean fácilmente accesibles</li>
+</ul>
+<hr>
+<h2>Ejercicios</h2>
+<ol>
+<li><p><strong>Crea un menú de navegación principal</strong>: Añade las páginas Inicio, Sobre Nosotros, Servicios, Blog y Contacto. Asígnalo a la ubicación Primary/Header.</p>
+</li>
+<li><p><strong>Crea elementos desplegables</strong>: Añade subpáginas bajo &quot;Servicios&quot; como elementos desplegables (crea páginas simples para &quot;Diseño Web&quot;, &quot;SEO&quot;, &quot;Marketing&quot; si no existen).</p>
+</li>
+<li><p><strong>Añade un enlace personalizado</strong>: Añade un enlace personalizado a tu menú que se abra en una nueva pestaña (cualquier URL externa).</p>
+</li>
+<li><p><strong>Crea un menú de pie de página</strong>: Crea un segundo menú con Política de Privacidad, Términos y Contacto. Asígnalo a la ubicación Footer.</p>
+</li>
+<li><p><strong>Renombra un elemento del menú</strong>: Cambia el Navigation Label de uno de tus elementos de menú para que sea diferente del título de su página.</p>
+</li>
+<li><p><strong>Prueba en móvil</strong>: Usa el modo responsive de tu navegador (F12 → alternar barra de herramientas de dispositivo) para ver cómo se ve tu menú en móvil.</p>
+</li>
+</ol>
+<hr>
+<h2>Puntos Clave</h2>
+<ul>
+<li>Crea menús en <strong>Appearance → Menus</strong></li>
+<li>Arrastra elementos <strong>hacia la derecha</strong> para crear subelementos desplegables</li>
+<li><strong>Asigna menús a ubicaciones</strong> (Primary/Header, Footer) definidas por tu theme</li>
+<li>Los elementos de menú pueden ser <strong>páginas, entradas, categorías o enlaces personalizados</strong></li>
+<li>Puedes <strong>renombrar las etiquetas del menú</strong> independientemente de los títulos de las páginas</li>
+<li>Mantén los menús principales con <strong>5-7 elementos</strong> con un máximo de 2 niveles de desplegable</li>
+<li>Crea <strong>menús separados</strong> para cabecera y pie de página</li>
+<li>Siempre <strong>prueba en móvil</strong> — la mayoría de visitantes usan el teléfono</li>
+</ul>
+<hr>
+<p><strong>Siguiente Lección:</strong> <a href="lesson-11.html">Lección 11 - Widgets y Barras Laterales</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-09.html" class="prev">&larr; 09. Instalar un Tema</a>
+      <a href="lesson-11.html" class="next">11. Widgets y Barras Laterales &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lección 31: Fundamentos de SEO para WordPress — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-31.html">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-31.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li class="active"><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lección 31: Fundamentos de SEO para WordPress</h1>
+<h2>Objetivos</h2>
+<ul>
+<li>Entender cómo los motores de búsqueda encuentran y posicionan tu sitio</li>
+<li>Optimizar cada página y entrada para los motores de búsqueda</li>
+<li>Usar Yoast SEO de forma efectiva</li>
+<li>Implementar los fundamentos del SEO técnico</li>
+</ul>
+<hr>
+<h2>Cómo Funcionan los Motores de Búsqueda</h2>
+<h3>El Proceso Básico:</h3>
+<ol>
+<li><strong>Rastreo (Crawling)</strong> — Google envía &quot;bots&quot; para descubrir y escanear tus páginas</li>
+<li><strong>Indexación (Indexing)</strong> — Google almacena y categoriza tu contenido</li>
+<li><strong>Posicionamiento (Ranking)</strong> — Google decide dónde mostrar tus páginas en los resultados de búsqueda</li>
+</ol>
+<h3>Qué Afecta al Posicionamiento:</h3>
+<ul>
+<li><strong>Calidad del contenido</strong> — contenido relevante, útil y bien escrito</li>
+<li><strong>Palabras clave</strong> — los términos que la gente busca coinciden con tu contenido</li>
+<li><strong>Velocidad del sitio</strong> — los sitios más rápidos se posicionan mejor</li>
+<li><strong>Diseño móvil</strong> — el diseño responsive para móvil es obligatorio</li>
+<li><strong>Backlinks</strong> — otros sitios que enlazan al tuyo</li>
+<li><strong>SEO técnico</strong> — estructura del sitio correcta, sitemaps, URLs limpias</li>
+<li><strong>Experiencia de usuario</strong> — tasa de rebote baja, buena navegación</li>
+</ul>
+<hr>
+<h2>SEO On-Page (Por Página/Entrada)</h2>
+<h3>Para Cada Página y Entrada, Optimiza Esto:</h3>
+<h4>1. SEO Title (Etiqueta de Título)</h4>
+<p>El elemento de SEO on-page más importante:</p>
+<ul>
+<li>Aparece como el titular clicable en los resultados de Google</li>
+<li>Mantenlo por debajo de <strong>60 caracteres</strong></li>
+<li>Incluye tu <strong>palabra clave objetivo</strong> cerca del principio</li>
+<li>Hazlo atractivo — determina si la gente hace clic</li>
+</ul>
+<p><strong>Ejemplos:</strong></p>
+<ul>
+<li>Malo: &quot;Inicio&quot;</li>
+<li>Bueno: &quot;Servicios Profesionales de Diseño Web | Tu Empresa&quot;</li>
+<li>Malo: &quot;Sobre Nosotros&quot;</li>
+<li>Bueno: &quot;Sobre Nuestra Agencia — 10 Años de Diseño Premiado&quot;</li>
+</ul>
+<h4>2. Meta Description</h4>
+<p>El fragmento que se muestra debajo del título en los resultados de Google:</p>
+<ul>
+<li>Mantenlo por debajo de <strong>155 caracteres</strong></li>
+<li>Incluye tu palabra clave objetivo de forma natural</li>
+<li>Escribe un resumen atractivo que anime a hacer clic</li>
+<li>Incluye una llamada a la acción</li>
+</ul>
+<p><strong>Ejemplo:</strong>
+&quot;Diseñamos sitios web impresionantes que generan resultados. Más de 10 años de experiencia, más de 200 proyectos completados. Solicita una consulta gratuita hoy.&quot;</p>
+<h4>3. URL Slug</h4>
+<p>La URL de la página:</p>
+<ul>
+<li>Mantenlo <strong>corto y descriptivo</strong></li>
+<li>Incluye la palabra clave principal</li>
+<li>Usa guiones entre las palabras</li>
+<li>Elimina palabras innecesarias (un, el, y, etc.)</li>
+</ul>
+<p><strong>Ejemplos:</strong></p>
+<ul>
+<li>Malo: <code>tusitio.com/nuestros-servicios-profesionales-de-diseno-web-para-pequenas-empresas</code></li>
+<li>Bueno: <code>tusitio.com/servicios-diseno-web</code></li>
+</ul>
+<h4>4. Encabezados (H1-H6)</h4>
+<ul>
+<li>Usa <strong>un H1</strong> por página (normalmente el título principal)</li>
+<li>Usa <strong>H2</strong> para las secciones principales</li>
+<li>Usa <strong>H3</strong> para las subsecciones</li>
+<li>Incluye palabras clave de forma natural en los encabezados</li>
+<li>Usa una jerarquía lógica (H1 → H2 → H3, nunca saltes niveles)</li>
+</ul>
+<h4>5. Contenido</h4>
+<ul>
+<li>Escribe <strong>de forma natural</strong> — no llenes de palabras clave</li>
+<li>Apunta a <strong>300+ palabras</strong> en cada página (más para entradas de blog)</li>
+<li>Usa <strong>palabras clave y términos relacionados</strong> de forma natural</li>
+<li>Divide el texto con encabezados, listas e imágenes</li>
+<li>Enlazado interno — enlaza a otras páginas de tu sitio</li>
+</ul>
+<h4>6. Imágenes</h4>
+<ul>
+<li>Usa <strong>nombres de archivo descriptivos</strong> (ejemplo-diseno-web.jpg, no IMG_001.jpg)</li>
+<li>Escribe <strong>texto alternativo (alt text)</strong> significativo para cada imagen</li>
+<li>Incluye palabras clave en el alt text donde sea natural</li>
+<li>Comprime las imágenes para carga rápida</li>
+</ul>
+<hr>
+<h2>Usar Yoast SEO</h2>
+<h3>El Panel de Yoast</h3>
+<p>Al editar cualquier entrada o página, desplázate hacia abajo para encontrar el panel de Yoast SEO:</p>
+<h3>Focus Keyphrase</h3>
+<ol>
+<li>Introduce la palabra clave o frase principal para esta página</li>
+<li>Yoast analiza tu contenido para esa palabra clave</li>
+<li>Verifica: título, meta description, URL, encabezados, contenido, imágenes</li>
+</ol>
+<h3>Análisis SEO</h3>
+<p>Yoast muestra puntos de colores:</p>
+<ul>
+<li><strong>Verde</strong> — bien, optimizado correctamente</li>
+<li><strong>Naranja</strong> — podría mejorar</li>
+<li><strong>Rojo</strong> — necesita atención</li>
+</ul>
+<p>Recomendaciones comunes:</p>
+<ul>
+<li>&quot;The focus keyphrase doesn&#39;t appear in the SEO title&quot;</li>
+<li>&quot;The meta description is too short&quot;</li>
+<li>&quot;No internal links appear in this page&quot;</li>
+<li>&quot;Images on this page do not have alt attributes with the focus keyphrase&quot;</li>
+</ul>
+<h3>Análisis de Legibilidad</h3>
+<p>Verifica qué tan fácil es leer tu contenido:</p>
+<ul>
+<li>Longitud de oraciones (mantén por debajo de 20 palabras de media)</li>
+<li>Longitud de párrafos (mantén por debajo de 150 palabras)</li>
+<li>Uso de palabras de transición (&quot;sin embargo&quot;, &quot;por lo tanto&quot;, &quot;además&quot;)</li>
+<li>Uso de voz pasiva (minimízalo)</li>
+<li>Distribución de subtítulos (añade encabezados cada 300 palabras)</li>
+</ul>
+<h3>Vista Previa del Snippet</h3>
+<p>Muestra cómo aparecerá tu página en Google:</p>
+<ol>
+<li>Haz clic en <strong>&quot;Edit snippet&quot;</strong> en el panel de Yoast</li>
+<li>Personaliza el <strong>SEO Title</strong> y la <strong>Meta Description</strong></li>
+<li>Ve una vista previa del resultado de búsqueda en Google</li>
+</ol>
+<hr>
+<h2>SEO Técnico</h2>
+<h3>XML Sitemap</h3>
+<p>Yoast genera automáticamente un sitemap:</p>
+<ul>
+<li>Ubicado en: <code>tusitio.com/sitemap_index.xml</code></li>
+<li>Lista todas tus páginas, entradas e imágenes</li>
+<li>Envíalo a Google Search Console cuando tu sitio esté en producción</li>
+</ul>
+<h3>Robots.txt</h3>
+<p>Controla qué páginas pueden rastrear los motores de búsqueda:</p>
+<ul>
+<li>Yoast gestiona esto automáticamente</li>
+<li>Accede en: <code>tusitio.com/robots.txt</code></li>
+</ul>
+<h3>URLs Canónicas</h3>
+<p>Previene problemas de contenido duplicado:</p>
+<ul>
+<li>Yoast añade automáticamente etiquetas canónicas</li>
+<li>Indica a los motores de búsqueda qué versión de una página es la &quot;oficial&quot;</li>
+</ul>
+<h3>Schema Markup (Datos Estructurados)</h3>
+<p>Ayuda a los motores de búsqueda a entender tu contenido:</p>
+<ul>
+<li>Yoast añade schema básico automáticamente</li>
+<li>Tipos: Article, Organization, Product, FAQ, etc.</li>
+<li>Puede resultar en rich snippets en resultados de búsqueda (estrellas, precios, FAQs)</li>
+</ul>
+<hr>
+<h2>Checklist SEO para Cada Página</h2>
+<p>Antes de publicar cualquier página o entrada:</p>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>SEO Title</strong> establecido y por debajo de 60 caracteres</li>
+<li><input disabled="" type="checkbox"> <strong>Meta Description</strong> establecida y por debajo de 155 caracteres</li>
+<li><input disabled="" type="checkbox"> <strong>URL Slug</strong> corto e incluye la palabra clave</li>
+<li><input disabled="" type="checkbox"> <strong>Focus Keyphrase</strong> establecida en Yoast</li>
+<li><input disabled="" type="checkbox"> <strong>Puntuación SEO de Yoast</strong> en verde (o al menos naranja)</li>
+<li><input disabled="" type="checkbox"> <strong>Encabezado H1</strong> usado una vez e incluye la palabra clave</li>
+<li><input disabled="" type="checkbox"> <strong>Encabezados H2/H3</strong> usados para las secciones</li>
+<li><input disabled="" type="checkbox"> <strong>Enlaces internos</strong> a otras páginas de tu sitio</li>
+<li><input disabled="" type="checkbox"> <strong>Imágenes tienen alt text</strong> con inclusión natural de la palabra clave</li>
+<li><input disabled="" type="checkbox"> <strong>Contenido de 300+ palabras</strong> (más para entradas de blog)</li>
+<li><input disabled="" type="checkbox"> <strong>Puntuación de legibilidad</strong> buena (verde o naranja en Yoast)</li>
+</ul>
+<hr>
+<h2>SEO Local (Para Negocios Locales)</h2>
+<p>Si construyes sitios para negocios locales:</p>
+<ol>
+<li><strong>Google Business Profile</strong> — crea/reclama el listado del negocio (lo más importante)</li>
+<li><strong>Consistencia NAP</strong> — Nombre, Dirección, Teléfono deben ser idénticos en todas partes</li>
+<li><strong>Palabras clave locales</strong> — incluye ciudad/región en títulos y contenido (ej., &quot;Diseño Web en Madrid&quot;)</li>
+<li><strong>Google Maps</strong> — incrusta un mapa en la página de contacto</li>
+<li><strong>Reseñas de clientes</strong> — incentiva las reseñas en Google</li>
+<li><strong>Schema local</strong> — añade datos estructurados de LocalBusiness</li>
+</ol>
+<hr>
+<h2>Estrategia de Contenido para SEO</h2>
+<h3>Entradas de Blog para Tráfico</h3>
+<p>Publicar regularmente entradas de blog útiles genera tráfico orgánico:</p>
+<ol>
+<li><strong>Investiga palabras clave</strong> — encuentra qué busca tu audiencia<ul>
+<li>Usa herramientas gratuitas: &quot;People also ask&quot; de Google, AnswerThePublic, Ubersuggest</li>
+</ul>
+</li>
+<li><strong>Escribe contenido útil</strong> — responde preguntas que tiene tu audiencia</li>
+<li><strong>Apunta a 1,000-2,000 palabras</strong> para entradas de blog</li>
+<li><strong>Publica consistentemente</strong> — semanal o quincenal</li>
+<li><strong>Actualiza entradas antiguas</strong> — refresca el contenido para mantenerlo relevante</li>
+</ol>
+<h3>Investigación de Palabras Clave (Básica)</h3>
+<ol>
+<li>Piensa en qué buscan tus clientes</li>
+<li>Usa Google — escribe una consulta y mira:<ul>
+<li>Sugerencias de autocompletado</li>
+<li>Cajas de &quot;People also ask&quot;</li>
+<li>&quot;Búsquedas relacionadas&quot; en la parte inferior</li>
+</ul>
+</li>
+<li>Estas son palabras clave reales que la gente usa — crea contenido alrededor de ellas</li>
+</ol>
+<hr>
+<h2>Ejercicios</h2>
+<ol>
+<li><p><strong>Optimiza tu página de inicio</strong>: Establece una focus keyphrase, escribe un SEO title y una meta description. Consigue que la puntuación de Yoast sea verde.</p>
+</li>
+<li><p><strong>Optimiza tu página Acerca de</strong>: Igual que arriba — keyphrase, título, descripción.</p>
+</li>
+<li><p><strong>Optimiza una entrada de blog</strong>: Crea una nueva entrada de blog (500+ palabras) apuntando a una palabra clave específica. Sigue la checklist SEO de arriba.</p>
+</li>
+<li><p><strong>Añade enlaces internos</strong>: En cada página, añade al menos un enlace a otra página de tu sitio.</p>
+</li>
+<li><p><strong>Comprueba tu sitemap</strong>: Visita <code>tu-sitio.local/sitemap_index.xml</code> y ve todas las páginas listadas.</p>
+</li>
+<li><p><strong>Revisa todo el alt text</strong>: Repasa tu Biblioteca de Medios y asegúrate de que cada imagen tiene alt text descriptivo.</p>
+</li>
+</ol>
+<hr>
+<h2>Puntos Clave</h2>
+<ul>
+<li>El SEO se trata de hacer tu sitio <strong>descubrible</strong> y <strong>relevante</strong> para los motores de búsqueda</li>
+<li><strong>SEO on-page</strong>: título, meta description, URL, encabezados, contenido, imágenes</li>
+<li><strong>Yoast SEO</strong> proporciona una checklist — apunta a puntuaciones verdes en cada página</li>
+<li><strong>SEO Title</strong> es el elemento individual más importante (menos de 60 caracteres, incluye la palabra clave)</li>
+<li>La <strong>calidad del contenido</strong> es lo que más importa — escribe contenido útil y bien estructurado</li>
+<li>El <strong>SEO técnico</strong> (sitemaps, URLs canónicas, schema) lo gestiona Yoast automáticamente</li>
+<li>El <strong>enlazado interno</strong> ayuda a los motores de búsqueda y usuarios a navegar tu sitio</li>
+<li><strong>Publica en el blog consistentemente</strong> para construir tráfico orgánico con el tiempo</li>
+</ul>
+<hr>
+<p><strong>Siguiente Lección:</strong> <a href="lesson-32.html">Lección 32 - Optimización del Rendimiento</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-30.html" class="prev">&larr; 30. Copias de Seguridad</a>
+      <a href="lesson-32.html" class="next">32. Rendimiento &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

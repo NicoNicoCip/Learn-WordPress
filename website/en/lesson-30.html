@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 30: Backups and Security Best Practices — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-30.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-30.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li class="active"><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lesson 30: Backups and Security Best Practices</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Implement a complete backup strategy</li>
+<li>Harden WordPress security beyond plugins</li>
+<li>Know what to do when things go wrong</li>
+<li>Create a maintenance routine</li>
+</ul>
+<hr>
+<h2>Backup Strategy</h2>
+<h3>The 3-2-1 Rule</h3>
+<ul>
+<li><strong>3</strong> copies of your data</li>
+<li><strong>2</strong> different storage types (local + cloud)</li>
+<li><strong>1</strong> offsite backup (cloud storage)</li>
+</ul>
+<h3>What Gets Backed Up</h3>
+<p>A complete WordPress backup includes:</p>
+<ol>
+<li><strong>Database</strong> — all content, settings, users, and plugin data</li>
+<li><strong>wp-content/uploads/</strong> — all media files</li>
+<li><strong>wp-content/themes/</strong> — your active theme</li>
+<li><strong>wp-content/plugins/</strong> — all plugins</li>
+<li><strong>wp-config.php</strong> — database connection and security keys</li>
+<li><strong>.htaccess</strong> — server configuration</li>
+</ol>
+<h3>Backup Schedule (Recommended)</h3>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>How Often</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Database</strong></td>
+<td>Daily</td>
+<td>Content changes frequently</td>
+</tr>
+<tr>
+<td><strong>Files</strong></td>
+<td>Weekly</td>
+<td>Files change less often</td>
+</tr>
+<tr>
+<td><strong>Full backup</strong></td>
+<td>Before any major update</td>
+<td>Safety net for updates</td>
+</tr>
+<tr>
+<td><strong>Full backup</strong></td>
+<td>Before any major change</td>
+<td>Theme switch, migration, etc.</td>
+</tr>
+</tbody></table>
+<h3>Setting Up UpdraftPlus (Configured in Lesson 22)</h3>
+<p>Review your UpdraftPlus settings:</p>
+<ol>
+<li>Go to <strong>Settings → UpdraftPlus Backups → Settings</strong></li>
+<li>Verify schedule: Database = Daily, Files = Weekly</li>
+<li>Verify remote storage is connected (Google Drive, Dropbox, etc.)</li>
+<li>Retention: Keep at least 3-5 backups</li>
+</ol>
+<h3>Manual Backup Before Updates</h3>
+<ol>
+<li>Go to <strong>Settings → UpdraftPlus Backups</strong></li>
+<li>Click <strong>&quot;Backup Now&quot;</strong></li>
+<li>Check both &quot;Include your database&quot; and &quot;Include your files&quot;</li>
+<li>Wait for completion before proceeding with updates</li>
+</ol>
+<h3>Restoring from a Backup</h3>
+<p>If something breaks:</p>
+<ol>
+<li>Go to <strong>Settings → UpdraftPlus Backups</strong></li>
+<li>Scroll to <strong>&quot;Existing Backups&quot;</strong></li>
+<li>Click <strong>&quot;Restore&quot;</strong> on the backup you want</li>
+<li>Select components to restore</li>
+<li>Click <strong>&quot;Restore&quot;</strong></li>
+</ol>
+<hr>
+<h2>WordPress Security Hardening</h2>
+<h3>Beyond Wordfence (Lesson 22), here are additional security measures:</h3>
+<h3>1. Keep Everything Updated</h3>
+<p>The #1 cause of WordPress hacks is outdated software:</p>
+<ul>
+<li><strong>WordPress core</strong> — update promptly</li>
+<li><strong>Plugins</strong> — update within a day of release (after backing up)</li>
+<li><strong>Themes</strong> — update when available</li>
+<li><strong>PHP version</strong> — use the latest supported version</li>
+</ul>
+<h3>2. Strong Credentials</h3>
+<ul>
+<li>Use <strong>unique, strong passwords</strong> for every account</li>
+<li>Use a <strong>password manager</strong> (Bitwarden, 1Password, LastPass)</li>
+<li>Never use: admin, password, 123456, your name, your birthday</li>
+<li>Enable <strong>Two-Factor Authentication</strong> on all admin accounts</li>
+</ul>
+<h3>3. Limit Login Attempts</h3>
+<p>Wordfence does this by default. Additional options:</p>
+<ul>
+<li>Rename the login URL (plugin: WPS Hide Login)</li>
+<li>CAPTCHA on login forms</li>
+</ul>
+<h3>4. File Permissions</h3>
+<p>On a live server, set proper file permissions:</p>
+<pre><code>Directories: 755
+Files: 644
+wp-config.php: 440 or 400
+</code></pre>
+<p>(Your hosting provider usually handles this. Local WP manages it automatically.)</p>
+<h3>5. Disable File Editing</h3>
+<p>Prevent theme/plugin editors in the admin:
+Add to <code>wp-config.php</code>:</p>
+<pre><code class="language-php">define(&#39;DISALLOW_FILE_EDIT&#39;, true);
+</code></pre>
+<p>This removes the Theme Editor and Plugin Editor from the admin — if a hacker gets admin access, they can&#39;t inject code through the editor.</p>
+<h3>6. SSL/HTTPS</h3>
+<ul>
+<li><strong>Always use HTTPS</strong> on live sites</li>
+<li>Most hosts provide free SSL certificates (Let&#39;s Encrypt)</li>
+<li>In Local WP, you can enable SSL by clicking &quot;Trust&quot; in the site settings</li>
+<li>After enabling SSL, update: Settings → General → change both URLs to <code>https://</code></li>
+</ul>
+<h3>7. Security Headers</h3>
+<p>Your hosting or a security plugin can add HTTP headers:</p>
+<ul>
+<li>Content Security Policy</li>
+<li>X-Frame-Options</li>
+<li>X-Content-Type-Options</li>
+<li>Referrer-Policy</li>
+</ul>
+<hr>
+<h2>What to Do When Hacked</h2>
+<p>If you suspect your site has been compromised:</p>
+<h3>Immediate Steps:</h3>
+<ol>
+<li><strong>Don&#39;t panic</strong> — most hacks are fixable</li>
+<li><strong>Take the site offline</strong> (maintenance mode) if possible</li>
+<li><strong>Scan with Wordfence</strong> — run a full scan</li>
+<li><strong>Change all passwords</strong> — WordPress admin, database, FTP, hosting</li>
+<li><strong>Check for unknown admin accounts</strong> — delete any you don&#39;t recognize</li>
+<li><strong>Check for modified files</strong> — Wordfence scan highlights these</li>
+<li><strong>Restore from a clean backup</strong> — if the hack is extensive</li>
+<li><strong>Update everything</strong> — core, plugins, themes to latest versions</li>
+<li><strong>Review and remove</strong> unused plugins and themes</li>
+<li><strong>Request a review</strong> from Google if your site was flagged</li>
+</ol>
+<h3>Prevention Recap:</h3>
+<ul>
+<li>Update regularly</li>
+<li>Use strong passwords + 2FA</li>
+<li>Back up frequently</li>
+<li>Use a security plugin (Wordfence)</li>
+<li>Only install plugins/themes from trusted sources</li>
+</ul>
+<hr>
+<h2>Maintenance Routine</h2>
+<h3>Weekly Tasks</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Check for WordPress, plugin, and theme updates</li>
+<li><input disabled="" type="checkbox"> Review pending comments (approve, spam, or trash)</li>
+<li><input disabled="" type="checkbox"> Check Wordfence scan results</li>
+<li><input disabled="" type="checkbox"> Verify backups completed successfully</li>
+</ul>
+<h3>Monthly Tasks</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Review analytics/traffic data</li>
+<li><input disabled="" type="checkbox"> Test all forms to make sure they still work</li>
+<li><input disabled="" type="checkbox"> Check for broken links (use a free broken link checker plugin or online tool)</li>
+<li><input disabled="" type="checkbox"> Review and optimize the database (UpdraftPlus has an option for this)</li>
+<li><input disabled="" type="checkbox"> Test site speed (Chrome Lighthouse)</li>
+<li><input disabled="" type="checkbox"> Review user accounts — remove any that aren&#39;t needed</li>
+</ul>
+<h3>Quarterly Tasks</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Full manual backup test — restore a backup on a test site to verify it works</li>
+<li><input disabled="" type="checkbox"> Review security settings</li>
+<li><input disabled="" type="checkbox"> Check SEO performance</li>
+<li><input disabled="" type="checkbox"> Review and clean up unused media</li>
+<li><input disabled="" type="checkbox"> Update privacy policy if needed</li>
+</ul>
+<hr>
+<h2>Exercises</h2>
+<ol>
+<li><p><strong>Verify your backup schedule</strong>: Check UpdraftPlus settings and make sure automatic backups are configured.</p>
+</li>
+<li><p><strong>Create a manual backup</strong>: Run a full backup right now and verify it completed.</p>
+</li>
+<li><p><strong>Practice a restore</strong>: If you have a test site, try restoring from a backup to confirm the process works.</p>
+</li>
+<li><p><strong>Security audit</strong>:</p>
+<ul>
+<li>Check that Wordfence is active and configured</li>
+<li>Verify all users have strong passwords</li>
+<li>Delete any unnecessary user accounts</li>
+<li>Check for available updates</li>
+</ul>
+</li>
+<li><p><strong>Create a maintenance checklist</strong>: Copy the maintenance routine above and save it somewhere you&#39;ll see it regularly.</p>
+</li>
+</ol>
+<hr>
+<h2>Key Takeaways</h2>
+<ul>
+<li>Follow the <strong>3-2-1 backup rule</strong>: 3 copies, 2 storage types, 1 offsite</li>
+<li>Back up <strong>before every major update or change</strong></li>
+<li>The <strong>#1 security measure</strong> is keeping everything updated</li>
+<li>Use <strong>strong, unique passwords</strong> + <strong>2FA</strong> on all admin accounts</li>
+<li><strong>Disable file editing</strong> in wp-config.php on live sites</li>
+<li>If hacked: scan, change passwords, restore from backup, update everything</li>
+<li>Set up a <strong>regular maintenance routine</strong> — weekly, monthly, quarterly</li>
+</ul>
+<hr>
+<p><strong>Next Lesson:</strong> <a href="lesson-31.html">Lesson 31 - SEO Fundamentals for WordPress</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-29.html" class="prev">&larr; 29. Users &amp; Roles</a>
+      <a href="lesson-31.html" class="next">31. SEO Fundamentals &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

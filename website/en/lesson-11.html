@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 11: Widgets and Sidebars — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-11.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-11.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li class="active"><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lesson 11: Widgets and Sidebars</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Understand what widgets and widget areas (sidebars) are</li>
+<li>Add, configure, and remove widgets</li>
+<li>Know the common widget types</li>
+<li>Understand how widgets fit into modern WordPress</li>
+</ul>
+<hr>
+<h2>What Are Widgets?</h2>
+<p><strong>Widgets</strong> are small content blocks you can place in designated areas of your site. They add content and features outside of your main page/post content.</p>
+<p><strong>Widget Areas</strong> (also called &quot;sidebars&quot;) are the locations where widgets can be placed. Despite the name &quot;sidebar,&quot; widget areas can be anywhere your theme defines them:</p>
+<ul>
+<li>Sidebar (left or right column)</li>
+<li>Footer (one or more footer columns)</li>
+<li>Header area (some themes)</li>
+</ul>
+<hr>
+<h2>Widget Areas in Hello Elementor</h2>
+<p>Hello Elementor is minimal and provides limited widget areas by default. Most themes (like Astra) offer more.</p>
+<p>When using Elementor for your design, you&#39;ll rely less on widgets because Elementor has its own widgets system. However, understanding WordPress widgets is important because:</p>
+<ul>
+<li>Many themes and plugins use them</li>
+<li>Blog sidebars commonly use them</li>
+<li>Footer areas often use them</li>
+<li>You&#39;ll encounter them on existing sites</li>
+</ul>
+<hr>
+<h2>Managing Widgets</h2>
+<h3>Accessing the Widget Editor</h3>
+<p>There are two ways to manage widgets:</p>
+<p><strong>Method 1: Block-based Widget Editor (newer)</strong></p>
+<ol>
+<li>Go to <strong>Appearance → Widgets</strong></li>
+<li>You&#39;ll see your widget areas with a block-based editor</li>
+<li>Add blocks just like in the post editor</li>
+</ol>
+<p><strong>Method 2: Through the Customizer</strong></p>
+<ol>
+<li>Go to <strong>Appearance → Customize → Widgets</strong></li>
+<li>Select a widget area</li>
+<li>Add and configure widgets with a live preview</li>
+</ol>
+<h3>Adding Widgets</h3>
+<ol>
+<li>Go to <strong>Appearance → Widgets</strong></li>
+<li>Click the <strong>&quot;+&quot;</strong> button in the widget area where you want to add content</li>
+<li>Search for or browse available widgets/blocks</li>
+<li>Click to add, then configure</li>
+</ol>
+<h3>Removing Widgets</h3>
+<ol>
+<li>Click on the widget in the widget area</li>
+<li>Click the three-dot menu (⋮)</li>
+<li>Select <strong>&quot;Remove&quot;</strong></li>
+</ol>
+<hr>
+<h2>Common Widget Types</h2>
+<table>
+<thead>
+<tr>
+<th>Widget</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Paragraph</strong></td>
+<td>Display text</td>
+</tr>
+<tr>
+<td><strong>Image</strong></td>
+<td>Display an image</td>
+</tr>
+<tr>
+<td><strong>Search</strong></td>
+<td>A search bar for your site</td>
+</tr>
+<tr>
+<td><strong>Recent Posts</strong></td>
+<td>List of your latest blog posts</td>
+</tr>
+<tr>
+<td><strong>Recent Comments</strong></td>
+<td>List of latest comments</td>
+</tr>
+<tr>
+<td><strong>Archives</strong></td>
+<td>Monthly/yearly post archives</td>
+</tr>
+<tr>
+<td><strong>Categories</strong></td>
+<td>List or dropdown of post categories</td>
+</tr>
+<tr>
+<td><strong>Navigation Menu</strong></td>
+<td>Display a menu you&#39;ve created</td>
+</tr>
+<tr>
+<td><strong>Custom HTML</strong></td>
+<td>Add raw HTML code</td>
+</tr>
+<tr>
+<td><strong>Calendar</strong></td>
+<td>A calendar showing posts by date</td>
+</tr>
+<tr>
+<td><strong>Tag Cloud</strong></td>
+<td>Display your tags in a visual cloud</td>
+</tr>
+<tr>
+<td><strong>RSS</strong></td>
+<td>Display feed from another site</td>
+</tr>
+</tbody></table>
+<h3>Plugin Widgets</h3>
+<p>Many plugins add their own widgets:</p>
+<ul>
+<li><strong>WooCommerce</strong>: Cart, product search, product categories, filters</li>
+<li><strong>Contact forms</strong>: Display a form in the sidebar</li>
+<li><strong>Social media</strong>: Social links, feeds, follow buttons</li>
+</ul>
+<hr>
+<h2>Common Widget Area Uses</h2>
+<h3>Sidebar Widgets (for blogs)</h3>
+<p>A typical blog sidebar might include:</p>
+<ol>
+<li>Search bar</li>
+<li>About the author (text + image)</li>
+<li>Recent Posts</li>
+<li>Categories</li>
+<li>Social media links</li>
+<li>Newsletter signup</li>
+</ol>
+<h3>Footer Widgets</h3>
+<p>A typical footer might include:</p>
+<ol>
+<li>Column 1: About the company + contact info</li>
+<li>Column 2: Quick links (menu widget)</li>
+<li>Column 3: Recent posts or social links</li>
+<li>Column 4: Newsletter signup or business hours</li>
+</ol>
+<hr>
+<h2>Widgets vs Elementor Widgets</h2>
+<p>Don&#39;t confuse these two:</p>
+<table>
+<thead>
+<tr>
+<th>WordPress Widgets</th>
+<th>Elementor Widgets</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Go in theme-defined widget areas</td>
+<td>Go anywhere in Elementor designs</td>
+</tr>
+<tr>
+<td>Managed at Appearance → Widgets</td>
+<td>Managed in the Elementor editor</td>
+</tr>
+<tr>
+<td>Limited placement options</td>
+<td>Full drag-and-drop freedom</td>
+</tr>
+<tr>
+<td>Basic styling options</td>
+<td>Full styling control</td>
+</tr>
+</tbody></table>
+<p><strong>When using Elementor:</strong> You&#39;ll mostly use Elementor&#39;s own widgets within the page builder. WordPress widgets become relevant mainly for:</p>
+<ul>
+<li>Blog sidebars (if your blog template has a sidebar)</li>
+<li>Areas Elementor doesn&#39;t control (depends on your setup)</li>
+<li>Quick additions to footer areas</li>
+</ul>
+<hr>
+<h2>The Widget Block Editor</h2>
+<p>Modern WordPress uses the <strong>block editor for widgets</strong> (same blocks as the post editor). This means you can add:</p>
+<ul>
+<li>Paragraphs, headings, images, lists</li>
+<li>Columns for multi-column layouts within a widget area</li>
+<li>Any block type available in the post editor</li>
+</ul>
+<h3>Legacy Widget Block</h3>
+<p>If a plugin provides an old-style widget that doesn&#39;t have a block equivalent:</p>
+<ol>
+<li>Add the <strong>&quot;Legacy Widget&quot;</strong> block</li>
+<li>Select the old-style widget from the dropdown</li>
+<li>Configure it within the block</li>
+</ol>
+<hr>
+<h2>Exercises</h2>
+<ol>
+<li><p><strong>Explore widget areas</strong>: Go to Appearance → Widgets and see what widget areas your theme provides.</p>
+</li>
+<li><p><strong>Add widgets to a sidebar</strong>: If your theme has a sidebar widget area, add a Search block, a Recent Posts block, and a Categories block.</p>
+</li>
+<li><p><strong>Add footer content</strong>: If your theme has footer widget areas, add some text, an image, and a navigation menu widget.</p>
+</li>
+<li><p><strong>Use the Customizer</strong>: Go to Appearance → Customize → Widgets and try adding/editing widgets with the live preview.</p>
+</li>
+<li><p><strong>Remove a widget</strong>: Practice removing a widget you added.</p>
+</li>
+</ol>
+<hr>
+<h2>Key Takeaways</h2>
+<ul>
+<li><strong>Widgets</strong> are content blocks placed in <strong>widget areas</strong> (sidebars, footers)</li>
+<li>Manage them at <strong>Appearance → Widgets</strong> or through the <strong>Customizer</strong></li>
+<li>Modern WordPress uses the <strong>block editor</strong> for widgets</li>
+<li>Common widgets: Search, Recent Posts, Categories, Navigation Menu, Custom HTML</li>
+<li>When using <strong>Elementor</strong>, you&#39;ll rely less on WordPress widgets and more on Elementor&#39;s own widget system</li>
+<li>Plugins often add their own widgets (WooCommerce, contact forms, etc.)</li>
+<li>Widgets are most useful for <strong>blog sidebars</strong> and <strong>footer areas</strong></li>
+</ul>
+<hr>
+<p><strong>Next Lesson:</strong> <a href="lesson-12.html">Lesson 12 - The Customizer</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-10.html" class="prev">&larr; 10. Menus &amp; Navigation</a>
+      <a href="lesson-12.html" class="next">12. The Customizer &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

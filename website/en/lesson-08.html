@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 08: Understanding Themes — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-08.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-08.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li class="active"><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lesson 08: Understanding Themes</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Understand what WordPress themes are and how they work</li>
+<li>Know the difference between free and premium themes</li>
+<li>Learn how to evaluate and choose a theme</li>
+<li>Understand parent and child themes</li>
+</ul>
+<hr>
+<h2>What is a Theme?</h2>
+<p>A WordPress theme controls the <strong>visual appearance</strong> and <strong>layout</strong> of your site. It determines:</p>
+<ul>
+<li>How your header and footer look</li>
+<li>The layout of pages and posts (sidebar, full-width, etc.)</li>
+<li>Typography (fonts, sizes, line spacing)</li>
+<li>Colors and styling</li>
+<li>What template options are available</li>
+</ul>
+<h3>Key Concept</h3>
+<p><strong>A theme controls presentation, not content.</strong> You can switch themes without losing your posts, pages, media, or settings. Your content stays in the database; the theme just changes how it&#39;s displayed.</p>
+<hr>
+<h2>How Themes Work (Under the Hood)</h2>
+<p>A theme is a folder of files inside <code>wp-content/themes/</code>:</p>
+<pre><code>wp-content/themes/your-theme/
+├── style.css          ← Main stylesheet + theme metadata
+├── functions.php      ← Theme functionality (registers menus, widgets, etc.)
+├── index.php          ← Fallback template
+├── header.php         ← Site header
+├── footer.php         ← Site footer
+├── sidebar.php        ← Sidebar
+├── single.php         ← Single post template
+├── page.php           ← Single page template
+├── archive.php        ← Category/tag archive pages
+├── 404.php            ← &quot;Page not found&quot; template
+├── screenshot.png     ← Theme preview image
+└── ...more template files
+</code></pre>
+<p>You don&#39;t need to edit these files — especially since we&#39;ll be using Elementor for design. But understanding the structure helps you troubleshoot issues later.</p>
+<hr>
+<h2>Free vs Premium Themes</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Free Themes</th>
+<th>Premium Themes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Cost</strong></td>
+<td>$0</td>
+<td>$30-100+ (one-time or yearly)</td>
+</tr>
+<tr>
+<td><strong>Where to find</strong></td>
+<td>WordPress.org theme directory</td>
+<td>ThemeForest, theme developer sites</td>
+</tr>
+<tr>
+<td><strong>Support</strong></td>
+<td>Community forums only</td>
+<td>Dedicated support from the developer</td>
+</tr>
+<tr>
+<td><strong>Updates</strong></td>
+<td>Variable — some abandoned</td>
+<td>Regular updates (usually)</td>
+</tr>
+<tr>
+<td><strong>Features</strong></td>
+<td>Basic</td>
+<td>More customization options, demos, page templates</td>
+</tr>
+<tr>
+<td><strong>Quality</strong></td>
+<td>Hit or miss</td>
+<td>Generally higher quality</td>
+</tr>
+<tr>
+<td><strong>Security</strong></td>
+<td>Reviewed by WordPress.org</td>
+<td>Depends on the developer</td>
+</tr>
+</tbody></table>
+<h3>For Elementor Users</h3>
+<p>Since Elementor handles most of the design, you don&#39;t need a feature-heavy theme. In fact, <strong>a minimal theme is better</strong> because:</p>
+<ul>
+<li>It won&#39;t conflict with Elementor&#39;s styling</li>
+<li>Faster loading (less code)</li>
+<li>Fewer compatibility issues</li>
+</ul>
+<p><strong>Recommended themes for Elementor:</strong></p>
+<ol>
+<li><strong>Hello Elementor</strong> (free) — made by the Elementor team, ultra-minimal, designed specifically for Elementor</li>
+<li><strong>Astra</strong> (free + paid) — lightweight, highly customizable, great Elementor integration</li>
+<li><strong>GeneratePress</strong> (free + paid) — performance-focused, clean code</li>
+<li><strong>OceanWP</strong> (free + paid) — lots of built-in features and demos</li>
+</ol>
+<hr>
+<h2>Choosing a Theme: What to Look For</h2>
+<h3>Must-Haves</h3>
+<ol>
+<li><strong>Regular updates</strong> — last updated within the past 6 months</li>
+<li><strong>WordPress version compatibility</strong> — works with the latest WordPress version</li>
+<li><strong>Responsive design</strong> — looks good on mobile, tablet, and desktop</li>
+<li><strong>Good reviews/ratings</strong> — 4+ stars with many reviews</li>
+<li><strong>Active support</strong> — developer responds to questions</li>
+</ol>
+<h3>Nice-to-Haves</h3>
+<ul>
+<li>Demo content import (one-click to get a pre-designed site)</li>
+<li>Multiple header/footer layouts</li>
+<li>WooCommerce compatibility (if you&#39;ll build e-commerce sites)</li>
+<li>Translation-ready (if you need multilingual sites)</li>
+</ul>
+<h3>Red Flags</h3>
+<ul>
+<li>Not updated in over a year</li>
+<li>Low ratings or many unresolved complaints</li>
+<li>Excessive features you don&#39;t need (bloated themes slow your site)</li>
+<li>No documentation</li>
+<li>Requires many paid add-ons for basic features</li>
+</ul>
+<hr>
+<h2>Parent and Child Themes</h2>
+<h3>What is a Child Theme?</h3>
+<p>A child theme <strong>inherits</strong> all the functionality and styling of another theme (the &quot;parent&quot;) while letting you make customizations that won&#39;t be overwritten when the parent theme updates.</p>
+<pre><code>Parent Theme (e.g., Astra)
+    ↓ provides base styling and functionality
+Child Theme (e.g., Astra Child)
+    ↓ your customizations live here
+</code></pre>
+<h3>Why Use a Child Theme?</h3>
+<ul>
+<li><strong>Safe customizations</strong> — your changes survive parent theme updates</li>
+<li><strong>Easy to revert</strong> — delete the child theme to go back to the parent</li>
+<li><strong>Clean separation</strong> — keeps your changes separate from the original theme</li>
+</ul>
+<h3>When You Need a Child Theme</h3>
+<ul>
+<li>When you need to edit theme template files (PHP)</li>
+<li>When you want to add custom CSS that won&#39;t be lost on update</li>
+<li>When you need to override specific theme functions</li>
+</ul>
+<h3>When You Don&#39;t Need a Child Theme</h3>
+<ul>
+<li>When using Elementor for all your design (Elementor stores designs in the database, not in theme files)</li>
+<li>When you only use the WordPress Customizer for changes</li>
+<li>When the theme has its own options panel for customization</li>
+</ul>
+<p><strong>For this course:</strong> Since we&#39;re using Elementor, you probably won&#39;t need a child theme right away. But it&#39;s good to know about them.</p>
+<hr>
+<h2>The Default WordPress Themes</h2>
+<p>WordPress comes with several default themes (named by year):</p>
+<ul>
+<li><strong>Twenty Twenty-Five</strong> (or the latest year&#39;s theme)</li>
+<li><strong>Twenty Twenty-Four</strong></li>
+<li><strong>Twenty Twenty-Three</strong></li>
+</ul>
+<p>These are good for learning but typically not used for professional client sites. They demonstrate WordPress capabilities and serve as a fallback.</p>
+<p><strong>Best practice:</strong> Keep one default theme installed as a fallback. If your active theme breaks, WordPress will automatically switch to a default theme so your site doesn&#39;t go completely down.</p>
+<hr>
+<h2>Block Themes vs Classic Themes</h2>
+<p>WordPress has two types of themes:</p>
+<h3>Classic Themes</h3>
+<ul>
+<li>Use PHP template files (header.php, footer.php, etc.)</li>
+<li>Customized through the Customizer, theme options, or code</li>
+<li>Work well with Elementor and other page builders</li>
+<li><strong>This is what we&#39;ll use</strong> — Hello Elementor is a classic theme</li>
+</ul>
+<h3>Block Themes (Full Site Editing / FSE)</h3>
+<ul>
+<li>Use HTML template files with block markup</li>
+<li>Customized entirely through the block editor (Gutenberg)</li>
+<li>The Site Editor lets you edit headers, footers, and templates visually</li>
+<li>Newer approach — WordPress is moving in this direction</li>
+<li>Don&#39;t use these with Elementor — they&#39;re designed for Gutenberg</li>
+</ul>
+<p><strong>For your work with Elementor</strong>, stick with classic themes.</p>
+<hr>
+<h2>Exercises</h2>
+<ol>
+<li><p><strong>Browse the theme directory</strong>: Go to <strong>Appearance → Themes → Add New Theme</strong> in your WordPress admin. Browse popular and featured themes. Notice the preview, ratings, and &quot;Last Updated&quot; info.</p>
+</li>
+<li><p><strong>Preview a theme</strong>: Click on any theme and then click <strong>&quot;Live Preview&quot;</strong> to see how it would look on your site without activating it.</p>
+</li>
+<li><p><strong>Check installed themes</strong>: Go to <strong>Appearance → Themes</strong> to see which themes are currently installed. You should see the currently active theme and 1-2 default themes.</p>
+</li>
+<li><p><strong>Research Hello Elementor</strong>: Search for &quot;Hello Elementor&quot; in the theme directory. Read its description and reviews. We&#39;ll install it in the next lesson.</p>
+</li>
+<li><p><strong>Compare themes</strong>: Preview 3 different themes on your site and note the differences in layout, typography, and overall feel.</p>
+</li>
+</ol>
+<hr>
+<h2>Key Takeaways</h2>
+<ul>
+<li>A theme controls how your site <strong>looks</strong>, not your content</li>
+<li>You can <strong>switch themes without losing content</strong> — content is stored in the database</li>
+<li>For Elementor users, <strong>minimal themes are best</strong> (Hello Elementor, Astra, GeneratePress)</li>
+<li>Check for <strong>recent updates, good ratings, and responsive design</strong> when choosing a theme</li>
+<li><strong>Child themes</strong> let you customize safely without losing changes on update</li>
+<li>Keep one <strong>default theme installed</strong> as a fallback</li>
+<li>Use <strong>classic themes</strong> (not block themes) when working with Elementor</li>
+</ul>
+<hr>
+<p><strong>Next Lesson:</strong> <a href="lesson-09.html">Lesson 09 - Installing and Configuring a Theme</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-07.html" class="prev">&larr; 07. WordPress Settings</a>
+      <a href="lesson-09.html" class="next">09. Installing a Theme &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

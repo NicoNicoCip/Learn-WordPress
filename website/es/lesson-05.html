@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lección 05: Categorías, Etiquetas y Taxonomías — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-05.html">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-05.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li class="active"><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lección 05: Categorías, Etiquetas y Taxonomías</h1>
+<h2>Objetivos</h2>
+<ul>
+<li>Entender cómo WordPress organiza el contenido con categorías y etiquetas</li>
+<li>Conocer la diferencia entre categorías y etiquetas y cuándo usar cada una</li>
+<li>Crear y gestionar categorías y etiquetas</li>
+<li>Comprender qué son las taxonomías</li>
+</ul>
+<hr>
+<h2>¿Qué Son las Taxonomías?</h2>
+<p>Una <strong>taxonomía</strong> es una forma de agrupar y clasificar contenido. WordPress tiene dos taxonomías integradas para las entradas:</p>
+<ol>
+<li><strong>Categorías</strong> — agrupaciones amplias (como capítulos de un libro)</li>
+<li><strong>Etiquetas (Tags)</strong> — descriptores específicos (como las entradas del índice de un libro)</li>
+</ol>
+<h3>Categorías vs Etiquetas</h3>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Categorías</th>
+<th>Etiquetas</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Propósito</strong></td>
+<td>Agrupación/clasificación amplia</td>
+<td>Temas/palabras clave específicas</td>
+</tr>
+<tr>
+<td><strong>¿Obligatorias?</strong></td>
+<td>Sí — toda entrada debe tener al menos una</td>
+<td>No — completamente opcionales</td>
+</tr>
+<tr>
+<td><strong>Jerarquía</strong></td>
+<td>Sí — pueden tener categorías padre/hijo</td>
+<td>No — estructura plana únicamente</td>
+</tr>
+<tr>
+<td><strong>Cantidad típica por entrada</strong></td>
+<td>1-3</td>
+<td>3-10</td>
+</tr>
+<tr>
+<td><strong>Valor por defecto</strong></td>
+<td>&quot;Uncategorized&quot; si no se selecciona ninguna</td>
+<td>Ninguna</td>
+</tr>
+<tr>
+<td><strong>Ideal para</strong></td>
+<td>Estructura del sitio y navegación</td>
+<td>Descubrimiento de contenido y búsqueda</td>
+</tr>
+</tbody></table>
+<h3>Analogía</h3>
+<p>Piensa en una librería:</p>
+<ul>
+<li><strong>Categorías</strong> = las secciones: Ficción, No Ficción, Ciencia, Historia</li>
+<li><strong>Etiquetas</strong> = etiquetas descriptivas: superventas, premiado, novedad, bolsillo</li>
+</ul>
+<hr>
+<h2>Planificar Tus Categorías</h2>
+<p>Antes de crear categorías, planifícalas según el contenido de tu sitio:</p>
+<h3>Buena Estructura de Categorías (para un blog de empresa):</h3>
+<ul>
+<li>Noticias de la Empresa</li>
+<li>Perspectivas del Sector</li>
+<li>Trucos y Tutoriales</li>
+<li>Casos de Estudio</li>
+<li>Actualizaciones del Producto</li>
+</ul>
+<h3>Reglas para Buenas Categorías:</h3>
+<ol>
+<li><strong>Mantenlas amplias</strong> — 5-10 categorías es lo ideal para la mayoría de sitios</li>
+<li><strong>Hazlas claras</strong> — un visitante debería saber qué encontrará en cada una</li>
+<li><strong>Mantenlas equilibradas</strong> — evita tener 50 entradas en una categoría y 2 en otra</li>
+<li><strong>Usa la jerarquía con moderación</strong> — un nivel de subcategorías suele ser suficiente</li>
+</ol>
+<h3>Ejemplos de Malas Categorías:</h3>
+<ul>
+<li>Demasiado específica: &quot;Entrada sobre nuestra reunión del lunes&quot; (esto debería ser una etiqueta)</li>
+<li>Demasiado vaga: &quot;Cosas&quot; u &quot;Otros&quot;</li>
+<li>Demasiadas: más de 30 categorías con 1-2 entradas cada una</li>
+</ul>
+<hr>
+<h2>Gestionar Categorías</h2>
+<h3>Crear Categorías</h3>
+<p><strong>Método 1: Desde la página de Categorías</strong></p>
+<ol>
+<li>Ve a <strong>Posts → Categories</strong></li>
+<li>Rellena:<ul>
+<li><strong>Name</strong>: El nombre para mostrar (ej., &quot;Company News&quot;)</li>
+<li><strong>Slug</strong>: La versión amigable para URL (se genera automáticamente, ej., <code>company-news</code>)</li>
+<li><strong>Parent Category</strong>: Selecciona si es una subcategoría</li>
+<li><strong>Description</strong>: Opcional — algunos temas la muestran</li>
+</ul>
+</li>
+<li>Haz clic en <strong>&quot;Add New Category&quot;</strong></li>
+</ol>
+<p><strong>Método 2: Mientras editas una entrada</strong></p>
+<ol>
+<li>En el editor de entradas, busca <strong>Categories</strong> en la barra lateral derecha</li>
+<li>Haz clic en <strong>&quot;Add New Category&quot;</strong></li>
+<li>Escribe el nombre y haz clic en &quot;Add New Category&quot;</li>
+</ol>
+<h3>Editar Categorías</h3>
+<ol>
+<li>Ve a <strong>Posts → Categories</strong></li>
+<li>Pasa el ratón sobre una categoría y haz clic en <strong>&quot;Edit&quot;</strong> o <strong>&quot;Quick Edit&quot;</strong></li>
+<li>Puedes cambiar el nombre, slug, padre y descripción</li>
+</ol>
+<h3>Eliminar Categorías</h3>
+<ol>
+<li>Ve a <strong>Posts → Categories</strong></li>
+<li>Pasa el ratón sobre una categoría y haz clic en <strong>&quot;Delete&quot;</strong></li>
+<li>Las entradas de esa categoría se moverán a la categoría predeterminada (&quot;Uncategorized&quot;)</li>
+</ol>
+<h3>Establecer la Categoría Predeterminada</h3>
+<ol>
+<li>Ve a <strong>Settings → Writing</strong></li>
+<li>Cambia <strong>&quot;Default Post Category&quot;</strong> a tu categoría preferida</li>
+<li>Renombra &quot;Uncategorized&quot; a algo mejor (como &quot;General&quot;)</li>
+</ol>
+<hr>
+<h2>Gestionar Etiquetas</h2>
+<h3>Crear Etiquetas</h3>
+<p><strong>Método 1: Desde la página de Tags</strong></p>
+<ol>
+<li>Ve a <strong>Posts → Tags</strong></li>
+<li>Rellena:<ul>
+<li><strong>Name</strong>: El nombre para mostrar</li>
+<li><strong>Slug</strong>: Versión amigable para URL (se genera automáticamente)</li>
+<li><strong>Description</strong>: Opcional</li>
+</ul>
+</li>
+<li>Haz clic en <strong>&quot;Add New Tag&quot;</strong></li>
+</ol>
+<p><strong>Método 2: Mientras editas una entrada</strong></p>
+<ol>
+<li>En el editor de entradas, busca <strong>Tags</strong> en la barra lateral derecha</li>
+<li>Escribe los nombres de las etiquetas separados por comas</li>
+<li>Pulsa Enter para añadirlas</li>
+</ol>
+<h3>Buenas Prácticas para Etiquetas</h3>
+<ul>
+<li>Usa <strong>minúsculas</strong> para mantener la coherencia</li>
+<li>Usa <strong>etiquetas existentes</strong> cuando sea posible (comprueba lo que ya has creado)</li>
+<li>No crees etiquetas que solo vayas a usar una vez</li>
+<li>Las etiquetas deben ser útiles para los visitantes que buscan en tu contenido</li>
+<li>3-5 etiquetas por entrada es un buen objetivo</li>
+</ul>
+<hr>
+<h2>Cómo Afectan las Categorías y Etiquetas a Tu Sitio</h2>
+<h3>Páginas de Archivo</h3>
+<p>WordPress crea automáticamente páginas de archivo para cada categoría y etiqueta:</p>
+<ul>
+<li><code>tusitio.com/category/company-news/</code> — muestra todas las entradas en &quot;Company News&quot;</li>
+<li><code>tusitio.com/tag/wordpress/</code> — muestra todas las entradas etiquetadas con &quot;wordpress&quot;</li>
+</ul>
+<p>Estas páginas están estilizadas por tu tema y se pueden personalizar más adelante con Elementor.</p>
+<h3>Navegación</h3>
+<p>Las categorías se usan comúnmente en:</p>
+<ul>
+<li>Menús de navegación principales</li>
+<li>Widgets de la barra lateral</li>
+<li>Enlaces del pie de página</li>
+<li>Filtros de la página del blog</li>
+</ul>
+<h3>Impacto en SEO</h3>
+<ul>
+<li>Las <strong>categorías</strong> crean una jerarquía de contenido que los motores de búsqueda entienden</li>
+<li>Las <strong>etiquetas</strong> ayudan con el enlazado interno y el descubrimiento de contenido</li>
+<li>No crees demasiadas de ninguna — genera páginas de archivo con poco contenido que perjudican el SEO</li>
+</ul>
+<hr>
+<h2>Ejemplo Práctico</h2>
+<p>Supongamos que estás construyendo un sitio para una agencia de diseño web:</p>
+<h3>Categorías:</h3>
+<pre><code>Web Design
+├── UI Design
+├── UX Design
+Digital Marketing
+├── SEO
+├── Social Media
+Case Studies
+Company News
+</code></pre>
+<h3>Etiquetas (usadas en todas las categorías):</h3>
+<pre><code>wordpress, elementor, responsive-design, e-commerce,
+small-business, redesign, mobile-first, branding,
+analytics, conversion-rate
+</code></pre>
+<h3>Ejemplo de Entrada:</h3>
+<ul>
+<li><strong>Título</strong>: &quot;5 Responsive Design Tips for Small Business Websites&quot;</li>
+<li><strong>Categoría</strong>: Web Design → UI Design</li>
+<li><strong>Etiquetas</strong>: responsive-design, small-business, mobile-first</li>
+</ul>
+<hr>
+<h2>Entender las Taxonomías (Más a Fondo)</h2>
+<p>Las categorías y las etiquetas son ejemplos de <strong>taxonomías</strong> — sistemas para clasificar contenido. El núcleo de WordPress proporciona dos:</p>
+<table>
+<thead>
+<tr>
+<th>Taxonomía</th>
+<th>Tipo</th>
+<th>Se Aplica A</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Category</td>
+<td>Jerárquica</td>
+<td>Entradas</td>
+</tr>
+<tr>
+<td>Tag</td>
+<td>No jerárquica (plana)</td>
+<td>Entradas</td>
+</tr>
+</tbody></table>
+<p><strong>Nota:</strong> Las páginas no tienen categorías ni etiquetas por defecto. Si necesitas organizar páginas, usarás menús y jerarquía de páginas (padre/hijo).</p>
+<p>Algunos plugins y temas añaden <strong>taxonomías personalizadas</strong>. Por ejemplo:</p>
+<ul>
+<li>WooCommerce añade &quot;Product Categories&quot; y &quot;Product Tags&quot; (separadas de las categorías/etiquetas de entradas normales)</li>
+<li>Un plugin de portfolio podría añadir &quot;Portfolio Categories&quot;</li>
+<li>Un plugin inmobiliario podría añadir &quot;Property Type&quot; y &quot;Location&quot;</li>
+</ul>
+<p>No necesitas preocuparte por las taxonomías personalizadas ahora — solo ten en cuenta que existen.</p>
+<hr>
+<h2>Ejercicios</h2>
+<ol>
+<li><p><strong>Renombra &quot;Uncategorized&quot;</strong>: Ve a Posts → Categories, edita &quot;Uncategorized&quot; y renómbrala a &quot;General&quot;.</p>
+</li>
+<li><p><strong>Crea una estructura de categorías</strong>: Crea 4-5 categorías que tengan sentido para un blog de empresa. Crea al menos una con una subcategoría (categoría hija).</p>
+</li>
+<li><p><strong>Establece la categoría predeterminada</strong>: Ve a Settings → Writing y cambia la categoría predeterminada de &quot;Uncategorized&quot; a &quot;General&quot;.</p>
+</li>
+<li><p><strong>Crea entradas con categorías y etiquetas</strong>: Crea 3 entradas, cada una en una categoría diferente, con 3-5 etiquetas relevantes cada una.</p>
+</li>
+<li><p><strong>Visualiza las páginas de archivo</strong>: Después de crear entradas, visita la página de archivo de una categoría yendo a <code>http://learning-wordpress.local/category/tu-slug-de-categoria/</code>. Observa cómo WordPress agrupa automáticamente las entradas.</p>
+</li>
+<li><p><strong>Revisa la página de Tags</strong>: Ve a Posts → Tags para ver todas las etiquetas que has creado. Fíjate en cómo muestra el recuento de entradas que usan cada etiqueta.</p>
+</li>
+</ol>
+<hr>
+<h2>Puntos Clave</h2>
+<ul>
+<li>Las <strong>categorías</strong> son grupos amplios (obligatorias, jerárquicas) — piensa en &quot;secciones&quot;</li>
+<li>Las <strong>etiquetas</strong> son descriptores específicos (opcionales, planas) — piensa en &quot;palabras clave&quot;</li>
+<li>Toda entrada necesita al menos una categoría; las etiquetas son opcionales</li>
+<li>Planifica tus categorías antes de empezar a crear contenido</li>
+<li>No te excedas — 5-10 categorías y un número moderado de etiquetas es lo ideal</li>
+<li>WordPress crea <strong>páginas de archivo</strong> automáticas para cada categoría y etiqueta</li>
+<li>Renombra &quot;Uncategorized&quot; a algo significativo como &quot;General&quot;</li>
+</ul>
+<hr>
+<p><strong>Siguiente Lección:</strong> <a href="lesson-06.html">Lección 06 - La Biblioteca de Medios</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-04.html" class="prev">&larr; 04. Entradas vs Páginas</a>
+      <a href="lesson-06.html" class="next">06. La Biblioteca de Medios &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

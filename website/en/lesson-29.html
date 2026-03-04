@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 29: Users and Roles — Managing Access — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-29.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-29.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li class="active"><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lesson 29: Users and Roles — Managing Access</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Understand WordPress user roles and capabilities</li>
+<li>Create and manage user accounts</li>
+<li>Assign appropriate roles to team members and clients</li>
+<li>Configure user profile settings</li>
+</ul>
+<hr>
+<h2>WordPress User Roles</h2>
+<p>WordPress has a built-in role system that controls what each user can do:</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>What They Can Do</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Administrator</strong></td>
+<td>Everything — full site control</td>
+<td>Site owner, lead developer</td>
+</tr>
+<tr>
+<td><strong>Editor</strong></td>
+<td>Manage and publish all content (posts, pages, comments)</td>
+<td>Content manager, senior writer</td>
+</tr>
+<tr>
+<td><strong>Author</strong></td>
+<td>Write and publish their own posts only</td>
+<td>Blog contributor, team member</td>
+</tr>
+<tr>
+<td><strong>Contributor</strong></td>
+<td>Write posts but cannot publish (requires editor/admin approval)</td>
+<td>Guest writers, interns</td>
+</tr>
+<tr>
+<td><strong>Subscriber</strong></td>
+<td>Can only manage their own profile</td>
+<td>Registered site visitors, newsletter subscribers</td>
+</tr>
+</tbody></table>
+<h3>WooCommerce Roles (Added by WooCommerce)</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>What They Can Do</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Shop Manager</strong></td>
+<td>Manage products, orders, coupons, and customers (no site settings)</td>
+</tr>
+<tr>
+<td><strong>Customer</strong></td>
+<td>Place orders and manage their account</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Managing Users</h2>
+<h3>Creating a New User</h3>
+<ol>
+<li>Go to <strong>Users → Add New User</strong></li>
+<li>Fill in:<ul>
+<li><strong>Username</strong> (required) — can&#39;t be changed later</li>
+<li><strong>Email</strong> (required) — must be unique</li>
+<li><strong>First Name / Last Name</strong> — display information</li>
+<li><strong>Website</strong> — optional</li>
+<li><strong>Password</strong> — use &quot;Generate Password&quot; for a strong one</li>
+<li><strong>Role</strong> — select the appropriate role</li>
+</ul>
+</li>
+<li>Check <strong>&quot;Send the new user an email about their account&quot;</strong> if you want to notify them</li>
+<li>Click <strong>&quot;Add New User&quot;</strong></li>
+</ol>
+<h3>Editing Users</h3>
+<ol>
+<li>Go to <strong>Users → All Users</strong></li>
+<li>Hover over a user → click <strong>&quot;Edit&quot;</strong></li>
+<li>You can change: name, email, role, password, bio, profile picture</li>
+</ol>
+<h3>Deleting Users</h3>
+<ol>
+<li>Go to <strong>Users → All Users</strong></li>
+<li>Hover over a user → click <strong>&quot;Delete&quot;</strong></li>
+<li>Choose what to do with their content:<ul>
+<li><strong>Delete all content</strong> — permanently removes their posts/pages</li>
+<li><strong>Attribute all content to</strong> — transfers their content to another user</li>
+</ul>
+</li>
+<li><strong>Always attribute content</strong> to avoid losing posts/pages</li>
+</ol>
+<hr>
+<h2>Role Selection Guide</h2>
+<h3>For Client Sites</h3>
+<p>When building sites for clients, think about what access they need:</p>
+<table>
+<thead>
+<tr>
+<th>Client Need</th>
+<th>Assign Role</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&quot;I just need to update blog posts&quot;</td>
+<td>Author or Editor</td>
+</tr>
+<tr>
+<td>&quot;I need to manage all content and pages&quot;</td>
+<td>Editor</td>
+</tr>
+<tr>
+<td>&quot;I need full control of the site&quot;</td>
+<td>Administrator</td>
+</tr>
+<tr>
+<td>&quot;I need to manage the online store&quot;</td>
+<td>Shop Manager</td>
+</tr>
+<tr>
+<td>&quot;My staff need to write posts for approval&quot;</td>
+<td>Contributor</td>
+</tr>
+</tbody></table>
+<h3>The Principle of Least Privilege</h3>
+<p>Give users the <strong>minimum role they need</strong>. This prevents:</p>
+<ul>
+<li>Accidental changes to site settings</li>
+<li>Deletion of important content</li>
+<li>Installation of insecure plugins</li>
+<li>Modification of other users&#39; content</li>
+</ul>
+<p><strong>Example:</strong> A content writer doesn&#39;t need Administrator access. Give them Author or Editor.</p>
+<hr>
+<h2>Your Profile Settings</h2>
+<p>Go to <strong>Users → Profile</strong> to configure your own account:</p>
+<h3>Important Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Visual Editor</strong></td>
+<td>Enable/disable the visual post editor</td>
+</tr>
+<tr>
+<td><strong>Admin Color Scheme</strong></td>
+<td>Change the admin dashboard colors</td>
+</tr>
+<tr>
+<td><strong>Keyboard Shortcuts</strong></td>
+<td>Enable comment moderation shortcuts</td>
+</tr>
+<tr>
+<td><strong>Toolbar</strong></td>
+<td>Show/hide the admin bar on the front-end</td>
+</tr>
+<tr>
+<td><strong>Display Name</strong></td>
+<td>How your name appears publicly</td>
+</tr>
+<tr>
+<td><strong>Email</strong></td>
+<td>Your login and notification email</td>
+</tr>
+<tr>
+<td><strong>New Password</strong></td>
+<td>Change your password</td>
+</tr>
+<tr>
+<td><strong>Application Passwords</strong></td>
+<td>Create passwords for apps/APIs to use</td>
+</tr>
+</tbody></table>
+<h3>Gravatar (Profile Picture)</h3>
+<p>WordPress uses <strong>Gravatar</strong> (Globally Recognized Avatar) for profile pictures:</p>
+<ol>
+<li>Go to <a href="https://gravatar.com/">https://gravatar.com/</a></li>
+<li>Create an account with the same email as your WordPress account</li>
+<li>Upload a profile photo</li>
+<li>It automatically appears in WordPress</li>
+</ol>
+<hr>
+<h2>Security Best Practices for Users</h2>
+<ol>
+<li><strong>Don&#39;t use &quot;admin&quot; as a username</strong> on live sites — it&#39;s the first thing attackers try</li>
+<li><strong>Use strong passwords</strong> — WordPress generates strong ones, use them</li>
+<li><strong>Enable Two-Factor Authentication</strong> — use Wordfence&#39;s 2FA feature</li>
+<li><strong>Limit Administrator accounts</strong> — only 1-2 admins per site</li>
+<li><strong>Remove unused accounts</strong> — delete accounts for people who no longer need access</li>
+<li><strong>Don&#39;t share login credentials</strong> — each person should have their own account</li>
+<li><strong>Review user list regularly</strong> — check for unknown or suspicious accounts</li>
+</ol>
+<hr>
+<h2>Exercises</h2>
+<ol>
+<li><p><strong>Check your profile</strong>: Go to Users → Profile. Set your display name, check your admin color scheme preference, and update your bio.</p>
+</li>
+<li><p><strong>Create test users</strong>: Create one user for each main role (Editor, Author, Contributor, Subscriber). Use test email addresses.</p>
+</li>
+<li><p><strong>Log in as different roles</strong>: Log out, log in as the Editor user, and note what they can and can&#39;t do. Repeat with Author. Notice the differences in the admin sidebar.</p>
+</li>
+<li><p><strong>Delete a test user</strong>: Delete the Subscriber user. Choose to attribute their content to your admin account.</p>
+</li>
+<li><p><strong>Review security</strong>: Check that no accounts use weak passwords. Consider enabling 2FA on your admin account.</p>
+</li>
+</ol>
+<hr>
+<h2>Key Takeaways</h2>
+<ul>
+<li>WordPress has 5 default roles: <strong>Administrator, Editor, Author, Contributor, Subscriber</strong></li>
+<li>WooCommerce adds <strong>Shop Manager</strong> and <strong>Customer</strong></li>
+<li>Follow the <strong>principle of least privilege</strong> — give minimum necessary access</li>
+<li><strong>Don&#39;t use &quot;admin&quot; as username</strong> on live sites</li>
+<li>Each person should have <strong>their own account</strong> — never share logins</li>
+<li><strong>Attribute content</strong> when deleting users to avoid losing posts/pages</li>
+<li>Review your user list regularly and remove unused accounts</li>
+</ul>
+<hr>
+<p><strong>Next Lesson:</strong> <a href="lesson-30.html">Lesson 30 - Backups and Security Best Practices</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-28.html" class="prev">&larr; 28. Shop Page Design</a>
+      <a href="lesson-30.html" class="next">30. Backups &amp; Security &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

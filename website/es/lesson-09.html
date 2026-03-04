@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lección 09: Instalar y Configurar un Theme (Hello Elementor) — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-09.html">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-09.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li class="active"><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lección 09: Instalar y Configurar un Theme (Hello Elementor)</h1>
+<h2>Objetivos</h2>
+<ul>
+<li>Instalar y activar el theme Hello Elementor</li>
+<li>Configurar los ajustes básicos del theme</li>
+<li>Comprender la activación y desactivación de themes</li>
+<li>Eliminar themes no utilizados</li>
+</ul>
+<hr>
+<h2>Instalar Hello Elementor</h2>
+<p>Hello Elementor es el <strong>theme oficial creado por el equipo de Elementor</strong>. Está diseñado para ser un lienzo en blanco que permite que Elementor haga todo el trabajo pesado en cuanto al diseño.</p>
+<h3>Paso 1: Instalar el Theme</h3>
+<ol>
+<li>Ve a <strong>Appearance → Themes</strong></li>
+<li>Haz clic en <strong>&quot;Add New Theme&quot;</strong> en la parte superior</li>
+<li>En el cuadro de búsqueda, escribe <strong>&quot;Hello Elementor&quot;</strong></li>
+<li>Encuentra el theme de &quot;Starter Templates&quot; / equipo de Elementor</li>
+<li>Haz clic en <strong>&quot;Install&quot;</strong></li>
+<li>Espera a que se complete la instalación</li>
+</ol>
+<h3>Paso 2: Activar el Theme</h3>
+<ol>
+<li>Después de la instalación, haz clic en <strong>&quot;Activate&quot;</strong></li>
+<li>Tu sitio ahora usa Hello Elementor</li>
+</ol>
+<h3>Paso 3: Visita Tu Sitio</h3>
+<ol>
+<li>Ve al front-end de tu sitio (<code>http://learning-wordpress.local/</code>)</li>
+<li>Observa que se ve muy minimalista — casi vacío</li>
+<li><strong>Esto es intencional</strong> — Hello Elementor es un lienzo en blanco para Elementor</li>
+</ol>
+<hr>
+<h2>Comprender Lo Que Acaba de Ocurrir</h2>
+<p>Cuando activaste Hello Elementor:</p>
+<ul>
+<li>El <strong>theme anterior fue desactivado</strong> (pero no eliminado)</li>
+<li>Las plantillas de Hello Elementor se usan ahora para mostrar tu contenido</li>
+<li>Tu <strong>contenido no cambió</strong> — todas las entradas, páginas y configuraciones están intactas</li>
+<li>La <strong>apariencia cambió</strong> porque el nuevo theme tiene estilos diferentes</li>
+</ul>
+<hr>
+<h2>Configuración del Theme</h2>
+<p>Hello Elementor es intencionalmente minimalista, pero tiene algunos ajustes básicos.</p>
+<h3>A Través del Personalizador</h3>
+<ol>
+<li>Ve a <strong>Appearance → Customize</strong> (o visita tu sitio y haz clic en &quot;Customize&quot; en la barra de administración)</li>
+<li>El Personalizador se abre con una vista previa en vivo</li>
+</ol>
+<p>Secciones disponibles en Hello Elementor:</p>
+<ul>
+<li><strong>Site Identity</strong> — Logo, título del sitio, eslogan, icono del sitio (favicon)</li>
+<li><strong>Menus</strong> — Ubicaciones de los menús de navegación</li>
+<li><strong>Homepage Settings</strong> — Lo mismo que Settings → Reading</li>
+<li><strong>Additional CSS</strong> — Añadir código CSS personalizado</li>
+</ul>
+<h3>Configurar la Identidad del Sitio</h3>
+<ol>
+<li>En el Personalizador, haz clic en <strong>&quot;Site Identity&quot;</strong></li>
+<li><strong>Logo</strong>: Haz clic en &quot;Select Logo&quot; para subir el logo de tu sitio<ul>
+<li>Recomendado: Sube un PNG con transparencia</li>
+<li>Tamaño sugerido: 200-300px de ancho</li>
+</ul>
+</li>
+<li><strong>Site Title</strong>: El nombre de tu sitio (también se configura en Settings → General)</li>
+<li><strong>Tagline</strong>: La descripción de tu sitio</li>
+<li><strong>Site Icon (Favicon)</strong>: El pequeño icono que aparece en las pestañas del navegador<ul>
+<li>Sube una imagen cuadrada de al menos 512×512 píxeles</li>
+<li>El formato PNG funciona mejor</li>
+</ul>
+</li>
+<li>Haz clic en <strong>&quot;Publish&quot;</strong> para guardar los cambios</li>
+</ol>
+<hr>
+<h2>Gestionar Themes</h2>
+<h3>Ver Themes Instalados</h3>
+<ul>
+<li>Ve a <strong>Appearance → Themes</strong></li>
+<li>Tu theme activo se muestra primero</li>
+<li>Los demás themes instalados (inactivos) se muestran debajo</li>
+</ul>
+<h3>Eliminar Themes No Utilizados</h3>
+<p>Mantén tu sitio limpio — elimina los themes que no vayas a usar:</p>
+<ol>
+<li>Ve a <strong>Appearance → Themes</strong></li>
+<li>Haz clic en un theme <strong>inactivo</strong></li>
+<li>Haz clic en <strong>&quot;Delete&quot;</strong> en la esquina inferior derecha de la ventana de detalles del theme</li>
+<li>Confirma la eliminación</li>
+</ol>
+<p><strong>Mantén al menos un theme de respaldo</strong> (como Twenty Twenty-Five) por si tu theme activo tiene problemas.</p>
+<p><strong>Regla general:</strong> Mantén tu theme activo + un theme predeterminado de WordPress. Elimina el resto.</p>
+<h3>Actualizar Themes</h3>
+<p>Los themes reciben actualizaciones para correcciones de seguridad, correcciones de errores y nuevas funciones:</p>
+<ol>
+<li>Ve a <strong>Dashboard → Updates</strong></li>
+<li>Si hay actualizaciones de themes disponibles, se listarán aquí</li>
+<li>Selecciona los themes a actualizar y haz clic en <strong>&quot;Update Themes&quot;</strong></li>
+<li>Alternativamente, verás una notificación en la página de Themes</li>
+</ol>
+<hr>
+<h2>Instalar Themes desde Archivos ZIP</h2>
+<p>Algunos themes premium no están en el directorio de WordPress. Descargas un archivo ZIP del desarrollador:</p>
+<ol>
+<li>Ve a <strong>Appearance → Themes → Add New Theme</strong></li>
+<li>Haz clic en <strong>&quot;Upload Theme&quot;</strong> en la parte superior</li>
+<li>Haz clic en <strong>&quot;Choose File&quot;</strong> y selecciona el archivo ZIP</li>
+<li>Haz clic en <strong>&quot;Install Now&quot;</strong></li>
+<li>Después de la instalación, haz clic en <strong>&quot;Activate&quot;</strong></li>
+</ol>
+<hr>
+<h2>Qué Hace Especial a Hello Elementor</h2>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Beneficio</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Ultra-ligero</strong></td>
+<td>Solo ~6KB de CSS, el theme de carga más rápida</td>
+</tr>
+<tr>
+<td><strong>Sin opiniones de estilo</strong></td>
+<td>No impone fuentes, colores ni diseños — Elementor controla todo</td>
+</tr>
+<tr>
+<td><strong>Creado por el equipo de Elementor</strong></td>
+<td>Compatibilidad perfecta garantizada</td>
+</tr>
+<tr>
+<td><strong>Soporte de cabecera/pie de página</strong></td>
+<td>Funciona con el Theme Builder de Elementor Pro (o alternativas gratuitas como el plugin &quot;Header Footer Elementor&quot;)</td>
+</tr>
+<tr>
+<td><strong>Actualizaciones regulares</strong></td>
+<td>Mantenido por el equipo de Elementor</td>
+</tr>
+</tbody></table>
+<h3>Cuándo Hello Elementor Podría No Ser Suficiente</h3>
+<p>Hello Elementor es intencionalmente básico. Si necesitas funciones sin Elementor Pro:</p>
+<ul>
+<li><strong>Cabecera/pie de página personalizado sin un constructor de páginas</strong> → Considera Astra o GeneratePress</li>
+<li><strong>Opciones de diseño integradas</strong> → Considera Astra (tiene un constructor de cabecera gratuito)</li>
+<li><strong>Demos de sitios pre-construidos</strong> → Considera Astra + el plugin Starter Templates</li>
+</ul>
+<p>Para este curso, Hello Elementor es perfecto ya que estamos aprendiendo Elementor para el diseño.</p>
+<hr>
+<h2>Ejercicios</h2>
+<ol>
+<li><p><strong>Instala y activa Hello Elementor</strong>: Sigue los pasos anteriores.</p>
+</li>
+<li><p><strong>Configura la Identidad del Sitio</strong>: En el Personalizador, añade un título del sitio, eslogan y favicon. Puedes usar cualquier imagen cuadrada pequeña como favicon.</p>
+</li>
+<li><p><strong>Elimina themes no utilizados</strong>: Elimina cualquier theme que no vayas a usar, manteniendo Hello Elementor y un theme predeterminado como respaldo.</p>
+</li>
+<li><p><strong>Previsualiza antes de activar</strong>: Instala otro theme (como Astra) — usa &quot;Live Preview&quot; para ver cómo se ve, pero no lo actives. Luego vuelve a Hello Elementor.</p>
+</li>
+<li><p><strong>Comprueba actualizaciones</strong>: Ve a Dashboard → Updates y verifica si hay actualizaciones de themes disponibles.</p>
+</li>
+</ol>
+<hr>
+<h2>Puntos Clave</h2>
+<ul>
+<li><strong>Hello Elementor</strong> es el theme ideal para usuarios de Elementor — ligero y diseñado como un lienzo en blanco</li>
+<li>Instala themes desde la administración: <strong>Appearance → Themes → Add New</strong></li>
+<li><strong>Activa</strong> para empezar a usar un theme; el contenido se conserva al cambiar</li>
+<li>Usa el <strong>Personalizador</strong> para ajustes básicos (logo, favicon, identidad del sitio)</li>
+<li><strong>Elimina los themes no utilizados</strong> para mantener tu sitio limpio y seguro</li>
+<li>Mantén <strong>un theme de respaldo</strong> (un theme predeterminado de WordPress) instalado</li>
+<li>Los themes premium se pueden instalar desde archivos ZIP</li>
+</ul>
+<hr>
+<p><strong>Siguiente Lección:</strong> <a href="lesson-10.html">Lección 10 - Menús y Navegación</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-08.html" class="prev">&larr; 08. Entender los Temas</a>
+      <a href="lesson-10.html" class="next">10. Menús y Navegación &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

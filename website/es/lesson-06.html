@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lección 06: La Biblioteca de Medios — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-06.html">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-06.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li class="active"><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lección 06: La Biblioteca de Medios</h1>
+<h2>Objetivos</h2>
+<ul>
+<li>Subir y gestionar imágenes, archivos y medios en WordPress</li>
+<li>Entender los tamaños de imagen y la optimización</li>
+<li>Usar la biblioteca de medios de forma eficaz</li>
+<li>Aprender buenas prácticas para nombrar archivos y organizarlos</li>
+</ul>
+<hr>
+<h2>¿Qué es la Biblioteca de Medios?</h2>
+<p>La Biblioteca de Medios es donde WordPress almacena todos los archivos subidos:</p>
+<ul>
+<li>Imágenes (JPG, PNG, GIF, WebP, SVG con plugins)</li>
+<li>Documentos (PDF, DOC, XLSX)</li>
+<li>Audio (MP3, WAV, OGG)</li>
+<li>Vídeo (MP4, MOV, AVI)</li>
+</ul>
+<p>Accede a ella en <strong>Media → Library</strong> en la barra lateral.</p>
+<hr>
+<h2>Subir Medios</h2>
+<h3>Método 1: Página de la Biblioteca de Medios</h3>
+<ol>
+<li>Ve a <strong>Media → Add New Media File</strong></li>
+<li>Arrastra y suelta archivos en el área de subida, o haz clic en <strong>&quot;Select Files&quot;</strong></li>
+<li>Puedes subir varios archivos a la vez</li>
+</ol>
+<h3>Método 2: Mientras Editas Contenido</h3>
+<ol>
+<li>En el editor de bloques, añade un bloque <strong>Image</strong> (escribe <code>/image</code>)</li>
+<li>Elige <strong>&quot;Upload&quot;</strong>, <strong>&quot;Media Library&quot;</strong> o <strong>&quot;Insert from URL&quot;</strong></li>
+<li>El archivo se sube a la Biblioteca de Medios automáticamente</li>
+</ol>
+<h3>Método 3: Arrastrar y Soltar</h3>
+<ul>
+<li>Mientras editas una entrada/página, arrastra una imagen directamente desde tu escritorio al editor</li>
+<li>WordPress crea un bloque Image y sube el archivo automáticamente</li>
+</ul>
+<hr>
+<h2>La Interfaz de la Biblioteca de Medios</h2>
+<h3>Vista de Cuadrícula (predeterminada)</h3>
+<ul>
+<li>Muestra miniaturas de todos los medios</li>
+<li>Haz clic en cualquier elemento para ver los detalles y editar</li>
+<li>Filtra por tipo (Imágenes, Audio, Vídeo, Documentos) o por fecha</li>
+</ul>
+<h3>Vista de Lista</h3>
+<ul>
+<li>Cambia con el icono en la esquina superior izquierda</li>
+<li>Muestra más detalles: nombre del archivo, autor, fecha, adjunto a</li>
+<li>Mejor para gestionar muchos archivos</li>
+</ul>
+<h3>Panel de Detalles del Medio</h3>
+<p>Haz clic en cualquier elemento multimedia para ver:</p>
+<ul>
+<li><strong>Vista previa</strong> de la imagen</li>
+<li><strong>Title</strong> — el nombre para mostrar (editable)</li>
+<li><strong>Caption</strong> — se muestra debajo de la imagen en el front-end</li>
+<li><strong>Alt Text</strong> — importante para accesibilidad y SEO (describe la imagen)</li>
+<li><strong>Description</strong> — descripción más larga (raramente se muestra)</li>
+<li><strong>File URL</strong> — el enlace directo al archivo</li>
+<li><strong>Uploaded to</strong> — a qué entrada/página está adjunto este medio</li>
+<li><strong>Tamaño del archivo y dimensiones</strong></li>
+</ul>
+<hr>
+<h2>Tamaños de Imagen en WordPress</h2>
+<p>Cuando subes una imagen, WordPress crea automáticamente <strong>múltiples tamaños</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Tamaño</th>
+<th>Dimensiones por Defecto</th>
+<th>Propósito</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Thumbnail</strong></td>
+<td>150 x 150 px</td>
+<td>Vista previa pequeña, recortada en cuadrado</td>
+</tr>
+<tr>
+<td><strong>Medium</strong></td>
+<td>300 x 300 px máx.</td>
+<td>Imágenes dentro del contenido</td>
+</tr>
+<tr>
+<td><strong>Medium Large</strong></td>
+<td>768 px de ancho</td>
+<td>Imágenes responsive</td>
+</tr>
+<tr>
+<td><strong>Large</strong></td>
+<td>1024 x 1024 px máx.</td>
+<td>Imágenes de contenido a ancho completo</td>
+</tr>
+<tr>
+<td><strong>Full</strong></td>
+<td>Tamaño original</td>
+<td>Resolución completa</td>
+</tr>
+</tbody></table>
+<h3>Configurar Tamaños por Defecto</h3>
+<ol>
+<li>Ve a <strong>Settings → Media</strong></li>
+<li>Ajusta las dimensiones para Thumbnail, Medium y Large</li>
+<li><strong>Recomendación:</strong> Deja los valores por defecto a menos que tengas una razón específica para cambiarlos</li>
+</ol>
+<h3>¿Por Qué Múltiples Tamaños?</h3>
+<ul>
+<li>WordPress sirve el <strong>tamaño apropiado</strong> según dónde se muestra la imagen</li>
+<li>Una miniatura en una barra lateral no necesita una imagen de 4000px</li>
+<li>Esto mejora significativamente la <strong>velocidad de carga</strong> de la página</li>
+</ul>
+<hr>
+<h2>Buenas Prácticas con Imágenes</h2>
+<h3>Antes de Subir</h3>
+<ol>
+<li><p><strong>Redimensiona las imágenes antes de subirlas</strong></p>
+<ul>
+<li>Una foto de 5000x3000 de tu cámara es demasiado grande</li>
+<li>Para la mayoría de sitios web, las imágenes no deberían superar los <strong>2000px de ancho</strong></li>
+<li>Imágenes hero/banner: 1920px de ancho es el estándar</li>
+<li>Imágenes dentro del contenido: 1200px de ancho suele ser suficiente</li>
+</ul>
+</li>
+<li><p><strong>Elige el formato correcto</strong></p>
+<table>
+<thead>
+<tr>
+<th>Formato</th>
+<th>Ideal Para</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>JPG/JPEG</strong></td>
+<td>Fotos, imágenes con muchos colores</td>
+</tr>
+<tr>
+<td><strong>PNG</strong></td>
+<td>Gráficos con transparencia, capturas de pantalla, logotipos</td>
+</tr>
+<tr>
+<td><strong>WebP</strong></td>
+<td>Formato moderno — archivos más pequeños, buena calidad (no todos los navegadores lo soportan)</td>
+</tr>
+<tr>
+<td><strong>SVG</strong></td>
+<td>Logotipos e iconos (requiere un plugin para subirlos)</td>
+</tr>
+<tr>
+<td><strong>GIF</strong></td>
+<td>Animaciones sencillas</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>Comprime las imágenes</strong></p>
+<ul>
+<li>Usa herramientas gratuitas antes de subir:<ul>
+<li><strong>TinyPNG</strong> (tinypng.com) — compresión con arrastrar y soltar</li>
+<li><strong>Squoosh</strong> (squoosh.app) — optimizador de imágenes de Google</li>
+</ul>
+</li>
+<li>O instala un plugin de WordPress (lo veremos en el Módulo 4)</li>
+</ul>
+</li>
+<li><p><strong>Nombra los archivos de forma descriptiva</strong></p>
+<ul>
+<li>Mal: <code>IMG_20240315_001.jpg</code>, <code>screenshot.png</code></li>
+<li>Bien: <code>blue-widget-product-photo.jpg</code>, <code>team-office-photo.jpg</code></li>
+<li>Usa guiones, no espacios ni guiones bajos</li>
+<li>Esto ayuda al SEO — los motores de búsqueda leen los nombres de archivo</li>
+</ul>
+</li>
+</ol>
+<h3>Después de Subir</h3>
+<ol start="5">
+<li><p><strong>Establece siempre el Alt Text</strong></p>
+<ul>
+<li>Describe la imagen para lectores de pantalla (accesibilidad)</li>
+<li>Usado por los motores de búsqueda (SEO)</li>
+<li>Ejemplo: &quot;Miembros del equipo trabajando juntos en la oficina&quot;</li>
+<li>No abuses de las palabras clave — describe lo que realmente se ve</li>
+</ul>
+</li>
+<li><p><strong>Establece un Title</strong></p>
+<ul>
+<li>WordPress usa el nombre del archivo como título por defecto</li>
+<li>Cámbialo a algo legible</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>Trabajar con Imágenes en el Editor</h2>
+<h3>Añadir un Bloque de Imagen</h3>
+<ol>
+<li>Escribe <code>/image</code> o haz clic en &quot;+&quot; y selecciona Image</li>
+<li>Sube, selecciona de la Biblioteca de Medios o inserta desde URL</li>
+<li>La imagen aparece en tu contenido</li>
+</ol>
+<h3>Configuración del Bloque Image</h3>
+<p><strong>Barra de herramientas del bloque</strong> (encima de la imagen):</p>
+<ul>
+<li><strong>Alignment</strong> — izquierda, centro, derecha, ancho, ancho completo</li>
+<li><strong>Link</strong> — enlazar la imagen a su archivo multimedia, página adjunta o URL personalizada</li>
+<li><strong>Replace</strong> — cambiar la imagen</li>
+<li><strong>Crop</strong> — recortar la imagen</li>
+</ul>
+<p><strong>Configuración del bloque</strong> (barra lateral derecha):</p>
+<ul>
+<li><strong>Alt Text</strong> — establecer o editar el texto alternativo</li>
+<li><strong>Image Size</strong> — elegir Thumbnail, Medium, Large o Full</li>
+<li><strong>Image Dimensions</strong> — establecer ancho/alto personalizados</li>
+<li><strong>Border Radius</strong> — redondear las esquinas</li>
+</ul>
+<h3>Bloque Gallery</h3>
+<p>Para mostrar múltiples imágenes:</p>
+<ol>
+<li>Escribe <code>/gallery</code> y selecciona Gallery</li>
+<li>Sube o selecciona varias imágenes</li>
+<li>Organízalas en una cuadrícula</li>
+<li>Configura las columnas (1-8) en los ajustes del bloque</li>
+</ol>
+<h3>Bloque Cover</h3>
+<p>Para imágenes con texto superpuesto:</p>
+<ol>
+<li>Escribe <code>/cover</code> y selecciona Cover</li>
+<li>Sube o selecciona una imagen de fondo</li>
+<li>Escribe texto encima de la imagen</li>
+<li>Ajusta el color y la opacidad de la superposición</li>
+</ol>
+<hr>
+<h2>Organizar los Medios</h2>
+<p>WordPress no tiene carpetas en la Biblioteca de Medios por defecto. Así es como puedes mantenerte organizado:</p>
+<h3>Opciones Integradas</h3>
+<ul>
+<li><strong>Search</strong> — usa la barra de búsqueda para encontrar medios por nombre de archivo o título</li>
+<li><strong>Filtrar por fecha</strong> — desplegable para filtrar por mes/año</li>
+<li><strong>Filtrar por tipo</strong> — Imágenes, Audio, Vídeo, Documentos</li>
+</ul>
+<h3>Convención de Nombres de Archivo</h3>
+<p>Como no hay carpetas, usa una convención de nombres:</p>
+<pre><code>[tipo]-[tema]-[detalle].jpg
+
+Ejemplos:
+hero-homepage-banner.jpg
+team-john-smith-headshot.jpg
+product-blue-widget-front.jpg
+blog-wordpress-tips-featured.jpg
+icon-phone-contact.png
+</code></pre>
+<h3>Opción con Plugins</h3>
+<p>Si necesitas carpetas, plugins como <strong>FileBird</strong> o <strong>Real Media Library</strong> añaden gestión de carpetas a la Biblioteca de Medios. Cubriremos los plugins en el Módulo 4.</p>
+<hr>
+<h2>Editar Imágenes en WordPress</h2>
+<p>WordPress tiene un editor de imágenes básico integrado:</p>
+<ol>
+<li>Ve a <strong>Media → Library</strong></li>
+<li>Haz clic en una imagen para abrirla</li>
+<li>Haz clic en <strong>&quot;Edit Image&quot;</strong> debajo de la vista previa</li>
+</ol>
+<h3>Herramientas de Edición Disponibles:</h3>
+<ul>
+<li><strong>Crop</strong> — selecciona un área y recorta</li>
+<li><strong>Rotate</strong> — rotar a la izquierda o a la derecha</li>
+<li><strong>Flip</strong> — voltear horizontal o verticalmente</li>
+<li><strong>Scale</strong> — redimensionar la imagen (solo reducir, no ampliar)</li>
+</ul>
+<h3>Aplicar Cambios A:</h3>
+<ul>
+<li><strong>All image sizes</strong> — cambia todos los tamaños generados</li>
+<li><strong>Thumbnail only</strong> — solo cambia la miniatura</li>
+<li><strong>All except thumbnail</strong> — cambia todo menos la miniatura</li>
+</ul>
+<p><strong>Nota:</strong> Para edición más avanzada, usa una herramienta externa (Canva, Photoshop, GIMP) y vuelve a subir.</p>
+<hr>
+<h2>Límites de Subida de Archivos</h2>
+<h3>Límites por Defecto</h3>
+<ul>
+<li>WordPress tiene un tamaño máximo de subida (normalmente 32MB-128MB dependiendo de tu hosting)</li>
+<li>En Local WP, esto es configurable</li>
+</ul>
+<h3>Comprobar Tu Límite</h3>
+<ol>
+<li>Ve a <strong>Media → Add New Media File</strong></li>
+<li>Debajo del área de subida, verás &quot;Maximum upload file size: XXX MB&quot;</li>
+</ol>
+<h3>Aumentar el Límite (si es necesario)</h3>
+<p>En Local WP:</p>
+<ol>
+<li>Abre Site Shell desde Local</li>
+<li>Encuentra el archivo <code>php.ini</code></li>
+<li>Cambia <code>upload_max_filesize</code> y <code>post_max_size</code></li>
+</ol>
+<p>En la mayoría de hostings, contacta con tu proveedor o edita <code>.htaccess</code>.</p>
+<hr>
+<h2>Ejercicios</h2>
+<ol>
+<li><p><strong>Sube 5 imágenes</strong>: Encuentra 5 imágenes de stock gratuitas (prueba unsplash.com o pexels.com). Nómbralas de forma descriptiva antes de subirlas. Súbelas a la Biblioteca de Medios.</p>
+</li>
+<li><p><strong>Establece el Alt Text</strong>: Para cada imagen subida, haz clic en ella en la Biblioteca de Medios y escribe un texto alternativo descriptivo.</p>
+</li>
+<li><p><strong>Añade imágenes al contenido</strong>: Edita una de tus páginas o entradas y añade imágenes usando el bloque Image. Prueba diferentes alineaciones (izquierda, centro, ancho).</p>
+</li>
+<li><p><strong>Crea una Galería</strong>: Crea una nueva página llamada &quot;Gallery&quot; y añade un bloque Gallery con más de 4 imágenes. Prueba a cambiar el número de columnas.</p>
+</li>
+<li><p><strong>Prueba el bloque Cover</strong>: Añade un bloque Cover a tu página de inicio con una imagen de fondo y texto superpuesto.</p>
+</li>
+<li><p><strong>Edita una imagen</strong>: Selecciona una imagen en la Biblioteca de Medios y prueba el editor integrado — recórtala, luego deshaz el cambio.</p>
+</li>
+</ol>
+<hr>
+<h2>Puntos Clave</h2>
+<ul>
+<li>La <strong>Biblioteca de Medios</strong> almacena todas tus subidas (imágenes, documentos, audio, vídeo)</li>
+<li>WordPress crea <strong>múltiples tamaños</strong> de cada imagen subida automáticamente</li>
+<li><strong>Optimiza las imágenes antes de subirlas</strong> — redimensiónalas y comprímelas</li>
+<li><strong>Establece siempre el Alt Text</strong> — es fundamental para la accesibilidad y el SEO</li>
+<li>Usa <strong>nombres de archivo descriptivos</strong> con guiones (ej., <code>team-photo-office.jpg</code>)</li>
+<li>Bloques de imagen habituales: <strong>Image</strong>, <strong>Gallery</strong>, <strong>Cover</strong></li>
+<li>WordPress tiene un editor de imágenes básico integrado para recortes y rotaciones</li>
+<li>Usa una <strong>convención de nombres</strong> consistente para mantener tu Biblioteca de Medios organizada</li>
+</ul>
+<hr>
+<p><strong>Siguiente Lección:</strong> <a href="lesson-07.html">Lección 07 - Configuración de WordPress a Fondo</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-05.html" class="prev">&larr; 05. Categorías, Etiquetas y Taxonomías</a>
+      <a href="lesson-07.html" class="next">07. Ajustes de WordPress &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

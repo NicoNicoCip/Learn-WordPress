@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lección 19: Plantillas, Guardado y Reutilización de Diseños — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-19.html">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-19.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li class="active"><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lección 19: Plantillas, Guardado y Reutilización de Diseños</h1>
+<h2>Objetivos</h2>
+<ul>
+<li>Usar la biblioteca de plantillas de Elementor</li>
+<li>Guardar tus propias secciones y páginas como plantillas</li>
+<li>Importar y exportar plantillas</li>
+<li>Trabajar eficientemente reutilizando diseños</li>
+</ul>
+<hr>
+<h2>¿Qué Son las Plantillas?</h2>
+<p>Las plantillas son <strong>diseños prediseñados</strong> que puedes insertar en tus páginas. Te ahorran construir todo desde cero.</p>
+<h3>Tipos de Plantillas:</h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Qué Es</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Page Template</strong></td>
+<td>Un diseño de página completo (todas las secciones)</td>
+</tr>
+<tr>
+<td><strong>Section Template</strong></td>
+<td>Una sola sección (hero, CTA, características, etc.)</td>
+</tr>
+<tr>
+<td><strong>My Templates</strong></td>
+<td>Tus propios diseños guardados</td>
+</tr>
+<tr>
+<td><strong>Elementor Library</strong></td>
+<td>Plantillas prediseñadas de Elementor</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Usar la Biblioteca de Plantillas de Elementor</h2>
+<h3>Acceder a la Biblioteca</h3>
+<ol>
+<li>Abre una página en Elementor</li>
+<li>Haz clic en el <strong>icono de carpeta</strong> en el panel de widgets, o</li>
+<li>Presiona <strong>Ctrl + Shift + L</strong>, o</li>
+<li>Haz clic en el <strong>icono de carpeta</strong> que aparece en el centro del canvas al añadir una nueva sección</li>
+</ol>
+<h3>Navegar por las Plantillas</h3>
+<p>La biblioteca tiene pestañas:</p>
+<ul>
+<li><strong>Pages</strong> — diseños de páginas completas</li>
+<li><strong>Blocks</strong> (Secciones) — diseños de secciones individuales (hero, FAQ, características, etc.)</li>
+<li><strong>My Templates</strong> — tus plantillas guardadas</li>
+</ul>
+<h3>Insertar una Plantilla</h3>
+<ol>
+<li>Navega y encuentra una plantilla que te guste</li>
+<li>Haz clic en <strong>&quot;Insert&quot;</strong></li>
+<li>La plantilla se añade a tu página</li>
+<li>Luego puedes personalizar todo el contenido, colores, fuentes e imágenes</li>
+</ol>
+<h3>Plantillas Free vs Pro</h3>
+<ul>
+<li>Las plantillas marcadas con un <strong>icono de diamante</strong> requieren Elementor Pro</li>
+<li>Las plantillas gratuitas están disponibles sin ninguna mejora</li>
+<li>Incluso las plantillas gratuitas proporcionan buenos puntos de partida</li>
+</ul>
+<hr>
+<h2>Guardar tus Propias Plantillas</h2>
+<h3>Guardar una Sección como Plantilla</h3>
+<p>Esto es extremadamente útil — guarda una sección que hayas diseñado bien y reutilízala entre páginas.</p>
+<ol>
+<li><strong>Clic derecho</strong> en el asa de la sección (pestaña azul en la parte superior de la sección)</li>
+<li>Haz clic en <strong>&quot;Save as Template&quot;</strong></li>
+<li>Dale un nombre descriptivo (ej., &quot;Sección Hero - Fondo Oscuro&quot; o &quot;3 Columnas Servicios&quot;)</li>
+<li>Haz clic en <strong>&quot;Save&quot;</strong></li>
+</ol>
+<h3>Guardar una Página Entera como Plantilla</h3>
+<ol>
+<li>Haz clic en el <strong>menú hamburguesa (☰)</strong> → <strong>&quot;Save as Template&quot;</strong> (o la flecha arriba junto a Update/Publish)</li>
+<li>Dale un nombre (ej., &quot;Plantilla Homepage Negocio&quot;)</li>
+<li>Haz clic en <strong>&quot;Save&quot;</strong></li>
+</ol>
+<h3>Usar tus Plantillas Guardadas</h3>
+<ol>
+<li>Abre la biblioteca de plantillas (Ctrl + Shift + L)</li>
+<li>Ve a la pestaña <strong>&quot;My Templates&quot;</strong></li>
+<li>Encuentra tu plantilla</li>
+<li>Haz clic en <strong>&quot;Insert&quot;</strong></li>
+<li>Personaliza el contenido para la nueva página</li>
+</ol>
+<hr>
+<h2>Organizar Plantillas</h2>
+<h3>Convención de Nombres</h3>
+<p>Usa un sistema de nombres claro:</p>
+<pre><code>[Tipo] - [Descripción] - [Variante]
+
+Ejemplos:
+Hero - Imagen de Fondo - Centrado
+Servicios - 3 Columnas Iconos - Fondo Claro
+CTA - Ancho Completo - Degradado
+Testimonios - Slider - Oscuro
+Footer - 4 Columnas - Con Mapa
+</code></pre>
+<h3>Construir una Biblioteca de Plantillas</h3>
+<p>Con el tiempo, construye una colección de secciones reutilizables:</p>
+<ul>
+<li><strong>Secciones hero</strong> — 2-3 variaciones (imagen de fondo, color sólido, vídeo de fondo)</li>
+<li><strong>Servicios/Características</strong> — 3 columnas con iconos, 4 columnas con iconos, con imágenes</li>
+<li><strong>Secciones sobre nosotros</strong> — imagen izquierda, imagen derecha</li>
+<li><strong>Testimonios</strong> — carrusel, cuadrícula, individual destacado</li>
+<li><strong>Secciones CTA</strong> — simple, con imagen de fondo, con formulario</li>
+<li><strong>FAQ</strong> — estilo acordeón</li>
+<li><strong>Contacto</strong> — formulario + diseño de información</li>
+</ul>
+<p>Esto se convierte en tu kit de diseño personal — construir nuevas páginas lleva minutos en vez de horas.</p>
+<hr>
+<h2>Importar y Exportar Plantillas</h2>
+<h3>Exportar Plantillas</h3>
+<p>Comparte plantillas entre sitios WordPress:</p>
+<ol>
+<li>Ve a <strong>Elementor → My Templates</strong> en wp-admin (o Templates → Saved Templates)</li>
+<li>Encuentra la plantilla que quieres exportar</li>
+<li>Haz clic en <strong>&quot;Export Template&quot;</strong></li>
+<li>Se descarga un archivo <code>.json</code></li>
+</ol>
+<h3>Importar Plantillas</h3>
+<ol>
+<li>Ve a <strong>Elementor → My Templates</strong></li>
+<li>Haz clic en <strong>&quot;Import Templates&quot;</strong> en la parte superior</li>
+<li>Selecciona el archivo <code>.json</code></li>
+<li>Haz clic en <strong>&quot;Import Now&quot;</strong></li>
+<li>La plantilla aparece en tu biblioteca</li>
+</ol>
+<h3>Casos de Uso para Importar/Exportar:</h3>
+<ul>
+<li><strong>Mover diseños entre sitios</strong> — desarrolla en local, exporta al sitio del cliente</li>
+<li><strong>Compartir con miembros del equipo</strong> — distribuir diseños estandarizados</li>
+<li><strong>Respaldar tus diseños</strong> — exporta todas las plantillas para guardarlas</li>
+<li><strong>Usar plantillas de terceros</strong> — muchos sitios ofrecen plantillas de Elementor gratuitas como archivos JSON</li>
+</ul>
+<hr>
+<h2>Kits de Plantillas y Sitios de Inicio</h2>
+<h3>Fuentes de Plantillas de Terceros</h3>
+<p>Varios servicios proporcionan kits de plantillas de Elementor gratuitos y premium:</p>
+<table>
+<thead>
+<tr>
+<th>Fuente</th>
+<th>Qué Ofrecen</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Envato Elements</strong></td>
+<td>1000+ kits de plantillas completos (suscripción de pago)</td>
+</tr>
+<tr>
+<td><strong>TemplateMonster</strong></td>
+<td>Plantillas premium de Elementor</td>
+</tr>
+<tr>
+<td><strong>Starter Templates by Astra</strong></td>
+<td>Importaciones completas de sitios gratuitas</td>
+</tr>
+<tr>
+<td><strong>Elementor Community</strong></td>
+<td>Plantillas gratuitas compartidas por usuarios</td>
+</tr>
+</tbody></table>
+<h3>Usar el Plugin Starter Templates (con tema Astra)</h3>
+<ol>
+<li>Instala el plugin <strong>&quot;Starter Templates&quot;</strong></li>
+<li>Elige Elementor como tu constructor de páginas</li>
+<li>Navega por las plantillas de sitios web completos</li>
+<li>Haz clic en <strong>&quot;Import Complete Site&quot;</strong> o importa páginas individuales</li>
+<li>Personaliza el contenido importado</li>
+</ol>
+<p><strong>Advertencia:</strong> Importar un sitio completo reemplazará tu contenido existente. Hazlo en un sitio nuevo o haz una copia de seguridad primero.</p>
+<hr>
+<h2>Flujo de Trabajo con Plantillas</h2>
+<h3>Proceso Eficiente de Construcción de Páginas:</h3>
+<ol>
+<li><strong>Revisa tu biblioteca de plantillas primero</strong> — ¿tienes una sección que encaje?</li>
+<li><strong>Revisa la biblioteca de Elementor</strong> — ¿hay una plantilla gratuita cercana a lo que necesitas?</li>
+<li><strong>Inserta una plantilla</strong> como punto de partida</li>
+<li><strong>Personaliza</strong> el contenido (texto, imágenes, colores)</li>
+<li><strong>Ajusta para que coincida</strong> con tus estilos globales</li>
+<li><strong>Guarda nuevos diseños</strong> como plantillas para uso futuro</li>
+</ol>
+<h3>Al Construir Múltiples Páginas Similares:</h3>
+<ol>
+<li>Construye la primera página completamente</li>
+<li>Guárdala como plantilla de página</li>
+<li>Para páginas similares, inserta la plantilla e intercambia el contenido</li>
+<li>Mucho más rápido que construir desde cero cada vez</li>
+</ol>
+<p><strong>Ejemplo:</strong> Construir 5 páginas de servicios (Diseño Web, SEO, Marketing, Branding, Soporte):</p>
+<ol>
+<li>Diseña el primer diseño de página de servicio</li>
+<li>Guárdalo como &quot;Plantilla Página de Servicio&quot;</li>
+<li>Crea cada nueva página → inserta la plantilla → cambia el contenido específico del servicio</li>
+</ol>
+<hr>
+<h2>Ejercicios</h2>
+<ol>
+<li><p><strong>Navega por la biblioteca de plantillas</strong>: Presiona Ctrl + Shift + L y navega por las páginas y bloques disponibles. Intenta insertar una plantilla de bloque gratuita en una página de prueba.</p>
+</li>
+<li><p><strong>Guarda una plantilla de sección</strong>: Toma tu mejor sección de la página de inicio y guárdala como plantilla. Dale un nombre descriptivo.</p>
+</li>
+<li><p><strong>Guarda una plantilla de página</strong>: Guarda tu página Acerca de (o Página de Inicio) como plantilla de página completa.</p>
+</li>
+<li><p><strong>Reutiliza una plantilla</strong>: Crea una nueva página, inserta tu plantilla de sección guardada y modifica el contenido.</p>
+</li>
+<li><p><strong>Exporta y reimporta</strong>: Exporta una de tus plantillas como archivo JSON. Elimínala de tu biblioteca. Reimportala para confirmar que el proceso funciona.</p>
+</li>
+<li><p><strong>Construye una colección de plantillas</strong>: Guarda al menos 3 plantillas de sección diferentes (hero, servicios, CTA) que puedas mezclar y combinar para futuras páginas.</p>
+</li>
+</ol>
+<hr>
+<h2>Puntos Clave</h2>
+<ul>
+<li><strong>Las plantillas ahorran un tiempo enorme</strong> — no construyas desde cero cada vez</li>
+<li>Guarda secciones con <strong>clic derecho → Save as Template</strong></li>
+<li>Guarda páginas desde el <strong>menú hamburguesa → Save as Template</strong></li>
+<li>Usa una <strong>convención de nombres</strong> clara para tus plantillas</li>
+<li><strong>Exporta/Importa</strong> plantillas como archivos JSON para mover entre sitios</li>
+<li>Construye una <strong>biblioteca de plantillas personal</strong> con el tiempo — este es tu kit de diseño</li>
+<li><strong>Revisa las plantillas existentes</strong> antes de construir algo nuevo</li>
+<li>Los kits de plantillas de terceros pueden impulsar nuevos proyectos</li>
+</ul>
+<hr>
+<p><strong>Siguiente Lección:</strong> <a href="lesson-20.html">Lección 20 - Diseño Responsivo</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-18.html" class="prev">&larr; 18. Página de Contacto</a>
+      <a href="lesson-20.html" class="next">20. Diseño Responsivo &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

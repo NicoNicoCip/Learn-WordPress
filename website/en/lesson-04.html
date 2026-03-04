@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 04: Posts vs Pages - When to Use Which — WordPress Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <a href="index.html" class="logo">WordPress Learning</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-04.html" class="active">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-04.html">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Course Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 1: Fundamentals</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. What is WordPress?</a></li>
+        <li><a href="lesson-02.html">02. Setting Up Local WP</a></li>
+        <li><a href="lesson-03.html">03. The Dashboard Tour</a></li>
+        <li class="active"><a href="lesson-04.html">04. Posts vs Pages</a></li>
+        <li><a href="lesson-05.html">05. Categories, Tags &amp; Taxonomies</a></li>
+        <li><a href="lesson-06.html">06. The Media Library</a></li>
+        <li><a href="lesson-07.html">07. WordPress Settings</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 2: Themes</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Understanding Themes</a></li>
+        <li><a href="lesson-09.html">09. Installing a Theme</a></li>
+        <li><a href="lesson-10.html">10. Menus &amp; Navigation</a></li>
+        <li><a href="lesson-11.html">11. Widgets &amp; Sidebars</a></li>
+        <li><a href="lesson-12.html">12. The Customizer</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Installing Elementor</a></li>
+        <li><a href="lesson-14.html">14. Sections, Columns &amp; Widgets</a></li>
+        <li><a href="lesson-15.html">15. Global Styles</a></li>
+        <li><a href="lesson-16.html">16. Building a Homepage</a></li>
+        <li><a href="lesson-17.html">17. Building an About Page</a></li>
+        <li><a href="lesson-18.html">18. Contact Page &amp; Forms</a></li>
+        <li><a href="lesson-19.html">19. Templates &amp; Reuse</a></li>
+        <li><a href="lesson-20.html">20. Responsive Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Understanding Plugins</a></li>
+        <li><a href="lesson-22.html">22. Must-Have Plugins</a></li>
+        <li><a href="lesson-23.html">23. Contact Forms</a></li>
+        <li><a href="lesson-24.html">24. Image Optimization</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. WooCommerce Setup</a></li>
+        <li><a href="lesson-26.html">26. Adding Products</a></li>
+        <li><a href="lesson-27.html">27. Payments &amp; Shipping</a></li>
+        <li><a href="lesson-28.html">28. Shop Page Design</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Module 6: Management</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Users &amp; Roles</a></li>
+        <li><a href="lesson-30.html">30. Backups &amp; Security</a></li>
+        <li><a href="lesson-31.html">31. SEO Fundamentals</a></li>
+        <li><a href="lesson-32.html">32. Performance</a></li>
+        <li><a href="lesson-33.html">33. Going Live</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Practice Projects</h3>
+      <ul>
+        <li><a href="project-01.html">Project 1: Business Website</a></li>
+        <li><a href="project-02.html">Project 2: Blog / Magazine</a></li>
+        <li><a href="project-03.html">Project 3: E-Commerce Store</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lesson 04: Posts vs Pages - When to Use Which</h1>
+<h2>Objectives</h2>
+<ul>
+<li>Understand the fundamental difference between Posts and Pages</li>
+<li>Know when to use each one</li>
+<li>Create your first Post and your first Page</li>
+<li>Learn the Gutenberg block editor basics</li>
+</ul>
+<hr>
+<h2>Posts vs Pages: The Core Difference</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Posts</th>
+<th>Pages</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Purpose</strong></td>
+<td>Blog/news content — timely, date-based</td>
+<td>Static content — evergreen, standalone</td>
+</tr>
+<tr>
+<td><strong>Date</strong></td>
+<td>Always have a published date</td>
+<td>No visible date</td>
+</tr>
+<tr>
+<td><strong>Categories/Tags</strong></td>
+<td>Yes — can be organized and filtered</td>
+<td>No — standalone</td>
+</tr>
+<tr>
+<td><strong>Order</strong></td>
+<td>Displayed newest-first automatically</td>
+<td>Displayed in your custom order</td>
+</tr>
+<tr>
+<td><strong>Comments</strong></td>
+<td>Enabled by default</td>
+<td>Disabled by default</td>
+</tr>
+<tr>
+<td><strong>Author</strong></td>
+<td>Shows author by default</td>
+<td>Usually doesn&#39;t show author</td>
+</tr>
+<tr>
+<td><strong>Appears in</strong></td>
+<td>Blog feed, archives, RSS</td>
+<td>Navigation menus, as standalone pages</td>
+</tr>
+<tr>
+<td><strong>Examples</strong></td>
+<td>News articles, blog posts, announcements</td>
+<td>About, Contact, Services, Home, Privacy Policy</td>
+</tr>
+</tbody></table>
+<h3>Simple Rule of Thumb</h3>
+<ul>
+<li><strong>Would this content make sense with a date?</strong> → It&#39;s a <strong>Post</strong></li>
+<li><strong>Is this content meant to be permanent and findable via the menu?</strong> → It&#39;s a <strong>Page</strong></li>
+</ul>
+<hr>
+<h2>When to Use Posts</h2>
+<p>Use posts when the content is:</p>
+<ul>
+<li><strong>Time-sensitive</strong> — news, announcements, updates</li>
+<li><strong>Part of a series</strong> — blog entries, tutorials, articles</li>
+<li><strong>Categorizable</strong> — belongs in a category (e.g., &quot;Company News&quot;, &quot;Tips &amp; Tricks&quot;)</li>
+<li><strong>Expected to grow</strong> — you&#39;ll keep adding more over time</li>
+</ul>
+<h3>Examples:</h3>
+<ul>
+<li>&quot;We Just Launched Our New Product Line&quot; (announcement)</li>
+<li>&quot;10 Tips for Better Web Design&quot; (blog article)</li>
+<li>&quot;Monthly Company Newsletter - March 2026&quot; (recurring content)</li>
+</ul>
+<hr>
+<h2>When to Use Pages</h2>
+<p>Use pages when the content is:</p>
+<ul>
+<li><strong>Permanent</strong> — doesn&#39;t change frequently</li>
+<li><strong>Standalone</strong> — makes sense on its own, not part of a series</li>
+<li><strong>Part of the site structure</strong> — belongs in the navigation menu</li>
+<li><strong>Not date-dependent</strong> — would be weird with a &quot;Published on&quot; date</li>
+</ul>
+<h3>Examples:</h3>
+<ul>
+<li>Home page</li>
+<li>About Us</li>
+<li>Our Services</li>
+<li>Contact Us</li>
+<li>Privacy Policy / Terms of Service</li>
+<li>Portfolio</li>
+<li>FAQ</li>
+<li>Team / Staff page</li>
+</ul>
+<hr>
+<h2>Creating Your First Page</h2>
+<p>Let&#39;s create an &quot;About&quot; page:</p>
+<ol>
+<li>Go to <strong>Pages → Add New Page</strong> in the sidebar</li>
+<li>You&#39;re now in the <strong>Gutenberg Block Editor</strong></li>
+</ol>
+<h3>The Block Editor (Gutenberg)</h3>
+<p>WordPress uses a <strong>block-based editor</strong>. Everything is a &quot;block&quot;:</p>
+<ul>
+<li>Paragraphs are blocks</li>
+<li>Headings are blocks</li>
+<li>Images are blocks</li>
+<li>Lists, quotes, buttons — all blocks</li>
+</ul>
+<h4>Key Interface Elements:</h4>
+<ul>
+<li><strong>Title area</strong> (top) — type your page title here</li>
+<li><strong>Content area</strong> — where you add blocks</li>
+<li><strong>&quot;+&quot; button</strong> — click to add a new block</li>
+<li><strong>Right sidebar</strong> — settings for the selected block or the page itself<ul>
+<li><strong>Block tab</strong> — settings for the currently selected block</li>
+<li><strong>Page tab</strong> — settings for the whole page (featured image, URL slug, etc.)</li>
+</ul>
+</li>
+</ul>
+<h3>Create the About Page:</h3>
+<ol>
+<li><strong>Title</strong>: Type <code>About Us</code></li>
+<li><strong>First block</strong>: Click in the content area and type a paragraph:<pre><code>Welcome to our company. We are dedicated to providing excellent service.
+</code></pre>
+</li>
+<li><strong>Add a heading</strong>: Press Enter, then type <code>/heading</code> and select &quot;Heading&quot;. Type: <code>Our Mission</code></li>
+<li><strong>Add another paragraph</strong>: Press Enter and type:<pre><code>Our mission is to deliver high-quality solutions that make a difference.
+</code></pre>
+</li>
+<li><strong>Add a list</strong>: Press Enter, type <code>/list</code> and select &quot;List&quot;. Add a few items:<ul>
+<li>Quality first</li>
+<li>Customer satisfaction</li>
+<li>Innovation</li>
+</ul>
+</li>
+<li>Click <strong>&quot;Publish&quot;</strong> (top-right)</li>
+<li>Click <strong>&quot;Publish&quot;</strong> again to confirm</li>
+<li>Click <strong>&quot;View Page&quot;</strong> to see it on the front-end</li>
+</ol>
+<hr>
+<h2>Creating Your First Post</h2>
+<p>Now let&#39;s create a blog post:</p>
+<ol>
+<li>Go to <strong>Posts → Add New Post</strong></li>
+<li><strong>Title</strong>: Type <code>Welcome to Our Blog</code></li>
+<li><strong>Content</strong>: Type a paragraph:<pre><code>This is our first blog post! We&#39;re excited to share news, tips, and updates with you. Stay tuned for more content coming soon.
+</code></pre>
+</li>
+<li><strong>Set a Category</strong>:<ul>
+<li>In the right sidebar, find the <strong>Categories</strong> section (under the Post tab)</li>
+<li>Click <strong>&quot;Add New Category&quot;</strong></li>
+<li>Type <code>General</code> and click &quot;Add New Category&quot;</li>
+<li>Make sure it&#39;s checked</li>
+</ul>
+</li>
+<li><strong>Add Tags</strong>:<ul>
+<li>In the right sidebar, find the <strong>Tags</strong> section</li>
+<li>Type <code>welcome, first post</code> and press Enter</li>
+</ul>
+</li>
+<li>Click <strong>&quot;Publish&quot;</strong> → <strong>&quot;Publish&quot;</strong> again</li>
+<li>Click <strong>&quot;View Post&quot;</strong> to see it</li>
+</ol>
+<hr>
+<h2>Working with the Block Editor</h2>
+<h3>Adding Blocks</h3>
+<p>There are several ways to add blocks:</p>
+<ol>
+<li>Click the <strong>&quot;+&quot;</strong> button that appears between blocks</li>
+<li>Click the <strong>&quot;+&quot;</strong> button in the top-left toolbar</li>
+<li>Type <strong><code>/</code></strong> in an empty block to search for block types</li>
+<li>Press <strong>Enter</strong> to create a new paragraph block</li>
+</ol>
+<h3>Common Block Types</h3>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>What It Does</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Paragraph</td>
+<td>Regular text</td>
+<td>Just start typing</td>
+</tr>
+<tr>
+<td>Heading</td>
+<td>Section headers (H2, H3, etc.)</td>
+<td><code>/heading</code></td>
+</tr>
+<tr>
+<td>Image</td>
+<td>Insert an image</td>
+<td><code>/image</code></td>
+</tr>
+<tr>
+<td>List</td>
+<td>Bulleted or numbered list</td>
+<td><code>/list</code></td>
+</tr>
+<tr>
+<td>Quote</td>
+<td>A styled blockquote</td>
+<td><code>/quote</code></td>
+</tr>
+<tr>
+<td>Button</td>
+<td>A call-to-action button</td>
+<td><code>/button</code></td>
+</tr>
+<tr>
+<td>Columns</td>
+<td>Multi-column layout</td>
+<td><code>/columns</code></td>
+</tr>
+<tr>
+<td>Separator</td>
+<td>A horizontal line</td>
+<td><code>/separator</code></td>
+</tr>
+<tr>
+<td>Spacer</td>
+<td>Vertical space between blocks</td>
+<td><code>/spacer</code></td>
+</tr>
+</tbody></table>
+<h3>Block Controls</h3>
+<p>When you click on a block, you get:</p>
+<ul>
+<li><strong>Block toolbar</strong> (appears above the block) — formatting options</li>
+<li><strong>Block settings</strong> (right sidebar, Block tab) — detailed settings</li>
+<li><strong>Three-dot menu</strong> on the toolbar — move, duplicate, delete, etc.</li>
+</ul>
+<h3>Moving Blocks</h3>
+<ul>
+<li>Use the <strong>up/down arrows</strong> on the block toolbar</li>
+<li><strong>Drag and drop</strong> using the six-dot grip icon</li>
+<li>Use the <strong>three-dot menu → Move to</strong> for precise placement</li>
+</ul>
+<h3>Keyboard Shortcuts in the Editor</h3>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Ctrl + B</code></td>
+<td>Bold</td>
+</tr>
+<tr>
+<td><code>Ctrl + I</code></td>
+<td>Italic</td>
+</tr>
+<tr>
+<td><code>Ctrl + K</code></td>
+<td>Insert link</td>
+</tr>
+<tr>
+<td><code>Ctrl + Z</code></td>
+<td>Undo</td>
+</tr>
+<tr>
+<td><code>Ctrl + Shift + Z</code></td>
+<td>Redo</td>
+</tr>
+<tr>
+<td><code>Ctrl + S</code></td>
+<td>Save draft / Update</td>
+</tr>
+<tr>
+<td><code>Enter</code></td>
+<td>New block</td>
+</tr>
+<tr>
+<td><code>Shift + Enter</code></td>
+<td>New line within same block</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Page/Post Settings (Right Sidebar)</h2>
+<h3>For Pages:</h3>
+<ul>
+<li><strong>Status &amp; Visibility</strong> — draft, published, scheduled, visibility (public/private)</li>
+<li><strong>URL (Slug)</strong> — the URL path (e.g., <code>/about-us</code>)</li>
+<li><strong>Featured Image</strong> — a hero image for the page</li>
+<li><strong>Page Attributes</strong> — parent page (for hierarchy), template, order</li>
+<li><strong>Discussion</strong> — enable/disable comments</li>
+</ul>
+<h3>For Posts (additional options):</h3>
+<ul>
+<li><strong>Categories</strong> — assign to one or more categories</li>
+<li><strong>Tags</strong> — add descriptive keywords</li>
+<li><strong>Excerpt</strong> — a short summary (used in blog feeds)</li>
+<li><strong>Author</strong> — who wrote this post</li>
+</ul>
+<hr>
+<h2>Page Hierarchy (Parent/Child Pages)</h2>
+<p>Pages can be organized hierarchically:</p>
+<ul>
+<li>A &quot;Services&quot; page could be the parent</li>
+<li>&quot;Web Design&quot;, &quot;SEO&quot;, &quot;Marketing&quot; could be child pages</li>
+<li>This creates URLs like <code>/services/web-design/</code></li>
+</ul>
+<p>To set a parent page:</p>
+<ol>
+<li>Edit the child page</li>
+<li>In the right sidebar → <strong>Page</strong> tab → <strong>Page Attributes</strong></li>
+<li>Select the parent page from the dropdown</li>
+</ol>
+<hr>
+<h2>Exercises</h2>
+<ol>
+<li><p><strong>Create 3 more pages</strong>: Create pages for &quot;Services&quot;, &quot;Contact&quot;, and &quot;Blog&quot; (you can leave them mostly empty for now — just add a title and a short paragraph).</p>
+</li>
+<li><p><strong>Create 2 more posts</strong>: Create two blog posts with different categories. Try using different block types (headings, lists, images).</p>
+</li>
+<li><p><strong>Practice blocks</strong>: On one of your pages, practice adding and arranging these blocks: Heading, Paragraph, Image (upload any image), List, Button, Columns.</p>
+</li>
+<li><p><strong>Set a parent page</strong>: Create a child page under &quot;Services&quot; called &quot;Web Design&quot;. Check the URL structure.</p>
+</li>
+<li><p><strong>Explore post settings</strong>: On one of your posts, explore the right sidebar — try setting a featured image, adding an excerpt, and changing the URL slug.</p>
+</li>
+</ol>
+<hr>
+<h2>Key Takeaways</h2>
+<ul>
+<li><strong>Posts</strong> = date-based, categorized content (blogs, news)</li>
+<li><strong>Pages</strong> = static, standalone content (About, Contact, Services)</li>
+<li>The <strong>Gutenberg block editor</strong> is how you create content in both</li>
+<li>Everything in the editor is a <strong>block</strong> — type <code>/</code> to search for block types</li>
+<li>Pages can have <strong>parent-child hierarchy</strong> for organized URL structures</li>
+<li>The <strong>right sidebar</strong> contains important settings for each post/page</li>
+<li>Use <code>Shift + Enter</code> for a new line, <code>Enter</code> for a new block</li>
+</ul>
+<hr>
+<p><strong>Next Lesson:</strong> <a href="lesson-05.html">Lesson 05 - Categories, Tags, and Taxonomies</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-03.html" class="prev">&larr; 03. The Dashboard Tour</a>
+      <a href="lesson-05.html" class="next">05. Categories, Tags &amp; Taxonomies &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

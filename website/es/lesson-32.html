@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lección 32: Optimización del Rendimiento — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-32.html">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-32.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li class="active"><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lección 32: Optimización del Rendimiento</h1>
+<h2>Objetivos</h2>
+<ul>
+<li>Medir el rendimiento actual de tu sitio</li>
+<li>Optimizar la velocidad usando técnicas probadas</li>
+<li>Configurar caché y minificación</li>
+<li>Entender los CDN y su función</li>
+</ul>
+<hr>
+<h2>Por Qué Importa el Rendimiento</h2>
+<ul>
+<li><strong>El 53% de los usuarios móviles se van</strong> si una página tarda más de 3 segundos en cargar</li>
+<li><strong>Google usa la velocidad de la página</strong> como factor de posicionamiento</li>
+<li><strong>Cada 1 segundo de retraso</strong> reduce las conversiones un 7%</li>
+<li>Los sitios rápidos proporcionan una mejor experiencia de usuario</li>
+</ul>
+<h3>Objetivos de Rendimiento:</h3>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Objetivo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Tiempo de carga de página</strong></td>
+<td>Menos de 3 segundos</td>
+</tr>
+<tr>
+<td><strong>Tamaño total de página</strong></td>
+<td>Menos de 2MB (idealmente menos de 1MB)</td>
+</tr>
+<tr>
+<td><strong>Número de peticiones</strong></td>
+<td>Menos de 50</td>
+</tr>
+<tr>
+<td><strong>Largest Contentful Paint (LCP)</strong></td>
+<td>Menos de 2.5 segundos</td>
+</tr>
+<tr>
+<td><strong>First Input Delay (FID)</strong></td>
+<td>Menos de 100ms</td>
+</tr>
+<tr>
+<td><strong>Cumulative Layout Shift (CLS)</strong></td>
+<td>Menos de 0.1</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Medir el Rendimiento</h2>
+<h3>Herramientas:</h3>
+<p><strong>Chrome Lighthouse (funciona localmente):</strong></p>
+<ol>
+<li>Abre tu sitio en Chrome</li>
+<li>Presiona <strong>F12</strong> → pestaña <strong>Lighthouse</strong></li>
+<li>Selecciona la categoría &quot;Performance&quot;</li>
+<li>Haz clic en <strong>&quot;Analyze page load&quot;</strong></li>
+<li>Revisa la puntuación (0-100) y las recomendaciones específicas</li>
+</ol>
+<p><strong>Chrome DevTools pestaña Network (funciona localmente):</strong></p>
+<ol>
+<li>Presiona <strong>F12</strong> → pestaña <strong>Network</strong></li>
+<li>Refresca la página</li>
+<li>Mira la barra inferior: total de peticiones, tamaño transferido, tiempo de carga</li>
+<li>Ordena por tamaño para encontrar los archivos más grandes</li>
+</ol>
+<p><strong>Google PageSpeed Insights (solo sitios en producción):</strong></p>
+<ul>
+<li>URL: <a href="https://pagespeed.web.dev/">https://pagespeed.web.dev/</a></li>
+<li>Prueba tanto móvil como escritorio</li>
+<li>Basado en datos reales de usuarios de Chrome</li>
+</ul>
+<p><strong>GTmetrix (solo sitios en producción):</strong></p>
+<ul>
+<li>URL: <a href="https://gtmetrix.com/">https://gtmetrix.com/</a></li>
+<li>Gráfico waterfall detallado mostrando cada recurso cargado</li>
+</ul>
+<hr>
+<h2>El Stack de Optimización de Rendimiento</h2>
+<h3>1. Hosting (Sitios en Producción)</h3>
+<p>Tu proveedor de hosting tiene el mayor impacto en la velocidad:</p>
+<ul>
+<li><strong>Hosting económico</strong> (3-10€/mes): Lento, recursos compartidos</li>
+<li><strong>Hosting WordPress gestionado</strong> (15-40€/mes): Optimizado para WordPress (SiteGround, Cloudways, Kinsta)</li>
+<li><strong>Hosting premium</strong> (30€+/mes): El más rápido, mejor soporte (WP Engine, Kinsta, Flywheel)</li>
+</ul>
+<p><strong>Recomendación:</strong> Para sitios de clientes, usa como mínimo SiteGround o Cloudways.</p>
+<h3>2. Caché (Ya Configurada)</h3>
+<p>WP Super Cache (Lección 22) se encarga de esto. Revisa:</p>
+<ul>
+<li><strong>Caché de página</strong>: Sirve HTML pre-generado en lugar de procesar PHP</li>
+<li><strong>Caché del navegador</strong>: Indica a los navegadores que almacenen archivos estáticos localmente</li>
+<li><strong>Caché de objetos</strong>: Almacena en caché las consultas a la base de datos (requiere soporte a nivel de servidor)</li>
+</ul>
+<h3>3. Optimización de Imágenes (Ya Configurada)</h3>
+<p>Smush o similar (Lección 24) se encarga de esto:</p>
+<ul>
+<li>Comprimir todas las imágenes</li>
+<li>Carga diferida (lazy loading)</li>
+<li>Dimensionamiento correcto de imágenes</li>
+<li>Formato WebP cuando sea posible</li>
+</ul>
+<h3>4. Minificación</h3>
+<p>Reduce el tamaño de los archivos eliminando espacios en blanco, comentarios y caracteres innecesarios:</p>
+<p><strong>Instala Autoptimize</strong> (plugin gratuito):</p>
+<ol>
+<li><strong>Plugins → Add New</strong> → busca &quot;Autoptimize&quot;</li>
+<li>Instala y activa</li>
+<li>Ve a <strong>Settings → Autoptimize</strong></li>
+<li>Marca:<ul>
+<li><strong>Optimize JavaScript Code</strong></li>
+<li><strong>Optimize CSS Code</strong></li>
+<li><strong>Optimize HTML Code</strong></li>
+</ul>
+</li>
+<li>Guarda y prueba tu sitio</li>
+</ol>
+<p><strong>Advertencia:</strong> La minificación a veces puede romper cosas (especialmente JavaScript). Si tu sitio se ve o funciona diferente después de habilitarla:</p>
+<ol>
+<li>Intenta desactivar la optimización de JavaScript primero</li>
+<li>Si eso lo arregla, mantén la optimización de JS desactivada</li>
+<li>La optimización de CSS y HTML raramente causa problemas</li>
+</ol>
+<h3>5. Optimización de Base de Datos</h3>
+<p>Con el tiempo, tu base de datos acumula datos innecesarios:</p>
+<ul>
+<li>Revisiones de entradas</li>
+<li>Comentarios spam</li>
+<li>Opciones transitorias</li>
+<li>Metadatos huérfanos</li>
+</ul>
+<p><strong>Usando WP-Optimize</strong> (plugin gratuito):</p>
+<ol>
+<li>Instala y activa <strong>WP-Optimize</strong></li>
+<li>Ve a <strong>WP-Optimize → Database</strong></li>
+<li>Marca las optimizaciones que quieras ejecutar:<ul>
+<li>Limpiar todas las revisiones de entradas</li>
+<li>Limpiar todos los borradores automáticos</li>
+<li>Limpiar comentarios spam y en la papelera</li>
+<li>Eliminar opciones transitorias expiradas</li>
+</ul>
+</li>
+<li>Haz clic en <strong>&quot;Run all selected optimizations&quot;</strong></li>
+</ol>
+<h3>6. Reducir Peticiones HTTP</h3>
+<p>Cada archivo (CSS, JS, imagen, fuente) requiere una petición HTTP separada:</p>
+<ul>
+<li>Combinar archivos CSS/JS (Autoptimize hace esto)</li>
+<li>Usar menos plugins (cada uno añade CSS/JS)</li>
+<li>Usar fuentes de iconos o SVGs en lugar de imágenes de iconos</li>
+<li>Limitar scripts externos (analytics, widgets de chat, botones sociales)</li>
+</ul>
+<h3>7. Optimización de Fuentes</h3>
+<p>Google Fonts puede ralentizar tu sitio:</p>
+<ul>
+<li>Usa como máximo <strong>2 familias de fuentes</strong></li>
+<li>Carga solo los <strong>pesos que necesites</strong> (400, 600, 700 — no todos)</li>
+<li>Considera usar <strong>fuentes del sistema</strong> para la carga más rápida:<pre><code class="language-css">font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, sans-serif;
+</code></pre>
+</li>
+</ul>
+<hr>
+<h2>CDN (Red de Distribución de Contenidos)</h2>
+<h3>¿Qué es un CDN?</h3>
+<p>Un CDN almacena copias de los archivos estáticos de tu sitio (imágenes, CSS, JS) en servidores alrededor del mundo. Los visitantes reciben el contenido desde el servidor más cercano.</p>
+<h3>Beneficios:</h3>
+<ul>
+<li>Tiempos de carga más rápidos para visitantes lejos de tu servidor</li>
+<li>Reduce la carga en tu servidor de hosting</li>
+<li>Proporciona protección DDoS</li>
+<li>Mejor rendimiento global</li>
+</ul>
+<h3>Cloudflare (Opción Gratuita):</h3>
+<ol>
+<li>Crea una cuenta gratuita en <a href="https://www.cloudflare.com/">https://www.cloudflare.com/</a></li>
+<li>Añade tu dominio</li>
+<li>Actualiza los nameservers de tu dominio a Cloudflare</li>
+<li>Cloudflare proporciona:<ul>
+<li>CDN gratuito</li>
+<li>SSL gratuito</li>
+<li>Protección DDoS básica</li>
+<li>Herramientas de optimización de rendimiento</li>
+</ul>
+</li>
+</ol>
+<p><strong>Nota:</strong> La configuración del CDN ocurre a nivel de hosting/DNS, no dentro de WordPress.</p>
+<hr>
+<h2>Consejos de Rendimiento para Elementor</h2>
+<p>Elementor añade sobrecarga. Minimízala:</p>
+<ol>
+<li><strong>No uses demasiadas secciones</strong> — combina donde sea posible</li>
+<li><strong>Usa los iconos integrados de Elementor</strong> en lugar de imágenes para iconos</li>
+<li><strong>Evita animaciones excesivas</strong> — requieren JavaScript extra</li>
+<li><strong>Usa el experimento &quot;Improved CSS Loading&quot;</strong>:<ul>
+<li>Elementor → Settings → Experiments → Improved CSS Loading → Active</li>
+</ul>
+</li>
+<li><strong>No uses demasiadas Google Fonts</strong> — elige 1-2 y mantente con ellas</li>
+<li><strong>Optimiza la salida CSS de Elementor</strong>:<ul>
+<li>Elementor → Settings → Advanced → CSS Print Method → Internal Embedding</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>Checklist de Rendimiento</h2>
+<h3>Victorias Rápidas (Haz Esto Primero):</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Habilita la caché (WP Super Cache)</li>
+<li><input disabled="" type="checkbox"> Optimiza todas las imágenes (Smush)</li>
+<li><input disabled="" type="checkbox"> Habilita la carga diferida (lazy loading)</li>
+<li><input disabled="" type="checkbox"> Habilita la minificación (Autoptimize)</li>
+<li><input disabled="" type="checkbox"> Usa solo 2 fuentes como máximo</li>
+<li><input disabled="" type="checkbox"> Elimina plugins y temas sin usar</li>
+</ul>
+<h3>Esfuerzo Medio:</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Optimiza la base de datos (WP-Optimize)</li>
+<li><input disabled="" type="checkbox"> Reduce el número de plugins</li>
+<li><input disabled="" type="checkbox"> Diferir JavaScript no crítico</li>
+<li><input disabled="" type="checkbox"> Optimiza la configuración de Elementor</li>
+</ul>
+<h3>Avanzado (Para Sitios en Producción):</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Usa un CDN (Cloudflare)</li>
+<li><input disabled="" type="checkbox"> Elige hosting rápido</li>
+<li><input disabled="" type="checkbox"> Habilita caché de objetos (si el hosting lo soporta)</li>
+<li><input disabled="" type="checkbox"> Implementa CSS crítico</li>
+<li><input disabled="" type="checkbox"> Usa imágenes WebP</li>
+</ul>
+<hr>
+<h2>Ejercicios</h2>
+<ol>
+<li><p><strong>Ejecuta una prueba de Lighthouse</strong>: Prueba tu página de inicio con Chrome Lighthouse. Anota tu puntuación de Performance y las recomendaciones específicas.</p>
+</li>
+<li><p><strong>Instala Autoptimize</strong>: Habilita la optimización de CSS, JS y HTML. Limpia la caché y prueba tu sitio.</p>
+</li>
+<li><p><strong>Comprueba el tamaño de la página</strong>: Usa la pestaña Network de Chrome DevTools para ver el tamaño total de tu página de inicio y el número de peticiones.</p>
+</li>
+<li><p><strong>Optimiza la base de datos</strong>: Instala WP-Optimize y limpia revisiones, borradores y spam.</p>
+</li>
+<li><p><strong>Reduce fuentes</strong>: Comprueba cuántas Google Fonts estás cargando. Reduce a 2 como máximo.</p>
+</li>
+<li><p><strong>Comparación antes/después</strong>: Anota tu puntuación de Lighthouse antes de las optimizaciones, aplica todas las optimizaciones, limpia la caché y prueba de nuevo. Documenta la mejora.</p>
+</li>
+</ol>
+<hr>
+<h2>Puntos Clave</h2>
+<ul>
+<li><strong>Carga de página en menos de 3 segundos</strong> es el objetivo</li>
+<li>Los factores más importantes: <strong>hosting, caché, imágenes y minificación</strong></li>
+<li><strong>Mide antes y después</strong> para ver la mejora</li>
+<li>Usa <strong>Lighthouse</strong> (Chrome DevTools) para pruebas locales</li>
+<li><strong>Caché</strong> (WP Super Cache) sirve páginas pre-generadas</li>
+<li><strong>Optimización de imágenes</strong> (Smush) a menudo proporciona la mayor mejora</li>
+<li><strong>Minificación</strong> (Autoptimize) reduce el tamaño de archivos CSS/JS/HTML</li>
+<li><strong>CDN</strong> (Cloudflare) mejora la velocidad para visitantes globales</li>
+<li>Menos plugins = sitio más rápido</li>
+<li>2 fuentes como máximo para el mejor rendimiento</li>
+</ul>
+<hr>
+<p><strong>Siguiente Lección:</strong> <a href="lesson-33.html">Lección 33 - Publicar un Sitio</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-31.html" class="prev">&larr; 31. Fundamentos de SEO</a>
+      <a href="lesson-33.html" class="next">33. Publicar el Sitio &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

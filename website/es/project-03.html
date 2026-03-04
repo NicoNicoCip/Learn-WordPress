@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto 03: Construir una Tienda Simple con WooCommerce — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/project-03.html">EN</a>
+        <span>|</span>
+        <a href="../es/project-03.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li class="active"><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Proyecto 03: Construir una Tienda Simple con WooCommerce</h1>
+<h2>Descripcion General</h2>
+<p>Construye una tienda en linea completa con WooCommerce. Este proyecto reune todo lo aprendido en el curso, especialmente los Modulos 3, 4 y 5.</p>
+<p><strong>Tiempo estimado:</strong> 4-6 horas</p>
+<hr>
+<h2>El Encargo</h2>
+<p><strong>Cliente:</strong> &quot;Evergreen Goods&quot; — una tienda en linea que vende productos ecologicos y sostenibles para el hogar (bolsas reutilizables, productos de bambu, productos de limpieza naturales, etc.).</p>
+<p><strong>Requisitos:</strong></p>
+<ul>
+<li>Tienda en linea limpia y profesional</li>
+<li>Catalogo de productos con categorias</li>
+<li>Carrito de la compra y proceso de pago (checkout)</li>
+<li>Procesamiento de pagos (Stripe en modo de prueba)</li>
+<li>Configuracion de envios</li>
+<li>Historia de la marca</li>
+<li>Pagina de contacto</li>
+</ul>
+<hr>
+<h2>Paginas a Construir</h2>
+<h3>1. Pagina de Inicio (Landing de la Tienda)</h3>
+<p><strong>Secciones a incluir:</strong></p>
+<ul>
+<li>Banner hero: &quot;Vida Sostenible Hecha Simple&quot; con una imagen de estilo de vida</li>
+<li>Categorias de productos destacadas (3-4 tarjetas de categoria con imagenes)</li>
+<li>Productos destacados/mas vendidos (4 productos)</li>
+<li>Adelanto de la historia de la marca (imagen + texto + boton &quot;Saber Mas&quot;)</li>
+<li>Seccion &quot;Por Que Elegirnos&quot; (3-4 cajas con icono: Ecologico, Envio Gratuito en Pedidos Superiores a 50$, Satisfaccion Garantizada, Embalaje Sostenible)</li>
+<li>Suscripcion al newsletter</li>
+<li>Testimonios de clientes (3 resenas)</li>
+</ul>
+<h3>2. Pagina de la Tienda (WooCommerce)</h3>
+<ul>
+<li>Catalogo de productos con filtros en la barra lateral</li>
+<li>Navegacion por categorias</li>
+<li>Tarjetas de producto bien disenadas</li>
+<li>Paginacion</li>
+</ul>
+<h3>3. Pagina Sobre Nosotros</h3>
+<p><strong>Contenido a incluir:</strong></p>
+<ul>
+<li>Historia y mision de la marca</li>
+<li>Compromiso con la sostenibilidad (con iconos/estadisticas)</li>
+<li>Numeros de &quot;Nuestro Impacto&quot; (arboles salvados, plastico reducido, etc.)</li>
+<li>Seccion del equipo</li>
+</ul>
+<h3>4. Pagina de Contacto</h3>
+<p><strong>Contenido a incluir:</strong></p>
+<ul>
+<li>Formulario de contacto (Nombre, Email, Asunto, Mensaje)</li>
+<li>Informacion de atencion al cliente (email, telefono, horario)</li>
+<li>Acordeon de preguntas frecuentes (envios, devoluciones, tallas)</li>
+<li>Enlaces a redes sociales</li>
+</ul>
+<h3>5. Pagina del Blog</h3>
+<ul>
+<li>3 entradas de blog sobre sostenibilidad:<ol>
+<li>&quot;10 Cambios Faciles para una Cocina Mas Sostenible&quot;</li>
+<li>&quot;Como Reducir el Plastico en Tu Rutina Diaria&quot;</li>
+<li>&quot;La Verdad Sobre el Greenwashing: Que Buscar&quot;</li>
+</ol>
+</li>
+</ul>
+<h3>6. Paginas Adicionales de WooCommerce</h3>
+<p>Estas se generan automaticamente pero deben funcionar:</p>
+<ul>
+<li>Pagina del carrito</li>
+<li>Pagina de checkout</li>
+<li>Pagina Mi Cuenta</li>
+</ul>
+<hr>
+<h2>Productos a Crear</h2>
+<p>Crea al menos <strong>12 productos</strong> en 4 categorias:</p>
+<h3>Categoria: Cocina y Comedor (3 productos)</h3>
+<p><strong>Producto 1: Set de Utensilios de Bambu (Simple)</strong></p>
+<ul>
+<li>Precio: $24.99</li>
+<li>Descripcion: Set de 5 utensilios de bambu — espatula, cuchara, tenedor, cuchillo y palillos</li>
+<li>SKU: BUS-001</li>
+<li>Imagen: foto de utensilios de bambu</li>
+</ul>
+<p><strong>Producto 2: Envolturas de Cera de Abeja (Variable)</strong></p>
+<ul>
+<li>Variaciones: Pequena ($12.99), Mediana ($16.99), Grande ($19.99), Pack Variado ($29.99)</li>
+<li>Descripcion: Envolturas de alimentos reutilizables para sustituir el film plastico</li>
+<li>SKU: BFW-001</li>
+<li>Imagen: foto de envolturas de cera de abeja</li>
+</ul>
+<p><strong>Producto 3: Set de Bolsas Reutilizables para la Compra (Simple)</strong></p>
+<ul>
+<li>Precio: $15.99, Precio de oferta: $12.99</li>
+<li>Descripcion: Set de 6 bolsas de malla para la compra de frutas y verduras</li>
+<li>SKU: RPB-001</li>
+</ul>
+<h3>Categoria: Cuidado Personal (3 productos)</h3>
+<p><strong>Producto 4: Pack de 4 Cepillos de Dientes de Bambu (Simple)</strong></p>
+<ul>
+<li>Precio: $9.99</li>
+<li>SKU: BT-001</li>
+</ul>
+<p><strong>Producto 5: Pastilla de Champu (Variable)</strong></p>
+<ul>
+<li>Variaciones: Lavanda ($11.99), Menta ($11.99), Sin Perfume ($10.99)</li>
+<li>SKU: SB-001</li>
+</ul>
+<p><strong>Producto 6: Desodorante Natural (Variable)</strong></p>
+<ul>
+<li>Variaciones: Citricos, Cedro, Sin Perfume — todos a $13.99</li>
+<li>SKU: ND-001</li>
+</ul>
+<h3>Categoria: Limpieza del Hogar (3 productos)</h3>
+<p><strong>Producto 7: Limpiador Multiusos Concentrado (Simple)</strong></p>
+<ul>
+<li>Precio: $14.99</li>
+<li>Descripcion: Rinde para 10 botellas de limpiador multiusos</li>
+<li>SKU: APC-001</li>
+</ul>
+<p><strong>Producto 8: Pack de 5 Panos de Limpieza Reutilizables (Simple)</strong></p>
+<ul>
+<li>Precio: $18.99</li>
+<li>SKU: RCC-001</li>
+</ul>
+<p><strong>Producto 9: Laminas de Detergente para la Ropa (Simple)</strong></p>
+<ul>
+<li>Precio: $16.99</li>
+<li>Descripcion: 60 laminas, envase sin plastico</li>
+<li>SKU: LDS-001</li>
+</ul>
+<h3>Categoria: Para Llevar (3 productos)</h3>
+<p><strong>Producto 10: Botella de Agua de Acero Inoxidable (Variable)</strong></p>
+<ul>
+<li>Variaciones: 500ml ($22.99), 750ml ($27.99), 1L ($32.99)</li>
+<li>Colores: Negro Mate, Verde Bosque, Azul Oceano</li>
+<li>SKU: SWB-001</li>
+</ul>
+<p><strong>Producto 11: Bolsa Tote de Algodon Organico (Simple)</strong></p>
+<ul>
+<li>Precio: $14.99</li>
+<li>SKU: OCT-001</li>
+</ul>
+<p><strong>Producto 12: Taza de Cafe Reutilizable (Variable)</strong></p>
+<ul>
+<li>Variaciones: 350ml ($18.99), 450ml ($21.99)</li>
+<li>SKU: RCC-002</li>
+</ul>
+<h3>Requisitos de los Productos:</h3>
+<ul>
+<li>Cada producto debe tener: <strong>titulo, descripcion, descripcion corta, precio, SKU, categoria, imagen del producto y 2 o mas imagenes de galeria</strong></li>
+<li>Al menos <strong>3 productos deben ser Variables</strong> (con opciones de tamano/color/aroma)</li>
+<li>Al menos <strong>2 productos deben estar en Oferta</strong> (con precio de oferta)</li>
+<li>Marcar <strong>4 productos como Destacados</strong></li>
+</ul>
+<hr>
+<h2>Configuracion de la Tienda</h2>
+<h3>Zonas de Envio:</h3>
+<p><strong>Zona 1: Nacional</strong></p>
+<ul>
+<li>Envio Gratuito para pedidos superiores a $50</li>
+<li>Tarifa Plana: $7.99 (Envio Estandar)</li>
+</ul>
+<p><strong>Zona 2: Internacional</strong></p>
+<ul>
+<li>Tarifa Plana: $19.99</li>
+</ul>
+<h3>Pagos:</h3>
+<ul>
+<li>Stripe (modo de prueba)</li>
+<li>PayPal (opcional)</li>
+</ul>
+<h3>Impuestos:</h3>
+<ul>
+<li>Configura al menos una tasa impositiva para tu region</li>
+</ul>
+<h3>Politicas de la Tienda:</h3>
+<ul>
+<li>Pagina de Politica de Envios</li>
+<li>Pagina de Politica de Devoluciones/Reembolsos</li>
+<li>Pagina de Politica de Privacidad</li>
+</ul>
+<hr>
+<h2>Especificaciones de Diseno</h2>
+<h3>Paleta de Colores</h3>
+<table>
+<thead>
+<tr>
+<th>Color</th>
+<th>Hex</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Verde Bosque</td>
+<td><code>#2d6a4f</code></td>
+<td>Primario, botones</td>
+</tr>
+<tr>
+<td>Verde Salvia</td>
+<td><code>#95d5b2</code></td>
+<td>Acentos, resaltados</td>
+</tr>
+<tr>
+<td>Crema Calido</td>
+<td><code>#fefae0</code></td>
+<td>Fondos claros</td>
+</tr>
+<tr>
+<td>Carbon Oscuro</td>
+<td><code>#1b1b1b</code></td>
+<td>Texto</td>
+</tr>
+<tr>
+<td>Blanco</td>
+<td><code>#ffffff</code></td>
+<td>Tarjetas, fondos</td>
+</tr>
+<tr>
+<td>Ambar</td>
+<td><code>#e09f3e</code></td>
+<td>Insignias de oferta, CTAs</td>
+</tr>
+</tbody></table>
+<h3>Fuentes</h3>
+<ul>
+<li><strong>Titulares:</strong> Raleway (Limpia, moderna)</li>
+<li><strong>Cuerpo:</strong> Nunito o Lato (Amigable, legible)</li>
+</ul>
+<h3>Fotografia</h3>
+<ul>
+<li>Buscar en Unsplash/Pexels: eco friendly products, sustainable living, bamboo products, zero waste, natural home</li>
+</ul>
+<hr>
+<h2>Requisitos Tecnicos</h2>
+<ul>
+<li><input disabled="" type="checkbox"> WooCommerce instalado y configurado</li>
+<li><input disabled="" type="checkbox"> Mas de 12 productos con detalles completos, imagenes y categorias</li>
+<li><input disabled="" type="checkbox"> Productos variables con variaciones funcionales</li>
+<li><input disabled="" type="checkbox"> Productos destacados mostrados en la pagina de inicio</li>
+<li><input disabled="" type="checkbox"> Productos en oferta mostrando insignias de descuento</li>
+<li><input disabled="" type="checkbox"> Zonas de envio configuradas (nacional + internacional)</li>
+<li><input disabled="" type="checkbox"> Envio gratuito para pedidos superiores a $50</li>
+<li><input disabled="" type="checkbox"> Pasarela de pago Stripe en modo de prueba</li>
+<li><input disabled="" type="checkbox"> Completar una compra de prueba con exito</li>
+<li><input disabled="" type="checkbox"> El formulario de contacto funciona</li>
+<li><input disabled="" type="checkbox"> El blog tiene 3 entradas</li>
+<li><input disabled="" type="checkbox"> Adaptable a moviles</li>
+<li><input disabled="" type="checkbox"> SEO configurado en todas las paginas</li>
+<li><input disabled="" type="checkbox"> Todas las imagenes de productos optimizadas</li>
+<li><input disabled="" type="checkbox"> Aviso de la tienda activo (&quot;Envio gratuito en pedidos superiores a $50!&quot;)</li>
+</ul>
+<hr>
+<h2>Desafios Extra</h2>
+<ol>
+<li>Anadir una seccion de <strong>&quot;Novedades&quot;</strong> a la pagina de inicio</li>
+<li>Crear <strong>imagenes de categorias de productos</strong> y usar el shortcode <code>[product_categories]</code></li>
+<li>Anadir <strong>productos de venta cruzada</strong> en la pagina del carrito</li>
+<li>Crear un <strong>codigo de cupon</strong> (por ejemplo, WELCOME10 para un 10% de descuento en el primer pedido)</li>
+<li>Anadir una <strong>guia de tallas</strong> o un <strong>acordeon de preguntas frecuentes</strong> en las paginas de producto</li>
+<li>Crear una pagina de <strong>&quot;Impacto en la Sostenibilidad&quot;</strong> con contadores (arboles salvados, plastico reducido)</li>
+<li>Configurar la <strong>imagen de marca en las plantillas de email</strong> (WooCommerce → Settings → Emails → personalizar colores/cabecera)</li>
+</ol>
+<hr>
+<h2>Lista de Comprobacion de Pruebas</h2>
+<p>Antes de dar por completado este proyecto:</p>
+<ul>
+<li><input disabled="" type="checkbox"> Navegar por la tienda y filtrar por categoria</li>
+<li><input disabled="" type="checkbox"> Ver la pagina de un producto simple — toda la informacion se muestra correctamente</li>
+<li><input disabled="" type="checkbox"> Ver un producto variable — las variaciones funcionan (seleccionar un tamano cambia el precio)</li>
+<li><input disabled="" type="checkbox"> Anadir articulos al carrito — el carrito se actualiza correctamente</li>
+<li><input disabled="" type="checkbox"> Actualizar cantidades en el carrito — el total se recalcula</li>
+<li><input disabled="" type="checkbox"> Eliminar un articulo del carrito — funciona correctamente</li>
+<li><input disabled="" type="checkbox"> Pasar al checkout — todos los campos se muestran</li>
+<li><input disabled="" type="checkbox"> Completar una compra de prueba con la tarjeta de prueba de Stripe (4242 4242 4242 4242)</li>
+<li><input disabled="" type="checkbox"> Se muestra la pagina de confirmacion del pedido</li>
+<li><input disabled="" type="checkbox"> El pedido aparece en WooCommerce → Orders</li>
+<li><input disabled="" type="checkbox"> Se envia el email de notificacion del pedido</li>
+<li><input disabled="" type="checkbox"> El envio gratuito se aplica cuando el total del carrito supera los $50</li>
+<li><input disabled="" type="checkbox"> Los productos en oferta muestran los precios con descuento tachando el precio original</li>
+<li><input disabled="" type="checkbox"> La pagina de la tienda se ve bien en movil</li>
+<li><input disabled="" type="checkbox"> Las paginas de producto se ven bien en movil</li>
+<li><input disabled="" type="checkbox"> El carrito y el checkout funcionan en movil</li>
+</ul>
+<hr>
+<h2>Criterios de Evaluacion</h2>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Verificacion</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mas de 12 productos con detalles completos e imagenes</td>
+<td></td>
+</tr>
+<tr>
+<td>Los productos variables funcionan correctamente</td>
+<td></td>
+</tr>
+<tr>
+<td>La pagina de la tienda esta bien organizada con categorias</td>
+<td></td>
+</tr>
+<tr>
+<td>El flujo de compra completo funciona (modo de prueba)</td>
+<td></td>
+</tr>
+<tr>
+<td>Los envios estan correctamente configurados</td>
+<td></td>
+</tr>
+<tr>
+<td>La pagina de inicio muestra los productos de forma efectiva</td>
+<td></td>
+</tr>
+<tr>
+<td>El diseno es coherente y profesional</td>
+<td></td>
+</tr>
+<tr>
+<td>Adaptable a moviles en todas las paginas</td>
+<td></td>
+</tr>
+<tr>
+<td>SEO configurado en todas las paginas</td>
+<td></td>
+</tr>
+<tr>
+<td>El formulario de contacto y el blog son funcionales</td>
+<td></td>
+</tr>
+<tr>
+<td>El aviso de la tienda y las promociones son visibles</td>
+<td></td>
+</tr>
+<tr>
+<td>Todos los enlaces y la navegacion funcionan</td>
+<td></td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Felicidades!</h2>
+<p>Si has completado los tres proyectos de practica, tienes experiencia practica con:</p>
+<ul>
+<li>Sitios WordPress corporativos/de negocio</li>
+<li>Sitios centrados en blog/contenido</li>
+<li>Tiendas en linea con WooCommerce</li>
+</ul>
+<p>Estos son los tres tipos mas comunes de sitios WordPress que construiras profesionalmente. Estas listo para empezar a construir sitios reales para clientes!</p>
+
+    <nav class="lesson-nav">
+      <a href="project-02.html" class="prev">&larr; Proyecto 2: Blog / Revista</a>
+      <span></span>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lección 26: Añadir Productos — Curso WordPress</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <button class="hamburger" aria-label="Alternar menú">&#9776;</button>
+    <a href="index.html" class="logo">Curso WordPress</a>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../en/lesson-26.html">EN</a>
+        <span>|</span>
+        <a href="../es/lesson-26.html" class="active">ES</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay"></div>
+
+  <nav class="sidebar">
+    <div class="module">
+      <h3>Resumen del Curso</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 1: Fundamentos</h3>
+      <ul>
+        <li><a href="lesson-01.html">01. Qué es WordPress</a></li>
+        <li><a href="lesson-02.html">02. Configuración Local</a></li>
+        <li><a href="lesson-03.html">03. Tour del Panel</a></li>
+        <li><a href="lesson-04.html">04. Entradas vs Páginas</a></li>
+        <li><a href="lesson-05.html">05. Categorías, Etiquetas y Taxonomías</a></li>
+        <li><a href="lesson-06.html">06. La Biblioteca de Medios</a></li>
+        <li><a href="lesson-07.html">07. Ajustes de WordPress</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 2: Temas</h3>
+      <ul>
+        <li><a href="lesson-08.html">08. Entender los Temas</a></li>
+        <li><a href="lesson-09.html">09. Instalar un Tema</a></li>
+        <li><a href="lesson-10.html">10. Menús y Navegación</a></li>
+        <li><a href="lesson-11.html">11. Widgets y Barras Laterales</a></li>
+        <li><a href="lesson-12.html">12. El Personalizador</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 3: Elementor</h3>
+      <ul>
+        <li><a href="lesson-13.html">13. Instalar Elementor</a></li>
+        <li><a href="lesson-14.html">14. Secciones, Columnas y Widgets</a></li>
+        <li><a href="lesson-15.html">15. Estilos Globales</a></li>
+        <li><a href="lesson-16.html">16. Construir una Página de Inicio</a></li>
+        <li><a href="lesson-17.html">17. Página Acerca de</a></li>
+        <li><a href="lesson-18.html">18. Página de Contacto</a></li>
+        <li><a href="lesson-19.html">19. Plantillas y Reutilización</a></li>
+        <li><a href="lesson-20.html">20. Diseño Responsivo</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 4: Plugins</h3>
+      <ul>
+        <li><a href="lesson-21.html">21. Entender los Plugins</a></li>
+        <li><a href="lesson-22.html">22. Plugins Esenciales</a></li>
+        <li><a href="lesson-23.html">23. Formularios de Contacto</a></li>
+        <li><a href="lesson-24.html">24. Optimización de Imágenes</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 5: WooCommerce</h3>
+      <ul>
+        <li><a href="lesson-25.html">25. Configurar WooCommerce</a></li>
+        <li class="active"><a href="lesson-26.html">26. Añadir Productos</a></li>
+        <li><a href="lesson-27.html">27. Pagos y Envíos</a></li>
+        <li><a href="lesson-28.html">28. Diseño de la Tienda</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Módulo 6: Gestión</h3>
+      <ul>
+        <li><a href="lesson-29.html">29. Usuarios y Roles</a></li>
+        <li><a href="lesson-30.html">30. Copias de Seguridad</a></li>
+        <li><a href="lesson-31.html">31. Fundamentos de SEO</a></li>
+        <li><a href="lesson-32.html">32. Rendimiento</a></li>
+        <li><a href="lesson-33.html">33. Publicar el Sitio</a></li>
+      </ul>
+    </div>
+    <div class="module">
+      <h3>Proyectos Prácticos</h3>
+      <ul>
+        <li><a href="project-01.html">Proyecto 1: Sitio Web Empresarial</a></li>
+        <li><a href="project-02.html">Proyecto 2: Blog / Revista</a></li>
+        <li><a href="project-03.html">Proyecto 3: Tienda E-Commerce</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+<h1>Lección 26: Añadir Productos</h1>
+<h2>Objetivos</h2>
+<ul>
+<li>Añadir productos simples con imágenes, precios y descripciones</li>
+<li>Comprender los tipos de productos (simple, variable, digital)</li>
+<li>Configurar categorías y etiquetas de productos</li>
+<li>Configurar inventario, envíos y productos relacionados</li>
+</ul>
+<hr>
+<h2>Tipos de Productos en WooCommerce</h2>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Qué Es</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Simple</strong></td>
+<td>Un producto único con un solo precio</td>
+<td>Una camiseta en una sola talla/color</td>
+</tr>
+<tr>
+<td><strong>Variable</strong></td>
+<td>Un producto con opciones (talla, color)</td>
+<td>Una camiseta con opciones de talla y color</td>
+</tr>
+<tr>
+<td><strong>Agrupado</strong></td>
+<td>Una colección de productos simples relacionados</td>
+<td>Un conjunto de accesorios relacionados</td>
+</tr>
+<tr>
+<td><strong>Externo/Afiliado</strong></td>
+<td>Un producto que se vende en otro sitio</td>
+<td>Producto de afiliado de Amazon</td>
+</tr>
+<tr>
+<td><strong>Virtual</strong></td>
+<td>Un producto no físico (sin envío)</td>
+<td>Un servicio de consultoría</td>
+</tr>
+<tr>
+<td><strong>Descargable</strong></td>
+<td>Un producto digital</td>
+<td>Un e-book, plantilla o software</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Añadir un Producto Simple</h2>
+<h3>Paso 1: Crear el Producto</h3>
+<ol>
+<li>Ve a <strong>Products → Add New</strong></li>
+<li>Introduce el <strong>Nombre del Producto</strong>: p. ej., &quot;Camiseta Azul Clásica&quot;</li>
+<li>Escribe una <strong>Descripción del Producto</strong> en el editor principal (esto aparece en la página completa del producto):<pre><code>Our Classic Blue T-Shirt is made from 100% organic cotton for
+ultimate comfort. Features a relaxed fit and durable stitching
+that lasts wash after wash.
+</code></pre>
+</li>
+</ol>
+<h3>Paso 2: Sección de Datos del Producto</h3>
+<p>Debajo del editor, verás el panel de <strong>Product Data</strong>. Asegúrate de que &quot;Simple product&quot; está seleccionado.</p>
+<h4>Pestaña General</h4>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Qué Introducir</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Regular Price</strong></td>
+<td>El precio normal (p. ej., 29,99 $)</td>
+</tr>
+<tr>
+<td><strong>Sale Price</strong></td>
+<td>El precio con descuento (opcional — p. ej., 24,99 $)</td>
+</tr>
+<tr>
+<td><strong>Sale dates</strong></td>
+<td>Programa cuándo empieza/termina la oferta</td>
+</tr>
+</tbody></table>
+<h4>Pestaña Inventory</h4>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Qué Introducir</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>SKU</strong></td>
+<td>Referencia — identificador único (p. ej., &quot;BTS-001&quot;)</td>
+</tr>
+<tr>
+<td><strong>Manage Stock</strong></td>
+<td>Marca para activar la gestión de inventario</td>
+</tr>
+<tr>
+<td><strong>Stock Quantity</strong></td>
+<td>Cuántos tienes (p. ej., 50)</td>
+</tr>
+<tr>
+<td><strong>Allow Backorders</strong></td>
+<td>¿Permitir compras cuando no hay stock?</td>
+</tr>
+<tr>
+<td><strong>Low Stock Threshold</strong></td>
+<td>Recibe una notificación cuando el stock baje de esta cifra</td>
+</tr>
+<tr>
+<td><strong>Sold Individually</strong></td>
+<td>Limitar a 1 por pedido</td>
+</tr>
+</tbody></table>
+<h4>Pestaña Shipping</h4>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Qué Introducir</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Weight</strong></td>
+<td>Peso del producto (para cálculos de envío)</td>
+</tr>
+<tr>
+<td><strong>Dimensions</strong></td>
+<td>Largo x Ancho x Alto</td>
+</tr>
+<tr>
+<td><strong>Shipping Class</strong></td>
+<td>Deja el valor por defecto a menos que tengas clases de envío personalizadas</td>
+</tr>
+</tbody></table>
+<h4>Pestaña Linked Products</h4>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Qué Introducir</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Upsells</strong></td>
+<td>Productos mostrados en la página del producto (&quot;También te puede gustar&quot;)</td>
+</tr>
+<tr>
+<td><strong>Cross-sells</strong></td>
+<td>Productos mostrados en el carrito (&quot;Te podría interesar&quot;)</td>
+</tr>
+</tbody></table>
+<h4>Pestaña Advanced</h4>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Qué Introducir</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Purchase Note</strong></td>
+<td>Nota enviada al cliente después de la compra</td>
+</tr>
+<tr>
+<td><strong>Menu Order</strong></td>
+<td>Orden de visualización (números más bajos aparecen primero)</td>
+</tr>
+<tr>
+<td><strong>Enable Reviews</strong></td>
+<td>Permitir reseñas de clientes en este producto</td>
+</tr>
+</tbody></table>
+<h3>Paso 3: Descripción Corta</h3>
+<p>En el lado derecho (o debajo, dependiendo de tu pantalla), busca <strong>Product Short Description</strong>:</p>
+<ul>
+<li>Escribe una descripción breve de 1-2 frases</li>
+<li>Aparece junto a la imagen del producto en la página del producto</li>
+<li>Ejemplo: &quot;Camiseta cómoda de 100% algodón orgánico. Color azul clásico. Disponible en todas las tallas.&quot;</li>
+</ul>
+<h3>Paso 4: Imagen del Producto</h3>
+<p>En la barra lateral derecha:</p>
+<ol>
+<li>Busca <strong>&quot;Product Image&quot;</strong></li>
+<li>Haz clic en <strong>&quot;Set product image&quot;</strong></li>
+<li>Sube o selecciona la <strong>foto principal del producto</strong></li>
+<li>Esta es la imagen principal que se muestra en la tienda y en la página del producto</li>
+</ol>
+<h3>Paso 5: Galería del Producto</h3>
+<p>Debajo de la imagen del producto:</p>
+<ol>
+<li>Haz clic en <strong>&quot;Add product gallery images&quot;</strong></li>
+<li>Sube o selecciona <strong>fotos adicionales</strong> (diferentes ángulos, detalles, fotos de estilo de vida)</li>
+<li>Aparecen como miniaturas debajo de la imagen principal en la página del producto</li>
+</ol>
+<h3>Paso 6: Categorías del Producto</h3>
+<p>En la barra lateral derecha:</p>
+<ol>
+<li>Busca <strong>&quot;Product categories&quot;</strong></li>
+<li>Marca una categoría existente o haz clic en <strong>&quot;+ Add new product category&quot;</strong></li>
+<li>Ejemplos de categorías: Ropa, Camisetas, Accesorios</li>
+<li>Puedes crear categorías padre/hijo (Ropa → Camisetas)</li>
+</ol>
+<h3>Paso 7: Etiquetas del Producto</h3>
+<ul>
+<li>Añade etiquetas como: <code>algodón</code>, <code>azul</code>, <code>camiseta</code>, <code>casual</code>, <code>unisex</code></li>
+<li>Las etiquetas ayudan con la búsqueda y el filtrado</li>
+</ul>
+<h3>Paso 8: Publicar</h3>
+<p>Haz clic en <strong>&quot;Publish&quot;</strong> para poner el producto en línea.</p>
+<hr>
+<h2>Añadir un Producto Variable</h2>
+<p>Los productos variables tienen opciones como talla y color.</p>
+<h3>Paso 1: Crear el Producto</h3>
+<ol>
+<li>Ve a <strong>Products → Add New</strong></li>
+<li>Nombre: &quot;Camiseta Premium de Algodón&quot;</li>
+<li>En Product Data, selecciona <strong>&quot;Variable product&quot;</strong></li>
+</ol>
+<h3>Paso 2: Configurar Atributos</h3>
+<ol>
+<li>Ve a la pestaña <strong>Attributes</strong> en Product Data</li>
+<li>Haz clic en <strong>&quot;Add new&quot;</strong> (o selecciona un atributo existente)</li>
+<li>Crea un atributo:<ul>
+<li><strong>Name</strong>: &quot;Talla&quot;</li>
+<li><strong>Values</strong>: S | M | L | XL (separa con <code>|</code>)</li>
+<li>Marca <strong>&quot;Used for variations&quot;</strong></li>
+<li>Haz clic en <strong>&quot;Save attributes&quot;</strong></li>
+</ul>
+</li>
+<li>Añade otro atributo:<ul>
+<li><strong>Name</strong>: &quot;Color&quot;</li>
+<li><strong>Values</strong>: Azul | Negro | Blanco</li>
+<li>Marca <strong>&quot;Used for variations&quot;</strong></li>
+<li>Haz clic en <strong>&quot;Save attributes&quot;</strong></li>
+</ul>
+</li>
+</ol>
+<h3>Paso 3: Crear Variaciones</h3>
+<ol>
+<li>Ve a la pestaña <strong>Variations</strong></li>
+<li>Haz clic en <strong>&quot;Generate variations&quot;</strong> (esto crea todas las combinaciones: S/Azul, S/Negro, M/Azul, etc.)</li>
+<li>Haz clic en <strong>&quot;OK&quot;</strong> para confirmar</li>
+</ol>
+<h3>Paso 4: Configurar Cada Variación</h3>
+<ol>
+<li>Haz clic en una variación para expandirla (p. ej., &quot;Talla: S, Color: Azul&quot;)</li>
+<li>Configura:<ul>
+<li><strong>Regular Price</strong> (¡obligatorio!) — p. ej., 29,99 $</li>
+<li><strong>Sale Price</strong> — opcional</li>
+<li><strong>SKU</strong> — opcional pero recomendado (p. ej., &quot;PCT-S-AZU&quot;)</li>
+<li><strong>Stock</strong> — stock opcional por variación</li>
+<li><strong>Image</strong> — sube una imagen específica para esta variación</li>
+</ul>
+</li>
+<li>Repite para todas las variaciones (o establece el mismo precio para todas)</li>
+</ol>
+<p><strong>Consejo:</strong> Para establecer el mismo precio para todas las variaciones, usa &quot;Set regular prices&quot; en el desplegable de la parte superior de la sección de Variaciones.</p>
+<h3>Paso 5: Publicar</h3>
+<hr>
+<h2>Añadir un Producto Digital/Descargable</h2>
+<p>Para e-books, plantillas, software, etc.</p>
+<ol>
+<li>Crea un nuevo producto</li>
+<li>Selecciona <strong>&quot;Simple product&quot;</strong></li>
+<li>Marca <strong>&quot;Virtual&quot;</strong> (sin envío) y <strong>&quot;Downloadable&quot;</strong></li>
+<li>Aparecen nuevos campos:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Qué Introducir</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Downloadable files</strong></td>
+<td>Haz clic en &quot;Add File&quot; → sube el archivo o introduce la URL</td>
+</tr>
+<tr>
+<td><strong>Download limit</strong></td>
+<td>Cuántas veces el cliente puede descargarlo (en blanco = ilimitado)</td>
+</tr>
+<tr>
+<td><strong>Download expiry</strong></td>
+<td>Cuántos días permanece activo el enlace de descarga</td>
+</tr>
+</tbody></table>
+<ol start="5">
+<li>Configura el precio, la descripción y la imagen como de costumbre</li>
+<li>Publica</li>
+</ol>
+<hr>
+<h2>Gestión de Productos</h2>
+<h3>Lista de Productos</h3>
+<p>Ve a <strong>Products → All Products</strong> para ver todos tus productos:</p>
+<ul>
+<li><strong>Filtrar</strong> por categoría, tipo o estado de stock</li>
+<li><strong>Edición masiva</strong> — selecciona varios productos y cambia categoría, precio, estado de stock, etc.</li>
+<li><strong>Edición rápida</strong> — edita los datos básicos en línea sin abrir el editor completo</li>
+</ul>
+<h3>Estados del Producto</h3>
+<table>
+<thead>
+<tr>
+<th>Estado</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Published</strong></td>
+<td>Activo y visible en la tienda</td>
+</tr>
+<tr>
+<td><strong>Draft</strong></td>
+<td>No visible — trabajo en progreso</td>
+</tr>
+<tr>
+<td><strong>Pending</strong></td>
+<td>En espera de revisión</td>
+</tr>
+<tr>
+<td><strong>Private</strong></td>
+<td>Solo visible para administradores</td>
+</tr>
+</tbody></table>
+<h3>Duplicar Productos</h3>
+<ul>
+<li>Pasa el cursor sobre un producto en la lista → haz clic en <strong>&quot;Duplicate&quot;</strong></li>
+<li>Se crea una copia como borrador — edita los detalles y publica</li>
+<li>Ideal para crear productos similares rápidamente</li>
+</ul>
+<hr>
+<h2>Organización de Productos</h2>
+<h3>Categorías</h3>
+<ul>
+<li>Crea categorías significativas: Ropa, Electrónica, Hogar y Jardín</li>
+<li>Usa jerarquía: Ropa → Hombre → Camisetas</li>
+<li>Gestiona en <strong>Products → Categories</strong></li>
+<li>Añade descripciones e imágenes a las categorías (algunos temas las muestran)</li>
+</ul>
+<h3>Etiquetas</h3>
+<ul>
+<li>Más específicas que las categorías</li>
+<li>Útiles para filtrado y búsqueda</li>
+<li>Gestiona en <strong>Products → Tags</strong></li>
+</ul>
+<hr>
+<h2>Ejercicios</h2>
+<ol>
+<li><p><strong>Añade 3 productos simples</strong>: Crea tres productos diferentes con:</p>
+<ul>
+<li>Título, descripción, descripción corta</li>
+<li>Precio (y un precio de oferta en al menos uno)</li>
+<li>Imagen de producto + 2 imágenes de galería</li>
+<li>Categoría y etiquetas</li>
+<li>SKU y cantidad de stock</li>
+</ul>
+</li>
+<li><p><strong>Crea un producto variable</strong>: Añade un producto con al menos 2 atributos (p. ej., Talla y Color) y genera variaciones con precios individuales.</p>
+</li>
+<li><p><strong>Crea un producto digital</strong>: Añade un producto descargable (usa cualquier archivo PDF o imagen como descarga).</p>
+</li>
+<li><p><strong>Configura las categorías de productos</strong>: Crea una jerarquía con al menos una categoría padre y dos categorías hijo. Asigna tus productos a ellas.</p>
+</li>
+<li><p><strong>Visita la página de la tienda</strong>: Ve a la página Shop de tu sitio para ver tus productos mostrados. Prueba a hacer clic en la página de un producto.</p>
+</li>
+<li><p><strong>Prueba el carrito</strong>: Añade un producto al carrito desde la página de la tienda. Visualiza el carrito. Prueba a cambiar las cantidades.</p>
+</li>
+</ol>
+<hr>
+<h2>Puntos Clave</h2>
+<ul>
+<li>Los <strong>productos simples</strong> son artículos únicos con un solo precio</li>
+<li>Los <strong>productos variables</strong> tienen opciones (talla, color) con variaciones separadas</li>
+<li>Los productos <strong>virtuales/descargables</strong> no requieren envío</li>
+<li>Cada producto necesita: <strong>título, precio, descripción, imagen y categoría</strong></li>
+<li>La <strong>imagen del producto</strong> es la foto principal; las imágenes de <strong>galería</strong> muestran ángulos adicionales</li>
+<li>Usa <strong>SKUs</strong> para el seguimiento del inventario</li>
+<li>Las <strong>categorías de productos</strong> crean la estructura organizativa de tu tienda</li>
+<li>Usa <strong>&quot;Duplicate&quot;</strong> para crear rápidamente productos similares</li>
+<li>Revisa tu <strong>página de la tienda</strong> y las <strong>páginas de productos</strong> después de añadir productos para verificar que todo se ve bien</li>
+</ul>
+<hr>
+<p><strong>Siguiente Lección:</strong> <a href="lesson-27.html">Lección 27 - Pasarelas de Pago y Envíos</a></p>
+
+    <nav class="lesson-nav">
+      <a href="lesson-25.html" class="prev">&larr; 25. Configurar WooCommerce</a>
+      <a href="lesson-27.html" class="next">27. Pagos y Envíos &rarr;</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
